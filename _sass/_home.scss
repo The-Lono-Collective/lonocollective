@@ -1,0 +1,57 @@
+.main-heading {
+    font-family: 'Crimson Pro', serif;
+    font-size: clamp(56px, 12vw, 96px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    letter-spacing: -0.03em;
+    animation: fadeInUp 1s ease-out;
+}
+
+.sub-heading {
+    font-size: clamp(24px, 5vw, 42px);
+    font-weight: 300;
+    color: #c4b5a8;
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 48px;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-description {
+    font-size: clamp(18px, 2.5vw, 20px);
+    line-height: 1.9;
+    color: #c4b5a8;
+    font-weight: 300;
+    max-width: 750px;
+    margin: 0 auto 56px;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-cta {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+@media (min-width: 768px) {
+    .main-heading {
+        font-size: clamp(72px, 9vw, 110px);
+        margin-bottom: 44px;
+        letter-spacing: -0.04em;
+    }
+
+    .hero-description {
+        font-size: clamp(19px, 2vw, 20px);
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        letter-spacing: -0.03em;
+    }
+
+    .hero-description {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+}

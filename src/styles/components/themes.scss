@@ -1,19 +1,6 @@
-$primary-navy: #1e293b;
-$secondary-navy: #334155;
-$dark-blue: #090A0F;
-$accent-blue: #0ea5e9;
-$light-blue: #e0f2fe;
-$warm-white: #fefbf7;
-$cool-gray: #f1f5f9;
-$medium-gray: #64748b;
-$dark-gray: #475569;
-$border-gray: #cbd5e1;
-$subtle-blue: #f0f9ff;
-
-
 $themes: (
     default: (
-        primary-navy: #0f172a;
+        primary-navy: #0f172a,
         secondary-navy: #1e293b,
         accent-blue: #38bdf8,
         light-blue: #1e293b,
@@ -22,8 +9,8 @@ $themes: (
         medium-gray: #94a3b8,
         dark-gray: #e2e8f0,
         border-gray: #334155,
-        subtle-blue: #0f172a,
-        ),
+        subtle-blue: #0f172a
+    ),
     light: (
         primary-navy: #1e293b,
         secondary-navy: #334155,
@@ -34,7 +21,7 @@ $themes: (
         medium-gray: #64748b,
         dark-gray: #475569,
         border-gray: #cbd5e1,
-        subtle-blue: #f0f9ff,
+        subtle-blue: #f0f9ff
     )
 );
 
@@ -43,8 +30,8 @@ $themes: (
         .theme--#{$theme} & {
             $theme-map: () !global;
             @each $key, $submap in $map {
-                $value: map-get(map-get($themes), $theme), '#{$key}';
-                $theme-map: map-merge($theme-map:, ($key: $value)) !global;
+                $value: map-get(map-get($themes, $theme), $key);
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
             }
             @content;
             $theme-map: null !global;
