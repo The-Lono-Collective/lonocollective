@@ -15,9 +15,9 @@
     transform: translateX(-50%);
     width: 100vw;
     height: 100%;
-    background: rgba(26, 21, 18, 0.8);
+    background: var(--bg-secondary);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(139, 92, 72, 0.15);
+    border-bottom: 1px solid var(--border-color);
     z-index: -1;
 }
 
@@ -25,7 +25,7 @@
     font-family: "Crimson Pro", serif;
     font-size: 28px;
     font-weight: 400;
-    color: #e8dfd6;
+    color: var(--text-primary);
     text-decoration: none;
     letter-spacing: -0.01em;
     transition: color 0.3s ease;
@@ -33,12 +33,12 @@
 
 .logo:hover,
 .logo:focus {
-    color: #c9a382;
+    color: var(--accent-primary);
     outline: none;
 }
 
 .logo:focus-visible {
-    outline: 2px solid #c9a382;
+    outline: 2px solid var(--accent-primary);
     outline-offset: 4px;
     border-radius: 4px;
 }

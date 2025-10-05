@@ -5,7 +5,7 @@
 }
 
 .nav-menu li a {
-    color: #c4b5a8;
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 15px;
     font-weight: 400;
@@ -17,13 +17,13 @@
 
 .nav-menu li a:hover,
 .nav-menu li a:focus {
-    color: #c9a382;
-    background: rgba(139, 92, 72, 0.1);
+    color: var(--accent-primary);
+    background: var(--gradient-accent);
     outline: none;
 }
 
 .nav-menu li a:focus-visible {
-    outline: 2px solid #c9a382;
+    outline: 2px solid var(--accent-primary);
     outline-offset: 2px;
 }
 
@@ -37,7 +37,7 @@
 .menu-line {
     width: 25px;
     height: 2px;
-    background-color: #c9a382;
+    background-color: var(--accent-primary);
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -47,12 +47,12 @@
     position: absolute;
     top: 100%;
     right: 20px;
-    background: rgba(26, 21, 18, 0.95);
+    background: var(--bg-secondary);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 10px;
     min-width: 150px;
-    border: 1px solid rgba(139, 92, 72, 0.25);
+    border: 1px solid var(--border-color);
 }
 
 .mobile-menu.active {
@@ -62,13 +62,13 @@
 
 .mobile-menu a {
     display: block;
-    color: #c4b5a8;
+    color: var(--text-secondary);
     text-decoration: none;
     padding: 10px 0;
     font-size: 15px;
     font-weight: 400;
     letter-spacing: 0.01em;
-    border-bottom: 1px solid rgba(139, 92, 72, 0.15);
+    border-bottom: 1px solid var(--border-color);
     transition: color 0.3s ease;
 }
 
@@ -78,17 +78,17 @@
 
 .mobile-menu a:hover,
 .mobile-menu a:focus {
-    color: #c9a382;
+    color: var(--accent-primary);
     outline: none;
 }
 
 .mobile-menu a:focus-visible {
-    outline: 2px solid #c9a382;
+    outline: 2px solid var(--accent-primary);
     outline-offset: 2px;
 }
 
 .menu-toggle:hover .menu-line {
-    background-color: #8b5c48;
+    background-color: var(--accent-primary);
 }
 
 /* Theme Toggle */
@@ -104,13 +104,13 @@
     justify-content: center;
     transition: all 0.3s ease;
     margin-right: 20px;
-    background: rgba(42, 35, 30, 0.5);
-    border: 1px solid rgba(139, 92, 72, 0.25);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
 }
 
 .theme-toggle:hover {
-    background: rgba(139, 92, 72, 0.2);
-    border-color: rgba(139, 92, 72, 0.4);
+    background: var(--gradient-accent);
+    border-color: var(--border-color);
     transform: scale(1.05);
 }
 
