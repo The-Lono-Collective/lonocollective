@@ -1,0 +1,23 @@
+- name: Zacharia Rupp, MCS, MFA
+  initials: ZR
+  title: Principal Investigator
+  credentials: Former Head of Data Delivery, Pareto AI • UIUC
+  expertise: AI evaluation methodologies, research design, PRISMA systematic reviews
+
+- name: Alexandra Ah Loy, JD
+  initials: AA
+  title: Legal & Regulatory Expert
+  credentials: Partner, Hall Booth Smith
+  expertise: Healthcare law, liability frameworks, regulatory compliance (HIPAA, GDPR)
+
+- name: Jesse Ewing
+  initials: JE
+  title: Data Science & Quality Assurance
+  credentials: Self-taught Data Scientist
+  expertise: Statistical analysis, inter-rater reliability, evaluation metrics
+
+- name: Kalani Ah Loy
+  initials: KA
+  title: Clinical Infrastructure Expert
+  credentials: Medical Engineer, OU Health • Navy Veteran
+  expertise: Healthcare technology, clinical systems, business development
