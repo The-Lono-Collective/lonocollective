@@ -74,3 +74,63 @@
     --border-color: rgba(139, 92, 72, 0.15);
     --shadow-color: rgba(139, 92, 72, 0.3);
 }
+
+// Option B: Dark Compassion (somber, psychological, intimate)
+.theme--dark-compassion {
+    --bg-primary: #1a1418;
+    --bg-secondary: rgba(26, 20, 24, 0.6);
+    --text-primary: #f0ebe8;
+    --text-secondary: #b8adb0;
+    --accent-primary: #9d7b8f;
+    --accent-secondary: #6b4f5e;
+    --accent-tertiary: #7a5968;
+    --gradient-start: rgba(157, 123, 143, 0.08);
+    --gradient-accent: rgba(157, 123, 143, 0.15);
+    --border-color: rgba(157, 123, 143, 0.2);
+    --shadow-color: rgba(157, 123, 143, 0.3);
+}
+
+// Option C: Brutalist Truth (stark, uncompromising, zero comfort)
+.theme--brutalist {
+    --bg-primary: #000000;
+    --bg-secondary: rgba(0, 0, 0, 0.8);
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --accent-primary: #ff4444;
+    --accent-secondary: #cc3333;
+    --accent-tertiary: #00d9ff;
+    --gradient-start: rgba(255, 68, 68, 0.05);
+    --gradient-accent: rgba(255, 68, 68, 0.1);
+    --border-color: rgba(255, 255, 255, 0.15);
+    --shadow-color: rgba(255, 68, 68, 0.4);
+}
+
+// Literary Folk (indie publishing, warm, illustrated, human)
+.theme--literary-folk {
+    --bg-primary: #ebe3d5;
+    --bg-secondary: rgba(235, 227, 213, 0.9);
+    --text-primary: #2a2520;
+    --text-secondary: #5a524a;
+    --accent-primary: #d64933;
+    --accent-secondary: #e8773d;
+    --accent-tertiary: #4a7c8c;
+    --gradient-start: rgba(214, 73, 51, 0.08);
+    --gradient-accent: rgba(214, 73, 51, 0.12);
+    --border-color: rgba(42, 37, 32, 0.15);
+    --shadow-color: rgba(214, 73, 51, 0.25);
+}
+
+// Literary Folk Dark (indie publishing night mode)
+.theme--literary-folk-dark {
+    --bg-primary: #1a1512;
+    --bg-secondary: rgba(26, 21, 18, 0.9);
+    --text-primary: #ebe3d5;
+    --text-secondary: #a8a098;
+    --accent-primary: #e8773d;
+    --accent-secondary: #d64933;
+    --accent-tertiary: #5a9cac;
+    --gradient-start: rgba(232, 119, 61, 0.08);
+    --gradient-accent: rgba(232, 119, 61, 0.12);
+    --border-color: rgba(235, 227, 213, 0.15);
+    --shadow-color: rgba(232, 119, 61, 0.25);
+}
