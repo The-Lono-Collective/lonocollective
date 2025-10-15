@@ -1,11 +1,13 @@
 .main-heading {
     font-family: 'Crimson Pro', serif;
-    font-size: clamp(56px, 12vw, 96px);
-    font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: 40px;
-    letter-spacing: -0.03em;
+    font-size: clamp(72px, 14vw, 140px);
+    font-weight: 600;
+    line-height: 0.95;
+    margin-bottom: 30px;
+    letter-spacing: -0.04em;
     animation: fadeInUp 1s ease-out;
+    text-transform: none;
+    max-width: 900px;
 }
 
 .sub-heading {
@@ -19,13 +21,15 @@
 }
 
 .hero-description {
-    font-size: clamp(18px, 2.5vw, 20px);
-    line-height: 1.9;
-    color: var(--text-secondary);
-    font-weight: 300;
-    max-width: 750px;
-    margin: 0 auto 56px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    font-weight: 400;
+    max-width: 550px;
+    margin: 0 0 40px 0;
     animation: fadeInUp 1s ease-out 0.4s both;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .hero-cta {
