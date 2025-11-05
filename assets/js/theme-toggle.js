@@ -2,17 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Get saved theme or default to light
-    const savedTheme = localStorage.getItem('theme') || 'literary-folk';
+    // Get saved theme or default to dark mode
+    const savedTheme = localStorage.getItem('theme') || 'green-gradient-dark';
     body.className = `theme--${savedTheme}`;
     updateButtonText(savedTheme);
 
     themeToggle.addEventListener('click', () => {
-        const currentTheme = body.classList.contains('theme--literary-folk') ? 'literary-folk' : 'literary-folk-dark';
-        const newTheme = currentTheme === 'literary-folk' ? 'literary-folk-dark' : 'literary-folk';
+        const currentTheme = body.classList.contains('theme--green-gradient-dark') ? 'green-gradient-dark' : 'green-gradient-light';
+        const newTheme = currentTheme === 'green-gradient-dark' ? 'green-gradient-light' : 'green-gradient-dark';
 
         // Remove old theme class and add new one
-        body.classList.remove('theme--literary-folk', 'theme--literary-folk-dark');
+        body.classList.remove('theme--green-gradient-dark', 'theme--green-gradient-light');
         body.classList.add(`theme--${newTheme}`);
 
         // Save to localStorage
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateButtonText(theme) {
-        if (theme === 'literary-folk') {
+        if (theme === 'green-gradient-light') {
             themeToggle.textContent = 'Dark Mode';
         } else {
             themeToggle.textContent = 'Light Mode';
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
         mediaQuery.addListener((e) => {
             if (!localStorage.getItem('theme')) {
-                const systemTheme = e.matches ? 'literary-folk-dark' : 'literary-folk';
+                const systemTheme = e.matches ? 'green-gradient-dark' : 'green-gradient-light';
                 body.className = `theme--${systemTheme}`;
                 updateButtonText(systemTheme);
             }
