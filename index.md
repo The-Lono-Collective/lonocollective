@@ -42,8 +42,8 @@ title: AI Safety Evaluation Frameworks
         </div>
 
         <div class="framework-status">
-            <div class="status-badge under-review">Under Review</div>
-            <p class="status-text">Framework under review by major government AI safety institute</p>
+            <div class="status-badge in-progress">Available for Partnership</div>
+            <p class="status-text">Framework complete and ready for institutional implementation</p>
         </div>
 
         <div class="framework-impact">
