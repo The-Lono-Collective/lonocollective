@@ -99,6 +99,44 @@ body::after {    content: "";    position: fixed;    top: 0;    left: 0;    widt
     z-index: -1;
 }
 
+/* Green Gradient themes - Global background */
+.theme--green-gradient-dark,
+.theme--green-gradient-light {
+    position: relative;
+}
+
+.theme--green-gradient-dark::before,
+.theme--green-gradient-light::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--gradient-bg-section);
+    z-index: -2;
+}
+
+/* Green Gradient themes hero background */
+.theme--green-gradient-dark .hero-section::before,
+.theme--green-gradient-light .hero-section::before {
+    background: var(--gradient-bg-hero);
+}
+
+.theme--green-gradient-dark .hero-section::after,
+.theme--green-gradient-light .hero-section::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 60%;
+    background: var(--gradient-bg-aurora);
+    z-index: -1;
+    pointer-events: none;
+}
+
 @keyframes heroPulse {
 }
 
@@ -175,6 +213,8 @@ body::after {    content: "";    position: fixed;    top: 0;    left: 0;    widt
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
 }
 
 .cta-button.primary {
