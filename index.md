@@ -7,48 +7,43 @@ title: AI Safety Evaluation Frameworks
 
 <section class="problem-section">
     <div class="problem-content">
-        <h2>The cost of unsafe AI is measured in lives</h2>
-        <p class="problem-stat">As of September 2025, at least <strong>five suicides</strong> have been attributed to conversations with AI language models—over half occurring in 2025 alone.</p>
-        <p class="problem-detail">With 50% of U.S. adults using large language models and 40% engaging with them for mental health support, the stakes have never been higher. Yet little is known about how and why these models fail to identify suicide risk or, worse, encourage progression from ideation to action.</p>
-        <p class="problem-solution">This is the problem we're solving.</p>
+        <h2>High-risk AI systems need rigorous evaluation before deployment</h2>
+        <p class="problem-stat">AI systems are increasingly deployed in <strong>high-stakes domains</strong>—from mental health support to medical diagnosis to child welfare decisions.</p>
+        <p class="problem-detail">Yet most AI safety evaluation relies on ad-hoc testing and post-deployment monitoring. When AI systems interact with vulnerable populations or make decisions that affect human wellbeing, reactive approaches are insufficient.</p>
+        <p class="problem-solution">We develop evidence-based frameworks that prevent harm before deployment.</p>
     </div>
 </section>
 
 <section id="framework" class="framework-section">
     <div class="framework-content">
-        <h2>AI Crisis Intervention Framework</h2>
-        <p class="framework-intro">Our flagship research project develops the first comprehensive, peer-reviewable framework for evaluating and implementing AI-based suicide detection and intervention systems.</p>
+        <h2>Our Evaluation Methodology</h2>
+        <p class="framework-intro">We combine clinical expertise with technical research to develop comprehensive, peer-reviewable frameworks for evaluating high-risk AI systems before deployment.</p>
 
         <div class="framework-approach">
-            <h3>Evidence-Based Methodology</h3>
+            <h3>Evidence-Based Approach</h3>
             <div class="methodology-grid">
                 <div class="method-card">
                     <h4>Systematic Literature Review</h4>
-                    <p>PRISMA-compliant analysis of AI mental health interventions, identifying research gaps in suicide-specific applications.</p>
+                    <p>PRISMA-compliant analysis of existing research and interventions, identifying gaps and establishing evidence-based benchmarks for your domain.</p>
                 </div>
                 <div class="method-card">
-                    <h4>Clinical Vignette Testing</h4>
-                    <p>Standardized assessment using validated scenarios, comparing model responses against C-SSRS and other evidence-based crisis intervention standards.</p>
+                    <h4>Standardized Scenario Testing</h4>
+                    <p>Vignette-based assessment using validated test cases, comparing AI system responses against clinical standards and best practices.</p>
                 </div>
                 <div class="method-card">
-                    <h4>Delphi Consensus Process</h4>
-                    <p>Structured expert consensus with clinical and technical specialists to establish industry guidelines for responsible implementation.</p>
+                    <h4>Expert Consensus Building</h4>
+                    <p>Structured Delphi process with domain specialists to establish rigorous, defensible guidelines for responsible AI implementation.</p>
                 </div>
                 <div class="method-card">
                     <h4>Stakeholder Validation</h4>
-                    <p>Review sessions with AI developers, clinical organizations, and regulatory experts to ensure actionable, defensible guidelines.</p>
+                    <p>Collaborative review with technical teams, domain experts, and regulatory stakeholders to ensure actionable, auditable frameworks.</p>
                 </div>
             </div>
         </div>
 
-        <div class="framework-status">
-            <div class="status-badge in-progress">Available for Partnership</div>
-            <p class="status-text">Framework complete and ready for institutional implementation</p>
-        </div>
-
         <div class="framework-impact">
-            <h3>Research Impact</h3>
-            <p>This study will provide the first comprehensive framework for evaluating and implementing AI-based suicide detection systems, directly contributing to AI safety and public health outcomes.</p>
+            <h3>Proven Expertise</h3>
+            <p>Our frameworks have been applied to AI safety evaluation in mental health, healthcare process intelligence, and other high-stakes domains where technical rigor meets real-world impact.</p>
         </div>
     </div>
 </section>
