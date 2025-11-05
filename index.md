@@ -42,8 +42,8 @@ title: AI Safety Evaluation Frameworks
         </div>
 
         <div class="framework-impact">
-            <h3>Proven track record</h3>
-            <p>We've applied this approach to AI systems in mental health, emergency healthcare, and other domains where mistakes cost lives. Our frameworks prevent harm.</p>
+            <h3>Multidisciplinary expertise</h3>
+            <p>Clinical psychology, emergency medicine, legal compliance, public health research, and technical AI evaluation. The team credentials to do this work right.</p>
         </div>
     </div>
 </section>
