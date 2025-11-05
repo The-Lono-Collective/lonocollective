@@ -104,4 +104,4 @@ Gemfile.lock
 *.temp
 
 # Project documentation (internal only)
-ocpi-condensed-5page.md
+ocpi-condensed-5page.md.claude/
