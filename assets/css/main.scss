@@ -239,7 +239,30 @@ body::before {
 /* Problem Section */
 .problem-section {
     padding: 80px 60px; max-width: 1400px; margin: 0 auto;
-    background: transparent;
+    background: rgba(127, 184, 148, 0.04);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 100%;
+        background: radial-gradient(
+            ellipse at 50% 30%,
+            rgba(127, 184, 148, 0.08) 0%,
+            transparent 60%
+        );
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .problem-content {
@@ -780,7 +803,30 @@ body::before {
 /* Contact Section */
 .contact-section {
     padding: 80px 60px; max-width: 1400px; margin: 0 auto;
-    background: transparent;
+    background: rgba(127, 184, 148, 0.04);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 100%;
+        background: radial-gradient(
+            ellipse at 50% 70%,
+            rgba(127, 184, 148, 0.08) 0%,
+            transparent 60%
+        );
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .contact-content {
