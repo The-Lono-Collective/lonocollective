@@ -1,0 +1,82 @@
+- id: ocpi
+  title: "Healthcare Equity Through Process Intelligence"
+  subtitle: "Shifting from measuring disparities to preventing them"
+  problem: "Healthcare disparities persist despite decades of research because we measure harm after it occurs. Traditional approaches analyze outcomes retrospectively—documenting that inequities exist without understanding how they emerge or how to prevent them."
+  innovation: "Object-Centric Process Intelligence"
+  approach: "OCPI tracks multiple objects simultaneously (patients, providers, resources) revealing how inequities emerge from systemic patterns rather than isolated decisions. This paradigm shift enables real-time intervention before patients experience harm."
+  key_differentiators:
+    - label: "Multi-Object Analysis"
+      description: "Captures how interpreter availability, provider schedules, and resource allocation interact simultaneously—revealing inequities invisible to traditional case-based analysis"
+    - label: "Continuous Monitoring"
+      description: "Shifts equity from retrospective audit to operational requirement—comparable to how hospitals monitor vital signs continuously rather than quarterly"
+    - label: "Prescriptive AI"
+      description: "Provides specific process-level interventions (reallocate interpreters at evening peak hours) rather than aspirational outcome goals (reduce wait times)"
+    - label: "Community Empowerment"
+      description: "Open-source tools enable community organizations to independently audit hospitals—democratizing who can generate authoritative knowledge about healthcare equity"
+  methodology:
+    phases:
+      - name: "Object-Centric Event Log Creation"
+        duration: "Months 1-6"
+        deliverable: "First standardized OCEL for ED equity research with comprehensive documentation"
+      - name: "Process Discovery"
+        duration: "Months 4-12"
+        deliverable: "Stratified process models showing how care pathways differ by demographic group"
+      - name: "Conformance Checking"
+        duration: "Months 7-18"
+        deliverable: "Systematic audit pinpointing exact process steps where inequities emerge"
+      - name: "Fairness-Constrained Prediction"
+        duration: "Months 13-20"
+        deliverable: "Models predicting which patients face inequitable treatment risk before it occurs"
+      - name: "Prescriptive AI & Dashboards"
+        duration: "Months 19-26"
+        deliverable: "Real-time equity monitoring with natural language querying for non-technical users"
+      - name: "Comprehensive Pathway Analysis"
+        duration: "Months 21-30"
+        deliverable: "Three complete ED pathway analyses (chest pain, pain management, mental health crisis)"
+  community_based: "6-8 member Community Advisory Board meets monthly to identify priority pathways, interpret findings through community knowledge, and co-design culturally appropriate interventions. CAB members receive $150/meeting stipends recognizing that community expertise has monetary value."
+  expected_impact:
+    immediate:
+      - "First comprehensive open-source OCPI framework for healthcare equity"
+      - "Validated methodology for continuous equity monitoring"
+      - "3-5 healthcare systems with signed MOUs for implementation pilots"
+      - "Open-source tools enabling community-led hospital audits"
+    medium_term:
+      - "OCPI becomes recognized methodology in health equity research"
+      - "CMS and state Medicaid integrate OCPI into equity-linked reimbursement"
+      - "Major EHR vendors (Epic, Cerner) integrate OCPI modules"
+      - "Health administration programs include OCPI in core curriculum"
+    transformative:
+      - "Healthcare AI systems designed with continuous equity monitoring as architectural requirement"
+      - "Communities become co-producers of healthcare quality knowledge"
+      - "Preventive infrastructure for AI-driven inequities before they harm millions"
+      - "Health equity evolves from aspirational goal to operational standard"
+  status: "Research framework—seeking funding for implementation"
+  timeline: "36 months"
+
+- id: suicide-prevention
+  title: "Mental Health Crisis Intervention for AI Chatbots"
+  subtitle: "Evidence-based safety frameworks for high-risk AI systems"
+  problem: "AI chatbots increasingly interact with users experiencing mental health crises, yet no standardized frameworks exist for evaluating their safety in these high-stakes scenarios."
+  approach: "PRISMA systematic review methodology combined with real-world testing protocols to establish evidence-based evaluation frameworks for AI chatbot safety in mental health crisis scenarios."
+  key_differentiators:
+    - label: "Evidence-Based Framework"
+      description: "PRISMA systematic review of existing literature combined with expert clinical validation"
+    - label: "Standardized Benchmarks"
+      description: "Replicable evaluation criteria enabling cross-platform comparison and accountability"
+    - label: "Real-World Testing"
+      description: "Validated scenarios based on actual crisis intervention best practices"
+    - label: "Safety-First Design"
+      description: "Identifies failure modes before deployment rather than discovering harms retrospectively"
+  expected_impact:
+    immediate:
+      - "First comprehensive evaluation framework for AI mental health crisis intervention"
+      - "Standardized benchmarks enabling institutional accountability"
+      - "Published methodology accessible to AI safety researchers"
+    medium_term:
+      - "Framework adopted by AI companies for internal safety testing"
+      - "Regulatory bodies reference framework in AI safety guidelines"
+      - "Academic researchers build on methodology for other high-risk domains"
+    transformative:
+      - "Industry-standard safety evaluation becomes prerequisite for AI deployment in sensitive contexts"
+      - "Shift from reactive harm documentation to proactive safety validation"
+  status: "Research framework complete—available for institutional partnership"
