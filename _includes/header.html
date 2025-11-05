@@ -1,5 +1,8 @@
 <header class="header">
-    <a href="{{ '/' | relative_url }}" class="logo">{{ site.title }}</a>
+    <a href="{{ '/' | relative_url }}" class="logo">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Lono Collective" class="logo-icon">
+        <span class="logo-text">{{ site.title }}</span>
+    </a>
 
     <div class="header-nav">
         {% include navigation.html %}

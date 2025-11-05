@@ -3,7 +3,7 @@
    ============================================ */
 
 .ocpi-section {
-  padding: 140px 20px;
+  padding: 80px 20px;
   background: linear-gradient(
     180deg,
     var(--bg-primary) 0%,
@@ -158,20 +158,25 @@
 
 .diff-card {
   padding: 32px;
-  background: var(--bg-secondary);
-  border-radius: 12px;
-  border: 1px solid rgba(127, 184, 148, 0.2);
+  background: linear-gradient(
+    135deg,
+    var(--bg-secondary) 0%,
+    rgba(127, 184, 148, 0.05) 100%
+  );
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 
-  &::before {
+  &::after {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background: linear-gradient(
       90deg,
       var(--accent-primary),
@@ -183,11 +188,10 @@
   }
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(127, 184, 148, 0.15);
-    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(127, 184, 148, 0.18);
 
-    &::before {
+    &::after {
       transform: scaleX(1);
     }
   }
@@ -234,11 +238,20 @@
 }
 
 .phase-card {
-  padding: 32px;
+  padding: 28px;
   background: var(--bg-secondary);
-  border-radius: 12px;
-  border: 1px solid rgba(127, 184, 148, 0.2);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-primary);
+  border-top: 1px solid rgba(127, 184, 148, 0.15);
+  border-right: 1px solid rgba(127, 184, 148, 0.15);
+  border-bottom: 1px solid rgba(127, 184, 148, 0.15);
   position: relative;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-left-width: 5px;
+    transform: translateX(2px);
+  }
 
   .phase-duration {
     font-size: 14px;
@@ -368,23 +381,23 @@
   border-radius: 12px;
 
   .status-badge {
-    display: inline-block;
-    font-size: 15px;
-    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    padding: 12px 24px;
+    letter-spacing: 0.5px;
+    padding: 10px 20px;
     border-radius: 6px;
     margin-bottom: 12px;
+    border: 2px solid;
+    transition: all 0.2s ease;
 
     &.seeking-funding {
-      background: linear-gradient(
-        135deg,
-        rgba(127, 184, 148, 0.2),
-        rgba(90, 143, 112, 0.2)
-      );
-      color: var(--accent-primary);
-      border: 2px solid var(--accent-primary);
+      background: var(--status-seeking-funding-bg);
+      color: var(--status-seeking-funding);
+      border-color: var(--status-seeking-funding);
     }
   }
 

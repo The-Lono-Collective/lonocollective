@@ -42,8 +42,8 @@ title: AI Safety Evaluation Frameworks
         </div>
 
         <div class="framework-status">
-            <div class="status-badge">Under Review</div>
-            <p class="status-text">Currently under review by a major government AI safety institute</p>
+            <div class="status-badge under-review">Under Review</div>
+            <p class="status-text">Framework under review by major government AI safety institute</p>
         </div>
 
         <div class="framework-impact">
@@ -205,7 +205,7 @@ title: AI Safety Evaluation Frameworks
         </div>
 
         <div class="contact-cta">
-            <a href="mailto:{{ site.email }}" class="cta-button primary large">Start a Conversation</a>
+            <a href="mailto:{{ site.email }}" class="cta-button primary large">Partner With Us</a>
         </div>
     </div>
 </section>

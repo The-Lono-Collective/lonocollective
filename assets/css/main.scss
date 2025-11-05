@@ -46,21 +46,7 @@ body::before {
     z-index: -1;
 }
 
-body::after {    content: "";    position: fixed;    top: 0;    left: 0;    width: 100vw;    height: 100vh;    pointer-events: none;    z-index: 1000;    opacity: 0;}@keyframes tvStatic {    0% { transform: translate(0, 0); }    100% { transform: translate(1%, 1%); }}
-
-@keyframes staticNoise {
-    0% { transform: translate(0, 0); }
-    10% { transform: translate(-5%, -5%); }
-    20% { transform: translate(-10%, 5%); }
-    30% { transform: translate(5%, -10%); }
-    40% { transform: translate(-5%, 15%); }
-    50% { transform: translate(-10%, 5%); }
-    60% { transform: translate(15%, 0); }
-    70% { transform: translate(0, 10%); }
-    80% { transform: translate(-15%, 0); }
-    90% { transform: translate(10%, 5%); }
-    100% { transform: translate(5%, 0); }
-}
+/* Unused animations removed for cleaner codebase */
 
 .container {
     min-height: 100vh;
@@ -136,14 +122,6 @@ body::after {    content: "";    position: fixed;    top: 0;    left: 0;    widt
     background: var(--gradient-bg-aurora);
     z-index: -1;
     pointer-events: none;
-}
-
-@keyframes heroPulse {
-}
-
-/* Animated Background Elements - Subtle */
-.hero-bg-elements {
-    display: none;
 }
 
 /* Gradient Text */
@@ -677,13 +655,43 @@ body::after {    content: "";    position: fixed;    top: 0;    left: 0;    widt
     margin-top: 40px;
 }
 
+/* Status Badges - Semantic Research States */
 .status-badge {
-    background: var(--accent-primary);
-    color: #faf8f5;
-    padding: 10px 18px;
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 2px solid;
+    transition: all 0.2s ease;
+}
+
+.status-badge.under-review {
+    background: var(--status-under-review-bg);
+    color: var(--status-under-review);
+    border-color: var(--status-under-review);
+}
+
+.status-badge.peer-reviewed {
+    background: var(--status-peer-reviewed-bg);
+    color: var(--status-peer-reviewed);
+    border-color: var(--status-peer-reviewed);
+}
+
+.status-badge.seeking-funding {
+    background: var(--status-seeking-funding-bg);
+    color: var(--status-seeking-funding);
+    border-color: var(--status-seeking-funding);
+}
+
+.status-badge.in-progress {
+    background: var(--status-in-progress-bg);
+    color: var(--status-in-progress);
+    border-color: var(--status-in-progress);
 }
 
 .status-text {
@@ -912,19 +920,7 @@ body::after {    content: "";    position: fixed;    top: 0;    left: 0;    widt
     font-weight: 300;
 }
 
-.data-pattern {
-    position: absolute;
-    top: 20%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    opacity: 0.12;
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='dots' patternUnits='userSpaceOnUse' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='2' fill='%23334155'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23dots)'/%3E%3C/svg%3E");
-    animation: float 20s ease-in-out infinite;
-}
-
-@keyframes float {
-}
+/* Unused data-pattern element removed */
 
 @keyframes fadeInUp {
     from {
@@ -999,23 +995,7 @@ html {
     opacity: 1;
 }
 
-/* Parallax elements */
-.parallax-element {
-    transform: translateZ(0);
-    will-change: transform;
-}
-
-/* Loading states */
-.skeleton {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-}
+/* Unused parallax and skeleton loader removed */
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
@@ -1091,31 +1071,4 @@ html {
     }
 }
 
-/* Theme Toggle Button */
-.theme-toggle {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    padding: 12px 24px;
-    background: var(--accent-primary);
-    color: var(--bg-primary);
-    border: none;
-    border-radius: 2px;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    z-index: 1000;
-}
-
-.theme-toggle:hover {
-    background: var(--text-primary);
-}
-
-.theme-toggle:focus-visible {
-    outline: 3px solid var(--accent-primary);
-    outline-offset: 2px;
-}
+/* Theme Toggle Removed - Single cohesive identity */
