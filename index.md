@@ -17,7 +17,7 @@ title: AI Safety Evaluation Frameworks
 <section id="framework" class="framework-section">
     <div class="framework-content">
         <h2>What you get from an engagement</h2>
-        <p class="framework-intro">Independent safety evaluations combining clinical expertise with technical research. Documentation you can defend to regulators, investors, and the public.</p>
+        <p class="framework-intro">Independent safety evaluations combining clinical expertise with technical research. Documentation designed to withstand both academic peer review and legal scrutiny.</p>
 
         <div class="framework-approach">
             <h3>Four Concrete Deliverables</h3>
@@ -28,7 +28,7 @@ title: AI Safety Evaluation Frameworks
                 </div>
                 <div class="method-card">
                     <h4>Regulatory-Ready Documentation</h4>
-                    <p>Peer-reviewable reports following academic standards (PRISMA, Delphi consensus) that satisfy regulatory scrutiny and due diligence.</p>
+                    <p>Academic-standard research methodology (e.g., PRISMA systematic reviews, Delphi expert consensus) designed to withstand both peer review and legal challenges. Reports that satisfy regulatory audits, stakeholder due diligence, and courtroom scrutiny.</p>
                 </div>
                 <div class="method-card">
                     <h4>Actionable Implementation Roadmap</h4>
