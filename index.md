@@ -42,8 +42,8 @@ title: AI Safety Evaluation Frameworks
         </div>
 
         <div class="framework-impact">
-            <h3>Multidisciplinary expertise</h3>
-            <p>Clinical psychology, emergency medicine, legal compliance, public health research, and technical AI evaluation. The team credentials to do this work right.</p>
+            <h3>Multidisciplinary expertise across any domain</h3>
+            <p>Our core team brings clinical psychology, emergency medicine, legal compliance, public health research, and technical AI evaluation. Our network gives us access to expert witnesses and domain specialists across virtually any high-stakes field.</p>
         </div>
     </div>
 </section>
