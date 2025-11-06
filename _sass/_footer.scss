@@ -1,0 +1,126 @@
+/* Site Footer */
+
+.site-footer {
+    background: rgba(127, 184, 148, 0.04);
+    border-top: 1px solid rgba(127, 184, 148, 0.15);
+    padding: 48px 20px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-copyright {
+    p {
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin: 0;
+    }
+}
+
+.footer-links {
+    display: flex;
+    gap: 32px;
+
+    a {
+        font-size: 14px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: var(--accent-primary);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* Privacy Policy Page */
+
+.privacy-section {
+    padding: 80px 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.privacy-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+        font-family: 'Crimson Pro', serif;
+        font-size: clamp(36px, 6vw, 48px);
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+    }
+
+    .last-updated {
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin-bottom: 48px;
+        font-style: italic;
+    }
+
+    h2 {
+        font-family: 'Crimson Pro', serif;
+        font-size: clamp(24px, 4vw, 32px);
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-top: 48px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    ul {
+        margin: 16px 0 24px 24px;
+        padding: 0;
+
+        li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+
+            strong {
+                color: var(--text-primary);
+                font-weight: 500;
+            }
+        }
+    }
+
+    a {
+        color: var(--accent-primary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: var(--accent-tertiary);
+        }
+    }
+}
