@@ -9,7 +9,7 @@ title: Privacy Policy
         <p class="last-updated">Last updated: January 2025</p>
 
         <h2>Who we are</h2>
-        <p>The Lono Collective, LLC ("we," "us," or "our") operates the website lonocollective.com. This Privacy Policy explains how we collect, use, and protect your personal information.</p>
+        <p>The Lono Collective, LLC ("we," "us," or "our") operates the website lonocollective.ai. This Privacy Policy explains how we collect, use, and protect your personal information.</p>
 
         <h2>What data we collect</h2>
         <p>We collect minimal personal information:</p>
