@@ -2,19 +2,19 @@
 ---
 
 // Themes
-@import "themes";
+@use "themes" as *;
 
 // Component styles
-@import "header";
-@import "navigation";
-@import "footer";
+@use "header" as *;
+@use "navigation" as *;
+@use "footer" as *;
 
 // Page styles
-@import "home";
-@import "about";
+@use "home" as *;
+@use "about" as *;
 
 // Background effects
-@import "flowing-arcs";
+@use "flowing-arcs" as *;
 
 // Base styles
 
