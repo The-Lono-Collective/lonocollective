@@ -63,27 +63,3 @@
     }
 }
 
-/* Research Teaser - Subtle CTA */
-.research-teaser {
-    margin-top: 48px;
-    padding-top: 32px;
-    border-top: 1px solid rgba(127, 184, 148, 0.2);
-
-    p {
-        font-size: 16px;
-        line-height: 1.6;
-        color: var(--text-secondary);
-        margin: 0;
-    }
-
-    .teaser-link {
-        color: var(--accent-primary);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s ease;
-
-        &:hover {
-            color: var(--accent-tertiary);
-        }
-    }
-}

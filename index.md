@@ -69,10 +69,6 @@ title: AI Safety Evaluation Frameworks
         </div>
 
         <p class="cooperative-value">In AI safety research, independence isn't just a business model. It's a moral imperative.</p>
-
-        <div class="research-teaser">
-            <p>Our research extends beyond AI safety to healthcare equity, applying similar frameworks to emergency department process intelligence. <a href="{{ '/research/ocpi/' | relative_url }}" class="teaser-link">View research →</a></p>
-        </div>
     </div>
 </section>
 
