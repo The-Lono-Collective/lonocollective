@@ -7,7 +7,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:a11y": "jest --testPathPattern=a11y",
-    "lint": "eslint assets/js/**/*.js"
+    "lint": "eslint assets/js/**/*.js",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@axe-core/puppeteer": "^4.8.1",
@@ -15,12 +16,18 @@
     "@babel/preset-env": "^7.23.0",
     "babel-jest": "^29.7.0",
     "eslint": "^8.52.0",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "lint-staged": "^16.2.6",
     "puppeteer": "^21.5.0"
   },
   "jest": {
     "testEnvironment": "jsdom",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/_site/"
+    ],
     "collectCoverageFrom": [
       "assets/js/**/*.js",
       "!assets/js/**/*.test.js"

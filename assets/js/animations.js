@@ -1,5 +1,5 @@
 // Scroll-triggered animations
-class ScrollAnimations {
+export class ScrollAnimations {
     constructor() {
         this.observerOptions = {
             threshold: 0.1,
@@ -81,7 +81,7 @@ class ScrollAnimations {
 }
 
 // Micro-interactions for interactive elements
-class MicroInteractions {
+export class MicroInteractions {
     constructor() {
         this.init();
     }
@@ -154,7 +154,7 @@ class MicroInteractions {
 }
 
 // Performance optimizations
-class PerformanceOptimizer {
+export class PerformanceOptimizer {
     constructor() {
         this.init();
     }
@@ -213,7 +213,7 @@ class PerformanceOptimizer {
 }
 
 // Accessibility enhancements
-class AccessibilityEnhancer {
+export class AccessibilityEnhancer {
     constructor() {
         this.init();
     }
