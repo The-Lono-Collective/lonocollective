@@ -26,9 +26,6 @@ export class ScrollAnimations {
         
         // Parallax effect for background elements
         this.initParallax();
-        
-        // Smooth scrolling for anchor links
-        this.initSmoothScrolling();
     }
     
     handleIntersection(entries) {
@@ -43,40 +40,26 @@ export class ScrollAnimations {
     
     initParallax() {
         const parallaxElements = document.querySelectorAll('.parallax-element');
-        
+
         if (parallaxElements.length === 0) return;
-        
+
+        let ticking = false;
+
         window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            
-            parallaxElements.forEach(element => {
-                element.style.transform = `translateY(${rate}px)`;
-            });
-        });
-    }
-    
-    initSmoothScrolling() {
-        const anchorLinks = document.querySelectorAll('a[href^="#"]');
-        
-        anchorLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                const targetId = link.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    const headerHeight = 80; // Account for fixed header
-                    const targetPosition = targetElement.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    const rate = scrolled * -0.5;
+
+                    parallaxElements.forEach(element => {
+                        element.style.transform = `translateY(${rate}px)`;
                     });
-                }
-            });
-        });
+
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
     }
 }
 

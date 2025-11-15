@@ -13,6 +13,8 @@ describe('ScrollAnimations', () => {
     let scrollAnimations;
 
     beforeEach(() => {
+        jest.useFakeTimers();
+
         document.body.innerHTML = `
             <div class="fade-in-up">Element 1</div>
             <div class="fade-in-left">Element 2</div>
@@ -27,6 +29,10 @@ describe('ScrollAnimations', () => {
             unobserve: jest.fn(),
             disconnect: jest.fn()
         }));
+    });
+
+    afterEach(() => {
+        jest.useRealTimers();
     });
 
     afterEach(() => {
@@ -124,6 +130,9 @@ describe('ScrollAnimations', () => {
         global.pageYOffset = 100;
         window.dispatchEvent(new Event('scroll'));
 
+        // Flush requestAnimationFrame
+        jest.runAllTimers();
+
         expect(parallaxElement.style.transform).toContain('translateY');
     });
 
@@ -142,55 +151,6 @@ describe('ScrollAnimations', () => {
         }).not.toThrow();
     });
 
-    test('handles smooth scrolling with valid target', () => {
-        global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-            observe: jest.fn(),
-            unobserve: jest.fn()
-        }));
-
-        const mockScrollTo = jest.fn();
-        global.scrollTo = mockScrollTo;
-
-        scrollAnimations = new ScrollAnimations();
-
-        const link = document.querySelector('a[href="#section"]');
-        const section = document.querySelector('#section');
-
-        // Mock offsetTop property
-        Object.defineProperty(section, 'offsetTop', {
-            writable: true,
-            value: 500
-        });
-
-        link.click();
-
-        expect(mockScrollTo).toHaveBeenCalledWith({
-            top: 420, // 500 - 80 (header height)
-            behavior: 'smooth'
-        });
-    });
-
-    test('handles smooth scrolling with no target element', () => {
-        document.body.innerHTML = `
-            <a href="#nonexistent">Broken Link</a>
-        `;
-
-        global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-            observe: jest.fn(),
-            unobserve: jest.fn()
-        }));
-
-        const mockScrollTo = jest.fn();
-        global.scrollTo = mockScrollTo;
-
-        scrollAnimations = new ScrollAnimations();
-
-        const link = document.querySelector('a');
-        link.click();
-
-        // Should not call scrollTo when target doesn't exist
-        expect(mockScrollTo).not.toHaveBeenCalled();
-    });
 });
 
 describe('MicroInteractions', () => {

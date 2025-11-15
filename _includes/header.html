@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" role="banner">
     <a href="{{ '/' | relative_url }}" class="logo">
         <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Lono Collective" class="logo-icon">
         <span class="logo-text">{{ site.title }}</span>
@@ -7,16 +7,23 @@
     <div class="header-nav">
         {% include navigation.html %}
 
-        <div class="menu-toggle" id="menuToggle">
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu">
             <div class="menu-line"></div>
             <div class="menu-line"></div>
             <div class="menu-line"></div>
-        </div>
+        </button>
     </div>
 
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu"
+         id="mobileMenu"
+         aria-label="Mobile navigation"
+         aria-hidden="true">
         {% for item in site.data.navigation %}
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
         {% endfor %}
-    </div>
+    </nav>
 </header>

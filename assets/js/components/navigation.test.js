@@ -155,19 +155,29 @@ describe('initSmoothScrolling', () => {
     });
 
     test('adds click event listeners to anchor links', () => {
+        // Mock window.scrollTo
+        const mockScrollTo = jest.fn();
+        global.window.scrollTo = mockScrollTo;
+
         initSmoothScrolling();
 
         const link1 = document.getElementById('link1');
-        const clickEvent = new MouseEvent('click', { bubbles: true, cancelable: true });
-
-        // Mock scrollIntoView
         const section1 = document.getElementById('section1');
-        section1.scrollIntoView = jest.fn();
 
+        // Mock offsetTop property
+        Object.defineProperty(section1, 'offsetTop', {
+            writable: true,
+            value: 500
+        });
+
+        const clickEvent = new MouseEvent('click', { bubbles: true, cancelable: true });
         link1.dispatchEvent(clickEvent);
 
         expect(clickEvent.defaultPrevented).toBe(true);
-        expect(section1.scrollIntoView).toHaveBeenCalledWith({ behavior: 'smooth' });
+        expect(mockScrollTo).toHaveBeenCalledWith({
+            top: 420, // 500 - 80 (header height)
+            behavior: 'smooth'
+        });
     });
 
     test('does not affect external links', () => {
@@ -197,17 +207,35 @@ describe('initSmoothScrolling', () => {
     });
 
     test('handles multiple anchor links', () => {
+        // Mock window.scrollTo
+        const mockScrollTo = jest.fn();
+        global.window.scrollTo = mockScrollTo;
+
         initSmoothScrolling();
 
         const section1 = document.getElementById('section1');
         const section2 = document.getElementById('section2');
-        section1.scrollIntoView = jest.fn();
-        section2.scrollIntoView = jest.fn();
+
+        // Mock offsetTop properties
+        Object.defineProperty(section1, 'offsetTop', {
+            writable: true,
+            value: 300
+        });
+        Object.defineProperty(section2, 'offsetTop', {
+            writable: true,
+            value: 600
+        });
 
         document.getElementById('link1').click();
-        expect(section1.scrollIntoView).toHaveBeenCalledWith({ behavior: 'smooth' });
+        expect(mockScrollTo).toHaveBeenCalledWith({
+            top: 220, // 300 - 80
+            behavior: 'smooth'
+        });
 
         document.getElementById('link2').click();
-        expect(section2.scrollIntoView).toHaveBeenCalledWith({ behavior: 'smooth' });
+        expect(mockScrollTo).toHaveBeenCalledWith({
+            top: 520, // 600 - 80
+            behavior: 'smooth'
+        });
     });
 });
