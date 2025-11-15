@@ -81,7 +81,13 @@ title: AI Safety Evaluation Frameworks
     <div class="team-grid">
         {% for member in site.data.team %}
         <div class="team-member fade-in-up">
+            {% if member.image %}
+            <div class="member-avatar">
+                <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+            </div>
+            {% else %}
             <div class="member-avatar">{{ member.initials }}</div>
+            {% endif %}
             <div class="member-info">
                 <h3>{{ member.name }}</h3>
                 <p class="member-title">{{ member.title }}</p>
