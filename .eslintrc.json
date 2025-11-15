@@ -2,7 +2,8 @@
   "env": {
     "browser": true,
     "es2021": true,
-    "jest": true
+    "jest": true,
+    "node": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {
@@ -12,5 +13,19 @@
   "rules": {
     "no-unused-vars": "warn",
     "no-console": "warn"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "env": {
+        "jest": true
+      },
+      "globals": {
+        "global": "readonly"
+      },
+      "rules": {
+        "no-unused-vars": "off"
+      }
+    }
+  ]
 }
