@@ -6,7 +6,7 @@ title: AI Safety Evaluation Frameworks
 {% include hero.html %}
 
 <section class="problem-section">
-    <div class="problem-content">
+    <div class="problem-content fade-in-up">
         <h2>Your internal testing caught the obvious problems. We catch the ones you missed.</h2>
         <p class="problem-stat">When your AI system could <strong>hurt or kill people</strong>, you need independent proof it's safe.</p>
         <p class="problem-detail">You've run evaluations and stress-tested edge cases. But regulators and stakeholders won't take your word for it. They need validation from experts with no stake in your product's success.</p>
@@ -16,32 +16,32 @@ title: AI Safety Evaluation Frameworks
 
 <section id="framework" class="framework-section">
     <div class="framework-content">
-        <h2>What you get from an engagement</h2>
-        <p class="framework-intro">Independent safety evaluations combining clinical expertise with technical research. Documentation designed to withstand both academic peer review and legal scrutiny.</p>
+        <h2 class="fade-in-up">What you get from an engagement</h2>
+        <p class="framework-intro fade-in-up">Independent safety evaluations combining clinical expertise with technical research. Documentation designed to withstand both academic peer review and legal scrutiny.</p>
 
         <div class="framework-approach">
-            <h3>Four Concrete Deliverables</h3>
+            <h3 class="fade-in-up">Four Concrete Deliverables</h3>
             <div class="methodology-grid">
-                <div class="method-card">
+                <div class="method-card fade-in-up">
                     <h4>Specific Failure Modes You Missed</h4>
                     <p>Systematic testing using evidence-based scenarios reveals where your system breaks down before real users encounter those failures.</p>
                 </div>
-                <div class="method-card">
+                <div class="method-card fade-in-up">
                     <h4>Regulatory-Ready Documentation</h4>
                     <p>Academic-standard research methodology (e.g., PRISMA systematic reviews, Delphi expert consensus) designed to withstand both peer review and legal challenges. Reports that satisfy regulatory audits, stakeholder due diligence, and courtroom scrutiny.</p>
                 </div>
-                <div class="method-card">
+                <div class="method-card fade-in-up">
                     <h4>Actionable Implementation Roadmap</h4>
                     <p>Defensible guidelines for fixes, prioritized by risk severity and validated by domain experts.</p>
                 </div>
-                <div class="method-card">
+                <div class="method-card fade-in-up">
                     <h4>Third-Party Credibility</h4>
                     <p>Independent validation from a cooperative with no VC pressure, no equity stake in your success. Just rigorous evaluation and honest findings.</p>
                 </div>
             </div>
         </div>
 
-        <div class="framework-impact">
+        <div class="framework-impact fade-in-up">
             <h3>Multidisciplinary expertise across any domain</h3>
             <p>Our core team brings clinical psychology, emergency medicine, legal compliance, public health research, and technical AI evaluation. Our network gives us access to expert witnesses and domain specialists across virtually any high-stakes field.</p>
         </div>
@@ -50,30 +50,30 @@ title: AI Safety Evaluation Frameworks
 
 <section class="cooperative-section">
     <div class="cooperative-content">
-        <h2>Why the cooperative model matters</h2>
-        <p class="cooperative-intro">Worker-owned and democratically governed. No venture capital pressure. No compromised research integrity.</p>
+        <h2 class="fade-in-up">Why the cooperative model matters</h2>
+        <p class="cooperative-intro fade-in-up">Worker-owned and democratically governed. No venture capital pressure. No compromised research integrity.</p>
 
         <div class="cooperative-benefits">
-            <div class="benefit-card">
+            <div class="benefit-card fade-in-up">
                 <h3>No VC Pressure</h3>
                 <p>Bootstrapped and independent. Never pressured to compromise safety for profit or growth metrics.</p>
             </div>
-            <div class="benefit-card">
+            <div class="benefit-card fade-in-up">
                 <h3>Democratic Governance</h3>
                 <p>Equal ownership and decision-making power. Collective accountability for our work's integrity.</p>
             </div>
-            <div class="benefit-card">
+            <div class="benefit-card fade-in-up">
                 <h3>Aligned Incentives</h3>
                 <p>Profit-sharing means every contributor is invested in delivering rigorous research.</p>
             </div>
         </div>
 
-        <p class="cooperative-value">In AI safety research, independence isn't just a business model. It's a moral imperative.</p>
+        <p class="cooperative-value fade-in-up">In AI safety research, independence isn't just a business model. It's a moral imperative.</p>
     </div>
 </section>
 
 <section id="team" class="team-section">
-    <div class="section-header">
+    <div class="section-header fade-in-up">
         <h2>Multidisciplinary Expertise</h2>
         <p class="section-subtitle">Clinical, legal, technical, and research capabilities under one cooperative</p>
     </div>
@@ -101,8 +101,8 @@ title: AI Safety Evaluation Frameworks
 
 <section id="contact" class="contact-section">
     <div class="contact-content">
-        <h2>Ready to validate your AI system?</h2>
-        <p class="contact-description">
+        <h2 class="fade-in-up">Ready to validate your AI system?</h2>
+        <p class="contact-description fade-in-up">
             We work with AI companies, research institutes, and government agencies deploying systems in high-stakes domains. If failure could harm people, we can prove it's safe or fix it before launch.
         </p>
 
@@ -115,11 +115,11 @@ title: AI Safety Evaluation Frameworks
             {% endfor %}
         </div>
 
-        <div class="contact-value">
+        <div class="contact-value fade-in-up">
             <p>Every engagement delivers documentation you can defend to regulators, stakeholders, and the public. No conflicts of interest. No compromises on rigor.</p>
         </div>
 
-        <div class="contact-cta">
+        <div class="contact-cta fade-in-up">
             <a href="mailto:{{ site.email }}" class="cta-button primary large">Get Independent Validation</a>
         </div>
     </div>
