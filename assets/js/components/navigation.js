@@ -85,34 +85,30 @@ export function initNavigation() {
 
 export function initSmoothScrolling() {
     const HEADER_HEIGHT = 80;
+    const anchors = document.querySelectorAll('a[href^="#"]');
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchors.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
 
             // Ignore empty or just # links
             if (!href || href === '#') return;
 
-            // Prevent default link behavior
-            e.preventDefault();
-
             // Find the target element
             const target = document.querySelector(href);
 
             if (target) {
+                // Prevent default link behavior
+                e.preventDefault();
+
                 // Calculate position accounting for fixed header
-                const targetPosition = target.offsetTop - HEADER_HEIGHT;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - HEADER_HEIGHT;
 
                 // Scroll to target with smooth behavior
-                try {
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                } catch (error) {
-                    // Fallback for browsers that don't support smooth scrolling
-                    window.scrollTo(0, targetPosition);
-                }
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });

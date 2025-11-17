@@ -258,20 +258,18 @@ describe('initSmoothScrolling', () => {
     });
 
     test('adds click event listeners to anchor links', () => {
-        // Mock window.scrollTo
+        // Mock window.scrollTo and pageYOffset
         const mockScrollTo = jest.fn();
         global.window.scrollTo = mockScrollTo;
+        global.window.pageYOffset = 0;
 
         initSmoothScrolling();
 
         const link1 = document.getElementById('link1');
         const section1 = document.getElementById('section1');
 
-        // Mock offsetTop property
-        Object.defineProperty(section1, 'offsetTop', {
-            writable: true,
-            value: 500
-        });
+        // Mock getBoundingClientRect
+        section1.getBoundingClientRect = jest.fn().mockReturnValue({ top: 500 });
 
         const clickEvent = new MouseEvent('click', { bubbles: true, cancelable: true });
         link1.dispatchEvent(clickEvent);
@@ -306,28 +304,24 @@ describe('initSmoothScrolling', () => {
         const clickEvent = new MouseEvent('click', { bubbles: true, cancelable: true });
 
         expect(() => brokenLink.dispatchEvent(clickEvent)).not.toThrow();
-        expect(clickEvent.defaultPrevented).toBe(true);
+        // preventDefault is only called if target exists
+        expect(clickEvent.defaultPrevented).toBe(false);
     });
 
     test('handles multiple anchor links', () => {
-        // Mock window.scrollTo
+        // Mock window.scrollTo and pageYOffset
         const mockScrollTo = jest.fn();
         global.window.scrollTo = mockScrollTo;
+        global.window.pageYOffset = 0;
 
         initSmoothScrolling();
 
         const section1 = document.getElementById('section1');
         const section2 = document.getElementById('section2');
 
-        // Mock offsetTop properties
-        Object.defineProperty(section1, 'offsetTop', {
-            writable: true,
-            value: 300
-        });
-        Object.defineProperty(section2, 'offsetTop', {
-            writable: true,
-            value: 600
-        });
+        // Mock getBoundingClientRect
+        section1.getBoundingClientRect = jest.fn().mockReturnValue({ top: 300 });
+        section2.getBoundingClientRect = jest.fn().mockReturnValue({ top: 600 });
 
         document.getElementById('link1').click();
         expect(mockScrollTo).toHaveBeenCalledWith({
