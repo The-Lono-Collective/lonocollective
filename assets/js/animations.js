@@ -168,15 +168,8 @@ export class PerformanceOptimizer {
     }
     
     initCriticalCSS() {
-        // Inline critical CSS for above-the-fold content
-        const criticalCSS = `
-            .hero-section { min-height: 100vh; }
-            .gradient-text { background: linear-gradient(135deg, #00d4ff 0%, #6366f1 50%, #8b5cf6 100%); }
-        `;
-        
-        const style = document.createElement('style');
-        style.textContent = criticalCSS;
-        document.head.appendChild(style);
+        // Critical CSS is now handled in the main stylesheet
+        // Removed dynamic injection that was causing layout shift
     }
     
     initPreloadResources() {

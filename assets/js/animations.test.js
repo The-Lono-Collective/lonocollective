@@ -283,16 +283,13 @@ describe('PerformanceOptimizer', () => {
         expect(mockObserve).toHaveBeenCalledTimes(2);
     });
 
-    test('adds critical CSS to head', () => {
+    test('does not inject critical CSS dynamically to prevent layout shift', () => {
+        const initialStyles = document.head.querySelectorAll('style').length;
         performanceOptimizer = new PerformanceOptimizer();
 
-        const styles = document.head.querySelectorAll('style');
-        expect(styles.length).toBeGreaterThan(0);
-
-        const criticalStyle = Array.from(styles).find(style =>
-            style.textContent.includes('.hero-section')
-        );
-        expect(criticalStyle).toBeTruthy();
+        const finalStyles = document.head.querySelectorAll('style').length;
+        // Should not add any new style elements (critical CSS is in stylesheet)
+        expect(finalStyles).toBe(initialStyles);
     });
 
     test('adds preload links', () => {
