@@ -109,6 +109,16 @@ export function initSmoothScrolling() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+
+                // For skip links, also set focus on the target for screen readers
+                if (this.classList.contains('skip-link')) {
+                    // Make target focusable if it isn't already
+                    if (!target.hasAttribute('tabindex')) {
+                        target.setAttribute('tabindex', '-1');
+                    }
+                    // Focus the target after a brief delay to ensure scroll completes
+                    setTimeout(() => target.focus(), 100);
+                }
             }
         });
     });
