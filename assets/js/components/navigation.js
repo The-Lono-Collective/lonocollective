@@ -89,16 +89,30 @@ export function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
+
+            // Ignore empty or just # links
             if (!href || href === '#') return;
 
+            // Prevent default link behavior
             e.preventDefault();
+
+            // Find the target element
             const target = document.querySelector(href);
+
             if (target) {
+                // Calculate position accounting for fixed header
                 const targetPosition = target.offsetTop - HEADER_HEIGHT;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+
+                // Scroll to target with smooth behavior
+                try {
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                } catch (error) {
+                    // Fallback for browsers that don't support smooth scrolling
+                    window.scrollTo(0, targetPosition);
+                }
             }
         });
     });

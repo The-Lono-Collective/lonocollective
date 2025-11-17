@@ -131,6 +131,109 @@ describe('initNavigation', () => {
         expect(menuToggle.classList.contains('active')).toBe(true);
         expect(mobileMenu.classList.contains('active')).toBe(true);
     });
+
+    test('closes menu on Escape key press', () => {
+        initNavigation();
+
+        // Open menu
+        menuToggle.click();
+        expect(menuToggle.getAttribute('aria-expanded')).toBe('true');
+
+        // Mock focus method
+        menuToggle.focus = jest.fn();
+
+        // Press Escape key
+        const escapeEvent = new KeyboardEvent('keydown', { key: 'Escape' });
+        document.dispatchEvent(escapeEvent);
+
+        expect(menuToggle.getAttribute('aria-expanded')).toBe('false');
+        expect(menuToggle.focus).toHaveBeenCalled();
+    });
+
+    test('does not close menu on Escape when menu is already closed', () => {
+        initNavigation();
+
+        // Menu starts closed (aria-expanded is not "true")
+        expect(menuToggle.getAttribute('aria-expanded')).not.toBe('true');
+
+        menuToggle.focus = jest.fn();
+
+        // Press Escape key
+        const escapeEvent = new KeyboardEvent('keydown', { key: 'Escape' });
+        document.dispatchEvent(escapeEvent);
+
+        // Should not focus toggle when menu was already closed
+        expect(menuToggle.focus).not.toHaveBeenCalled();
+    });
+
+    test('traps focus with Tab key in open menu', () => {
+        initNavigation();
+
+        // Open menu
+        menuToggle.click();
+
+        const firstLink = mobileMenu.querySelector('a:first-child');
+        const lastLink = mobileMenu.querySelector('a:last-child');
+
+        // Mock focus methods
+        firstLink.focus = jest.fn();
+        lastLink.focus = jest.fn();
+
+        // Set active element to last link
+        Object.defineProperty(document, 'activeElement', {
+            writable: true,
+            configurable: true,
+            value: lastLink
+        });
+
+        // Press Tab (forward) on last element
+        const tabEvent = new KeyboardEvent('keydown', {
+            key: 'Tab',
+            shiftKey: false,
+            bubbles: true,
+            cancelable: true
+        });
+        mobileMenu.dispatchEvent(tabEvent);
+
+        // Should focus first element
+        expect(firstLink.focus).toHaveBeenCalled();
+    });
+
+    test('traps focus with Shift+Tab in open menu', () => {
+        initNavigation();
+
+        // Open menu
+        menuToggle.click();
+
+        const firstLink = mobileMenu.querySelector('a:first-child');
+        const lastLink = mobileMenu.querySelector('a:last-child');
+
+        // Mock focus methods
+        firstLink.focus = jest.fn();
+        lastLink.focus = jest.fn();
+
+        // Set active element to first link
+        Object.defineProperty(document, 'activeElement', {
+            writable: true,
+            configurable: true,
+            value: firstLink
+        });
+
+        // Press Shift+Tab (backward) on first element
+        const shiftTabEvent = new KeyboardEvent('keydown', {
+            key: 'Tab',
+            shiftKey: true,
+            bubbles: true,
+            cancelable: true
+        });
+
+        // Mock preventDefault
+        shiftTabEvent.preventDefault = jest.fn();
+        mobileMenu.dispatchEvent(shiftTabEvent);
+
+        // Should focus last element
+        expect(lastLink.focus).toHaveBeenCalled();
+    });
 });
 
 describe('initSmoothScrolling', () => {
