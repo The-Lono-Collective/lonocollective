@@ -334,6 +334,118 @@ body::before {
     font-weight: 300;
 }
 
+.framework-impact ul {
+    list-style: none;
+    margin-top: 24px;
+    padding: 0;
+}
+
+.framework-impact li {
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    padding-left: 28px;
+    position: relative;
+    font-weight: 300;
+}
+
+.framework-impact li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.framework-impact li strong {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.settings-section {
+    padding: 80px 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.settings-content h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: clamp(36px, 7vw, 56px);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.settings-intro {
+    font-size: clamp(18px, 2.5vw, 22px);
+    line-height: 1.9;
+    color: var(--text-secondary);
+    max-width: 850px;
+    margin: 0 auto 64px;
+    text-align: left;
+    font-weight: 300;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.setting-card {
+    background: transparent;
+    border-left: 4px solid var(--accent-primary);
+    border-radius: 12px;
+    padding: 36px;
+    transition: all 0.3s ease;
+}
+
+.setting-card:hover {
+    border-color: var(--border-color);
+    background: transparent;
+}
+
+.setting-card h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--accent-primary);
+    margin-bottom: 16px;
+}
+
+.setting-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.clinical-advisory {
+    max-width: 1100px;
+    margin: 48px auto 0;
+    padding: 32px;
+    background: rgba(127, 184, 148, 0.04);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.clinical-advisory p {
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.clinical-advisory strong {
+    color: var(--accent-primary);
+    font-weight: 500;
+}
+
 .cooperative-section {
     padding: 80px 20px;
     max-width: 1600px;
