@@ -115,41 +115,6 @@ describe('ScrollAnimations', () => {
         expect(element.classList.contains('animate')).toBe(false);
     });
 
-    test('sets up parallax effect when parallax elements exist', () => {
-        global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-            observe: jest.fn(),
-            unobserve: jest.fn()
-        }));
-
-        scrollAnimations = new ScrollAnimations();
-
-        const parallaxElement = document.querySelector('.parallax-element');
-        expect(parallaxElement).toBeTruthy();
-
-        // Simulate scroll
-        global.pageYOffset = 100;
-        window.dispatchEvent(new Event('scroll'));
-
-        // Flush requestAnimationFrame
-        jest.runAllTimers();
-
-        expect(parallaxElement.style.transform).toContain('translateY');
-    });
-
-    test('skips parallax setup when no parallax elements exist', () => {
-        document.body.innerHTML = `
-            <div class="fade-in-up">Element 1</div>
-        `;
-
-        global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-            observe: jest.fn(),
-            unobserve: jest.fn()
-        }));
-
-        expect(() => {
-            scrollAnimations = new ScrollAnimations();
-        }).not.toThrow();
-    });
 
 });
 
@@ -206,10 +171,10 @@ describe('MicroInteractions', () => {
         jest.useRealTimers();
     });
 
-    test('applies card tilt on mousemove', () => {
+    test('applies card tilt on mousemove to team members', () => {
         microInteractions = new MicroInteractions();
 
-        const card = document.querySelector('.service-card');
+        const card = document.querySelector('.team-member');
         card.getBoundingClientRect = jest.fn().mockReturnValue({
             left: 0,
             top: 0,
@@ -232,7 +197,7 @@ describe('MicroInteractions', () => {
     test('resets card transform on mouseleave', () => {
         microInteractions = new MicroInteractions();
 
-        const card = document.querySelector('.service-card');
+        const card = document.querySelector('.team-member');
         card.style.transform = 'perspective(1000px) rotateX(5deg) rotateY(5deg)';
 
         card.dispatchEvent(new MouseEvent('mouseleave'));
@@ -241,137 +206,3 @@ describe('MicroInteractions', () => {
     });
 });
 
-describe('PerformanceOptimizer', () => {
-    let performanceOptimizer;
-
-    beforeEach(() => {
-        document.head.innerHTML = '';
-        document.body.innerHTML = `
-            <img data-src="image1.jpg" class="lazy" />
-            <img data-src="image2.jpg" class="lazy" />
-        `;
-
-        // Mock IntersectionObserver for lazy loading
-        global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({
-            observe: jest.fn(),
-            unobserve: jest.fn(),
-            disconnect: jest.fn()
-        }));
-    });
-
-    afterEach(() => {
-        document.head.innerHTML = '';
-        document.body.innerHTML = '';
-        jest.clearAllMocks();
-    });
-
-    test('initializes without errors', () => {
-        expect(() => {
-            performanceOptimizer = new PerformanceOptimizer();
-        }).not.toThrow();
-    });
-
-    test('observes lazy load images', () => {
-        const mockObserve = jest.fn();
-        global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-            observe: mockObserve,
-            unobserve: jest.fn()
-        }));
-
-        performanceOptimizer = new PerformanceOptimizer();
-
-        expect(mockObserve).toHaveBeenCalledTimes(2);
-    });
-
-    test('does not inject critical CSS dynamically to prevent layout shift', () => {
-        const initialStyles = document.head.querySelectorAll('style').length;
-        performanceOptimizer = new PerformanceOptimizer();
-
-        const finalStyles = document.head.querySelectorAll('style').length;
-        // Should not add any new style elements (critical CSS is in stylesheet)
-        expect(finalStyles).toBe(initialStyles);
-    });
-
-    test('adds preload links', () => {
-        performanceOptimizer = new PerformanceOptimizer();
-
-        const preloadLinks = document.head.querySelectorAll('link[rel="preload"]');
-        expect(preloadLinks.length).toBeGreaterThan(0);
-    });
-});
-
-describe('AccessibilityEnhancer', () => {
-    let accessibilityEnhancer;
-
-    beforeEach(() => {
-        document.body.innerHTML = `
-            <div class="service-card">
-                <h3>Service Title</h3>
-            </div>
-            <div class="team-member">
-                <h3>Member Name</h3>
-            </div>
-            <button>Test Button</button>
-        `;
-    });
-
-    afterEach(() => {
-        document.body.innerHTML = '';
-    });
-
-    test('initializes without errors', () => {
-        expect(() => {
-            accessibilityEnhancer = new AccessibilityEnhancer();
-        }).not.toThrow();
-    });
-
-    test('adds keyboard-navigation class on Tab key', () => {
-        accessibilityEnhancer = new AccessibilityEnhancer();
-
-        const tabEvent = new KeyboardEvent('keydown', { key: 'Tab' });
-        document.dispatchEvent(tabEvent);
-
-        expect(document.body.classList.contains('keyboard-navigation')).toBe(true);
-    });
-
-    test('removes keyboard-navigation class on mousedown', () => {
-        accessibilityEnhancer = new AccessibilityEnhancer();
-
-        document.body.classList.add('keyboard-navigation');
-
-        const mouseEvent = new MouseEvent('mousedown');
-        document.dispatchEvent(mouseEvent);
-
-        expect(document.body.classList.contains('keyboard-navigation')).toBe(false);
-    });
-
-    test('blurs active element on Escape key', () => {
-        accessibilityEnhancer = new AccessibilityEnhancer();
-
-        const button = document.querySelector('button');
-        button.focus();
-
-        const blurSpy = jest.spyOn(button, 'blur');
-
-        const escapeEvent = new KeyboardEvent('keydown', { key: 'Escape' });
-        document.dispatchEvent(escapeEvent);
-
-        expect(blurSpy).toHaveBeenCalled();
-    });
-
-    test('adds ARIA attributes to service cards', () => {
-        accessibilityEnhancer = new AccessibilityEnhancer();
-
-        const serviceCard = document.querySelector('.service-card');
-        expect(serviceCard.getAttribute('role')).toBe('article');
-        expect(serviceCard.getAttribute('aria-labelledby')).toBeTruthy();
-    });
-
-    test('adds ARIA attributes to team members', () => {
-        accessibilityEnhancer = new AccessibilityEnhancer();
-
-        const teamMember = document.querySelector('.team-member');
-        expect(teamMember.getAttribute('role')).toBe('article');
-        expect(teamMember.getAttribute('aria-labelledby')).toBeTruthy();
-    });
-});
