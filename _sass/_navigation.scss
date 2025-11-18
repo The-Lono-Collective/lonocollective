@@ -39,7 +39,7 @@
 .menu-line {
     width: 25px;
     height: 2px;
-    background-color: var(--accent-primary);
+    background-color: var(--accent-tertiary);
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -90,7 +90,7 @@
 }
 
 .menu-toggle:hover .menu-line {
-    background-color: var(--accent-primary);
+    background-color: var(--text-primary);
 }
 
 .menu-toggle.active .menu-line:nth-child(1) {
