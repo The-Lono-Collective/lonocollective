@@ -178,3 +178,120 @@ describe('Contact Form', () => {
         expect(submitted).toBe(true);
     });
 });
+
+describe('Contact Form AJAX Handler', () => {
+    let form;
+    let submitButton;
+
+    beforeEach(() => {
+        document.body.innerHTML = `
+            <div class="contact-content">
+                <form class="contact-form" action="https://formspree.io/f/xqanepdw" method="POST">
+                    <input type="text" id="name" name="name" required>
+                    <input type="email" id="email" name="email" required>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit" class="cta-button primary large">Send Inquiry</button>
+                </form>
+            </div>
+        `;
+
+        form = document.querySelector('.contact-form');
+        submitButton = form.querySelector('button[type="submit"]');
+
+        // Mock fetch
+        global.fetch = jest.fn();
+    });
+
+    afterEach(() => {
+        document.body.innerHTML = '';
+        jest.restoreAllMocks();
+    });
+
+    test('AJAX submission prevents default form submission', async () => {
+        const { initContactForm } = await import('./contact-form.js');
+        initContactForm();
+
+        const submitEvent = new Event('submit', { bubbles: true, cancelable: true });
+        let defaultPrevented = false;
+
+        submitEvent.preventDefault = () => { defaultPrevented = true; };
+
+        form.dispatchEvent(submitEvent);
+
+        expect(defaultPrevented).toBe(true);
+    });
+
+    test('successful submission shows success message', async () => {
+        global.fetch.mockResolvedValue({
+            ok: true,
+            json: async () => ({})
+        });
+
+        const { initContactForm } = await import('./contact-form.js');
+        initContactForm();
+
+        // Fill form
+        document.getElementById('name').value = 'Test User';
+        document.getElementById('email').value = 'test@example.com';
+        document.getElementById('message').value = 'Test message';
+
+        // Submit form
+        form.dispatchEvent(new Event('submit'));
+
+        // Wait for async operations
+        await new Promise(resolve => setTimeout(resolve, 100));
+
+        // Check for success message
+        const successMessage = document.querySelector('.form-success');
+        expect(successMessage).toBeTruthy();
+        expect(successMessage.textContent).toContain('Message sent successfully');
+    });
+
+    test('failed submission shows error message', async () => {
+        global.fetch.mockResolvedValue({
+            ok: false,
+            json: async () => ({ errors: 'Test error' })
+        });
+
+        const { initContactForm } = await import('./contact-form.js');
+        initContactForm();
+
+        // Fill form
+        document.getElementById('name').value = 'Test User';
+        document.getElementById('email').value = 'test@example.com';
+        document.getElementById('message').value = 'Test message';
+
+        // Submit form
+        form.dispatchEvent(new Event('submit'));
+
+        // Wait for async operations
+        await new Promise(resolve => setTimeout(resolve, 100));
+
+        // Check for error message
+        const errorMessage = document.querySelector('.form-error');
+        expect(errorMessage).toBeTruthy();
+    });
+
+    test('network error shows error message', async () => {
+        global.fetch.mockRejectedValue(new Error('Network error'));
+
+        const { initContactForm } = await import('./contact-form.js');
+        initContactForm();
+
+        // Fill form
+        document.getElementById('name').value = 'Test User';
+        document.getElementById('email').value = 'test@example.com';
+        document.getElementById('message').value = 'Test message';
+
+        // Submit form
+        form.dispatchEvent(new Event('submit'));
+
+        // Wait for async operations
+        await new Promise(resolve => setTimeout(resolve, 100));
+
+        // Check for error message
+        const errorMessage = document.querySelector('.form-error');
+        expect(errorMessage).toBeTruthy();
+        expect(errorMessage.textContent).toContain('Network error');
+    });
+});

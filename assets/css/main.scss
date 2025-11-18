@@ -959,6 +959,62 @@ body::before {
     text-decoration: underline;
 }
 
+/* Form Messages (Success/Error) */
+.form-message {
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.form-success {
+    background: rgba(127, 184, 148, 0.1);
+    border: 2px solid var(--accent-primary);
+}
+
+.form-error {
+    background: rgba(212, 138, 127, 0.1);
+    border: 2px solid var(--clinical-urgent);
+}
+
+.message-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.form-success .message-icon {
+    color: var(--accent-primary);
+}
+
+.form-error .message-icon {
+    color: var(--clinical-urgent);
+}
+
+.form-message h3 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.form-message p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.form-message button {
+    margin-top: 16px;
+}
+
+.form-error {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
 /* Trust Indicators */
 .trust-indicators {
     display: flex;
