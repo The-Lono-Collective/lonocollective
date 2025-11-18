@@ -1,219 +1,42 @@
 /* ============================================
-   Flowing Arc Background (Page 8 Aesthetic)
+   Lightweight Background Gradient
    ============================================
-   Inspired by the curved flowing arcs design from the brand proposal.
-   Creates luminous, flowing gradients suggesting movement and depth.
+   Static CSS gradients for visual depth without performance cost.
+   No blur filters, no animations, no GPU overhead.
 */
 
 // Apply to body for global effect
 .flowing-arcs-bg {
-    position: relative;
-
-    &::before {
-        content: '';
-        position: fixed;
-        top: -20%;
-        right: -10%;
-        width: 140%;
-        height: 140%;
-        background:
-            radial-gradient(
-                ellipse 800px 400px at 70% 20%,
-                rgba(127, 184, 148, 0.15) 0%,
-                rgba(90, 143, 112, 0.08) 40%,
-                transparent 70%
-            ),
-            radial-gradient(
-                ellipse 1000px 500px at 30% 60%,
-                rgba(157, 212, 184, 0.12) 0%,
-                rgba(127, 184, 148, 0.06) 45%,
-                transparent 75%
-            ),
-            radial-gradient(
-                ellipse 700px 350px at 80% 80%,
-                rgba(90, 143, 112, 0.1) 0%,
-                rgba(127, 184, 148, 0.05) 50%,
-                transparent 70%
-            );
-        filter: blur(60px);
-        opacity: 0.8;
-        z-index: -1;
-        pointer-events: none;
-        will-change: transform, opacity;
-        animation: flowingArcsPulse 20s ease-in-out infinite alternate;
-    }
-
-    &::after {
-        content: '';
-        position: fixed;
-        bottom: -20%;
-        left: -15%;
-        width: 130%;
-        height: 120%;
-        background:
-            radial-gradient(
-                ellipse 900px 450px at 20% 80%,
-                rgba(157, 212, 184, 0.13) 0%,
-                rgba(127, 184, 148, 0.07) 45%,
-                transparent 72%
-            ),
-            radial-gradient(
-                ellipse 600px 300px at 60% 40%,
-                rgba(90, 143, 112, 0.09) 0%,
-                rgba(127, 184, 148, 0.04) 50%,
-                transparent 70%
-            );
-        filter: blur(80px);
-        opacity: 0.7;
-        z-index: -1;
-        pointer-events: none;
-        will-change: transform, opacity;
-        animation: flowingArcsPulse 25s ease-in-out infinite alternate-reverse;
-    }
+    background:
+        // Diagonal gradient for depth
+        linear-gradient(135deg,
+            rgba(93, 143, 112, 0.15) 0%,
+            rgba(13, 20, 16, 0.9) 50%,
+            rgba(127, 184, 148, 0.08) 100%
+        ),
+        // Top radial glow
+        radial-gradient(ellipse at 30% 20%,
+            rgba(127, 184, 148, 0.12) 0%,
+            transparent 50%
+        ),
+        // Bottom subtle accent
+        radial-gradient(ellipse at 70% 80%,
+            rgba(157, 212, 184, 0.08) 0%,
+            transparent 50%
+        ),
+        // Base dark background
+        var(--bg-primary);
+    background-attachment: fixed;
 }
 
-// Subtle animation for organic feel
-@keyframes flowingArcsPulse {
-    0% {
-        transform: scale(1) translate(0, 0);
-        opacity: 0.8;
-    }
-    50% {
-        transform: scale(1.05) translate(2%, -2%);
-        opacity: 0.9;
-    }
-    100% {
-        transform: scale(1.08) translate(-1%, 3%);
-        opacity: 0.75;
-    }
-}
-
-// Alternative: Section-specific arc treatment
+// Optional: Section-specific subtle gradient overlay
 .section-with-arcs {
     position: relative;
-    overflow: hidden;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -20%;
-        width: 800px;
-        height: 600px;
-        background: radial-gradient(
-            ellipse at center,
-            rgba(127, 184, 148, 0.18) 0%,
-            rgba(90, 143, 112, 0.1) 40%,
-            transparent 70%
-        );
-        border-radius: 50%;
-        filter: blur(60px);
-        transform: rotate(-25deg);
-        pointer-events: none;
-        z-index: 0;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -40%;
-        left: -15%;
-        width: 700px;
-        height: 500px;
-        background: radial-gradient(
-            ellipse at center,
-            rgba(157, 212, 184, 0.15) 0%,
-            rgba(127, 184, 148, 0.08) 45%,
-            transparent 72%
-        );
-        border-radius: 50%;
-        filter: blur(70px);
-        transform: rotate(15deg);
-        pointer-events: none;
-        z-index: 0;
-    }
-
-    > * {
-        position: relative;
-        z-index: 1;
-    }
-}
-
-// Hero-specific arc treatment (for dramatic entrance)
-.hero-section.with-arcs {
-    &::before {
-        content: '';
-        position: absolute;
-        top: -30%;
-        right: 10%;
-        width: 1000px;
-        height: 700px;
-        background:
-            radial-gradient(
-                ellipse at 30% 40%,
-                rgba(157, 212, 184, 0.2) 0%,
-                rgba(127, 184, 148, 0.12) 35%,
-                rgba(90, 143, 112, 0.06) 60%,
-                transparent 80%
-            );
-        filter: blur(80px);
-        transform: rotate(-20deg);
-        pointer-events: none;
-        z-index: 0;
-        animation: heroArcFloat 15s ease-in-out infinite alternate;
-    }
-
-    > * {
-        position: relative;
-        z-index: 1;
-    }
-}
-
-@keyframes heroArcFloat {
-    0% {
-        transform: rotate(-20deg) translateY(0);
-    }
-    100% {
-        transform: rotate(-18deg) translateY(-3%);
-    }
-}
-
-// Responsive adjustments
-@media (max-width: 1024px) {
-    .flowing-arcs-bg::before,
-    .flowing-arcs-bg::after {
-        filter: blur(50px);
-    }
-
-    .section-with-arcs::before,
-    .section-with-arcs::after {
-        filter: blur(45px);
-    }
-}
-
-@media (max-width: 768px) {
-    .flowing-arcs-bg::before,
-    .flowing-arcs-bg::after {
-        filter: blur(30px);
-        opacity: 0.5;
-        animation: none; // Disable animations on mobile for better performance
-    }
-
-    .section-with-arcs::before {
-        width: 600px;
-        height: 450px;
-    }
-
-    .section-with-arcs::after {
-        width: 500px;
-        height: 400px;
-    }
-}
-
-// Disable heavy effects for users who prefer reduced motion or low-end devices
-@media (prefers-reduced-motion: reduce) {
-    .flowing-arcs-bg::before,
-    .flowing-arcs-bg::after {
-        animation: none !important;
-    }
+    background: linear-gradient(
+        to bottom,
+        rgba(127, 184, 148, 0.05) 0%,
+        transparent 30%,
+        transparent 70%,
+        rgba(157, 212, 184, 0.05) 100%
+    );
 }
