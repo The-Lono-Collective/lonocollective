@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lonocollective.ai/sitemap.xml

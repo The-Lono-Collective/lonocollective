@@ -102,3 +102,7 @@ Gemfile.lock
 # Temporary files
 *.tmp
 *.temp
+
+# Project documentation (internal only)
+ocpi-condensed-5page.md.claude/
+reference_materials/

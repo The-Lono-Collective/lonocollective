@@ -1,136 +1,95 @@
-// Color Palette Themes for Lono Collective
+/* ============================================
+   Lono Collective Design System - Theme
+   ============================================
+   Single cohesive identity for institutional credibility.
+   Research organization requires authority, not customization.
+*/
 
-// Option 1: Deep Navy & Gold (Academic/Scholarly)
-.theme--navy-gold {
-    --bg-primary: #0f1419;
-    --bg-secondary: rgba(15, 20, 25, 0.4);
-    --text-primary: #e8e3d8;
-    --text-secondary: #b8a890;
-    --accent-primary: #d4a574;
-    --accent-secondary: #8b7355;
-    --accent-tertiary: #5a7a8a;
-    --gradient-start: rgba(212, 165, 116, 0.08);
-    --gradient-accent: rgba(212, 165, 116, 0.1);
-    --border-color: rgba(212, 165, 116, 0.15);
-    --shadow-color: rgba(212, 165, 116, 0.3);
+// Primary Theme: Green Gradient Dark
+// Conveys: Growth, healing, evidence-based research, environmental health
+.theme--green-gradient-dark {
+    --bg-primary: #0d1410;
+    --bg-secondary: rgba(13, 20, 16, 0.85);
+    --text-primary: #e8f0ec;
+    --text-secondary: #b0c4b8;
+    --accent-primary: #7fb894;
+    --accent-secondary: #5a8f70;
+    --accent-tertiary: #9dd4b8;
+    --gradient-start: rgba(127, 184, 148, 0.12);
+    --gradient-accent: rgba(127, 184, 148, 0.18);
+    --border-color: rgba(127, 184, 148, 0.2);
+    --shadow-color: rgba(127, 184, 148, 0.35);
+
+    // Multi-directional gradient backgrounds
+    --gradient-bg-hero: linear-gradient(135deg,
+        rgba(93, 143, 112, 0.15) 0%,
+        rgba(13, 20, 16, 0.9) 50%,
+        rgba(127, 184, 148, 0.08) 100%);
+    --gradient-bg-section: linear-gradient(165deg,
+        rgba(157, 212, 184, 0.08) 0%,
+        rgba(13, 20, 16, 0.95) 60%);
+    --gradient-bg-aurora: radial-gradient(ellipse at 50% -20%,
+        rgba(127, 184, 148, 0.25) 0%,
+        rgba(90, 143, 112, 0.12) 35%,
+        transparent 70%);
+
+    // Semantic Color System - Research States
+    --status-peer-reviewed: #7fb894;
+    --status-peer-reviewed-bg: rgba(127, 184, 148, 0.15);
+    --status-seeking-funding: #9dd4b8;
+    --status-seeking-funding-bg: rgba(157, 212, 184, 0.15);
+    --status-in-progress: #5a8f70;
+    --status-in-progress-bg: rgba(90, 143, 112, 0.15);
+    --status-under-review: #b8d4c6;
+    --status-under-review-bg: rgba(184, 212, 198, 0.15);
+
+    // Clinical/Urgent states
+    --clinical-urgent: #d48a7f;
+    --clinical-urgent-bg: rgba(212, 138, 127, 0.15);
+    --clinical-standard: #7fb894;
+    --clinical-standard-bg: rgba(127, 184, 148, 0.15);
 }
 
-// Option 2: Forest Green & Cream (Natural/Ethical)
-.theme--forest-cream {
-    --bg-primary: #1a1f1a;
-    --bg-secondary: rgba(26, 31, 26, 0.4);
-    --text-primary: #e8ebe4;
-    --text-secondary: #b8bfb4;
-    --accent-primary: #8fa884;
-    --accent-secondary: #5d6b5a;
-    --accent-tertiary: #a8956f;
-    --gradient-start: rgba(143, 168, 132, 0.08);
-    --gradient-accent: rgba(143, 168, 132, 0.1);
-    --border-color: rgba(143, 168, 132, 0.15);
-    --shadow-color: rgba(143, 168, 132, 0.3);
-}
+// Light Mode Theme (for accessibility and user preference)
+.theme--green-gradient-light {
+    --bg-primary: #f5f7f5;
+    --bg-secondary: rgba(245, 247, 245, 0.9);
+    --text-primary: #1a2820;
+    --text-secondary: #4a5a50;
+    --accent-primary: #5a8f70;
+    --accent-secondary: #7fb894;
+    --accent-tertiary: #9dd4b8;
+    --gradient-start: rgba(90, 143, 112, 0.08);
+    --gradient-accent: rgba(90, 143, 112, 0.12);
+    --border-color: rgba(90, 143, 112, 0.15);
+    --shadow-color: rgba(90, 143, 112, 0.2);
 
-// Option 3: Charcoal & Burgundy (Serious/Clinical)
-.theme--charcoal-burgundy {
-    --bg-primary: #1c1818;
-    --bg-secondary: rgba(28, 24, 24, 0.4);
-    --text-primary: #e8e0de;
-    --text-secondary: #b8aea8;
-    --accent-primary: #9d6b6b;
-    --accent-secondary: #6b4f4f;
-    --accent-tertiary: #8a7c7a;
-    --gradient-start: rgba(157, 107, 107, 0.08);
-    --gradient-accent: rgba(157, 107, 107, 0.1);
-    --border-color: rgba(157, 107, 107, 0.15);
-    --shadow-color: rgba(157, 107, 107, 0.3);
-}
+    // Multi-directional gradient backgrounds
+    --gradient-bg-hero: linear-gradient(135deg,
+        rgba(157, 212, 184, 0.2) 0%,
+        rgba(245, 247, 245, 0.95) 50%,
+        rgba(127, 184, 148, 0.15) 100%);
+    --gradient-bg-section: linear-gradient(165deg,
+        rgba(127, 184, 148, 0.12) 0%,
+        rgba(245, 247, 245, 0.98) 60%);
+    --gradient-bg-aurora: radial-gradient(ellipse at 50% -20%,
+        rgba(157, 212, 184, 0.3) 0%,
+        rgba(127, 184, 148, 0.15) 35%,
+        transparent 70%);
 
-// Option 4: Midnight Blue & Copper (Modern Research)
-.theme--midnight-copper {
-    --bg-primary: #12171f;
-    --bg-secondary: rgba(18, 23, 31, 0.4);
-    --text-primary: #e6e8eb;
-    --text-secondary: #b0b8c0;
-    --accent-primary: #b8866b;
-    --accent-secondary: #7a5c4f;
-    --accent-tertiary: #4a6b7c;
-    --gradient-start: rgba(184, 134, 107, 0.08);
-    --gradient-accent: rgba(184, 134, 107, 0.1);
-    --border-color: rgba(184, 134, 107, 0.15);
-    --shadow-color: rgba(184, 134, 107, 0.3);
-}
+    // Semantic Color System - Research States
+    --status-peer-reviewed: #5a8f70;
+    --status-peer-reviewed-bg: rgba(90, 143, 112, 0.12);
+    --status-seeking-funding: #7fb894;
+    --status-seeking-funding-bg: rgba(127, 184, 148, 0.12);
+    --status-in-progress: #4a7560;
+    --status-in-progress-bg: rgba(74, 117, 96, 0.12);
+    --status-under-review: #8fa89f;
+    --status-under-review-bg: rgba(143, 168, 159, 0.12);
 
-// Original: Warm Earth Tones
-.theme--default {
-    --bg-primary: #1a1512;
-    --bg-secondary: rgba(32, 26, 22, 0.4);
-    --text-primary: #e8dfd6;
-    --text-secondary: #b8a890;
-    --accent-primary: #8b5c48;
-    --accent-secondary: #c9a382;
-    --accent-tertiary: #a67c5c;
-    --gradient-start: rgba(139, 92, 72, 0.08);
-    --gradient-accent: rgba(139, 92, 72, 0.1);
-    --border-color: rgba(139, 92, 72, 0.15);
-    --shadow-color: rgba(139, 92, 72, 0.3);
-}
-
-// Option B: Dark Compassion (somber, psychological, intimate)
-.theme--dark-compassion {
-    --bg-primary: #1a1418;
-    --bg-secondary: rgba(26, 20, 24, 0.6);
-    --text-primary: #f0ebe8;
-    --text-secondary: #b8adb0;
-    --accent-primary: #9d7b8f;
-    --accent-secondary: #6b4f5e;
-    --accent-tertiary: #7a5968;
-    --gradient-start: rgba(157, 123, 143, 0.08);
-    --gradient-accent: rgba(157, 123, 143, 0.15);
-    --border-color: rgba(157, 123, 143, 0.2);
-    --shadow-color: rgba(157, 123, 143, 0.3);
-}
-
-// Option C: Brutalist Truth (stark, uncompromising, zero comfort)
-.theme--brutalist {
-    --bg-primary: #000000;
-    --bg-secondary: rgba(0, 0, 0, 0.8);
-    --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
-    --accent-primary: #ff4444;
-    --accent-secondary: #cc3333;
-    --accent-tertiary: #00d9ff;
-    --gradient-start: rgba(255, 68, 68, 0.05);
-    --gradient-accent: rgba(255, 68, 68, 0.1);
-    --border-color: rgba(255, 255, 255, 0.15);
-    --shadow-color: rgba(255, 68, 68, 0.4);
-}
-
-// Literary Folk (indie publishing, warm, illustrated, human)
-.theme--literary-folk {
-    --bg-primary: #ebe3d5;
-    --bg-secondary: rgba(235, 227, 213, 0.9);
-    --text-primary: #2a2520;
-    --text-secondary: #5a524a;
-    --accent-primary: #d64933;
-    --accent-secondary: #e8773d;
-    --accent-tertiary: #4a7c8c;
-    --gradient-start: rgba(214, 73, 51, 0.08);
-    --gradient-accent: rgba(214, 73, 51, 0.12);
-    --border-color: rgba(42, 37, 32, 0.15);
-    --shadow-color: rgba(214, 73, 51, 0.25);
-}
-
-// Literary Folk Dark (indie publishing night mode)
-.theme--literary-folk-dark {
-    --bg-primary: #1a1512;
-    --bg-secondary: rgba(26, 21, 18, 0.9);
-    --text-primary: #ebe3d5;
-    --text-secondary: #a8a098;
-    --accent-primary: #e8773d;
-    --accent-secondary: #d64933;
-    --accent-tertiary: #5a9cac;
-    --gradient-start: rgba(232, 119, 61, 0.08);
-    --gradient-accent: rgba(232, 119, 61, 0.12);
-    --border-color: rgba(235, 227, 213, 0.15);
-    --shadow-color: rgba(232, 119, 61, 0.25);
+    // Clinical/Urgent states
+    --clinical-urgent: #c47670;
+    --clinical-urgent-bg: rgba(196, 118, 112, 0.12);
+    --clinical-standard: #5a8f70;
+    --clinical-standard-bg: rgba(90, 143, 112, 0.12);
 }

@@ -1,14 +1,19 @@
 title: The Lono Collective
-tagline: Defending humanity in the age of AI
-description: Evidence-based safety frameworks for high-risk AI systems, built through cooperative research and clinical expertise.
-email: contact@lonocollective.com
+tagline: Regulatory-Grade AI Safety Evaluation
+description: Regulatory-grade evaluation frameworks for high-risk AI systems. Academic methodology that satisfies peer review. Legal documentation that holds up in court.
+email: contact@lonocollective.ai
 
-url: "https://tektonics.github.io"
-baseurl: "/lonocollective"
+url: "https://lonocollective.ai"
+baseurl: ""
 
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Build settings
 sass:
