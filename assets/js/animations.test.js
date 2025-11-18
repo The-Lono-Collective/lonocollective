@@ -122,6 +122,13 @@ describe('MicroInteractions', () => {
     let microInteractions;
 
     beforeEach(() => {
+        // Mock window dimensions for desktop testing
+        Object.defineProperty(window, 'innerWidth', {
+            writable: true,
+            configurable: true,
+            value: 1024
+        });
+
         document.body.innerHTML = `
             <button class="cta-button">Click me</button>
             <div class="service-card">Card</div>
@@ -171,7 +178,7 @@ describe('MicroInteractions', () => {
         jest.useRealTimers();
     });
 
-    test('applies card tilt on mousemove to team members', () => {
+    test('applies card tilt on mousemove to team members', (done) => {
         microInteractions = new MicroInteractions();
 
         const card = document.querySelector('.team-member');
@@ -189,9 +196,13 @@ describe('MicroInteractions', () => {
 
         card.dispatchEvent(mouseMoveEvent);
 
-        expect(card.style.transform).toContain('perspective');
-        expect(card.style.transform).toContain('rotateX');
-        expect(card.style.transform).toContain('rotateY');
+        // Wait for requestAnimationFrame to execute
+        requestAnimationFrame(() => {
+            expect(card.style.transform).toContain('perspective');
+            expect(card.style.transform).toContain('rotateX');
+            expect(card.style.transform).toContain('rotateY');
+            done();
+        });
     });
 
     test('resets card transform on mouseleave', () => {

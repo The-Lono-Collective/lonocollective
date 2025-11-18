@@ -39,6 +39,7 @@
         opacity: 0.8;
         z-index: -1;
         pointer-events: none;
+        will-change: transform, opacity;
         animation: flowingArcsPulse 20s ease-in-out infinite alternate;
     }
 
@@ -66,6 +67,7 @@
         opacity: 0.7;
         z-index: -1;
         pointer-events: none;
+        will-change: transform, opacity;
         animation: flowingArcsPulse 25s ease-in-out infinite alternate-reverse;
     }
 }
@@ -192,8 +194,9 @@
 @media (max-width: 768px) {
     .flowing-arcs-bg::before,
     .flowing-arcs-bg::after {
-        filter: blur(40px);
-        opacity: 0.6;
+        filter: blur(30px);
+        opacity: 0.5;
+        animation: none; // Disable animations on mobile for better performance
     }
 
     .section-with-arcs::before {
@@ -204,5 +207,13 @@
     .section-with-arcs::after {
         width: 500px;
         height: 400px;
+    }
+}
+
+// Disable heavy effects for users who prefer reduced motion or low-end devices
+@media (prefers-reduced-motion: reduce) {
+    .flowing-arcs-bg::before,
+    .flowing-arcs-bg::after {
+        animation: none !important;
     }
 }

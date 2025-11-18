@@ -73,24 +73,44 @@ export class MicroInteractions {
     }
 
     initCardTilt() {
+        // Only enable card tilt on desktop with no motion preference
+        const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const isMobile = window.innerWidth < 768;
+
+        if (prefersReducedMotion || isMobile) {
+            return; // Skip tilt effect on mobile or for users who prefer reduced motion
+        }
+
         const cards = document.querySelectorAll('.team-member');
 
         cards.forEach(card => {
+            let rafId = null;
+
+            // Throttle mousemove with requestAnimationFrame for better performance
             card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
+                if (rafId) return;
 
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
+                rafId = requestAnimationFrame(() => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
 
-                const rotateX = (y - centerY) / 20;
-                const rotateY = (centerX - x) / 20;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
 
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+                    const rotateX = (y - centerY) / 20;
+                    const rotateY = (centerX - x) / 20;
+
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+                    rafId = null;
+                });
             });
 
             card.addEventListener('mouseleave', () => {
+                if (rafId) {
+                    cancelAnimationFrame(rafId);
+                    rafId = null;
+                }
                 card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
             });
         });
