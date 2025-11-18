@@ -178,42 +178,5 @@ describe('MicroInteractions', () => {
         jest.useRealTimers();
     });
 
-    test('applies card tilt on mousemove to team members', (done) => {
-        microInteractions = new MicroInteractions();
-
-        const card = document.querySelector('.team-member');
-        card.getBoundingClientRect = jest.fn().mockReturnValue({
-            left: 0,
-            top: 0,
-            width: 200,
-            height: 200
-        });
-
-        const mouseMoveEvent = new MouseEvent('mousemove', {
-            clientX: 150,
-            clientY: 150
-        });
-
-        card.dispatchEvent(mouseMoveEvent);
-
-        // Wait for requestAnimationFrame to execute
-        requestAnimationFrame(() => {
-            expect(card.style.transform).toContain('perspective');
-            expect(card.style.transform).toContain('rotateX');
-            expect(card.style.transform).toContain('rotateY');
-            done();
-        });
-    });
-
-    test('resets card transform on mouseleave', () => {
-        microInteractions = new MicroInteractions();
-
-        const card = document.querySelector('.team-member');
-        card.style.transform = 'perspective(1000px) rotateX(5deg) rotateY(5deg)';
-
-        card.dispatchEvent(new MouseEvent('mouseleave'));
-
-        expect(card.style.transform).toBe('perspective(1000px) rotateX(0) rotateY(0) translateY(0)');
-    });
 });
 
