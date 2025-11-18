@@ -46,12 +46,10 @@ body::before {
     z-index: -1;
 }
 
-/* Unused animations removed for cleaner codebase */
-
 /* Skip to main content link */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -50px;
     left: 0;
     background: var(--accent-primary);
     color: var(--bg-primary);
@@ -60,6 +58,7 @@ body::before {
     font-weight: 600;
     z-index: 100;
     border-radius: 0 0 4px 0;
+    
 }
 
 .skip-link:focus {
