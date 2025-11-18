@@ -5,8 +5,10 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 20px;
+    padding: 1.75em 1.5em;
+    inset: 0% 0% auto;
     transition: padding 0.3s ease, backdrop-filter 0.3s ease;
+    margin: 0 10%;
 }
 
 .header::before {
@@ -26,22 +28,22 @@
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .logo-icon {
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
 .logo-text {
     font-family: "Crimson Pro", serif;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 40px;
+    font-weight: 400;
     color: var(--text-primary);
     letter-spacing: -0.01em;
 }
@@ -72,7 +74,7 @@
 
 @media (min-width: 768px) {
     .header {
-        padding: 30px 0;
+        padding: 0px 0;
     }
 
     .logo {
@@ -82,7 +84,7 @@
 
 @media (max-width: 480px) {
     .header {
-        padding: 15px;
+        padding: 10px;
     }
     
     .logo {
