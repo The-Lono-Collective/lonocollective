@@ -106,21 +106,49 @@ title: AI Safety Evaluation Frameworks
             We work with AI companies, research institutes, and government agencies deploying systems in high-stakes domains. If failure could harm people, we can prove it's safe or fix it before launch.
         </p>
 
-        <div class="contact-info">
-            {% for method in site.data.contact %}
-            <div class="contact-method fade-in-up">
-                <h3>{{ method.title }}</h3>
-                <p>{{ method.description }}</p>
+        <form class="contact-form fade-in-up" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
             </div>
-            {% endfor %}
-        </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@company.com">
+            </div>
+
+            <div class="form-group">
+                <label for="organization">Organization</label>
+                <input type="text" id="organization" name="organization" placeholder="Your company or institution">
+            </div>
+
+            <div class="form-group">
+                <label for="system">AI System Type</label>
+                <select id="system" name="system-type">
+                    <option value="">Select system type (optional)</option>
+                    <option value="healthcare">Healthcare/Medical AI</option>
+                    <option value="autonomous">Autonomous Systems</option>
+                    <option value="safety-critical">Safety-Critical Infrastructure</option>
+                    <option value="legal">Legal/Judicial AI</option>
+                    <option value="financial">Financial Systems</option>
+                    <option value="other">Other High-Stakes Domain</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Tell us about your AI system and what kind of validation you need..."></textarea>
+            </div>
+
+            <button type="submit" class="cta-button primary large">Send Inquiry</button>
+        </form>
 
         <div class="contact-value fade-in-up">
             <p>Every engagement delivers documentation you can defend to regulators, stakeholders, and the public. No conflicts of interest. No compromises on rigor.</p>
         </div>
 
-        <div class="contact-cta fade-in-up">
-            <a href="mailto:{{ site.email }}" class="cta-button primary large">Get Independent Validation</a>
+        <div class="contact-alternative fade-in-up">
+            <p>Prefer email? Reach us directly at <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
         </div>
     </div>
 </section>
