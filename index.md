@@ -8,9 +8,9 @@ title: Mental Health AI Safety Evaluation
 <section class="problem-section">
     <div class="problem-content fade-in-up">
         <h2>Why Mental Health AI Requires Specialized Evaluation</h2>
-        <p class="problem-stat">When AI systems make suicide risk assessments, crisis decisions, or psychiatric diagnoses, <strong>generic AI evaluation isn't enough</strong>.</p>
+        <p class="problem-stat">When AI systems make suicide risk assessments, crisis decisions, or psychiatric determinations, <strong>generic AI evaluation isn't enough</strong>.</p>
         <p class="problem-detail">Mental health AI operates in environments where ambiguity is the norm, incomplete information is expected, and judgment calls determine whether someone lives or dies. Your vendor showed you impressive accuracy numbers on clean test datasets. We help you understand what happens when their system encounters the edge cases that matter most in real clinical settings.</p>
-        <p class="problem-solution">We're developing evaluation frameworks specifically designed for mental health AI—combining clinical expertise with rigorous research methodology to identify failure modes before they harm patients.</p>
+        <p class="problem-solution">We're developing evaluation frameworks specifically designed for mental health AI by combining clinical expertise with rigorous research methodology to identify failure modes before they harm patients.</p>
     </div>
 </section>
 
@@ -56,7 +56,7 @@ title: Mental Health AI Safety Evaluation
 
 <section class="settings-section">
     <div class="settings-content">
-        <h2 class="fade-in-up">Where Mental Health AI Operates—And Where It Fails</h2>
+        <h2 class="fade-in-up">Where Mental Health AI Operates <br /> And Where It Fails</h2>
         <p class="settings-intro fade-in-up">We evaluate systems across five high-risk deployment settings where mental health AI is already being used to make life-or-death decisions:</p>
 
         <div class="settings-grid">
