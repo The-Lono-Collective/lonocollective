@@ -1,27 +1,27 @@
-- name: Zacharia Rupp, MCS, MFA
-  initials: ZR
-  image: /assets/images/zach.jpg
-  title: President
-  credentials: Former Head of Data Delivery, Pareto AI • Master of Computer Science, UIUC
-  expertise: AI evaluation methodologies, research design, PRISMA systematic reviews
-
 - name: Alexandra Ah Loy, JD
   initials: AA
   image: /assets/images/allie.jpeg
-  title: Vice President
-  credentials: Partner, Hall Booth Smith • J.D., Law, OCU
-  expertise: Healthcare law, liability frameworks, regulatory compliance (HIPAA, GDPR)
+  title: Founding Member | Vice President
+  credentials: Partner, Hall Booth Smith specializing in healthcare law and mental health litigation. Bachelor's degree in Psychology. Former Chief Legal Officer for healthcare company. National defense counsel for multiple healthcare organizations.
+  expertise: Legal frameworks for mental health care, liability analysis, regulatory compliance (HIPAA, 42 CFR Part 2, state mental health statutes), medical malpractice defense, civil rights litigation.
+
+- name: Zacharia Rupp, MCS, MFA
+  initials: ZR
+  image: /assets/images/zach.jpg
+  title: Founding Member | President
+  credentials: Former Head of Data Delivery, Pareto AI • Master of Computer Science from University of Illinois Urbana-Champaign.
+  expertise: AI evaluation methodology, systematic literature review (PRISMA guidelines), research design, technical assessment of clinical decision support systems, statistical validation.
 
 - name: Jesse Ewing
   initials: JE
   image: /assets/images/jesse.jpg
-  title: Research & Development Steward
-  credentials: Data Science • Quality Assurance • Model Training • Human Data for AI
-  expertise: Statistical analysis, inter-rater reliability, evaluation metrics
+  title: Founding Member | Research & Development Steward
+  credentials: Data science and quality assurance across multiple AI development contexts. Expert-level annotation and review experience. 
+  expertise: Statistical analysis, inter-rater reliability assessment, evaluation metrics design, data quality frameworks, model behavior analysis.
 
 - name: Kalani Ah Loy
   initials: KA
   image: /assets/images/kalani.jpeg
-  title: Business Development & Data Steward
-  credentials: Medical Engineer, OU Health • Startup Business Development • Navy Veteran
-  expertise: Healthcare technology, clinical systems, business development, data infrastructure
+  title: Founding Member | Business Development & Data Steward
+  credentials: Lead Clinical Engineer at OU Health. Former Head of Business Development and Cloud Infrastructure Architect at healthcare startup. Navy veteran with electronics technical background.
+  expertise: Healthcare technology systems, clinical engineering, medical device integration, data infrastructure, healthcare business development.

@@ -9,15 +9,15 @@ title: Mental Health AI Safety Evaluation
     <div class="problem-content fade-in-up">
         <h2>Why Mental Health AI Requires Specialized Evaluation</h2>
         <p class="problem-stat">When AI systems make suicide risk assessments, crisis decisions, or psychiatric determinations, <strong>generic AI evaluation isn't enough</strong>.</p>
-        <p class="problem-detail">Mental health AI operates in environments where ambiguity is the norm, incomplete information is expected, and judgment calls determine whether someone lives or dies. Your vendor showed you impressive accuracy numbers on clean test datasets. We help you understand what happens when their system encounters the edge cases that matter most in real clinical settings.</p>
-        <p class="problem-solution">We're developing evaluation frameworks specifically designed for mental health AI by combining clinical expertise with rigorous research methodology to identify failure modes before they harm patients.</p>
+        <p class="problem-detail">Mental health AI operates in environments where ambiguity is the norm, incomplete information is expected, and judgment calls can determine whether someone lives or dies. Your vendor showed you impressive accuracy numbers on clean test datasets. We help you understand what happens when their system encounters the edge cases that matter most in real clinical settings.</p>
+        <p class="problem-solution">We're developing evaluation frameworks specifically designed for mental health AI by combining clinical and regulatory expertise with rigorous research methodology to identify failure modes before they harm patients.</p>
     </div>
 </section>
 
 <section id="framework" class="framework-section">
     <div class="framework-content">
         <h2 class="fade-in-up">What Pilot Clients Receive</h2>
-        <p class="framework-intro fade-in-up">We're seeking early partners to validate our evaluation frameworks in real-world settings. Pilot engagements combine clinical expertise with systematic research methodology.</p>
+        <p class="framework-intro fade-in-up">We're seeking early partners to validate our evaluation frameworks in real-world settings. Pilot engagements combine clinical and regulatory expertise with systematic research methodology.</p>
 
         <div class="framework-approach">
             <h3 class="fade-in-up">Four Deliverables</h3>
@@ -28,7 +28,7 @@ title: Mental Health AI Safety Evaluation
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Research-Grade Documentation</h4>
-                    <p>Evaluation reports following academic research standards (PRISMA systematic reviews, Delphi expert consensus methodology). Documentation designed to withstand regulatory scrutiny, stakeholder due diligence, and legal challenges.</p>
+                    <p>Evaluation reports following academic research standards (PRISMA systematic reviews, Delphi expert consensus methodology). Documentation designed to withstand academic and regulatory scrutiny, stakeholder due diligence, and legal challenges.</p>
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Clinical Expert Consensus Report</h4>
@@ -70,7 +70,7 @@ title: Mental Health AI Safety Evaluation
             </div>
             <div class="setting-card fade-in-up">
                 <h3>Community Mental Health Centers</h3>
-                <p>AI tools supporting clinicians in outpatient settings serving high-risk populations—individuals with serious mental illness, substance use disorders, and trauma histories.</p>
+                <p>AI tools supporting clinicians in outpatient settings serving high-risk populations such as individuals with serious mental illness, substance use disorders, and trauma histories.</p>
             </div>
             <div class="setting-card fade-in-up">
                 <h3>Telehealth and Crisis Lines</h3>
@@ -78,7 +78,7 @@ title: Mental Health AI Safety Evaluation
             </div>
             <div class="setting-card fade-in-up">
                 <h3>Primary Care Mental Health Integration</h3>
-                <p>AI screening tools used in general medical settings to identify depression, anxiety, and suicide risk—often by providers with limited mental health training.</p>
+                <p>AI screening tools used in general medical settings to identify depression, anxiety, and suicide risk, often by providers with limited mental health training.</p>
             </div>
         </div>
     </div>
@@ -104,7 +104,7 @@ title: Mental Health AI Safety Evaluation
             </div>
         </div>
 
-        <p class="cooperative-value fade-in-up">In mental health AI safety evaluation, independence isn't just a business model. It's a moral imperative. Lives depend on honest findings.</p>
+        <p class="cooperative-value fade-in-up">In mental health AI safety evaluation, independence isn't just a business model, <strong>but a moral imperative</strong>. Lives depend on honest findings.</p>
     </div>
 </section>
 
