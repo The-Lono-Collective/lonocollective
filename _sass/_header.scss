@@ -5,7 +5,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 1.75em 1.5em;
+    padding: 20px 1.5em;
     inset: 0% 0% auto;
     transition: padding 0.3s ease, backdrop-filter 0.3s ease;
     margin: 0 10%;
@@ -21,7 +21,6 @@
     height: 100%;
     background: var(--bg-secondary);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
     z-index: -1;
 }
 
