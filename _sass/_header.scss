@@ -42,7 +42,7 @@
 
 .logo-text {
     font-family: "Crimson Pro", serif;
-    font-size: 40px;
+    font-size: 26px;
     font-weight: 400;
     color: var(--text-primary);
     letter-spacing: -0.01em;
@@ -82,11 +82,18 @@
     }
 }
 
+@media (max-width: 768px) {
+    .header {
+        position: relative;
+    }
+}
+
 @media (max-width: 480px) {
     .header {
         padding: 10px;
+        position: relative;
     }
-    
+
     .logo {
         font-size: 18px;
     }
