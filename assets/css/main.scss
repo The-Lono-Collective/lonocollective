@@ -23,7 +23,7 @@ html, body {
     height: 100%;
     background: var(--bg-primary);
     overflow-x: hidden;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     min-height: 100vh;
     color: var(--text-primary);
     position: relative;
@@ -40,6 +40,45 @@ body::before {
     height: 100vh;
     background: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
     z-index: -1;
+}
+
+/* ============================================
+   Dot Grid Pattern Utilities - Brand Design Element
+   ============================================ */
+
+.dot-pattern {
+    background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.15;
+}
+
+.dot-pattern-overlay {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
+        background-size: 20px 20px;
+        opacity: 0.08;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.dot-pattern-large {
+    background-image: radial-gradient(circle, var(--accent-primary) 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
+    opacity: 0.08;
 }
 
 .skip-link {
@@ -86,13 +125,32 @@ body::before {
     border-bottom: 3px solid var(--accent-primary);
 }
 
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, var(--accent-primary) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 1;
+}
+
 .section-header {
     text-align: left;
     margin-bottom: 80px;
 }
 
 .section-header h2 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Song Myung', serif;
     font-size: clamp(36px, 7vw, 56px);
     font-weight: 400;
     margin-bottom: 24px;
@@ -120,7 +178,7 @@ body::before {
     margin: 8px 8px 8px 0;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     position: relative;
     overflow: hidden;
 }
@@ -193,6 +251,19 @@ body::before {
         position: relative;
         z-index: 1;
     }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 4px;
+        background-image: radial-gradient(circle, var(--accent-primary) 2px, transparent 2px);
+        background-size: 12px 12px;
+        margin: 60px auto 0;
+        opacity: 0.3;
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .problem-content {
@@ -202,7 +273,7 @@ body::before {
 }
 
 .problem-content h2 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Song Myung', serif;
     font-size: clamp(32px, 6vw, 48px);
     font-weight: 400;
     color: var(--text-primary);
@@ -244,10 +315,21 @@ body::before {
     padding: 80px 20px;
     max-width: 1600px;
     margin: 0 auto;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 4px;
+        background-image: radial-gradient(circle, var(--accent-primary) 2px, transparent 2px);
+        background-size: 12px 12px;
+        margin: 60px auto 0;
+        opacity: 0.3;
+    }
 }
 
 .framework-content h2 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Song Myung', serif;
     font-size: clamp(36px, 7vw, 56px);
     font-weight: 400;
     color: var(--text-primary);
@@ -271,7 +353,7 @@ body::before {
 }
 
 .framework-approach h3 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Song Myung', serif;
     font-size: clamp(28px, 5vw, 38px);
     font-weight: 400;
     color: var(--text-primary);
@@ -289,9 +371,30 @@ body::before {
 .method-card {
     background: transparent;
     border-left: 4px solid var(--accent-primary);
-    border-radius: 12px;
+    border-radius: 24px;
     padding: 36px;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.method-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.method-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .method-card:hover {
@@ -320,7 +423,7 @@ body::before {
 }
 
 .framework-impact h3 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Song Myung', serif;
     font-size: clamp(24px, 4vw, 32px);
     font-weight: 400;
     color: var(--text-primary);
@@ -372,7 +475,7 @@ body::before {
 }
 
 .settings-content h2 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Song Myung', serif;
     font-size: clamp(36px, 7vw, 56px);
     font-weight: 400;
     color: var(--text-primary);
@@ -401,9 +504,30 @@ body::before {
 .setting-card {
     background: transparent;
     border-left: 4px solid var(--accent-primary);
-    border-radius: 12px;
+    border-radius: 24px;
     padding: 36px;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.setting-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.setting-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .setting-card:hover {
@@ -430,7 +554,7 @@ body::before {
     margin: 48px auto 0;
     padding: 32px;
     background: rgba(127, 184, 148, 0.04);
-    border-radius: 12px;
+    border-radius: 24px;
     text-align: left;
 }
 
@@ -451,6 +575,17 @@ body::before {
     max-width: 1600px;
     margin: 0 auto;
     background: transparent;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 4px;
+        background-image: radial-gradient(circle, var(--accent-primary) 2px, transparent 2px);
+        background-size: 12px 12px;
+        margin: 60px auto 0;
+        opacity: 0.3;
+    }
 }
 
 .cooperative-content {
@@ -459,7 +594,7 @@ body::before {
 }
 
 .cooperative-content h2 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Song Myung', serif;
     font-size: clamp(36px, 7vw, 56px);
     font-weight: 400;
     color: var(--text-primary);
@@ -488,9 +623,30 @@ body::before {
 .benefit-card {
     background: transparent;
     border-left: 4px solid var(--accent-primary);
-    border-radius: 12px;
+    border-radius: 24px;
     padding: 40px;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.benefit-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .benefit-card:hover {
@@ -538,11 +694,30 @@ body::before {
 .team-member {
     background: transparent;
     border-left: 4px solid var(--accent-primary);
-    border-radius: 12px;
+    border-radius: 24px;
     padding: 40px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    
     position: relative;
+    overflow: hidden;
+}
+
+.team-member::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.team-member > * {
+    position: relative;
+    z-index: 1;
 }
 
 .team-member:hover {
@@ -643,7 +818,7 @@ body::before {
 }
 
 .contact-content h2 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Song Myung', serif;
     font-size: clamp(36px, 6vw, 52px);
     font-weight: 400;
     color: var(--text-primary);
@@ -701,7 +876,7 @@ body::before {
     border-radius: 6px;
     color: var(--text-primary);
     font-size: 15px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     transition: all 0.3s ease;
 }
 
@@ -763,7 +938,7 @@ body::before {
 /* Form Messages (Success/Error) */
 .form-message {
     padding: 32px;
-    border-radius: 12px;
+    border-radius: 24px;
     text-align: center;
     margin-bottom: 32px;
 }
@@ -793,7 +968,7 @@ body::before {
 }
 
 .form-message h3 {
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Song Myung', serif;
     font-size: 28px;
     font-weight: 500;
     color: var(--text-primary);

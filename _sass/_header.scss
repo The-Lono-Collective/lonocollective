@@ -43,11 +43,12 @@
 }
 
 .logo-text {
-    font-family: "Crimson Pro", serif;
-    font-size: 26px;
-    font-weight: 400;
+    font-family: "Azeret Mono", monospace;
+    font-size: 18px;
+    font-weight: 500;
     color: var(--text-primary);
-    letter-spacing: -0.01em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
 }
 
 .logo:hover .logo-icon {

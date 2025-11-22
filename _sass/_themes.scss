@@ -8,46 +8,46 @@
 // Primary Theme: Green Gradient Dark
 // Conveys: Growth, healing, evidence-based research, environmental health
 .theme--green-gradient-dark {
-    --bg-primary: #0d1410;
-    --bg-secondary: rgba(13, 20, 16, 0.85);
-    --text-primary: #e8f0ec;
-    --text-secondary: #b0c4b8;
-    --accent-primary: #7fb894;
-    --accent-secondary: #5a8f70;
-    --accent-tertiary: #9dd4b8;
-    --gradient-start: rgba(127, 184, 148, 0.12);
-    --gradient-accent: rgba(127, 184, 148, 0.18);
-    --border-color: rgba(127, 184, 148, 0.2);
-    --shadow-color: rgba(127, 184, 148, 0.35);
+    --bg-primary: #2A4227;
+    --bg-secondary: rgba(42, 66, 39, 0.85);
+    --text-primary: #E8EADF;
+    --text-secondary: #BAE2E1;
+    --accent-primary: #5BA55E;
+    --accent-secondary: #EBFFDC;
+    --accent-tertiary: #BAE2E1;
+    --gradient-start: rgba(91, 165, 94, 0.12);
+    --gradient-accent: rgba(91, 165, 94, 0.18);
+    --border-color: rgba(186, 226, 225, 0.2);
+    --shadow-color: rgba(91, 165, 94, 0.35);
 
     // Multi-directional gradient backgrounds
     --gradient-bg-hero: linear-gradient(135deg,
-        rgba(93, 143, 112, 0.15) 0%,
-        rgba(13, 20, 16, 0.9) 50%,
-        rgba(127, 184, 148, 0.08) 100%);
+        rgba(91, 165, 94, 0.15) 0%,
+        rgba(42, 66, 39, 0.9) 50%,
+        rgba(91, 165, 94, 0.08) 100%);
     --gradient-bg-section: linear-gradient(165deg,
-        rgba(157, 212, 184, 0.08) 0%,
-        rgba(13, 20, 16, 0.95) 60%);
+        rgba(186, 226, 225, 0.08) 0%,
+        rgba(42, 66, 39, 0.95) 60%);
     --gradient-bg-aurora: radial-gradient(ellipse at 50% -20%,
-        rgba(127, 184, 148, 0.25) 0%,
-        rgba(90, 143, 112, 0.12) 35%,
+        rgba(91, 165, 94, 0.25) 0%,
+        rgba(91, 165, 94, 0.12) 35%,
         transparent 70%);
 
     // Semantic Color System - Research States
-    --status-peer-reviewed: #7fb894;
-    --status-peer-reviewed-bg: rgba(127, 184, 148, 0.15);
-    --status-seeking-funding: #9dd4b8;
-    --status-seeking-funding-bg: rgba(157, 212, 184, 0.15);
-    --status-in-progress: #5a8f70;
-    --status-in-progress-bg: rgba(90, 143, 112, 0.15);
-    --status-under-review: #b8d4c6;
-    --status-under-review-bg: rgba(184, 212, 198, 0.15);
+    --status-peer-reviewed: #5BA55E;
+    --status-peer-reviewed-bg: rgba(91, 165, 94, 0.15);
+    --status-seeking-funding: #BAE2E1;
+    --status-seeking-funding-bg: rgba(186, 226, 225, 0.15);
+    --status-in-progress: #5BA55E;
+    --status-in-progress-bg: rgba(91, 165, 94, 0.15);
+    --status-under-review: #BAE2E1;
+    --status-under-review-bg: rgba(186, 226, 225, 0.15);
 
     // Clinical/Urgent states
     --clinical-urgent: #d48a7f;
     --clinical-urgent-bg: rgba(212, 138, 127, 0.15);
-    --clinical-standard: #7fb894;
-    --clinical-standard-bg: rgba(127, 184, 148, 0.15);
+    --clinical-standard: #5BA55E;
+    --clinical-standard-bg: rgba(91, 165, 94, 0.15);
 }
 
 // Light Mode Theme (for accessibility and user preference)
