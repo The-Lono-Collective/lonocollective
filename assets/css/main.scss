@@ -287,7 +287,7 @@ body::before {
 }
 
 .method-card {
-    background: transparent;
+    background: rgba(91, 165, 94, 0.05);
     border-left: 4px solid var(--accent-primary);
     border-radius: 24px;
     padding: 36px;
@@ -296,7 +296,7 @@ body::before {
 
 .method-card:hover {
     border-color: var(--border-color);
-    background: transparent;
+    background: rgba(91, 165, 94, 0.08);
 }
 
 .method-card h4 {
@@ -399,7 +399,7 @@ body::before {
 }
 
 .setting-card {
-    background: transparent;
+    background: rgba(186, 226, 225, 0.05);
     border-left: 4px solid var(--accent-primary);
     border-radius: 24px;
     padding: 36px;
@@ -408,7 +408,7 @@ body::before {
 
 .setting-card:hover {
     border-color: var(--border-color);
-    background: transparent;
+    background: rgba(186, 226, 225, 0.08);
 }
 
 .setting-card h3 {
@@ -486,7 +486,7 @@ body::before {
 }
 
 .benefit-card {
-    background: transparent;
+    background: rgba(91, 165, 94, 0.05);
     border-left: 4px solid var(--accent-primary);
     border-radius: 24px;
     padding: 40px;
@@ -495,7 +495,7 @@ body::before {
 
 .benefit-card:hover {
     border-color: var(--border-color);
-    background: transparent;
+    background: rgba(91, 165, 94, 0.08);
 }
 
 .benefit-card h3 {
@@ -536,7 +536,7 @@ body::before {
 }
 
 .team-member {
-    background: transparent;
+    background: rgba(186, 226, 225, 0.05);
     border-left: 4px solid var(--accent-primary);
     border-radius: 24px;
     padding: 40px;
@@ -545,8 +545,7 @@ body::before {
 
 .team-member:hover {
     border-color: var(--border-color);
-    
-    background: transparent;
+    background: rgba(186, 226, 225, 0.08);
 }
 
 .member-avatar {
