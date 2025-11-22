@@ -42,45 +42,6 @@ body::before {
     z-index: -1;
 }
 
-/* ============================================
-   Dot Grid Pattern Utilities - Brand Design Element
-   ============================================ */
-
-.dot-pattern {
-    background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.15;
-}
-
-.dot-pattern-overlay {
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
-        background-size: 20px 20px;
-        opacity: 0.08;
-        pointer-events: none;
-        z-index: 0;
-    }
-
-    > * {
-        position: relative;
-        z-index: 1;
-    }
-}
-
-.dot-pattern-large {
-    background-image: radial-gradient(circle, var(--accent-primary) 1.5px, transparent 1.5px);
-    background-size: 40px 40px;
-    opacity: 0.08;
-}
-
 .skip-link {
     position: absolute;
     top: -50px;
@@ -123,25 +84,6 @@ body::before {
     margin: 0 auto;
     position: relative;
     border-bottom: 3px solid var(--accent-primary);
-}
-
-.hero-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: radial-gradient(circle, var(--accent-primary) 1px, transparent 1px);
-    background-size: 30px 30px;
-    opacity: 0.03;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.hero-section > * {
-    position: relative;
-    z-index: 1;
 }
 
 .section-header {
@@ -251,19 +193,6 @@ body::before {
         position: relative;
         z-index: 1;
     }
-
-    &::after {
-        content: "";
-        display: block;
-        width: 100px;
-        height: 4px;
-        background-image: radial-gradient(circle, var(--accent-primary) 2px, transparent 2px);
-        background-size: 12px 12px;
-        margin: 60px auto 0;
-        opacity: 0.3;
-        position: relative;
-        z-index: 1;
-    }
 }
 
 .problem-content {
@@ -315,17 +244,6 @@ body::before {
     padding: 80px 20px;
     max-width: 1600px;
     margin: 0 auto;
-
-    &::after {
-        content: "";
-        display: block;
-        width: 100px;
-        height: 4px;
-        background-image: radial-gradient(circle, var(--accent-primary) 2px, transparent 2px);
-        background-size: 12px 12px;
-        margin: 60px auto 0;
-        opacity: 0.3;
-    }
 }
 
 .framework-content h2 {
@@ -374,27 +292,6 @@ body::before {
     border-radius: 24px;
     padding: 36px;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.method-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.05;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.method-card > * {
-    position: relative;
-    z-index: 1;
 }
 
 .method-card:hover {
@@ -507,27 +404,6 @@ body::before {
     border-radius: 24px;
     padding: 36px;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.setting-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.05;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.setting-card > * {
-    position: relative;
-    z-index: 1;
 }
 
 .setting-card:hover {
@@ -575,17 +451,6 @@ body::before {
     max-width: 1600px;
     margin: 0 auto;
     background: transparent;
-
-    &::after {
-        content: "";
-        display: block;
-        width: 100px;
-        height: 4px;
-        background-image: radial-gradient(circle, var(--accent-primary) 2px, transparent 2px);
-        background-size: 12px 12px;
-        margin: 60px auto 0;
-        opacity: 0.3;
-    }
 }
 
 .cooperative-content {
@@ -626,27 +491,6 @@ body::before {
     border-radius: 24px;
     padding: 40px;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.benefit-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.05;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.benefit-card > * {
-    position: relative;
-    z-index: 1;
 }
 
 .benefit-card:hover {
@@ -697,27 +541,6 @@ body::before {
     border-radius: 24px;
     padding: 40px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.team-member::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: radial-gradient(circle, var(--text-secondary) 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.05;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.team-member > * {
-    position: relative;
-    z-index: 1;
 }
 
 .team-member:hover {
