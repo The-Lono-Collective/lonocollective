@@ -11,7 +11,7 @@
 
 @import "flowing-arcs";
 
-// Base styles
+/* Base styles */
 
 * {
     margin: 0;
@@ -253,9 +253,9 @@ body::before {
     display: grid;
     gap: 80px;
     align-items: center;
-    padding: 100px 10%;
+    padding: 100px 40px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 10%;
     position: relative;
 }
 
@@ -425,6 +425,7 @@ body::before {
 .problem-section {
     position: relative;
     padding: 0;
+    margin: 0 10%;
 }
 
 .problem-section .split-section__image {
@@ -440,9 +441,9 @@ body::before {
 }
 
 .framework-section {
-    padding: 80px 10%;
+    padding: 80px 40px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 10%;
 }
 
 .framework-content h2 {
@@ -565,9 +566,9 @@ body::before {
 }
 
 .settings-section {
-    padding: 80px 10%;
+    padding: 80px 40px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 10%;
 }
 
 .settings-content h2 {
@@ -646,9 +647,9 @@ body::before {
 }
 
 .cooperative-section {
-    padding: 80px 10%;
+    padding: 80px 40px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 10%;
     background: transparent;
 }
 
@@ -722,9 +723,9 @@ body::before {
 
 /* Team Section */
 .team-section {
-    padding: 80px 10%;
+    padding: 80px 40px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 10%;
 }
 
 .team-grid {
@@ -803,9 +804,9 @@ body::before {
 }
 
 .contact-section {
-    padding: 80px 10%;
+    padding: 80px 40px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 10%;
     background: rgba(127, 184, 148, 0.04);
     position: relative;
 
@@ -1105,9 +1106,18 @@ html {
         padding: 60px 20px;
     }
 
+    .framework-section,
+    .settings-section,
+    .cooperative-section,
     .team-section,
     .contact-section {
         padding: 60px 20px;
+        margin: 0 5%;
+    }
+
+    .split-section {
+        padding: 60px 20px;
+        margin: 0 5%;
     }
 
     .team-grid {
@@ -1125,9 +1135,18 @@ html {
         padding: 40px 15px;
     }
 
+    .framework-section,
+    .settings-section,
+    .cooperative-section,
     .team-section,
     .contact-section {
         padding: 40px 15px;
+        margin: 0 2%;
+    }
+
+    .split-section {
+        padding: 40px 15px;
+        margin: 0 2%;
     }
 
     .team-member {
