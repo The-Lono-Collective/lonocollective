@@ -251,10 +251,10 @@ body::before {
 /* Split Section (Asymmetric Layouts) */
 .split-section {
     display: grid;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
-    padding: 100px 20px;
-    max-width: 1600px;
+    padding: 100px 10%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
 }
@@ -325,6 +325,8 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
 }
 
 .organic-portrait--large {
@@ -439,8 +441,8 @@ body::before {
 }
 
 .framework-section {
-    padding: 80px 20px;
-    max-width: 1600px;
+    padding: 80px 10%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -564,8 +566,8 @@ body::before {
 }
 
 .settings-section {
-    padding: 80px 20px;
-    max-width: 1600px;
+    padding: 80px 10%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -645,8 +647,8 @@ body::before {
 }
 
 .cooperative-section {
-    padding: 80px 20px;
-    max-width: 1600px;
+    padding: 80px 10%;
+    width: 100%;
     margin: 0 auto;
     background: transparent;
 }
@@ -721,8 +723,8 @@ body::before {
 
 /* Team Section */
 .team-section {
-    padding: 80px 20px;
-    max-width: 1600px;
+    padding: 80px 10%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -802,8 +804,8 @@ body::before {
 }
 
 .contact-section {
-    padding: 80px 20px;
-    max-width: 1600px;
+    padding: 80px 10%;
+    width: 100%;
     margin: 0 auto;
     background: rgba(127, 184, 148, 0.04);
     position: relative;
