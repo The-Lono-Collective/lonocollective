@@ -50,46 +50,51 @@
     --clinical-standard-bg: rgba(91, 165, 94, 0.15);
 }
 
-// Light Mode Theme (for accessibility and user preference)
+// Light Mode Theme (Editorial/Magazine Style - Shore Background)
 .theme--green-gradient-light {
-    --bg-primary: #f5f7f5;
-    --bg-secondary: rgba(245, 247, 245, 0.9);
-    --text-primary: #1a2820;
+    --bg-primary: #E8EADF; // Shore - warm neutral base
+    --bg-secondary: rgba(232, 234, 223, 0.95);
+    --text-primary: #2A4227; // Kapu - dark green for text
     --text-secondary: #4a5a50;
-    --accent-primary: #5a8f70;
-    --accent-secondary: #7fb894;
-    --accent-tertiary: #9dd4b8;
-    --gradient-start: rgba(90, 143, 112, 0.08);
-    --gradient-accent: rgba(90, 143, 112, 0.12);
-    --border-color: rgba(90, 143, 112, 0.15);
-    --shadow-color: rgba(90, 143, 112, 0.2);
+    --accent-primary: #5BA55E; // Lau - medium green
+    --accent-secondary: #EBFFDC; // Kalo - light lime
+    --accent-tertiary: #BAE2E1; // Mauka - cyan
+    --gradient-start: rgba(91, 165, 94, 0.08);
+    --gradient-accent: rgba(91, 165, 94, 0.12);
+    --border-color: rgba(42, 66, 39, 0.15);
+    --shadow-color: rgba(42, 66, 39, 0.1);
 
-    // Multi-directional gradient backgrounds
+    // Multi-directional gradient backgrounds (subtle on Shore)
     --gradient-bg-hero: linear-gradient(135deg,
-        rgba(157, 212, 184, 0.2) 0%,
-        rgba(245, 247, 245, 0.95) 50%,
-        rgba(127, 184, 148, 0.15) 100%);
+        rgba(186, 226, 225, 0.15) 0%,
+        rgba(232, 234, 223, 0.98) 50%,
+        rgba(91, 165, 94, 0.1) 100%);
     --gradient-bg-section: linear-gradient(165deg,
-        rgba(127, 184, 148, 0.12) 0%,
-        rgba(245, 247, 245, 0.98) 60%);
+        rgba(91, 165, 94, 0.08) 0%,
+        rgba(232, 234, 223, 0.98) 60%);
     --gradient-bg-aurora: radial-gradient(ellipse at 50% -20%,
-        rgba(157, 212, 184, 0.3) 0%,
-        rgba(127, 184, 148, 0.15) 35%,
+        rgba(186, 226, 225, 0.2) 0%,
+        rgba(91, 165, 94, 0.1) 35%,
         transparent 70%);
 
+    // Section background color variants (for color rotation)
+    --bg-shore: #E8EADF;
+    --bg-kalo: #EBFFDC;
+    --bg-mauka: #BAE2E1;
+
     // Semantic Color System - Research States
-    --status-peer-reviewed: #5a8f70;
-    --status-peer-reviewed-bg: rgba(90, 143, 112, 0.12);
-    --status-seeking-funding: #7fb894;
-    --status-seeking-funding-bg: rgba(127, 184, 148, 0.12);
-    --status-in-progress: #4a7560;
-    --status-in-progress-bg: rgba(74, 117, 96, 0.12);
-    --status-under-review: #8fa89f;
-    --status-under-review-bg: rgba(143, 168, 159, 0.12);
+    --status-peer-reviewed: #5BA55E;
+    --status-peer-reviewed-bg: rgba(91, 165, 94, 0.12);
+    --status-seeking-funding: #BAE2E1;
+    --status-seeking-funding-bg: rgba(186, 226, 225, 0.15);
+    --status-in-progress: #5BA55E;
+    --status-in-progress-bg: rgba(91, 165, 94, 0.12);
+    --status-under-review: #BAE2E1;
+    --status-under-review-bg: rgba(186, 226, 225, 0.15);
 
     // Clinical/Urgent states
     --clinical-urgent: #c47670;
-    --clinical-urgent-bg: rgba(196, 118, 112, 0.12);
-    --clinical-standard: #5a8f70;
-    --clinical-standard-bg: rgba(90, 143, 112, 0.12);
+    --clinical-urgent-bg: rgba(196, 118, 112, 0.15);
+    --clinical-standard: #5BA55E;
+    --clinical-standard-bg: rgba(91, 165, 94, 0.12);
 }

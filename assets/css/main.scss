@@ -42,6 +42,30 @@ body::before {
     z-index: -1;
 }
 
+// Editorial/Magazine Typography Scale
+:root {
+    // Display typography (hero, major headlines)
+    --type-display-xl: clamp(72px, 10vw, 120px);
+    --type-display-lg: clamp(56px, 8vw, 96px);
+    --type-display-md: clamp(48px, 7vw, 80px);
+
+    // Editorial headlines
+    --type-headline-xl: clamp(40px, 6vw, 64px);
+    --type-headline-lg: clamp(36px, 5vw, 56px);
+    --type-headline-md: clamp(28px, 4vw, 42px);
+    --type-headline-sm: clamp(24px, 3vw, 32px);
+
+    // Body copy
+    --type-body-lg: clamp(18px, 2.5vw, 22px);
+    --type-body-md: clamp(16px, 2vw, 19px);
+    --type-body-sm: clamp(15px, 1.8vw, 17px);
+
+    // Display line heights
+    --line-display: 1.1;
+    --line-headline: 1.2;
+    --line-body: 1.8;
+}
+
 .skip-link {
     position: absolute;
     top: -50px;
@@ -163,6 +187,200 @@ body::before {
 .cta-button.large {
     padding: 16px 36px;
     font-size: 16px;
+}
+
+/* ============================================
+   EDITORIAL/MAGAZINE VISUAL ELEMENT LIBRARY
+   ============================================ */
+
+// Dotted Dividers (CSS-based, swappable with images later)
+.dotted-divider {
+    width: 100%;
+    height: 2px;
+    border-top: 2px dotted var(--border-color);
+    margin: 60px 0;
+    opacity: 0.6;
+}
+
+.dotted-divider--vertical {
+    width: 2px;
+    height: 100%;
+    border-left: 2px dotted var(--border-color);
+    margin: 0;
+    opacity: 0.6;
+}
+
+// Split Section (Asymmetric Layouts)
+.split-section {
+    display: grid;
+    gap: 60px;
+    align-items: center;
+    padding: 100px 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.split-section--60-40 {
+    grid-template-columns: 60% 40%;
+}
+
+.split-section--70-30 {
+    grid-template-columns: 70% 30%;
+}
+
+.split-section--50-50 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.split-section__text {
+    padding-right: 40px;
+}
+
+.split-section__image {
+    position: relative;
+}
+
+// Card Modules (Rounded Rectangles with Color Variants)
+.card-module {
+    background: var(--bg-primary);
+    border-radius: 24px;
+    padding: 48px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.card-module--dark {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.card-module--light {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.card-module--shore {
+    background: var(--bg-shore);
+}
+
+.card-module--kalo {
+    background: var(--bg-kalo);
+}
+
+.card-module--mauka {
+    background: var(--bg-mauka);
+}
+
+.card-module:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px var(--shadow-color);
+}
+
+// Organic Portrait Shapes (Circular masks, swappable with photos later)
+.organic-portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.organic-portrait--large {
+    width: 300px;
+    height: 300px;
+}
+
+.organic-portrait--small {
+    width: 120px;
+    height: 120px;
+}
+
+.organic-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// Color Statement Sections (Full-Bleed Typography)
+.color-statement {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.color-statement--kalo {
+    background: var(--bg-kalo);
+}
+
+.color-statement--mauka {
+    background: var(--bg-mauka);
+}
+
+.color-statement--shore {
+    background: var(--bg-shore);
+}
+
+.color-statement h2 {
+    font-family: 'Azeret Mono', monospace;
+    font-size: var(--type-display-lg);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+// Section Background Variants
+.section--shore {
+    background: var(--bg-shore);
+}
+
+.section--kalo {
+    background: var(--bg-kalo);
+}
+
+.section--mauka {
+    background: var(--bg-mauka);
+}
+
+// Responsive Breakpoints for Split Sections
+@media (max-width: 1024px) {
+    .split-section--60-40,
+    .split-section--70-30,
+    .split-section--50-50 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .split-section__text {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .split-section {
+        padding: 60px 20px;
+    }
+
+    .card-module {
+        padding: 32px;
+    }
+
+    .organic-portrait {
+        width: 150px;
+        height: 150px;
+    }
+
+    .organic-portrait--large {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 .problem-section {
