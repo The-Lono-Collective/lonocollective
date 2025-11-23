@@ -129,6 +129,25 @@ body::before {
     font-weight: 500;
 }
 
+/* Editorial Typography Classes */
+.editorial-headline {
+    font-family: 'Song Myung', serif;
+    font-size: var(--type-headline-xl);
+    line-height: var(--line-headline);
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+}
+
+.editorial-body {
+    font-size: var(--type-body-lg);
+    line-height: var(--line-body);
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
 .section-header {
     text-align: left;
     margin-bottom: 80px;
@@ -403,78 +422,20 @@ body::before {
 }
 
 .problem-section {
-    padding: 80px 20px;
-    max-width: 1600px;
-    margin: 0 auto;
-    background: rgba(127, 184, 148, 0.04);
     position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        height: 100%;
-        background: radial-gradient(
-            ellipse at 50% 30%,
-            rgba(127, 184, 148, 0.08) 0%,
-            transparent 60%
-        );
-        pointer-events: none;
-        z-index: 0;
-    }
-
-    > * {
-        position: relative;
-        z-index: 1;
-    }
+    padding: 0;
 }
 
-.problem-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
+.problem-section .split-section__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
 
-.problem-content h2 {
-    font-family: 'Song Myung', serif;
-    font-size: clamp(32px, 6vw, 48px);
-    font-weight: 400;
-    color: var(--text-primary);
-    margin-bottom: 40px;
-    letter-spacing: -0.02em;
-}
-
-.problem-stat {
-    font-size: clamp(20px, 3vw, 26px);
-    line-height: 1.6;
-    color: var(--accent-primary);
-    margin-bottom: 32px;
-    font-weight: 400;
-}
-
-.problem-stat strong {
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-.problem-detail {
-    font-size: clamp(17px, 2.5vw, 19px);
-    line-height: 1.9;
-    color: var(--text-secondary);
-    margin-bottom: 32px;
-    font-weight: 300;
-}
-
-.problem-solution {
-    font-size: clamp(18px, 2.5vw, 22px);
-    line-height: 1.8;
-    color: var(--accent-primary);
-    margin-top: 48px;
-    font-weight: 400;
-    font-style: italic;
+.problem-section .dotted-divider--vertical {
+    height: 300px;
+    align-self: center;
 }
 
 .framework-section {
