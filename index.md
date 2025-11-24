@@ -414,7 +414,7 @@ title: Mental Health AI Safety Evaluation
         <h2 class="fade-in-up">Regulatory Landscape</h2>
         <p class="regulatory-intro fade-in-up">Mental health AI operates in a rapidly evolving regulatory environment. Federal agencies, state legislatures, and clinical standards bodies are all developing frameworks for clinical decision support systems—especially those making life-or-death determinations.</p>
 
-        <div class="regulatory-tracker-last-updated fade-in-up">Last Updated: January 2025</div>
+        <div class="regulatory-tracker-last-updated fade-in-up">Last Updated: November 2025</div>
 
         <div class="regulatory-timeline">
             {% for regulation in site.data.regulations %}

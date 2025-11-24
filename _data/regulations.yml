@@ -1,5 +1,5 @@
 # Mental Health AI Regulatory Tracker
-# Last updated: January 2025
+# Last updated: November 2025
 #
 # To add new regulatory items, add a new entry following this format:
 # - date: "Month Year"
@@ -10,6 +10,48 @@
 #   impact_note: "Optional: High-impact warning message"
 #   source_label: "Source name"
 #   source_url: "https://..."
+
+- date: "November 2025"
+  category: federal
+  high_impact: true
+  title: "FDA Advisory Committee Recommends Stricter Approval Standards for Generative AI Mental Health Devices"
+  description: "FDA's Digital Health Advisory Committee issued formal recommendations that all generative AI-enabled mental health devices require De Novo classification or premarket approval (PMA), explicitly rejecting the 510(k) substantial equivalence pathway. Committee recommends randomized controlled trials for safety and effectiveness validation, and mandates human oversight for all AI therapy applications."
+  impact_note: "Fundamentally changes approval pathway for generative AI mental health tools"
+  source_label: "FDA Digital Health Advisory Committee"
+  source_url: "https://www.fda.gov/advisory-committees/advisory-committee-calendar/november-6-2025-digital-health-advisory-committee-meeting-announcement-11062025"
+
+- date: "August 2025"
+  category: state
+  high_impact: true
+  title: "Illinois Enacts First-in-Nation Ban on AI-Only Mental Health Therapy"
+  description: "Illinois HB 1806 (Wellness and Oversight for Psychological Resources Act) prohibits AI systems from independently performing therapy, counseling, or psychotherapy without direct oversight by a licensed mental health professional. The law, which passed unanimously and was signed by Gov. Pritzker, represents the first state ban on autonomous AI therapy and sets a precedent for other states considering similar restrictions."
+  impact_note: "Bans autonomous AI therapy; requires licensed professional oversight"
+  source_label: "Illinois General Assembly"
+  source_url: "https://www.ilga.gov/legislation/billstatus.asp?DocNum=1806&GAID=17&GA=104&DocTypeID=HB&SessionID=112"
+
+- date: "June 2025"
+  category: state
+  high_impact: false
+  title: "Nevada Regulates AI Chatbots in Mental Healthcare Settings"
+  description: "Nevada AB 406, signed by Gov. Lombardo, establishes disclosure requirements and regulatory oversight for AI chatbot use in mental and behavioral healthcare contexts. The law requires clear notification to users when interacting with AI systems and mandates data privacy protections specific to mental health applications."
+  source_label: "Nevada Legislature"
+  source_url: "https://www.leg.state.nv.us/"
+
+- date: "May 2025"
+  category: state
+  high_impact: false
+  title: "Utah Establishes Disclosure Requirements for Mental Health AI Chatbots"
+  description: "Utah HB 452, signed by Gov. Cox and effective May 7, 2025, requires suppliers of AI mental health chatbots to provide clear disclosures about AI capabilities and limitations. The law establishes consumer protection standards and requires transparency about data usage and algorithm decision-making in mental health contexts."
+  source_label: "Utah State Legislature"
+  source_url: "https://le.utah.gov/"
+
+- date: "January 2025"
+  category: federal
+  high_impact: false
+  title: "FDA Issues Draft Guidance on Lifecycle Management of AI-Based Medical Device Software"
+  description: "FDA released comprehensive draft guidance outlining expectations for transparency, clinical validation, algorithm updates, and post-market monitoring of AI-enabled medical devices. The guidance applies to mental health AI systems classified as medical devices and emphasizes continuous monitoring requirements throughout the product lifecycle."
+  source_label: "FDA Draft Guidance"
+  source_url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents"
 
 - date: "December 2024"
   category: federal

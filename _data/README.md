@@ -43,18 +43,25 @@ The regulatory tracker displays mental health AI regulatory developments on the 
 
 ## Automated Monitoring
 
-A GitHub Action runs **every Monday at 9 AM UTC** to monitor regulatory feeds:
+### Federal-Level Monitoring (GitHub Actions)
+
+A GitHub Action runs **every Monday at 9 AM UTC** to monitor federal regulatory feeds:
 
 - Federal Register (FDA rules)
 - FDA News RSS feed
 
-### What the Monitor Does
+**What the Monitor Does:**
 
 1. Checks RSS feeds and APIs for keywords: "mental health", "psychiatric", "suicide", "clinical decision support", etc.
 2. Creates a GitHub Issue with findings if any are detected
 3. Issue includes title, source, date, summary, and direct link for each finding
 
-### Reviewing Automated Findings
+**Limitations:**
+- **Federal-only**: Only monitors FDA sources; does not track state legislation
+- **Forward-looking only**: RSS/API feeds retain only recent documents (30-90 days); cannot search historical archives
+- **Misses some federal activity**: Does not capture FDA advisory committee recommendations or some draft guidances
+
+**Reviewing Automated Findings:**
 
 When you receive a notification:
 
@@ -64,6 +71,64 @@ When you receive a notification:
    - Add to `regulations.yml` following the format above
    - Update "Last Updated" date in `index.md` line 417
 4. Close the issue after review
+
+### State Legislation Monitoring (WestLaw)
+
+Since there is no unified API for 50 state legislatures, we use **WestLaw WestClip alerts** to track state mental health AI legislation.
+
+**Setting Up WestClip Alerts:**
+
+1. **Log in to WestLaw** (requires subscription)
+
+2. **Navigate to WestClip**:
+   - Click "Alerts" in the top menu
+   - Select "Create Alert" → "WestClip"
+
+3. **Configure Search Query** (Alert #1 - All Activity):
+   ```
+   "mental health" OR "behavioral health" OR psychiatric /s "artificial intelligence" OR AI OR "machine learning" OR chatbot
+   ```
+   - **Database**: State Statutes & Legislation (all jurisdictions)
+   - **Frequency**: Weekly (Monday mornings recommended)
+   - **Delivery**: Email with document links
+   - **Date Range**: Last 7 days
+
+4. **Create Second Alert** (Alert #2 - Enacted Laws Only):
+   - Same search query as above
+   - **Additional Filter**: Document Status = "Enacted" or "Signed"
+   - **Frequency**: Weekly
+   - This filters out proposed bills and focuses on actual law changes
+
+**Processing WestLaw Alerts:**
+
+1. **Review weekly alert emails** for relevant mental health AI legislation
+2. **Evaluate for inclusion**:
+   - Does it specifically regulate AI in mental health contexts?
+   - Is it enacted (not just proposed)?
+   - What's the impact level (disclosure only vs. practice restrictions)?
+3. **Add to regulations.yml**:
+   - Use `category: state`
+   - Set `high_impact: true` for practice restrictions, bans, or liability provisions
+   - Set `high_impact: false` for disclosure/transparency requirements
+4. **Update "Last Updated" date** in `index.md` line 417
+
+**Recommended Review Frequency:**
+- **Weekly**: Process WestLaw alert emails as received
+- **Quarterly**: Comprehensive manual review (see "Quarterly State Review Checklist" below)
+
+**Quarterly State Review Checklist:**
+
+Even with WestLaw alerts, conduct a quarterly manual check (January, April, July, October):
+
+1. **High-Activity States** (search legislature sites directly):
+   - California, Illinois, New York, Texas, Massachusetts, Washington
+2. **Key Search Terms**:
+   - "mental health artificial intelligence"
+   - "AI therapy" or "AI counseling"
+   - "digital mental health"
+3. **WestLaw Verification**:
+   - Run the WestClip query manually to catch anything alerts missed
+   - Check for enacted laws in past 90 days
 
 ## Manual Monitoring Sources
 
