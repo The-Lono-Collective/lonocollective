@@ -524,6 +524,506 @@ body::before {
     font-style: italic;
 }
 
+/* Failure Mode Alert Section */
+.failure-mode-alert {
+    padding: 80px 0;
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(135deg, rgba(212, 138, 127, 0.08) 0%, rgba(212, 138, 127, 0.15) 100%);
+    border-top: 2px solid rgba(212, 138, 127, 0.3);
+    border-bottom: 2px solid rgba(212, 138, 127, 0.3);
+    position: relative;
+}
+
+.failure-mode-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.failure-scenario {
+    font-family: 'Song Myung', serif;
+    font-size: clamp(28px, 4.5vw, 42px);
+    line-height: 1.5;
+    color: var(--text-primary);
+    font-weight: 400;
+    margin-bottom: 32px;
+    font-style: italic;
+    letter-spacing: -0.01em;
+}
+
+.failure-insight {
+    font-size: clamp(18px, 2.5vw, 22px);
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-weight: 400;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Methodology Badges */
+.methodology-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 80px;
+    max-width: 1000px;
+}
+
+.badge-item {
+    text-align: center;
+    padding: 32px 20px;
+    background: rgba(127, 184, 148, 0.04);
+    border-radius: 16px;
+    border: 2px solid rgba(127, 184, 148, 0.15);
+    transition: all 0.3s ease;
+}
+
+.badge-item:hover {
+    background: rgba(127, 184, 148, 0.08);
+    border-color: var(--accent-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(127, 184, 148, 0.15);
+}
+
+.badge-icon {
+    margin: 0 auto 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-icon svg {
+    color: var(--accent-primary);
+    width: 48px;
+    height: 48px;
+}
+
+.badge-item h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.badge-item p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Case Study Section */
+.case-study-section {
+    padding: 100px 0;
+    width: 100%;
+    margin: 0;
+    background: var(--bg-shore);
+}
+
+.case-study-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.case-study-content h2 {
+    font-family: 'Song Myung', serif;
+    font-size: clamp(42px, 7vw, 64px);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    line-height: var(--line-headline);
+}
+
+.case-study-intro {
+    font-size: clamp(18px, 2.5vw, 21px);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 80px;
+    font-weight: 300;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+}
+
+.case-study-card {
+    background: var(--bg-primary);
+    border-radius: 16px;
+    border: 1px solid rgba(127, 184, 148, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.case-study-card:hover {
+    box-shadow: 0 12px 32px rgba(127, 184, 148, 0.12);
+    transform: translateY(-4px);
+}
+
+.case-scenario {
+    padding: 32px;
+    background: rgba(127, 184, 148, 0.03);
+    border-bottom: 1px solid rgba(127, 184, 148, 0.1);
+}
+
+.case-scenario h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.case-scenario p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-weight: 300;
+    font-style: italic;
+}
+
+.case-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.generic-result,
+.specialized-result {
+    padding: 28px;
+}
+
+.generic-result {
+    background: rgba(212, 138, 127, 0.04);
+    border-right: 1px solid rgba(127, 184, 148, 0.1);
+}
+
+.specialized-result {
+    background: rgba(127, 184, 148, 0.04);
+}
+
+.result-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.result-badge.failure {
+    background: rgba(212, 138, 127, 0.15);
+    color: #D48A7F;
+    border: 1px solid rgba(212, 138, 127, 0.3);
+}
+
+.result-badge.success {
+    background: rgba(127, 184, 148, 0.15);
+    color: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
+}
+
+.case-split p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* Risk Matrix Section */
+.risk-matrix-section {
+    padding: 100px 0;
+    width: 100%;
+    margin: 0;
+}
+
+.risk-matrix-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.risk-matrix-content h2 {
+    font-family: 'Song Myung', serif;
+    font-size: clamp(42px, 7vw, 64px);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    line-height: var(--line-headline);
+}
+
+.risk-matrix-intro {
+    font-size: clamp(18px, 2.5vw, 21px);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 80px;
+    font-weight: 300;
+}
+
+.risk-matrix-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.risk-matrix-chart {
+    flex: 1;
+    position: relative;
+    background: var(--bg-primary);
+    border: 2px solid rgba(127, 184, 148, 0.2);
+    border-radius: 16px;
+    padding: 80px 60px 60px 80px;
+    min-height: 600px;
+}
+
+/* Quadrants */
+.quadrant {
+    position: absolute;
+    width: calc(50% - 1px);
+    height: calc(50% - 1px);
+    opacity: 0.3;
+    border-radius: 8px;
+}
+
+.quadrant.low-low {
+    bottom: 60px;
+    left: 80px;
+    background: rgba(127, 184, 148, 0.05);
+}
+
+.quadrant.low-high {
+    top: 80px;
+    left: 80px;
+    background: rgba(255, 193, 7, 0.05);
+}
+
+.quadrant.high-low {
+    bottom: 60px;
+    right: 60px;
+    background: rgba(255, 193, 7, 0.08);
+}
+
+.quadrant.high-high {
+    top: 80px;
+    right: 60px;
+    background: rgba(212, 138, 127, 0.12);
+}
+
+/* Grid lines */
+.grid-line {
+    position: absolute;
+    background: rgba(127, 184, 148, 0.2);
+}
+
+.grid-line.vertical {
+    left: 50%;
+    top: 80px;
+    bottom: 60px;
+    width: 2px;
+}
+
+.grid-line.horizontal {
+    top: 50%;
+    left: 80px;
+    right: 60px;
+    height: 2px;
+}
+
+/* Risk points */
+.risk-point {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.risk-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 3px solid;
+    background: var(--bg-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.risk-point.critical .risk-dot {
+    border-color: #D48A7F;
+    box-shadow: 0 0 0 8px rgba(212, 138, 127, 0.15);
+}
+
+.risk-point.high .risk-dot {
+    border-color: #FFC107;
+    box-shadow: 0 0 0 8px rgba(255, 193, 7, 0.15);
+}
+
+.risk-point.medium .risk-dot {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 8px rgba(127, 184, 148, 0.15);
+}
+
+.risk-dot:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 12px rgba(127, 184, 148, 0.2);
+}
+
+.risk-label {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-primary);
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid rgba(127, 184, 148, 0.2);
+    min-width: 280px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+}
+
+.risk-point:hover .risk-label {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.risk-label h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.risk-label p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+.risk-label .risk-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.risk-label .tag {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+/* Axis labels */
+.axis-label {
+    position: absolute;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.axis-label.y-axis {
+    top: 20px;
+    left: 80px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.axis-scale {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.axis-scale.x-axis {
+    bottom: 20px;
+    left: 80px;
+    right: 60px;
+}
+
+.axis-scale.y-axis-scale {
+    flex-direction: column;
+    left: 20px;
+    top: 80px;
+    bottom: 60px;
+}
+
+/* Risk Legend */
+.risk-legend {
+    flex: 0 0 320px;
+    background: var(--bg-primary);
+    border: 2px solid rgba(127, 184, 148, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.risk-legend h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    line-height: 1.3;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.legend-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid;
+    flex-shrink: 0;
+}
+
+.legend-dot.critical {
+    border-color: #D48A7F;
+    background: rgba(212, 138, 127, 0.15);
+}
+
+.legend-dot.high {
+    border-color: #FFC107;
+    background: rgba(255, 193, 7, 0.15);
+}
+
+.legend-dot.medium {
+    border-color: var(--accent-primary);
+    background: rgba(127, 184, 148, 0.15);
+}
+
 .problem-section {
     position: relative;
     padding-right: 0;
@@ -1516,6 +2016,29 @@ html {
         grid-template-columns: 1fr;
         gap: 48px;
     }
+
+    .methodology-badges {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .case-study-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .risk-matrix-wrapper {
+        flex-direction: column;
+    }
+
+    .risk-legend {
+        flex: 1;
+        width: 100%;
+    }
+
+    .risk-matrix-chart {
+        min-height: 500px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1557,6 +2080,54 @@ html {
     .team-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .failure-mode-alert {
+        padding: 60px 0;
+    }
+
+    .failure-mode-content {
+        padding: 0 20px;
+    }
+
+    .case-study-section,
+    .risk-matrix-section {
+        padding: 60px 20px;
+    }
+
+    .case-split {
+        grid-template-columns: 1fr;
+    }
+
+    .generic-result {
+        border-right: none;
+        border-bottom: 1px solid rgba(127, 184, 148, 0.1);
+    }
+
+    .risk-matrix-chart {
+        padding: 60px 40px 40px 60px;
+        min-height: 450px;
+    }
+
+    .risk-point {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    .risk-label {
+        min-width: 220px;
+        font-size: 14px;
+    }
+
+    .risk-label h3 {
+        font-size: 16px;
+    }
+
+    .axis-label.y-axis {
+        font-size: 14px;
+    }
+
+    .axis-scale {
+        font-size: 11px;
     }
 }
 
@@ -1607,5 +2178,36 @@ html {
         display: block;
         margin: 8px 0;
         text-align: left;
+    }
+
+    .failure-mode-alert {
+        padding: 40px 0;
+    }
+
+    .failure-mode-content {
+        padding: 0 15px;
+    }
+
+    .case-study-section,
+    .risk-matrix-section {
+        padding: 40px 15px;
+    }
+
+    .risk-matrix-chart {
+        padding: 40px 20px 20px 40px;
+        min-height: 400px;
+    }
+
+    .risk-label {
+        min-width: 200px;
+        padding: 16px;
+    }
+
+    .risk-legend {
+        padding: 24px;
+    }
+
+    .badge-item {
+        padding: 24px 16px;
     }
 }

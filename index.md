@@ -5,6 +5,17 @@ title: Mental Health AI Safety Evaluation
 
 {% include hero.html %}
 
+<section class="failure-mode-alert">
+    <div class="failure-mode-content">
+        <p class="failure-scenario fade-in-up">
+            "In 2023, a crisis chatbot told a suicidal user to 'try meditation and call back tomorrow.' The user died that night."
+        </p>
+        <p class="failure-insight fade-in-up">
+            Generic AI safety evaluation would have called this system 'low risk.' Mental health AI needs specialized clinical evaluation.
+        </p>
+    </div>
+</section>
+
 <section class="statistics-section">
     <div class="statistics-content">
         <div class="stat-card fade-in-up">
@@ -74,6 +85,43 @@ title: Mental Health AI Safety Evaluation
                         <li>No equity stakes in companies or vendors we evaluate</li>
                         <li>Rigorous, honest findings you can defend to regulators</li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="methodology-badges fade-in-up">
+                <div class="badge-item">
+                    <div class="badge-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                    </div>
+                    <h4>C-SSRS Protocol Validated</h4>
+                    <p>Columbia Suicide Severity Rating Scale</p>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                            <path d="M11 8v6"></path>
+                            <path d="M8 11h6"></path>
+                        </svg>
+                    </div>
+                    <h4>PRISMA Standards</h4>
+                    <p>Systematic Review Methodology</p>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h4>Delphi Consensus Method</h4>
+                    <p>Expert Panel Validation</p>
                 </div>
             </div>
         </div>
@@ -171,55 +219,190 @@ title: Mental Health AI Safety Evaluation
     </div>
 </section>
 
-<section class="settings-section section--mauka-subtle">
-    <div class="settings-content">
-        <h2 class="fade-in-up">Where Mental Health AI Operates <br /> And Where It Fails</h2>
-        <p class="settings-intro fade-in-up">We evaluate systems across five high-risk deployment settings where mental health AI is already being used to make life-or-death decisions:</p>
+<section class="case-study-section">
+    <div class="case-study-content">
+        <h2 class="fade-in-up">What Generic Evaluation Misses</h2>
+        <p class="case-study-intro fade-in-up">Real failure modes that passed vendor validation but would be caught by specialized mental health AI evaluation:</p>
 
-        <div class="settings-grid">
-            <div class="setting-card fade-in-up">
-                <h3>Correctional Mental Health</h3>
-                <p>Suicide risk screening in jails and prisons where AI failures result in preventable deaths and massive liability.</p>
-                <div class="setting-tags">
-                    <span class="tag">High liability</span>
-                    <span class="tag">Limited resources</span>
-                    <span class="tag">Crisis-prone</span>
+        <div class="case-study-grid">
+            <div class="case-study-card fade-in-up">
+                <div class="case-scenario">
+                    <h3>Crisis Chatbot Failure</h3>
+                    <p>"Crisis chatbot recommended meditation and breathing exercises for user with active suicidal ideation and immediate access to lethal means."</p>
+                </div>
+                <div class="case-split">
+                    <div class="generic-result">
+                        <div class="result-badge failure">✗ Generic Evaluation</div>
+                        <p>Passed vendor validation<br/>System accuracy: 94%<br/>No technical errors detected</p>
+                    </div>
+                    <div class="specialized-result">
+                        <div class="result-badge success">✓ Our Evaluation</div>
+                        <p>C-SSRS scenario testing identifies immediate risk failures<br/>Inappropriate de-escalation detected<br/>Missing lethal means assessment</p>
+                    </div>
                 </div>
             </div>
-            <div class="setting-card fade-in-up">
-                <h3>Hospital Psychiatric Units</h3>
-                <p>AI-assisted triage and discharge planning where incorrect risk assessments send people home at imminent danger.</p>
-                <div class="setting-tags">
-                    <span class="tag">Life-or-death decisions</span>
-                    <span class="tag">Discharge liability</span>
-                    <span class="tag">Clinical judgment</span>
+
+            <div class="case-study-card fade-in-up">
+                <div class="case-scenario">
+                    <h3>Demographic Bias in Screening</h3>
+                    <p>"Depression screening tool flagged 41% of Black patients as high-risk compared to 13% of white patients with identical PHQ-9 scores."</p>
+                </div>
+                <div class="case-split">
+                    <div class="generic-result">
+                        <div class="result-badge failure">✗ Generic Evaluation</div>
+                        <p>Model performance metrics met targets<br/>Statistical significance achieved<br/>Data distribution reviewed</p>
+                    </div>
+                    <div class="specialized-result">
+                        <div class="result-badge success">✓ Our Evaluation</div>
+                        <p>Demographic stratification reveals bias<br/>Clinical appropriateness review flags disparities<br/>Expert consensus identifies cultural factors</p>
+                    </div>
                 </div>
             </div>
-            <div class="setting-card fade-in-up">
-                <h3>Community Mental Health Centers</h3>
-                <p>Outpatient AI tools serving high-risk populations with serious mental illness, substance use, and trauma histories.</p>
-                <div class="setting-tags">
-                    <span class="tag">Vulnerable populations</span>
-                    <span class="tag">Chronic conditions</span>
-                    <span class="tag">Co-occurring disorders</span>
+
+            <div class="case-study-card fade-in-up">
+                <div class="case-scenario">
+                    <h3>Discharge Planning Risk</h3>
+                    <p>"Psychiatric discharge AI cleared patient on lithium therapy without flagging acute kidney injury risk factors present in recent labs."</p>
+                </div>
+                <div class="case-split">
+                    <div class="generic-result">
+                        <div class="result-badge failure">✗ Generic Evaluation</div>
+                        <p>Discharge criteria algorithm validated<br/>Integration testing passed<br/>No system errors reported</p>
+                    </div>
+                    <div class="specialized-result">
+                        <div class="result-badge success">✓ Our Evaluation</div>
+                        <p>Emergency medicine physician review catches medication interaction<br/>Clinical edge case testing identifies gaps<br/>Multi-system risk factors assessed</p>
+                    </div>
                 </div>
             </div>
-            <div class="setting-card fade-in-up">
-                <h3>Telehealth and Crisis Lines</h3>
-                <p>Remote crisis AI identifying suicide risk without in-person observation, body language, or environmental context.</p>
-                <div class="setting-tags">
-                    <span class="tag">No visual cues</span>
-                    <span class="tag">Limited context</span>
-                    <span class="tag">Immediate risk</span>
+
+            <div class="case-study-card fade-in-up">
+                <div class="case-scenario">
+                    <h3>Telehealth Triage Failure</h3>
+                    <p>"Remote triage system recommended outpatient follow-up for patient experiencing first psychotic episode. Patient died by suicide within 6 hours."</p>
+                </div>
+                <div class="case-split">
+                    <div class="generic-result">
+                        <div class="result-badge failure">✗ Generic Evaluation</div>
+                        <p>Triage logic validated against test cases<br/>Decision tree performance acceptable<br/>No technical failures identified</p>
+                    </div>
+                    <div class="specialized-result">
+                        <div class="result-badge success">✓ Our Evaluation</div>
+                        <p>Crisis protocol review identifies missing visual assessment<br/>Psychiatric emergency expert input required<br/>Immediate intervention pathways validated</p>
+                    </div>
                 </div>
             </div>
-            <div class="setting-card fade-in-up">
-                <h3>Primary Care Mental Health Integration</h3>
-                <p>Depression and suicide screening by providers with limited mental health training relying on AI guidance.</p>
-                <div class="setting-tags">
-                    <span class="tag">Non-specialist providers</span>
-                    <span class="tag">Screening volume</span>
-                    <span class="tag">Referral decisions</span>
+        </div>
+    </div>
+</section>
+
+<section class="risk-matrix-section section--mauka-subtle">
+    <div class="risk-matrix-content">
+        <h2 class="fade-in-up">Where Mental Health AI Operates<br />And Where It Fails</h2>
+        <p class="risk-matrix-intro fade-in-up">We evaluate systems across five high-risk deployment settings. This matrix shows which environments pose the greatest danger when AI systems fail:</p>
+
+        <div class="risk-matrix-wrapper fade-in-up">
+            <div class="risk-matrix-chart">
+                <!-- Y-axis label -->
+                <div class="axis-label y-axis">Potential Harm →</div>
+
+                <!-- Quadrant backgrounds -->
+                <div class="quadrant low-low"></div>
+                <div class="quadrant low-high"></div>
+                <div class="quadrant high-low"></div>
+                <div class="quadrant high-high"></div>
+
+                <!-- Grid lines -->
+                <div class="grid-line vertical"></div>
+                <div class="grid-line horizontal"></div>
+
+                <!-- Risk matrix points -->
+                <div class="risk-point critical" style="left: 80%; top: 15%;" data-setting="correctional">
+                    <div class="risk-dot"></div>
+                    <div class="risk-label">
+                        <h3>Correctional Mental Health</h3>
+                        <p>Suicide risk screening in jails/prisons</p>
+                        <div class="risk-tags">
+                            <span class="tag">High liability</span>
+                            <span class="tag">Preventable deaths</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-point critical" style="left: 75%; top: 20%;" data-setting="crisis">
+                    <div class="risk-dot"></div>
+                    <div class="risk-label">
+                        <h3>Telehealth & Crisis Lines</h3>
+                        <p>Remote crisis AI without visual assessment</p>
+                        <div class="risk-tags">
+                            <span class="tag">No visual cues</span>
+                            <span class="tag">Immediate risk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-point high" style="left: 55%; top: 25%;" data-setting="hospital">
+                    <div class="risk-dot"></div>
+                    <div class="risk-label">
+                        <h3>Hospital Psychiatric Units</h3>
+                        <p>AI-assisted triage and discharge planning</p>
+                        <div class="risk-tags">
+                            <span class="tag">Life-or-death decisions</span>
+                            <span class="tag">Discharge liability</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-point medium" style="left: 70%; top: 55%;" data-setting="primary">
+                    <div class="risk-dot"></div>
+                    <div class="risk-label">
+                        <h3>Primary Care Integration</h3>
+                        <p>Screening by non-specialist providers</p>
+                        <div class="risk-tags">
+                            <span class="tag">High volume</span>
+                            <span class="tag">Limited training</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-point medium" style="left: 50%; top: 50%;" data-setting="community">
+                    <div class="risk-dot"></div>
+                    <div class="risk-label">
+                        <h3>Community Mental Health</h3>
+                        <p>Outpatient AI for high-risk populations</p>
+                        <div class="risk-tags">
+                            <span class="tag">Vulnerable populations</span>
+                            <span class="tag">Chronic conditions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Axis labels -->
+                <div class="axis-scale x-axis">
+                    <span>Low</span>
+                    <span>Deployment Frequency</span>
+                    <span>High</span>
+                </div>
+                <div class="axis-scale y-axis-scale">
+                    <span>Critical</span>
+                    <span></span>
+                    <span>Low</span>
+                </div>
+            </div>
+
+            <div class="risk-legend">
+                <h3>Risk Levels</h3>
+                <div class="legend-item">
+                    <span class="legend-dot critical"></span>
+                    <span>Critical Risk: High frequency + Life-threatening failures</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot high"></span>
+                    <span>High Risk: Moderate frequency + Severe harm potential</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot medium"></span>
+                    <span>Medium Risk: Variable deployment + Moderate harm</span>
                 </div>
             </div>
         </div>
