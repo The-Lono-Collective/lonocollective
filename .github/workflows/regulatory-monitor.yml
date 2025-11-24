@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '0 9 * * 1'  # 9 AM UTC every Monday
   workflow_dispatch:  # Allow manual triggering
+  push:
+    branches:
+      - new-design  # Enable for testing on new-design branch
 
 jobs:
   monitor-regulations:
