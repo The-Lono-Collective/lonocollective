@@ -1,0 +1,62 @@
+# Mental Health AI Regulatory Tracker
+# Last updated: January 2025
+#
+# To add new regulatory items, add a new entry following this format:
+# - date: "Month Year"
+#   category: federal | state | clinical | international
+#   high_impact: true | false
+#   title: "Title of regulatory development"
+#   description: "Detailed description..."
+#   impact_note: "Optional: High-impact warning message"
+#   source_label: "Source name"
+#   source_url: "https://..."
+
+- date: "December 2024"
+  category: federal
+  high_impact: true
+  title: "FDA Issues Draft Guidance on Clinical Decision Support Software"
+  description: "FDA clarifies which clinical decision support (CDS) software functions are considered medical devices requiring premarket review. Mental health AI systems making diagnostic or treatment recommendations fall under increased scrutiny, particularly those assessing suicide risk or recommending involuntary commitment."
+  impact_note: "May require premarket submission for mental health AI systems"
+  source_label: "FDA Draft Guidance"
+  source_url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+
+- date: "October 2024"
+  category: state
+  high_impact: true
+  title: "California Enacts AI Safety and Accountability Act"
+  description: "California AB 2930 requires AI systems used in healthcare settings to undergo third-party safety evaluation before deployment. Includes specific provisions for mental health AI systems that assess suicide risk, recommend involuntary commitment, or influence crisis intervention decisions. Liability provisions take effect January 2026."
+  impact_note: "Mandates independent safety evaluation for California deployments"
+  source_label: "California Legislature"
+  source_url: "https://leginfo.legislature.ca.gov/"
+
+- date: "September 2024"
+  category: clinical
+  high_impact: false
+  title: "APA Releases Guidelines for AI in Psychiatric Practice"
+  description: "American Psychiatric Association publishes clinical guidelines emphasizing that AI systems used for suicide risk assessment must be validated against established instruments (C-SSRS, Beck Scale) and reviewed by board-certified psychiatrists. Recommends against sole reliance on AI for crisis intervention decisions."
+  source_label: "American Psychiatric Association"
+  source_url: "https://www.psychiatry.org/"
+
+- date: "July 2024"
+  category: federal
+  high_impact: false
+  title: "CMS Announces Reimbursement Rules for AI-Enhanced Mental Health Services"
+  description: "Centers for Medicare & Medicaid Services establishes billing codes for AI-assisted mental health screening but requires documentation of clinical oversight, validation studies, and adverse event reporting. Telehealth mental health AI must meet same standards as in-person care."
+  source_label: "Centers for Medicare & Medicaid Services"
+  source_url: "https://www.cms.gov/"
+
+- date: "June 2024"
+  category: international
+  high_impact: false
+  title: "EU AI Act Classifies Mental Health AI as \"High-Risk\""
+  description: "European Union's AI Act officially designates mental health AI systems—particularly those used for diagnosis, treatment planning, or crisis assessment—as high-risk applications requiring conformity assessment, transparency requirements, and human oversight. Enforcement begins in 2026."
+  source_label: "European Commission"
+  source_url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+
+- date: "March 2024"
+  category: clinical
+  high_impact: false
+  title: "Joint Commission Issues Safety Standards for Healthcare AI"
+  description: "The Joint Commission releases accreditation standards requiring healthcare organizations to demonstrate systematic evaluation of AI systems used in clinical decision-making. Mental health AI must undergo clinical validation, bias testing, and failure mode analysis before deployment."
+  source_label: "The Joint Commission"
+  source_url: "https://www.jointcommission.org/"

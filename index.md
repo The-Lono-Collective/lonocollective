@@ -417,113 +417,43 @@ title: Mental Health AI Safety Evaluation
         <div class="regulatory-tracker-last-updated fade-in-up">Last Updated: January 2025</div>
 
         <div class="regulatory-timeline">
-            <div class="regulatory-item federal fade-in-up">
+            {% for regulation in site.data.regulations %}
+            <div class="regulatory-item {{ regulation.category }} fade-in-up">
                 <div class="regulatory-header">
-                    <div class="regulatory-date">December 2024</div>
+                    <div class="regulatory-date">{{ regulation.date }}</div>
                     <div class="regulatory-badges">
+                        {% if regulation.category == 'federal' %}
                         <span class="regulatory-badge federal">Federal</span>
-                        <span class="regulatory-badge high-impact">High Impact</span>
-                    </div>
-                </div>
-                <h3 class="regulatory-title">FDA Issues Draft Guidance on Clinical Decision Support Software</h3>
-                <p class="regulatory-description">FDA clarifies which clinical decision support (CDS) software functions are considered medical devices requiring premarket review. Mental health AI systems making diagnostic or treatment recommendations fall under increased scrutiny, particularly those assessing suicide risk or recommending involuntary commitment.</p>
-                <div class="regulatory-impact-note">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                        <line x1="12" y1="9" x2="12" y2="13"></line>
-                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                    </svg>
-                    May require premarket submission for mental health AI systems
-                </div>
-                <div class="regulatory-source">
-                    <span class="regulatory-source-label">Source:</span>
-                    <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software" class="regulatory-source-link" target="_blank" rel="noopener">FDA Draft Guidance</a>
-                </div>
-            </div>
-
-            <div class="regulatory-item state fade-in-up">
-                <div class="regulatory-header">
-                    <div class="regulatory-date">October 2024</div>
-                    <div class="regulatory-badges">
+                        {% elsif regulation.category == 'state' %}
                         <span class="regulatory-badge state">State</span>
+                        {% elsif regulation.category == 'clinical' %}
+                        <span class="regulatory-badge clinical">Clinical Standards</span>
+                        {% elsif regulation.category == 'international' %}
+                        <span class="regulatory-badge international">International</span>
+                        {% endif %}
+                        {% if regulation.high_impact %}
                         <span class="regulatory-badge high-impact">High Impact</span>
+                        {% endif %}
                     </div>
                 </div>
-                <h3 class="regulatory-title">California Enacts AI Safety and Accountability Act</h3>
-                <p class="regulatory-description">California AB 2930 requires AI systems used in healthcare settings to undergo third-party safety evaluation before deployment. Includes specific provisions for mental health AI systems that assess suicide risk, recommend involuntary commitment, or influence crisis intervention decisions. Liability provisions take effect January 2026.</p>
+                <h3 class="regulatory-title">{{ regulation.title }}</h3>
+                <p class="regulatory-description">{{ regulation.description }}</p>
+                {% if regulation.impact_note %}
                 <div class="regulatory-impact-note">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
                         <line x1="12" y1="9" x2="12" y2="13"></line>
                         <line x1="12" y1="17" x2="12.01" y2="17"></line>
                     </svg>
-                    Mandates independent safety evaluation for California deployments
+                    {{ regulation.impact_note }}
                 </div>
+                {% endif %}
                 <div class="regulatory-source">
                     <span class="regulatory-source-label">Source:</span>
-                    <a href="https://leginfo.legislature.ca.gov/" class="regulatory-source-link" target="_blank" rel="noopener">California Legislature</a>
+                    <a href="{{ regulation.source_url }}" class="regulatory-source-link" target="_blank" rel="noopener">{{ regulation.source_label }}</a>
                 </div>
             </div>
-
-            <div class="regulatory-item clinical fade-in-up">
-                <div class="regulatory-header">
-                    <div class="regulatory-date">September 2024</div>
-                    <div class="regulatory-badges">
-                        <span class="regulatory-badge clinical">Clinical Standards</span>
-                    </div>
-                </div>
-                <h3 class="regulatory-title">APA Releases Guidelines for AI in Psychiatric Practice</h3>
-                <p class="regulatory-description">American Psychiatric Association publishes clinical guidelines emphasizing that AI systems used for suicide risk assessment must be validated against established instruments (C-SSRS, Beck Scale) and reviewed by board-certified psychiatrists. Recommends against sole reliance on AI for crisis intervention decisions.</p>
-                <div class="regulatory-source">
-                    <span class="regulatory-source-label">Source:</span>
-                    <a href="https://www.psychiatry.org/" class="regulatory-source-link" target="_blank" rel="noopener">American Psychiatric Association</a>
-                </div>
-            </div>
-
-            <div class="regulatory-item federal fade-in-up">
-                <div class="regulatory-header">
-                    <div class="regulatory-date">July 2024</div>
-                    <div class="regulatory-badges">
-                        <span class="regulatory-badge federal">Federal</span>
-                    </div>
-                </div>
-                <h3 class="regulatory-title">CMS Announces Reimbursement Rules for AI-Enhanced Mental Health Services</h3>
-                <p class="regulatory-description">Centers for Medicare & Medicaid Services establishes billing codes for AI-assisted mental health screening but requires documentation of clinical oversight, validation studies, and adverse event reporting. Telehealth mental health AI must meet same standards as in-person care.</p>
-                <div class="regulatory-source">
-                    <span class="regulatory-source-label">Source:</span>
-                    <a href="https://www.cms.gov/" class="regulatory-source-link" target="_blank" rel="noopener">Centers for Medicare & Medicaid Services</a>
-                </div>
-            </div>
-
-            <div class="regulatory-item international fade-in-up">
-                <div class="regulatory-header">
-                    <div class="regulatory-date">June 2024</div>
-                    <div class="regulatory-badges">
-                        <span class="regulatory-badge international">International</span>
-                    </div>
-                </div>
-                <h3 class="regulatory-title">EU AI Act Classifies Mental Health AI as "High-Risk"</h3>
-                <p class="regulatory-description">European Union's AI Act officially designates mental health AI systems—particularly those used for diagnosis, treatment planning, or crisis assessment—as high-risk applications requiring conformity assessment, transparency requirements, and human oversight. Enforcement begins in 2026.</p>
-                <div class="regulatory-source">
-                    <span class="regulatory-source-label">Source:</span>
-                    <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" class="regulatory-source-link" target="_blank" rel="noopener">European Commission</a>
-                </div>
-            </div>
-
-            <div class="regulatory-item clinical fade-in-up">
-                <div class="regulatory-header">
-                    <div class="regulatory-date">March 2024</div>
-                    <div class="regulatory-badges">
-                        <span class="regulatory-badge clinical">Clinical Standards</span>
-                    </div>
-                </div>
-                <h3 class="regulatory-title">Joint Commission Issues Safety Standards for Healthcare AI</h3>
-                <p class="regulatory-description">The Joint Commission releases accreditation standards requiring healthcare organizations to demonstrate systematic evaluation of AI systems used in clinical decision-making. Mental health AI must undergo clinical validation, bias testing, and failure mode analysis before deployment.</p>
-                <div class="regulatory-source">
-                    <span class="regulatory-source-label">Source:</span>
-                    <a href="https://www.jointcommission.org/" class="regulatory-source-link" target="_blank" rel="noopener">The Joint Commission</a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

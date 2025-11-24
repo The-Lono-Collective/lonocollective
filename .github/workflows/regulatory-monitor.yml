@@ -1,0 +1,179 @@
+name: Regulatory Tracker Monitor
+
+# Runs weekly on Monday mornings
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # 9 AM UTC every Monday
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  monitor-regulations:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install feedparser requests pyyaml
+
+      - name: Monitor regulatory feeds
+        id: monitor
+        run: |
+          python - <<'EOF'
+          import feedparser
+          import requests
+          import yaml
+          import json
+          from datetime import datetime, timedelta
+
+          # Mental health AI keywords to filter for
+          KEYWORDS = [
+              'mental health', 'psychiatric', 'suicide', 'crisis intervention',
+              'clinical decision support', 'behavioral health', 'psychotherapy',
+              'depression screening', 'anxiety', 'AI diagnostic', 'mental healthcare'
+          ]
+
+          # RSS/API feeds to monitor
+          FEEDS = [
+              {
+                  'name': 'Federal Register (FDA)',
+                  'url': 'https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=food-and-drug-administration&conditions[type][]=RULE&conditions[type][]=PRORULE&per_page=20',
+                  'type': 'json'
+              },
+              {
+                  'name': 'FDA News',
+                  'url': 'https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/fda-newsroom/rss.xml',
+                  'type': 'rss'
+              }
+          ]
+
+          findings = []
+          one_week_ago = datetime.now() - timedelta(days=7)
+
+          print(f"🔍 Monitoring regulatory feeds for mental health AI developments...")
+          print(f"📅 Looking for items from the last 7 days\n")
+
+          for feed_info in FEEDS:
+              try:
+                  print(f"Checking: {feed_info['name']}")
+
+                  if feed_info['type'] == 'rss':
+                      feed = feedparser.parse(feed_info['url'])
+
+                      for entry in feed.entries[:20]:  # Check last 20 entries
+                          title = entry.get('title', '').lower()
+                          summary = entry.get('summary', '').lower()
+                          combined_text = f"{title} {summary}"
+
+                          # Check if any keywords match
+                          if any(keyword.lower() in combined_text for keyword in KEYWORDS):
+                              pub_date = entry.get('published', '')
+                              findings.append({
+                                  'source': feed_info['name'],
+                                  'title': entry.get('title', 'No title'),
+                                  'link': entry.get('link', ''),
+                                  'date': pub_date,
+                                  'summary': entry.get('summary', 'No summary')[:300]
+                              })
+                              print(f"  ✓ Found: {entry.get('title', 'No title')[:80]}")
+
+                  elif feed_info['type'] == 'json':
+                      response = requests.get(feed_info['url'], timeout=10)
+                      if response.status_code == 200:
+                          data = response.json()
+                          results = data.get('results', [])
+
+                          for item in results:
+                              title = item.get('title', '').lower()
+                              abstract = item.get('abstract', '').lower()
+                              combined_text = f"{title} {abstract}"
+
+                              if any(keyword.lower() in combined_text for keyword in KEYWORDS):
+                                  findings.append({
+                                      'source': feed_info['name'],
+                                      'title': item.get('title', 'No title'),
+                                      'link': item.get('html_url', ''),
+                                      'date': item.get('publication_date', ''),
+                                      'summary': item.get('abstract', 'No summary')[:300]
+                                  })
+                                  print(f"  ✓ Found: {item.get('title', 'No title')[:80]}")
+
+              except Exception as e:
+                  print(f"  ⚠ Error checking {feed_info['name']}: {str(e)}")
+
+          print(f"\n📊 Total findings: {len(findings)}")
+
+          # Save findings to output
+          if findings:
+              with open('regulatory_findings.json', 'w') as f:
+                  json.dump(findings, f, indent=2)
+              print("✅ Findings saved to regulatory_findings.json")
+          else:
+              print("ℹ️ No new mental health AI regulatory developments found")
+
+          EOF
+
+      - name: Create issue if findings exist
+        if: hashFiles('regulatory_findings.json') != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            if (!fs.existsSync('regulatory_findings.json')) {
+              console.log('No findings file found');
+              return;
+            }
+
+            const findings = JSON.parse(fs.readFileSync('regulatory_findings.json', 'utf8'));
+
+            if (findings.length === 0) {
+              console.log('No findings to report');
+              return;
+            }
+
+            // Create issue body
+            let body = `## 🔔 New Mental Health AI Regulatory Developments Detected\n\n`;
+            body += `**Monitoring Date:** ${new Date().toISOString().split('T')[0]}\n`;
+            body += `**Findings:** ${findings.length} potential items\n\n`;
+            body += `---\n\n`;
+
+            findings.forEach((finding, index) => {
+              body += `### ${index + 1}. ${finding.title}\n\n`;
+              body += `**Source:** ${finding.source}\n`;
+              body += `**Date:** ${finding.date}\n`;
+              body += `**Link:** ${finding.link}\n\n`;
+              body += `**Summary:**\n${finding.summary}\n\n`;
+              body += `---\n\n`;
+            });
+
+            body += `\n\n## 📝 Next Steps\n\n`;
+            body += `1. Review each finding for relevance to mental health AI safety evaluation\n`;
+            body += `2. For relevant items, add to \`_data/regulations.yml\` following the existing format\n`;
+            body += `3. Update the "Last Updated" date in the regulatory tracker section\n`;
+            body += `4. Close this issue after review\n\n`;
+            body += `**File to edit:** [\`_data/regulations.yml\`](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/_data/regulations.yml)\n`;
+
+            // Create the issue
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🔔 Regulatory Monitor: ${findings.length} Potential Items (${new Date().toISOString().split('T')[0]})`,
+              body: body,
+              labels: ['regulatory-monitor', 'content-update']
+            });
+
+            console.log(`✅ Created issue with ${findings.length} findings`);
+
+      - name: Send summary comment
+        if: always()
+        run: |
+          echo "✅ Regulatory monitoring workflow completed"
+          echo "Check the Actions tab for detailed results"
