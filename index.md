@@ -5,6 +5,26 @@ title: Mental Health AI Safety Evaluation
 
 {% include hero.html %}
 
+<section class="statistics-section">
+    <div class="statistics-content">
+        <div class="stat-card fade-in-up">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Suicide deaths annually in the US</div>
+            <div class="stat-context">Every mental health AI failure is a potential preventable death</div>
+        </div>
+        <div class="stat-card fade-in-up">
+            <div class="stat-number">$17B+</div>
+            <div class="stat-label">Projected mental health AI market by 2030</div>
+            <div class="stat-context">Rapid deployment without rigorous clinical validation</div>
+        </div>
+        <div class="stat-card fade-in-up">
+            <div class="stat-number">$3M+</div>
+            <div class="stat-label">Average wrongful death settlement in psychiatric care</div>
+            <div class="stat-context">Legal liability from AI-assisted clinical failures</div>
+        </div>
+    </div>
+</section>
+
 <section class="problem-section section--kalo">
     <div class="split-section split-section--60-40">
         <div class="split-section__text">
@@ -25,21 +45,75 @@ title: Mental Health AI Safety Evaluation
             <div class="methodology-grid">
                 <div class="method-card fade-in-up">
                     <h4>Mental Health-Specific Failure Mode Analysis</h4>
-                    <p>Systematic testing using evidence-based clinical scenarios (validated against tools like the C-SSRS for suicide risk assessment). We identify where your system breaks down in ambiguous presentations, incomplete information, and crisis situations requiring immediate judgment.</p>
+                    <ul>
+                        <li>Systematic testing using validated clinical scenarios (C-SSRS, PHQ-9, GAD-7)</li>
+                        <li>Identifies breakdowns in ambiguous presentations and crisis situations</li>
+                        <li>Tests edge cases where incomplete information requires clinical judgment</li>
+                    </ul>
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Research-Grade Documentation</h4>
-                    <p>Evaluation reports following academic research standards (PRISMA systematic reviews, Delphi expert consensus methodology). Documentation designed to withstand academic and regulatory scrutiny, stakeholder due diligence, and legal challenges.</p>
+                    <ul>
+                        <li>Academic research standards (PRISMA reviews, Delphi consensus methodology)</li>
+                        <li>Withstands regulatory scrutiny and legal challenges</li>
+                        <li>Suitable for stakeholder due diligence and board presentations</li>
+                    </ul>
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Clinical Expert Consensus Report</h4>
-                    <p>Validation from our network of board-certified psychiatrists, licensed clinical psychologists, and emergency medicine physicians. Expert assessment of clinical appropriateness, risk factors, and edge case handling.</p>
+                    <ul>
+                        <li>Validation from board-certified psychiatrists and clinical psychologists</li>
+                        <li>Emergency medicine physician assessment of crisis protocols</li>
+                        <li>Expert review of clinical appropriateness and risk factors</li>
+                    </ul>
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Independent Third-Party Credibility</h4>
-                    <p>Worker-owned cooperative with no VC pressure, no equity stake in your success or your vendor's success. Just rigorous evaluation and honest findings you can defend to regulators and stakeholders.</p>
+                    <ul>
+                        <li>Worker-owned cooperative: no VC pressure to soften findings</li>
+                        <li>No equity stakes in companies or vendors we evaluate</li>
+                        <li>Rigorous, honest findings you can defend to regulators</li>
+                    </ul>
                 </div>
             </div>
+        </div>
+
+        <div class="process-timeline fade-in-up">
+            <h3>Evaluation Process</h3>
+            <div class="timeline-steps">
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Systematic Literature Review</h4>
+                        <p>1-2 weeks: PRISMA-standard review of existing research</p>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Failure Mode Testing</h4>
+                        <p>2-3 weeks: Clinical scenario testing with validated instruments</p>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Clinical Expert Consensus</h4>
+                        <p>2 weeks: Delphi method validation from clinical advisory network</p>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Final Documentation</h4>
+                        <p>1 week: Complete evaluation package with recommendations</p>
+                    </div>
+                </div>
+            </div>
+            <p class="timeline-note">Total engagement: 6-8 weeks for comprehensive evaluation</p>
         </div>
 
         <div class="framework-impact fade-in-up">
@@ -52,10 +126,52 @@ title: Mental Health AI Safety Evaluation
                 <li><strong>Legal and regulatory complexity</strong>: Mental health AI intersects with informed consent, involuntary commitment laws, HIPAA privacy protections, and liability frameworks that don't apply to general healthcare AI.</li>
             </ul>
         </div>
+
+        <div class="comparison-table-wrapper fade-in-up">
+            <h3>Generic AI Evaluation vs. Mental Health-Specific Evaluation</h3>
+            <div class="comparison-table">
+                <div class="comparison-column generic">
+                    <div class="column-header">Generic AI Evaluation</div>
+                    <div class="comparison-row">
+                        <div class="comparison-item">ML engineers and data scientists</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-item">Accuracy metrics on test datasets</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-item">Edge cases from data distribution</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-item">Technical documentation</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-item">Vendor-provided validation</div>
+                    </div>
+                </div>
+                <div class="comparison-column specific">
+                    <div class="column-header">Mental Health-Specific Evaluation</div>
+                    <div class="comparison-row">
+                        <div class="comparison-item">Board-certified clinicians + emergency medicine physicians</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-item">Clinical appropriateness in crisis scenarios (C-SSRS validated)</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-item">Life-or-death edge cases identified by clinical experts</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-item">Academic research standards (PRISMA, Delphi consensus)</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-item">Independent third-party evaluation (no vendor conflicts)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="settings-section">
+<section class="settings-section section--mauka-subtle">
     <div class="settings-content">
         <h2 class="fade-in-up">Where Mental Health AI Operates <br /> And Where It Fails</h2>
         <p class="settings-intro fade-in-up">We evaluate systems across five high-risk deployment settings where mental health AI is already being used to make life-or-death decisions:</p>
@@ -63,23 +179,48 @@ title: Mental Health AI Safety Evaluation
         <div class="settings-grid">
             <div class="setting-card fade-in-up">
                 <h3>Correctional Mental Health</h3>
-                <p>Suicide risk screening in jails and prisons, where mental health crises are common, resources are limited, and failures result in preventable deaths and massive liability.</p>
+                <p>Suicide risk screening in jails and prisons where AI failures result in preventable deaths and massive liability.</p>
+                <div class="setting-tags">
+                    <span class="tag">High liability</span>
+                    <span class="tag">Limited resources</span>
+                    <span class="tag">Crisis-prone</span>
+                </div>
             </div>
             <div class="setting-card fade-in-up">
                 <h3>Hospital Psychiatric Units</h3>
-                <p>AI-assisted triage, suicide risk assessment, and discharge planning in inpatient psychiatric settings where clinical decisions determine whether someone is safe to leave or at imminent risk.</p>
+                <p>AI-assisted triage and discharge planning where incorrect risk assessments send people home at imminent danger.</p>
+                <div class="setting-tags">
+                    <span class="tag">Life-or-death decisions</span>
+                    <span class="tag">Discharge liability</span>
+                    <span class="tag">Clinical judgment</span>
+                </div>
             </div>
             <div class="setting-card fade-in-up">
                 <h3>Community Mental Health Centers</h3>
-                <p>AI tools supporting clinicians in outpatient settings serving high-risk populations such as individuals with serious mental illness, substance use disorders, and trauma histories.</p>
+                <p>Outpatient AI tools serving high-risk populations with serious mental illness, substance use, and trauma histories.</p>
+                <div class="setting-tags">
+                    <span class="tag">Vulnerable populations</span>
+                    <span class="tag">Chronic conditions</span>
+                    <span class="tag">Co-occurring disorders</span>
+                </div>
             </div>
             <div class="setting-card fade-in-up">
                 <h3>Telehealth and Crisis Lines</h3>
-                <p>AI-powered crisis chatbots, virtual therapy platforms, and suicide prevention hotlines where remote assessment must identify risk without in-person clinical observation.</p>
+                <p>Remote crisis AI identifying suicide risk without in-person observation, body language, or environmental context.</p>
+                <div class="setting-tags">
+                    <span class="tag">No visual cues</span>
+                    <span class="tag">Limited context</span>
+                    <span class="tag">Immediate risk</span>
+                </div>
             </div>
             <div class="setting-card fade-in-up">
                 <h3>Primary Care Mental Health Integration</h3>
-                <p>AI screening tools used in general medical settings to identify depression, anxiety, and suicide risk, often by providers with limited mental health training.</p>
+                <p>Depression and suicide screening by providers with limited mental health training relying on AI guidance.</p>
+                <div class="setting-tags">
+                    <span class="tag">Non-specialist providers</span>
+                    <span class="tag">Screening volume</span>
+                    <span class="tag">Referral decisions</span>
+                </div>
             </div>
         </div>
     </div>
@@ -144,7 +285,7 @@ title: Mental Health AI Safety Evaluation
     <div class="contact-content">
         <h2 class="fade-in-up">Start With a Complimentary Risk Assessment</h2>
         <p class="contact-description fade-in-up">
-            We're seeking pilot clients—hospitals, healthcare organizations, and AI vendors deploying mental health AI systems. Book a 45-minute consultation where we'll review your system, identify potential failure modes, and explain our evaluation approach. No obligation. No sales pitch. Just an honest assessment of whether rigorous evaluation would benefit your deployment.
+            Book a 45-minute consultation where we'll review your mental health AI system and identify potential failure modes. We're seeking pilot clients—hospitals, health systems, and AI vendors—to validate our frameworks at significantly reduced rates.
         </p>
 
         <form class="contact-form fade-in-up" action="https://formspree.io/f/xqanepdw" method="POST">
