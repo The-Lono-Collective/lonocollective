@@ -101,7 +101,16 @@ body::before {
     display: flex;
     align-items: center;
     position: relative;
-    padding: 0;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.hero-section .split-section__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding-left: 50px;
 }
 
 .hero-headline {
@@ -112,6 +121,7 @@ body::before {
     color: var(--text-primary);
     letter-spacing: -0.02em;
     margin-bottom: 40px;
+    padding-right: 20px;
 }
 
 .hero-manifesto {
@@ -120,6 +130,7 @@ body::before {
     color: var(--text-secondary);
     margin-bottom: 32px;
     font-weight: 400;
+    padding-right: 50px;
 }
 
 .hero-focus {
@@ -127,6 +138,7 @@ body::before {
     line-height: var(--line-body);
     color: var(--text-primary);
     font-weight: 500;
+    padding-right: 50px;
 }
 
 /* Editorial Typography Classes */
@@ -138,6 +150,7 @@ body::before {
     color: var(--text-primary);
     letter-spacing: -0.02em;
     margin-bottom: 32px;
+    margin-right: 10px;
 }
 
 .editorial-body {
@@ -146,11 +159,13 @@ body::before {
     color: var(--text-primary);
     margin-bottom: 24px;
     font-weight: 400;
+    padding-right: 50px;
 }
 
 .section-header {
     text-align: left;
     margin-bottom: 80px;
+    margin-right: 10px;
 }
 
 .section-header h2 {
@@ -233,17 +248,17 @@ body::before {
 
 /* Dotted Dividers (CSS-based, swappable with images later) */
 .dotted-divider {
-    width: 100%;
+    width: 100vh;
     height: 2px;
-    border-top: 2px dotted var(--border-color);
+    border-top: 5px dotted var(--border-color);
     margin: 60px 0;
     opacity: 0.6;
 }
 
 .dotted-divider--vertical {
     width: 2px;
-    height: 100%;
-    border-left: 2px dotted var(--border-color);
+    height: 80vh;
+    border-left: 5px dotted var(--border-color);
     margin: 0;
     opacity: 0.6;
 }
@@ -251,16 +266,16 @@ body::before {
 /* Split Section (Asymmetric Layouts) */
 .split-section {
     display: grid;
-    gap: 80px;
+    gap: 200px;
     align-items: center;
-    padding: 100px 40px;
+    padding: 100px 20px;
     width: 100%;
-    margin: 0 10%;
+    margin: 0;
     position: relative;
 }
 
 .split-section--60-40 {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 100% 0%;
 }
 
 .split-section--70-30 {
@@ -272,7 +287,7 @@ body::before {
 }
 
 .split-section__text {
-    padding-right: 40px;
+    padding-right: 50px;
 }
 
 .split-section__image {
@@ -317,20 +332,18 @@ body::before {
 /* Organic Portrait Shapes (Rounded rectangles, swappable with photos later) */
 .organic-portrait {
     width: 220px;
-    height: 280px;
-    border-radius: 24px;
+    height: 400px;
+    border-radius: 169px;
     background: var(--accent-primary);
     overflow: hidden;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
 }
 
 .organic-portrait--large {
-    width: 280px;
-    height: 360px;
+    width: 420px;
+    height: 690px;
 }
 
 .organic-portrait--small {
@@ -424,26 +437,27 @@ body::before {
 
 .problem-section {
     position: relative;
-    padding: 0;
-    margin: 0 10%;
+    padding-right: 0;
+    margin: 0;
 }
 
 .problem-section .split-section__image {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 100px;
 }
 
 .problem-section .dotted-divider--vertical {
-    height: 300px;
+    height: 700px;
     align-self: center;
+    padding-left: 50px;
 }
 
 .framework-section {
-    padding: 80px 40px;
+    padding: 80px 20px;
     width: 100%;
-    margin: 0 10%;
+    margin: 0;
 }
 
 .framework-content h2 {
@@ -566,9 +580,9 @@ body::before {
 }
 
 .settings-section {
-    padding: 80px 40px;
+    padding: 80px 20px;
     width: 100%;
-    margin: 0 10%;
+    margin: 0;
 }
 
 .settings-content h2 {
@@ -647,9 +661,9 @@ body::before {
 }
 
 .cooperative-section {
-    padding: 80px 40px;
+    padding: 80px 20px;
     width: 100%;
-    margin: 0 10%;
+    margin: 0;
     background: transparent;
 }
 
@@ -723,9 +737,9 @@ body::before {
 
 /* Team Section */
 .team-section {
-    padding: 80px 40px;
+    padding: 80px 20px;
     width: 100%;
-    margin: 0 10%;
+    margin: 0;
 }
 
 .team-grid {
@@ -804,9 +818,9 @@ body::before {
 }
 
 .contact-section {
-    padding: 80px 40px;
+    padding: 80px 20px;
     width: 100%;
-    margin: 0 10%;
+    margin: 0;
     background: rgba(127, 184, 148, 0.04);
     position: relative;
 
@@ -1091,19 +1105,20 @@ html {
 /* Responsive adjustments */
 @media (min-width: 768px) {
     .container {
-        padding: 0 40px;
+        padding: 0 10px;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 0 15%;
     }
 
     .main-content {
-        padding: 0 20px;
+        padding: 0 0px;
+        margin: 0;
     }
 }
 
 @media (max-width: 768px) {
     .hero-section {
-        padding: 60px 20px;
+        padding: 0px 0px;
     }
 
     .framework-section,
@@ -1141,12 +1156,12 @@ html {
     .team-section,
     .contact-section {
         padding: 40px 15px;
-        margin: 0 2%;
+        margin: 0;
     }
 
     .split-section {
         padding: 40px 15px;
-        margin: 0 2%;
+        margin: 0;
     }
 
     .team-member {
