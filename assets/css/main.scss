@@ -270,9 +270,10 @@ body::before {
     display: grid;
     gap: 200px;
     align-items: center;
-    padding: 100px 20px;
+    padding: 100px 40px;
     width: 100%;
-    margin: 0;
+    max-width: 1400px;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -457,9 +458,15 @@ body::before {
 }
 
 .framework-section {
-    padding: 80px 20px;
+    padding: 80px 0;
     width: 100%;
     margin: 0;
+}
+
+.framework-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .framework-content h2 {
@@ -582,9 +589,15 @@ body::before {
 }
 
 .settings-section {
-    padding: 80px 20px;
+    padding: 80px 0;
     width: 100%;
     margin: 0;
+}
+
+.settings-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .settings-content h2 {
@@ -663,15 +676,16 @@ body::before {
 }
 
 .cooperative-section {
-    padding: 80px 20px;
+    padding: 80px 0;
     width: 100%;
     margin: 0;
     background: transparent;
 }
 
 .cooperative-content {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 40px;
 }
 
 .cooperative-content h2 {
@@ -739,9 +753,17 @@ body::before {
 
 /* Team Section */
 .team-section {
-    padding: 80px 20px;
+    padding: 80px 0;
     width: 100%;
     margin: 0;
+}
+
+.team-section > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .team-grid {
@@ -820,7 +842,7 @@ body::before {
 }
 
 .contact-section {
-    padding: 80px 20px;
+    padding: 80px 0;
     width: 100%;
     margin: 0;
     background: rgba(127, 184, 148, 0.04);
@@ -852,6 +874,7 @@ body::before {
 .contact-content {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 40px;
     text-align: left;
 }
 
