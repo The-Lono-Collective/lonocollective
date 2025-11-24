@@ -272,13 +272,18 @@ body::before {
     align-items: center;
     padding: 100px 40px;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
 }
 
+/* Hero section split is wider than other sections */
+.hero-section .split-section {
+    max-width: 1600px;
+}
+
 .split-section--60-40 {
-    grid-template-columns: 100% 0%;
+    grid-template-columns: 60% 40%;
 }
 
 .split-section--70-30 {
@@ -394,14 +399,72 @@ body::before {
 /* Section Background Variants */
 .section--shore {
     background: var(--bg-shore);
+    position: relative;
 }
 
 .section--kalo {
     background: var(--bg-kalo);
+    position: relative;
 }
 
 .section--mauka {
     background: var(--bg-mauka);
+    position: relative;
+}
+
+/* Gradient fade transitions between sections */
+/* Add gradient overlay at top of colored sections to blend from previous section */
+.section--kalo::before,
+.section--mauka::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Blend from Shore into Kalo */
+.section--kalo::before {
+    background: linear-gradient(to bottom, rgba(232, 234, 223, 1) 0%, rgba(232, 234, 223, 0.7) 30%, transparent 100%);
+}
+
+/* Blend from Kalo into Mauka (if used) */
+.section--mauka::before {
+    background: linear-gradient(to bottom, rgba(235, 255, 220, 1) 0%, rgba(235, 255, 220, 0.7) 30%, transparent 100%);
+}
+
+/* Add gradient overlay at bottom of colored sections to blend into next section */
+.section--kalo::after,
+.section--mauka::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Blend Kalo out to next section */
+.section--kalo::after {
+    background: linear-gradient(to bottom, transparent 0%, rgba(232, 234, 223, 0.3) 70%, rgba(232, 234, 223, 1) 100%);
+}
+
+/* Blend Mauka out to next section */
+.section--mauka::after {
+    background: linear-gradient(to bottom, transparent 0%, rgba(232, 234, 223, 0.3) 70%, rgba(232, 234, 223, 1) 100%);
+}
+
+/* Ensure section content stays above gradient overlays */
+.section--shore > *,
+.section--kalo > *,
+.section--mauka > * {
+    position: relative;
+    z-index: 2;
 }
 
 /* Responsive Breakpoints for Split Sections */
