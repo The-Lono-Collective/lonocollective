@@ -653,18 +653,47 @@ body::before {
     font-weight: 300;
 }
 
-.case-study-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 48px;
+/* Horizontal Scroll Container */
+.case-study-scroll {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0 40px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    /* Hide scrollbar but keep functionality */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(127, 184, 148, 0.3) transparent;
+}
+
+.case-study-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.case-study-scroll::-webkit-scrollbar-track {
+    background: rgba(127, 184, 148, 0.05);
+    border-radius: 10px;
+}
+
+.case-study-scroll::-webkit-scrollbar-thumb {
+    background: rgba(127, 184, 148, 0.3);
+    border-radius: 10px;
+}
+
+.case-study-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary);
 }
 
 .case-study-card {
+    flex: 0 0 480px;
     background: var(--bg-primary);
     border-radius: 16px;
     border: 1px solid rgba(127, 184, 148, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
+    scroll-snap-align: start;
 }
 
 .case-study-card:hover {
@@ -1051,12 +1080,21 @@ body::before {
     line-height: var(--line-headline);
 }
 
+.regulatory-header-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
 .regulatory-intro {
     font-size: clamp(19px, 2.5vw, 23px);
     line-height: 1.9;
     color: var(--text-secondary);
-    max-width: 900px;
-    margin: 0 0 80px;
+    max-width: 700px;
+    margin: 0;
     font-weight: 300;
 }
 
@@ -1261,10 +1299,72 @@ body::before {
     stroke: currentColor;
 }
 
+/* Horizontal Regulatory Scroll */
+.regulatory-scroll {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0 40px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(127, 184, 148, 0.3) transparent;
+}
+
+.regulatory-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.regulatory-scroll::-webkit-scrollbar-track {
+    background: rgba(127, 184, 148, 0.05);
+    border-radius: 10px;
+}
+
+.regulatory-scroll::-webkit-scrollbar-thumb {
+    background: rgba(127, 184, 148, 0.3);
+    border-radius: 10px;
+}
+
+.regulatory-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary);
+}
+
+.regulatory-item-card {
+    flex: 0 0 420px;
+    background: var(--bg-primary);
+    border: 2px solid rgba(127, 184, 148, 0.15);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    scroll-snap-align: start;
+    text-decoration: none;
+    display: block;
+}
+
+.regulatory-item-card:hover {
+    border-color: rgba(127, 184, 148, 0.3);
+    box-shadow: 0 8px 24px rgba(127, 184, 148, 0.1);
+    transform: translateY(-2px);
+}
+
+.regulatory-item-card .regulatory-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .regulatory-tracker-section {
         padding: 80px 0;
+    }
+
+    .regulatory-item-card {
+        flex: 0 0 320px;
     }
 
     .regulatory-timeline {
@@ -2402,6 +2502,15 @@ html {
     .axis-scale {
         font-size: 11px;
     }
+
+    .case-study-card {
+        flex: 0 0 360px;
+    }
+
+    .regulatory-header-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2482,5 +2591,250 @@ html {
 
     .badge-item {
         padding: 24px 16px;
+    }
+}
+
+/* ============================================================================
+   REGULATIONS PAGE
+   ========================================================================= */
+
+.regulations-page-hero {
+    padding: 140px 0 80px;
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(135deg, rgba(127, 184, 148, 0.05) 0%, rgba(186, 226, 225, 0.1) 100%);
+    border-bottom: 2px solid rgba(127, 184, 148, 0.2);
+}
+
+.regulations-hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.regulations-hero-content h1 {
+    font-family: 'Song Myung', serif;
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    line-height: var(--line-headline);
+}
+
+.regulations-subtitle {
+    font-size: clamp(18px, 2.5vw, 21px);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+}
+
+.regulations-page-filters {
+    padding: 32px 0;
+    width: 100%;
+    background: var(--bg-primary);
+    border-bottom: 1px solid rgba(127, 184, 148, 0.1);
+    position: sticky;
+    top: 80px;
+    z-index: 50;
+}
+
+.filters-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.filter-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: rgba(127, 184, 148, 0.05);
+    border: 2px solid rgba(127, 184, 148, 0.15);
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.filter-btn:hover {
+    background: rgba(127, 184, 148, 0.1);
+    border-color: rgba(127, 184, 148, 0.3);
+}
+
+.filter-btn.active {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+.regulations-page-content {
+    padding: 80px 0;
+    width: 100%;
+    margin: 0;
+    background: var(--bg-primary);
+}
+
+.regulations-timeline {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    padding-left: 100px;
+}
+
+.regulations-timeline::before {
+    content: '';
+    position: absolute;
+    left: 60px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg,
+        rgba(127, 184, 148, 0.4) 0%,
+        rgba(127, 184, 148, 0.15) 100%);
+}
+
+.regulatory-item-full {
+    position: relative;
+    margin-bottom: 60px;
+    background: var(--bg-primary);
+    border: 2px solid rgba(127, 184, 148, 0.15);
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s ease;
+}
+
+.regulatory-item-full:hover {
+    border-color: rgba(127, 184, 148, 0.3);
+    box-shadow: 0 8px 24px rgba(127, 184, 148, 0.1);
+    transform: translateY(-2px);
+}
+
+.regulatory-item-full::before {
+    content: '';
+    position: absolute;
+    left: -48px;
+    top: 40px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 3px solid var(--accent-primary);
+    box-shadow: 0 0 0 6px var(--bg-primary);
+    z-index: 2;
+}
+
+.regulatory-item-full.federal::before {
+    border-color: #D48A7F;
+}
+
+.regulatory-item-full.state::before {
+    border-color: #FFC107;
+}
+
+.regulatory-item-full.clinical::before {
+    border-color: var(--accent-primary);
+}
+
+.regulatory-item-full.international::before {
+    border-color: #7FA8C9;
+}
+
+.regulations-cta {
+    padding: 100px 0;
+    width: 100%;
+    margin: 0;
+    background: var(--bg-mauka);
+    border-top: 2px solid rgba(127, 184, 148, 0.2);
+}
+
+.regulations-cta-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.regulations-cta-content h2 {
+    font-family: 'Song Myung', serif;
+    font-size: clamp(36px, 6vw, 52px);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    line-height: var(--line-headline);
+}
+
+.regulations-cta-content p {
+    font-size: clamp(18px, 2.5vw, 21px);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* Responsive regulations page */
+@media (max-width: 768px) {
+    .regulations-page-hero {
+        padding: 100px 0 60px;
+    }
+
+    .regulations-hero-content {
+        padding: 0 20px;
+    }
+
+    .regulations-page-filters {
+        top: 60px;
+        padding: 20px 0;
+    }
+
+    .filters-content {
+        padding: 0 20px;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .regulations-timeline {
+        padding-left: 60px;
+        padding-right: 20px;
+    }
+
+    .regulations-timeline::before {
+        left: 20px;
+    }
+
+    .regulatory-item-full::before {
+        left: -48px;
+        width: 12px;
+        height: 12px;
+        border-width: 2px;
+    }
+
+    .regulatory-item-full {
+        padding: 24px;
+        margin-bottom: 40px;
+    }
+
+    .regulations-cta {
+        padding: 60px 0;
+    }
+
+    .regulations-cta-content {
+        padding: 0 20px;
     }
 }

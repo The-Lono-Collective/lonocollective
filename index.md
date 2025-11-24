@@ -36,16 +36,6 @@ title: Mental Health AI Safety Evaluation
     </div>
 </section>
 
-<section class="problem-section section--kalo">
-    <div class="split-section split-section--60-40">
-        <div class="split-section__text">
-            <h2 class="editorial-headline">Why Mental Health AI Requires Specialized Evaluation</h2>
-            <p class="editorial-body">When AI systems make suicide risk assessments, crisis decisions, or psychiatric determinations, generic AI evaluation isn't enough. Mental health AI operates where ambiguity is the norm, incomplete information is expected, and judgment calls can determine whether someone lives or dies.</p>
-            <p class="editorial-body">We identify failure modes before they harm patients, combining clinical and regulatory expertise with rigorous research methodology.</p>
-        </div>
-    </div>
-</section>
-
 <section id="framework" class="framework-section">
     <div class="framework-content">
         <h2 class="fade-in-up">What Pilot Clients Receive</h2>
@@ -85,43 +75,6 @@ title: Mental Health AI Safety Evaluation
                         <li>No equity stakes in companies or vendors we evaluate</li>
                         <li>Rigorous, honest findings you can defend to regulators</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="methodology-badges fade-in-up">
-                <div class="badge-item">
-                    <div class="badge-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 11l3 3L22 4"></path>
-                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                        </svg>
-                    </div>
-                    <h4>C-SSRS Protocol Validated</h4>
-                    <p>Columbia Suicide Severity Rating Scale</p>
-                </div>
-                <div class="badge-item">
-                    <div class="badge-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                            <path d="M11 8v6"></path>
-                            <path d="M8 11h6"></path>
-                        </svg>
-                    </div>
-                    <h4>PRISMA Standards</h4>
-                    <p>Systematic Review Methodology</p>
-                </div>
-                <div class="badge-item">
-                    <div class="badge-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h4>Delphi Consensus Method</h4>
-                    <p>Expert Panel Validation</p>
                 </div>
             </div>
         </div>
@@ -224,7 +177,7 @@ title: Mental Health AI Safety Evaluation
         <h2 class="fade-in-up">What Generic Evaluation Misses</h2>
         <p class="case-study-intro fade-in-up">Real failure modes that passed vendor validation but would be caught by specialized mental health AI evaluation:</p>
 
-        <div class="case-study-grid">
+        <div class="case-study-scroll">
             <div class="case-study-card fade-in-up">
                 <div class="case-scenario">
                     <h3>Crisis Chatbot Failure</h3>
@@ -411,14 +364,19 @@ title: Mental Health AI Safety Evaluation
 
 <section class="regulatory-tracker-section">
     <div class="regulatory-tracker-content">
-        <h2 class="fade-in-up">Regulatory Landscape</h2>
-        <p class="regulatory-intro fade-in-up">Mental health AI operates in a rapidly evolving regulatory environment. Federal agencies, state legislatures, and clinical standards bodies are all developing frameworks for clinical decision support systems—especially those making life-or-death determinations.</p>
+        <div class="regulatory-header-wrapper">
+            <div>
+                <h2 class="fade-in-up">Regulatory Landscape</h2>
+                <p class="regulatory-intro fade-in-up">Mental health AI operates in a rapidly evolving regulatory environment. Track the latest developments.</p>
+            </div>
+            <a href="/regulations.html" class="cta-button secondary">View All Regulations</a>
+        </div>
 
         <div class="regulatory-tracker-last-updated fade-in-up">Last Updated: November 2025</div>
 
-        <div class="regulatory-timeline">
-            {% for regulation in site.data.regulations %}
-            <div class="regulatory-item {{ regulation.category }} fade-in-up">
+        <div class="regulatory-scroll">
+            {% for regulation in site.data.regulations limit:6 %}
+            <a href="/regulations.html#{{ regulation.date | slugify }}" class="regulatory-item-card {{ regulation.category }} fade-in-up">
                 <div class="regulatory-header">
                     <div class="regulatory-date">{{ regulation.date }}</div>
                     <div class="regulatory-badges">
@@ -437,7 +395,7 @@ title: Mental Health AI Safety Evaluation
                     </div>
                 </div>
                 <h3 class="regulatory-title">{{ regulation.title }}</h3>
-                <p class="regulatory-description">{{ regulation.description }}</p>
+                <p class="regulatory-description">{{ regulation.description | truncatewords: 25 }}</p>
                 {% if regulation.impact_note %}
                 <div class="regulatory-impact-note">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -448,11 +406,7 @@ title: Mental Health AI Safety Evaluation
                     {{ regulation.impact_note }}
                 </div>
                 {% endif %}
-                <div class="regulatory-source">
-                    <span class="regulatory-source-label">Source:</span>
-                    <a href="{{ regulation.source_url }}" class="regulatory-source-link" target="_blank" rel="noopener">{{ regulation.source_label }}</a>
-                </div>
-            </div>
+            </a>
             {% endfor %}
         </div>
     </div>
