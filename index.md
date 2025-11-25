@@ -121,54 +121,13 @@ title: Mental Health AI Safety Evaluation
             </ul>
         </div>
 
-        <div class="comparison-table-wrapper fade-in-up">
-            <h3>Generic AI Evaluation vs. Mental Health-Specific Evaluation</h3>
-            <div class="comparison-table">
-                <div class="comparison-column generic">
-                    <div class="column-header">Generic AI Evaluation</div>
-                    <div class="comparison-row">
-                        <div class="comparison-item">ML engineers and data scientists</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-item">Accuracy metrics on test datasets</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-item">Edge cases from data distribution</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-item">Technical documentation</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-item">Vendor-provided validation</div>
-                    </div>
-                </div>
-                <div class="comparison-column specific">
-                    <div class="column-header">Mental Health-Specific Evaluation</div>
-                    <div class="comparison-row">
-                        <div class="comparison-item">Board-certified clinicians + emergency medicine physicians</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-item">Clinical appropriateness in crisis scenarios (C-SSRS validated)</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-item">Life-or-death edge cases identified by clinical experts</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-item">Academic research standards (PRISMA, Delphi consensus)</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-item">Independent third-party evaluation (no vendor conflicts)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
 <section class="case-study-section">
     <div class="case-study-content">
         <h2 class="fade-in-up">What Generic Evaluation Misses</h2>
-        <p class="case-study-intro fade-in-up">Real failure modes that passed vendor validation but would be caught by specialized mental health AI evaluation:</p>
+        <p class="case-study-intro fade-in-up">Generic AI evaluation relies on ML engineers testing accuracy metrics on test datasets. Mental health-specific evaluation requires board-certified clinicians testing clinical appropriateness in life-or-death scenarios using validated crisis assessment tools (C-SSRS, PHQ-9). Here are real failure modes that passed vendor validation but would be caught by specialized evaluation:</p>
 
         <div class="case-study-scroll">
             <div class="case-study-card fade-in-up">
@@ -370,7 +329,7 @@ title: Mental Health AI Safety Evaluation
         <div class="regulatory-scroll">
             <div class="regulatory-marquee-track">
                 {% for regulation in site.data.regulations limit:6 %}
-                <a href="/regulations/#{{ regulation.date | slugify }}" class="regulatory-item-card {{ regulation.category }}">
+                <a href="{{ regulation.source_url }}" target="_blank" rel="noopener noreferrer" class="regulatory-item-card {{ regulation.category }}">
                     <div class="regulatory-header">
                         <div class="regulatory-date">{{ regulation.date }}</div>
                         <div class="regulatory-badges">
@@ -404,7 +363,7 @@ title: Mental Health AI Safety Evaluation
                 {% endfor %}
                 <!-- Duplicate for seamless loop -->
                 {% for regulation in site.data.regulations limit:6 %}
-                <a href="/regulations/#{{ regulation.date | slugify }}" class="regulatory-item-card {{ regulation.category }}">
+                <a href="{{ regulation.source_url }}" target="_blank" rel="noopener noreferrer" class="regulatory-item-card {{ regulation.category }}">
                     <div class="regulatory-header">
                         <div class="regulatory-date">{{ regulation.date }}</div>
                         <div class="regulatory-badges">
