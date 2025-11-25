@@ -627,7 +627,7 @@ body::before {
 }
 
 .case-study-content {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -653,47 +653,19 @@ body::before {
     font-weight: 300;
 }
 
-/* Horizontal Scroll Container */
+/* Desktop: 2x2 Grid */
 .case-study-scroll {
-    display: flex;
-    gap: 32px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 20px 0 40px 0;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-
-    /* Hide scrollbar but keep functionality */
-    scrollbar-width: thin;
-    scrollbar-color: rgba(127, 184, 148, 0.3) transparent;
-}
-
-.case-study-scroll::-webkit-scrollbar {
-    height: 8px;
-}
-
-.case-study-scroll::-webkit-scrollbar-track {
-    background: rgba(127, 184, 148, 0.05);
-    border-radius: 10px;
-}
-
-.case-study-scroll::-webkit-scrollbar-thumb {
-    background: rgba(127, 184, 148, 0.3);
-    border-radius: 10px;
-}
-
-.case-study-scroll::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-primary);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
 }
 
 .case-study-card {
-    flex: 0 0 480px;
     background: var(--bg-primary);
     border-radius: 16px;
     border: 1px solid rgba(127, 184, 148, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
-    scroll-snap-align: start;
 }
 
 .case-study-card:hover {
@@ -1065,7 +1037,7 @@ body::before {
 }
 
 .regulatory-tracker-content {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -1299,36 +1271,53 @@ body::before {
     stroke: currentColor;
 }
 
-/* Horizontal Regulatory Scroll */
+/* Auto-Scrolling Marquee with Fade Edges */
 .regulatory-scroll {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0 40px 0;
+}
+
+/* Fade edges */
+.regulatory-scroll::before,
+.regulatory-scroll::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.regulatory-scroll::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-primary) 0%, transparent 100%);
+}
+
+.regulatory-scroll::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-primary) 0%, transparent 100%);
+}
+
+/* Marquee track */
+.regulatory-marquee-track {
     display: flex;
     gap: 32px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 20px 0 40px 0;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: thin;
-    scrollbar-color: rgba(127, 184, 148, 0.3) transparent;
+    animation: marquee 40s linear infinite;
 }
 
-.regulatory-scroll::-webkit-scrollbar {
-    height: 8px;
+.regulatory-marquee-track:hover {
+    animation-play-state: paused;
 }
 
-.regulatory-scroll::-webkit-scrollbar-track {
-    background: rgba(127, 184, 148, 0.05);
-    border-radius: 10px;
-}
-
-.regulatory-scroll::-webkit-scrollbar-thumb {
-    background: rgba(127, 184, 148, 0.3);
-    border-radius: 10px;
-}
-
-.regulatory-scroll::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-primary);
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .regulatory-item-card {
@@ -1338,7 +1327,6 @@ body::before {
     border-radius: 16px;
     padding: 28px;
     transition: all 0.3s ease;
-    scroll-snap-align: start;
     text-decoration: none;
     display: block;
 }
@@ -2503,8 +2491,36 @@ html {
         font-size: 11px;
     }
 
+    .case-study-scroll {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 32px;
+        padding: 20px 0 40px 0;
+
+        scrollbar-width: thin;
+        scrollbar-color: rgba(127, 184, 148, 0.3) transparent;
+    }
+
+    .case-study-scroll::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .case-study-scroll::-webkit-scrollbar-track {
+        background: rgba(127, 184, 148, 0.05);
+        border-radius: 10px;
+    }
+
+    .case-study-scroll::-webkit-scrollbar-thumb {
+        background: rgba(127, 184, 148, 0.3);
+        border-radius: 10px;
+    }
+
     .case-study-card {
         flex: 0 0 360px;
+        scroll-snap-align: start;
     }
 
     .regulatory-header-wrapper {
