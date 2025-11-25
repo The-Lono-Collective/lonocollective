@@ -12,6 +12,15 @@
 #   source_url: "https://..."
 
 - date: "November 2025"
+  category: clinical
+  high_impact: true
+  title: "APA Issues Health Advisory Warning Against AI Chatbots and Wellness Apps for Mental Health"
+  description: "American Psychological Association releases health advisory stating that AI chatbots and wellness applications lack scientific evidence and necessary regulations to ensure user safety. Advisory warns these technologies may lack scientific validation and oversight, often do not include adequate safety protocols, and have not received regulatory approval. Emphasizes that even well-developed generative AI tools lack evidence of effectiveness or safety. Calls for randomized clinical trials, longitudinal outcome studies, and federal regulatory action. Warns against using these tools as substitutes for qualified mental health professionals."
+  impact_note: "Major professional organization declares current AI mental health tools unvalidated and unsafe"
+  source_label: "American Psychological Association"
+  source_url: "https://www.apa.org/topics/artificial-intelligence-machine-learning/health-advisory-chatbots-wellness-apps"
+
+- date: "November 2025"
   category: federal
   high_impact: true
   title: "FDA Advisory Committee Recommends Stricter Approval Standards for Generative AI Mental Health Devices"
@@ -19,6 +28,23 @@
   impact_note: "Fundamentally changes approval pathway for generative AI mental health tools"
   source_label: "FDA Digital Health Advisory Committee"
   source_url: "https://www.fda.gov/advisory-committees/advisory-committee-calendar/november-6-2025-digital-health-advisory-committee-meeting-announcement-11062025"
+
+- date: "October 2025"
+  category: state
+  high_impact: true
+  title: "California Enacts First-in-Nation AI Companion Chatbot Safeguards (SB 243)"
+  description: "Governor Newsom signs SB 243 requiring companion chatbot operators to implement critical safeguards including protocols for addressing suicidal ideation and self-harm, preventing exposure of minors to sexual content, and clear notifications that interactions are with AI. Operators must provide crisis service referrals and submit annual reports on connections between chatbot use and suicidal ideation. Creates private right of action for injuries from noncompliance. Effective January 1, 2026."
+  impact_note: "First state law mandating suicide prevention protocols for AI chatbots"
+  source_label: "California SB 243"
+  source_url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243"
+
+- date: "October 2025"
+  category: state
+  high_impact: false
+  title: "California Bans AI from Misrepresenting Healthcare Credentials (AB 489)"
+  description: "California AB 489, signed alongside SB 243, prohibits developers and deployers of AI tools from indicating or implying that the AI possesses a license or certificate to practice a healthcare profession. Additionally bans advertisements suggesting that AI-provided care comes from a licensed or certified human healthcare professional. Establishes consumer protection standards for transparency about AI use in healthcare settings. Effective January 1, 2026."
+  source_label: "California AB 489"
+  source_url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB489"
 
 - date: "August 2025"
   category: state
@@ -61,15 +87,6 @@
   impact_note: "May require premarket submission for mental health AI systems"
   source_label: "FDA Draft Guidance"
   source_url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
-
-- date: "October 2024"
-  category: state
-  high_impact: true
-  title: "California Enacts First-in-Nation AI Companion Chatbot Safeguards (SB 243)"
-  description: "Governor Newsom signs SB 243 requiring companion chatbot operators to implement critical safeguards including protocols for addressing suicidal ideation and self-harm, preventing exposure of minors to sexual content, and clear notifications that interactions are with AI. Operators must provide crisis service referrals and submit annual reports on connections between chatbot use and suicidal ideation. Creates private right of action for injuries from noncompliance. Effective January 1, 2026."
-  impact_note: "First state law mandating suicide prevention protocols for AI chatbots"
-  source_label: "California SB 243"
-  source_url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB243"
 
 - date: "September 2024"
   category: clinical
