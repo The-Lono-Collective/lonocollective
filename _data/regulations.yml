@@ -46,6 +46,15 @@
   source_label: "California AB 489"
   source_url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB489"
 
+- date: "September 2025"
+  category: state
+  high_impact: true
+  title: "California Enacts First-in-Nation Frontier AI Regulation (SB 53)"
+  description: "Governor Newsom signs SB 53, the Transparency in Frontier Artificial Intelligence Act, establishing oversight and accountability requirements for developers of advanced AI models trained with more than 10^26 floating-point operations. Requires public disclosure of safety standards, establishes formal safety incident reporting mechanisms, protects whistleblowers raising AI safety concerns, and mandates annual legislative updates. Affects mental health AI systems built on frontier models like GPT-4 or Claude. California becomes first state to directly regulate frontier foundation model developers. Effective January 1, 2026."
+  impact_note: "First state regulation of frontier AI models used in mental health applications"
+  source_label: "California SB 53"
+  source_url: "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53"
+
 - date: "August 2025"
   category: state
   high_impact: true
