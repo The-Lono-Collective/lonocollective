@@ -21,17 +21,10 @@ title: Mental Health AI Safety Evaluation
         <div class="stat-card fade-in-up">
             <div class="stat-number">50K+</div>
             <div class="stat-label">Suicide deaths annually in the US</div>
-            <div class="stat-context">Every mental health AI failure is a potential preventable death</div>
-        </div>
-        <div class="stat-card fade-in-up">
-            <div class="stat-number">$17B+</div>
-            <div class="stat-label">Projected mental health AI market by 2030</div>
-            <div class="stat-context">Rapid deployment without rigorous clinical validation</div>
         </div>
         <div class="stat-card fade-in-up">
             <div class="stat-number">$3M+</div>
             <div class="stat-label">Average wrongful death settlement in psychiatric care</div>
-            <div class="stat-context">Legal liability from AI-assisted clinical failures</div>
         </div>
     </div>
 </section>
@@ -369,7 +362,7 @@ title: Mental Health AI Safety Evaluation
                 <h2 class="fade-in-up">Regulatory Landscape</h2>
                 <p class="regulatory-intro fade-in-up">Mental health AI operates in a rapidly evolving regulatory environment. Track the latest developments.</p>
             </div>
-            <a href="/regulations.html" class="cta-button secondary">View All Regulations</a>
+            <a href="/regulations/" class="cta-button secondary">View All Regulations</a>
         </div>
 
         <div class="regulatory-tracker-last-updated fade-in-up">Last Updated: November 2025</div>
@@ -377,7 +370,7 @@ title: Mental Health AI Safety Evaluation
         <div class="regulatory-scroll">
             <div class="regulatory-marquee-track">
                 {% for regulation in site.data.regulations limit:6 %}
-                <a href="/regulations.html#{{ regulation.date | slugify }}" class="regulatory-item-card {{ regulation.category }}">
+                <a href="/regulations/#{{ regulation.date | slugify }}" class="regulatory-item-card {{ regulation.category }}">
                     <div class="regulatory-header">
                         <div class="regulatory-date">{{ regulation.date }}</div>
                         <div class="regulatory-badges">
@@ -411,7 +404,7 @@ title: Mental Health AI Safety Evaluation
                 {% endfor %}
                 <!-- Duplicate for seamless loop -->
                 {% for regulation in site.data.regulations limit:6 %}
-                <a href="/regulations.html#{{ regulation.date | slugify }}" class="regulatory-item-card {{ regulation.category }}">
+                <a href="/regulations/#{{ regulation.date | slugify }}" class="regulatory-item-card {{ regulation.category }}">
                     <div class="regulatory-header">
                         <div class="regulatory-date">{{ regulation.date }}</div>
                         <div class="regulatory-badges">
