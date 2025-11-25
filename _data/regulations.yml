@@ -27,7 +27,7 @@
   description: "Illinois HB 1806 (Wellness and Oversight for Psychological Resources Act) prohibits AI systems from independently performing therapy, counseling, or psychotherapy without direct oversight by a licensed mental health professional. The law, which passed unanimously and was signed by Gov. Pritzker, represents the first state ban on autonomous AI therapy and sets a precedent for other states considering similar restrictions."
   impact_note: "Bans autonomous AI therapy; requires licensed professional oversight"
   source_label: "Illinois General Assembly"
-  source_url: "https://www.ilga.gov/legislation/billstatus.asp?DocNum=1806&GAID=17&GA=104&DocTypeID=HB&SessionID=112"
+  source_url: "https://www.ilga.gov/Legislation/BillStatus?GAID=18&DocNum=1806&DocTypeID=HB&LegId=159219"
 
 - date: "June 2025"
   category: state
@@ -35,7 +35,7 @@
   title: "Nevada Regulates AI Chatbots in Mental Healthcare Settings"
   description: "Nevada AB 406, signed by Gov. Lombardo, establishes disclosure requirements and regulatory oversight for AI chatbot use in mental and behavioral healthcare contexts. The law requires clear notification to users when interacting with AI systems and mandates data privacy protections specific to mental health applications."
   source_label: "Nevada Legislature"
-  source_url: "https://www.leg.state.nv.us/"
+  source_url: "https://legiscan.com/NV/bill/AB406/2025"
 
 - date: "May 2025"
   category: state
@@ -43,7 +43,7 @@
   title: "Utah Establishes Disclosure Requirements for Mental Health AI Chatbots"
   description: "Utah HB 452, signed by Gov. Cox and effective May 7, 2025, requires suppliers of AI mental health chatbots to provide clear disclosures about AI capabilities and limitations. The law establishes consumer protection standards and requires transparency about data usage and algorithm decision-making in mental health contexts."
   source_label: "Utah State Legislature"
-  source_url: "https://le.utah.gov/"
+  source_url: "https://le.utah.gov/~2025/bills/static/HB0452.html"
 
 - date: "January 2025"
   category: federal
@@ -51,7 +51,7 @@
   title: "FDA Issues Draft Guidance on Lifecycle Management of AI-Based Medical Device Software"
   description: "FDA released comprehensive draft guidance outlining expectations for transparency, clinical validation, algorithm updates, and post-market monitoring of AI-enabled medical devices. The guidance applies to mental health AI systems classified as medical devices and emphasizes continuous monitoring requirements throughout the product lifecycle."
   source_label: "FDA Draft Guidance"
-  source_url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents"
+  source_url: "https://www.fda.gov/media/184856/download"
 
 - date: "December 2024"
   category: federal
@@ -65,11 +65,11 @@
 - date: "October 2024"
   category: state
   high_impact: true
-  title: "California Enacts AI Safety and Accountability Act"
-  description: "California AB 2930 requires AI systems used in healthcare settings to undergo third-party safety evaluation before deployment. Includes specific provisions for mental health AI systems that assess suicide risk, recommend involuntary commitment, or influence crisis intervention decisions. Liability provisions take effect January 2026."
-  impact_note: "Mandates independent safety evaluation for California deployments"
-  source_label: "California Legislature"
-  source_url: "https://leginfo.legislature.ca.gov/"
+  title: "California Enacts First-in-Nation AI Companion Chatbot Safeguards (SB 243)"
+  description: "Governor Newsom signs SB 243 requiring companion chatbot operators to implement critical safeguards including protocols for addressing suicidal ideation and self-harm, preventing exposure of minors to sexual content, and clear notifications that interactions are with AI. Operators must provide crisis service referrals and submit annual reports on connections between chatbot use and suicidal ideation. Creates private right of action for injuries from noncompliance. Effective January 1, 2026."
+  impact_note: "First state law mandating suicide prevention protocols for AI chatbots"
+  source_label: "California SB 243"
+  source_url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB243"
 
 - date: "September 2024"
   category: clinical
