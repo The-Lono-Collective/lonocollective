@@ -8,7 +8,7 @@ title: Mental Health AI Safety Evaluation
 <section class="failure-mode-alert">
     <div class="failure-mode-content">
         <p class="failure-scenario fade-in-up">
-            "In 2023, a crisis chatbot told a suicidal user to 'try meditation and call back tomorrow.' The user died that night."
+            "In May 2023, NEDA's eating disorder chatbot gave weight loss advice to users seeking help for anorexia—recommending calorie counting and weekly weigh-ins. The bot was shut down within days."
         </p>
         <p class="failure-insight fade-in-up">
             Generic AI safety evaluation would have called this system 'low risk.' Mental health AI needs specialized clinical evaluation.
