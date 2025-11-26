@@ -44,7 +44,15 @@
   title: "California Bans AI from Misrepresenting Healthcare Credentials (AB 489)"
   description: "California AB 489, signed alongside SB 243, prohibits developers and deployers of AI tools from indicating or implying that the AI possesses a license or certificate to practice a healthcare profession. Additionally bans advertisements suggesting that AI-provided care comes from a licensed or certified human healthcare professional. Establishes consumer protection standards for transparency about AI use in healthcare settings. Effective January 1, 2026."
   source_label: "California AB 489"
-  source_url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB489"
+  source_url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB489"
+
+- date: "September 2025"
+  category: clinical
+  high_impact: false
+  title: "Joint Commission and Coalition for Health AI Release First-of-Its-Kind Guidance on Responsible AI Use in Healthcare"
+  description: "Joint Commission (TJC), in collaboration with the Coalition for Health AI (CHAI), released its Guidance on the Responsible Use of Artificial Intelligence in Healthcare (RUAIH). This marks the first formal framework from a U.S. accrediting body aimed at helping health care organizations safely, effectively and ethically integrate AI technologies into clinical and operational practice."
+  source_label: "The Joint Commission"
+  source_url: "https://www.jointcommission.org/en-us/knowledge-library/news/2025-09-jc-and-chai-release-initial-guidance-to-support-responsible-ai-adoption"
 
 - date: "September 2025"
   category: state
@@ -97,21 +105,13 @@
   source_label: "FDA Draft Guidance"
   source_url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
 
-- date: "September 2024"
-  category: clinical
-  high_impact: false
-  title: "APA Releases Guidelines for AI in Psychiatric Practice"
-  description: "American Psychiatric Association publishes clinical guidelines emphasizing that AI systems used for suicide risk assessment must be validated against established instruments (C-SSRS, Beck Scale) and reviewed by board-certified psychiatrists. Recommends against sole reliance on AI for crisis intervention decisions."
-  source_label: "American Psychiatric Association"
-  source_url: "https://www.psychiatry.org/"
-
 - date: "July 2024"
   category: federal
   high_impact: false
-  title: "CMS Announces Reimbursement Rules for AI-Enhanced Mental Health Services"
+  title: "CMS Announces Reimbursement Rules for Digital Mental Health Treatment"
   description: "Centers for Medicare & Medicaid Services establishes billing codes for AI-assisted mental health screening but requires documentation of clinical oversight, validation studies, and adverse event reporting. Telehealth mental health AI must meet same standards as in-person care."
   source_label: "Centers for Medicare & Medicaid Services"
-  source_url: "https://www.cms.gov/"
+  source_url: "https://www.cms.gov/files/document/mln909432-behavioral-health-integration-services.pdf"
 
 - date: "June 2024"
   category: international
@@ -121,10 +121,4 @@
   source_label: "European Commission"
   source_url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
 
-- date: "March 2024"
-  category: clinical
-  high_impact: false
-  title: "Joint Commission Issues Safety Standards for Healthcare AI"
-  description: "The Joint Commission releases accreditation standards requiring healthcare organizations to demonstrate systematic evaluation of AI systems used in clinical decision-making. Mental health AI must undergo clinical validation, bias testing, and failure mode analysis before deployment."
-  source_label: "The Joint Commission"
-  source_url: "https://www.jointcommission.org/"
+
