@@ -5,60 +5,40 @@
    Research organization requires authority, not customization.
 */
 
-// Primary Theme: Green Gradient Dark
-// Conveys: Growth, healing, evidence-based research, environmental health
-.theme--green-gradient-dark {
-    --bg-primary: #2A4227;
-    --bg-secondary: rgba(42, 66, 39, 0.85);
-    --text-primary: #E8EADF;
-    --text-secondary: #BAE2E1;
-    --accent-primary: #5BA55E;
-    --accent-secondary: #EBFFDC;
-    --accent-tertiary: #BAE2E1;
-    --gradient-start: rgba(91, 165, 94, 0.12);
-    --gradient-accent: rgba(91, 165, 94, 0.18);
-    --border-color: rgba(186, 226, 225, 0.2);
-    --shadow-color: rgba(91, 165, 94, 0.35);
-
-    // Multi-directional gradient backgrounds
-    --gradient-bg-hero: linear-gradient(135deg,
-        rgba(91, 165, 94, 0.15) 0%,
-        rgba(42, 66, 39, 0.9) 50%,
-        rgba(91, 165, 94, 0.08) 100%);
-    --gradient-bg-section: linear-gradient(165deg,
-        rgba(186, 226, 225, 0.08) 0%,
-        rgba(42, 66, 39, 0.95) 60%);
-    --gradient-bg-aurora: radial-gradient(ellipse at 50% -20%,
-        rgba(91, 165, 94, 0.25) 0%,
-        rgba(91, 165, 94, 0.12) 35%,
-        transparent 70%);
-
-    // Semantic Color System - Research States
-    --status-peer-reviewed: #5BA55E;
-    --status-peer-reviewed-bg: rgba(91, 165, 94, 0.15);
-    --status-seeking-funding: #BAE2E1;
-    --status-seeking-funding-bg: rgba(186, 226, 225, 0.15);
-    --status-in-progress: #5BA55E;
-    --status-in-progress-bg: rgba(91, 165, 94, 0.15);
-    --status-under-review: #BAE2E1;
-    --status-under-review-bg: rgba(186, 226, 225, 0.15);
-
-    // Clinical/Urgent states
-    --clinical-urgent: #d48a7f;
-    --clinical-urgent-bg: rgba(212, 138, 127, 0.15);
-    --clinical-standard: #5BA55E;
-    --clinical-standard-bg: rgba(91, 165, 94, 0.15);
+/* ============================================
+   BASE COLOR PALETTE (Immutable - from design doc)
+   ============================================ */
+:root {
+    // Core palette - never modify these values
+    --color-shore: #E8EADF;    // Warm neutral cream
+    --color-mauka: #BAE2E1;    // Cool cyan
+    --color-kalo: #EBFFDC;     // Light lime
+    --color-kapu: #2A4227;     // Deep forest green
+    --color-lau: #5BA55E;      // Medium green
+    --color-coral: #D48A7F;    // Warm coral/terracotta
 }
 
-// Light Mode Theme (Editorial/Magazine Style - Shore Background)
-.theme--green-gradient-light {
-    --bg-primary: #E8EADF; // Shore - warm neutral base
-    --bg-secondary: rgba(232, 234, 223, 0.95);
-    --text-primary: #2A4227; // Kapu - dark green for text
-    --text-secondary: #4a5a50;
-    --accent-primary: #5BA55E; // Lau - medium green
-    --accent-secondary: #EBFFDC; // Kalo - light lime
-    --accent-tertiary: #BAE2E1; // Mauka - cyan
+/* ============================================
+   THEME: Light Shore (Current Default)
+   ============================================ */
+.theme--light-shore {
+    // Background colors (4 variants for sections)
+    --bg-primary: var(--color-shore);
+    --bg-secondary: rgba(232, 234, 223, 0.95);  // Shore with transparency
+    --bg-shore: var(--color-shore);
+    --bg-kalo: var(--color-kalo);
+    --bg-mauka: var(--color-mauka);
+
+    // Text colors
+    --text-primary: var(--color-kapu);
+    --text-secondary: #4a5a50;  // Darkened kapu variant
+
+    // Accent colors
+    --accent-primary: var(--color-lau);
+    --accent-secondary: var(--color-kalo);
+    --accent-tertiary: var(--color-mauka);
+
+    // Gradient overlays
     --gradient-start: rgba(91, 165, 94, 0.08);
     --gradient-accent: rgba(91, 165, 94, 0.12);
     --border-color: rgba(42, 66, 39, 0.15);
@@ -77,24 +57,250 @@
         rgba(91, 165, 94, 0.1) 35%,
         transparent 70%);
 
-    // Section background color variants (for color rotation)
-    --bg-shore: #E8EADF;
-    --bg-kalo: #EBFFDC;
-    --bg-mauka: #BAE2E1;
-
     // Semantic Color System - Research States
-    --status-peer-reviewed: #5BA55E;
+    --status-peer-reviewed: var(--color-lau);
     --status-peer-reviewed-bg: rgba(91, 165, 94, 0.12);
-    --status-seeking-funding: #BAE2E1;
+    --status-seeking-funding: var(--color-mauka);
     --status-seeking-funding-bg: rgba(186, 226, 225, 0.15);
-    --status-in-progress: #5BA55E;
+    --status-in-progress: var(--color-lau);
     --status-in-progress-bg: rgba(91, 165, 94, 0.12);
-    --status-under-review: #BAE2E1;
+    --status-under-review: var(--color-mauka);
     --status-under-review-bg: rgba(186, 226, 225, 0.15);
+
+    // Clinical/Urgent states
+    --clinical-urgent: #c47670;  // Darker coral variant
+    --clinical-urgent-bg: rgba(196, 118, 112, 0.15);
+    --clinical-standard: var(--color-lau);
+    --clinical-standard-bg: rgba(91, 165, 94, 0.12);
+}
+
+/* ============================================
+   THEME: Deep Forest
+   ============================================ */
+.theme--deep-forest {
+    // Background colors - inverted (dark backgrounds)
+    --bg-primary: var(--color-kapu);
+    --bg-secondary: rgba(42, 66, 39, 0.85);
+    --bg-shore: #3a5a4a;        // Lighter kapu variant
+    --bg-kalo: #4a6a5a;         // Even lighter
+    --bg-mauka: #5a7a6a;        // Lightest green-gray
+
+    // Text colors - inverted (light text on dark)
+    --text-primary: var(--color-shore);
+    --text-secondary: var(--color-mauka);
+
+    // Accent colors
+    --accent-primary: #7fb882;  // Lighter lau for visibility on dark
+    --accent-secondary: var(--color-kalo);
+    --accent-tertiary: var(--color-mauka);
+
+    // Gradient overlays
+    --gradient-start: rgba(91, 165, 94, 0.12);
+    --gradient-accent: rgba(91, 165, 94, 0.18);
+    --border-color: rgba(186, 226, 225, 0.2);
+    --shadow-color: rgba(91, 165, 94, 0.35);
+
+    // Multi-directional gradient backgrounds
+    --gradient-bg-hero: linear-gradient(135deg,
+        rgba(91, 165, 94, 0.15) 0%,
+        rgba(42, 66, 39, 0.9) 50%,
+        rgba(91, 165, 94, 0.08) 100%);
+    --gradient-bg-section: linear-gradient(165deg,
+        rgba(186, 226, 225, 0.08) 0%,
+        rgba(42, 66, 39, 0.95) 60%);
+    --gradient-bg-aurora: radial-gradient(ellipse at 50% -20%,
+        rgba(91, 165, 94, 0.25) 0%,
+        rgba(91, 165, 94, 0.12) 35%,
+        transparent 70%);
+
+    // Semantic Color System
+    --status-peer-reviewed: #7fb882;
+    --status-peer-reviewed-bg: rgba(127, 184, 130, 0.15);
+    --status-seeking-funding: var(--color-mauka);
+    --status-seeking-funding-bg: rgba(186, 226, 225, 0.15);
+    --status-in-progress: #7fb882;
+    --status-in-progress-bg: rgba(127, 184, 130, 0.15);
+    --status-under-review: var(--color-mauka);
+    --status-under-review-bg: rgba(186, 226, 225, 0.15);
+
+    // Clinical/Urgent states
+    --clinical-urgent: var(--color-coral);
+    --clinical-urgent-bg: rgba(212, 138, 127, 0.15);
+    --clinical-standard: #7fb882;
+    --clinical-standard-bg: rgba(127, 184, 130, 0.15);
+}
+
+/* ============================================
+   THEME: Twilight Shore
+   ============================================ */
+.theme--twilight-shore {
+    // Background colors - dimmed/desaturated shore
+    --bg-primary: #c8cab8;      // Darker gray-beige
+    --bg-secondary: rgba(200, 202, 184, 0.95);
+    --bg-shore: #d8dac8;        // Lighter variant
+    --bg-kalo: #d8e0c8;         // Muted olive
+    --bg-mauka: #b8c8c8;        // Muted cyan-gray
+
+    // Text colors
+    --text-primary: #1a2820;    // Very dark green
+    --text-secondary: var(--color-kapu);
+
+    // Accent colors
+    --accent-primary: var(--color-lau);
+    --accent-secondary: var(--color-kalo);
+    --accent-tertiary: var(--color-mauka);
+
+    // Gradient overlays
+    --gradient-start: rgba(91, 165, 94, 0.08);
+    --gradient-accent: rgba(91, 165, 94, 0.12);
+    --border-color: rgba(42, 66, 39, 0.15);
+    --shadow-color: rgba(42, 66, 39, 0.1);
+
+    // Multi-directional gradient backgrounds
+    --gradient-bg-hero: linear-gradient(135deg,
+        rgba(186, 226, 225, 0.12) 0%,
+        rgba(200, 202, 184, 0.98) 50%,
+        rgba(91, 165, 94, 0.08) 100%);
+    --gradient-bg-section: linear-gradient(165deg,
+        rgba(91, 165, 94, 0.06) 0%,
+        rgba(200, 202, 184, 0.98) 60%);
+    --gradient-bg-aurora: radial-gradient(ellipse at 50% -20%,
+        rgba(186, 226, 225, 0.15) 0%,
+        rgba(91, 165, 94, 0.08) 35%,
+        transparent 70%);
+
+    // Semantic Color System
+    --status-peer-reviewed: var(--color-lau);
+    --status-peer-reviewed-bg: rgba(91, 165, 94, 0.12);
+    --status-seeking-funding: var(--color-mauka);
+    --status-seeking-funding-bg: rgba(186, 226, 225, 0.15);
+    --status-in-progress: var(--color-lau);
+    --status-in-progress-bg: rgba(91, 165, 94, 0.12);
+    --status-under-review: var(--color-mauka);
+    --status-under-review-bg: rgba(186, 226, 225, 0.15);
+
+    // Clinical/Urgent states
+    --clinical-urgent: #b86660;  // Darker coral
+    --clinical-urgent-bg: rgba(184, 102, 96, 0.15);
+    --clinical-standard: var(--color-lau);
+    --clinical-standard-bg: rgba(91, 165, 94, 0.12);
+}
+
+/* ============================================
+   THEME: Sage Mauka
+   ============================================ */
+.theme--sage-mauka {
+    // Background colors - cool cyan base
+    --bg-primary: #9BC5C3;      // Deeper mauka
+    --bg-secondary: rgba(155, 197, 195, 0.95);
+    --bg-shore: #B8D5D3;        // Lighter mauka variant
+    --bg-kalo: #C8E5D8;         // Sage green
+    --bg-mauka: #8AB5B3;        // Even deeper cyan
+
+    // Text colors
+    --text-primary: #1a2820;    // Very dark green
+    --text-secondary: var(--color-kapu);
+
+    // Accent colors
+    --accent-primary: var(--color-lau);
+    --accent-secondary: var(--color-kalo);
+    --accent-tertiary: var(--color-coral);
+
+    // Gradient overlays
+    --gradient-start: rgba(91, 165, 94, 0.08);
+    --gradient-accent: rgba(91, 165, 94, 0.12);
+    --border-color: rgba(42, 66, 39, 0.15);
+    --shadow-color: rgba(42, 66, 39, 0.12);
+
+    // Multi-directional gradient backgrounds
+    --gradient-bg-hero: linear-gradient(135deg,
+        rgba(138, 181, 179, 0.3) 0%,
+        rgba(155, 197, 195, 0.98) 50%,
+        rgba(91, 165, 94, 0.1) 100%);
+    --gradient-bg-section: linear-gradient(165deg,
+        rgba(91, 165, 94, 0.1) 0%,
+        rgba(155, 197, 195, 0.98) 60%);
+    --gradient-bg-aurora: radial-gradient(ellipse at 50% -20%,
+        rgba(138, 181, 179, 0.4) 0%,
+        rgba(91, 165, 94, 0.15) 35%,
+        transparent 70%);
+
+    // Semantic Color System
+    --status-peer-reviewed: var(--color-lau);
+    --status-peer-reviewed-bg: rgba(91, 165, 94, 0.15);
+    --status-seeking-funding: #6a9a98;  // Darker mauka
+    --status-seeking-funding-bg: rgba(106, 154, 152, 0.15);
+    --status-in-progress: var(--color-lau);
+    --status-in-progress-bg: rgba(91, 165, 94, 0.15);
+    --status-under-review: #6a9a98;
+    --status-under-review-bg: rgba(106, 154, 152, 0.15);
 
     // Clinical/Urgent states
     --clinical-urgent: #c47670;
     --clinical-urgent-bg: rgba(196, 118, 112, 0.15);
-    --clinical-standard: #5BA55E;
-    --clinical-standard-bg: rgba(91, 165, 94, 0.12);
+    --clinical-standard: var(--color-lau);
+    --clinical-standard-bg: rgba(91, 165, 94, 0.15);
+}
+
+/* ============================================
+   THEME: Organic Forest (Textured Background)
+   ============================================ */
+.theme--organic-forest {
+    // Background colors - subtle overlays on darkened texture
+    --bg-primary: rgba(42, 66, 39, 0.5);         // Medium Kapu overlay
+    --bg-secondary: rgba(42, 66, 39, 0.6);       // Slightly darker
+    --bg-shore: rgba(58, 90, 74, 0.55);          // Dark green-gray
+    --bg-kalo: rgba(74, 106, 90, 0.5);           // Slightly lighter dark
+    --bg-mauka: rgba(90, 122, 106, 0.5);         // Lighter dark gray-green
+
+    // Text colors - light cream for excellent contrast
+    --text-primary: var(--color-shore);          // Cream text
+    --text-secondary: #f5f6f0;                   // Lighter cream for secondary
+
+    // Accent colors - bright for visibility
+    --accent-primary: var(--color-kalo);         // Bright lime accent
+    --accent-secondary: var(--color-mauka);      // Cyan accent
+    --accent-tertiary: var(--color-coral);       // Warm coral
+
+    // Gradient overlays - subtle on textured background
+    --gradient-start: rgba(235, 255, 220, 0.1);
+    --gradient-accent: rgba(186, 226, 225, 0.12);
+    --border-color: rgba(232, 234, 223, 0.25);
+    --shadow-color: rgba(0, 0, 0, 0.4);
+
+    // Multi-directional gradient backgrounds - light overlays
+    --gradient-bg-hero: linear-gradient(135deg,
+        rgba(42, 66, 39, 0.3) 0%,
+        rgba(42, 66, 39, 0.35) 50%,
+        rgba(58, 90, 74, 0.3) 100%);
+    --gradient-bg-section: linear-gradient(165deg,
+        rgba(42, 66, 39, 0.35) 0%,
+        rgba(42, 66, 39, 0.45) 60%);
+    --gradient-bg-aurora: radial-gradient(ellipse at 50% -20%,
+        rgba(91, 165, 94, 0.15) 0%,
+        rgba(42, 66, 39, 0.2) 35%,
+        transparent 70%);
+
+    // Semantic Color System - bright for dark background
+    --status-peer-reviewed: var(--color-kalo);
+    --status-peer-reviewed-bg: rgba(74, 106, 90, 0.6);
+    --status-seeking-funding: var(--color-mauka);
+    --status-seeking-funding-bg: rgba(90, 122, 106, 0.6);
+    --status-in-progress: var(--color-kalo);
+    --status-in-progress-bg: rgba(74, 106, 90, 0.6);
+    --status-under-review: var(--color-mauka);
+    --status-under-review-bg: rgba(90, 122, 106, 0.6);
+
+    // Clinical/Urgent states
+    --clinical-urgent: var(--color-coral);
+    --clinical-urgent-bg: rgba(90, 66, 63, 0.65);
+    --clinical-standard: var(--color-kalo);
+    --clinical-standard-bg: rgba(74, 106, 90, 0.6);
+}
+
+/* ============================================
+   DEFAULT THEME APPLICATION
+   ============================================ */
+body {
+    @extend .theme--organic-forest;
 }
