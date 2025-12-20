@@ -58,10 +58,7 @@ description: Research citations and creative attributions for the Lono Collectiv
         <h2>Creative Credits</h2>
 
         <h3>Hero Background Video</h3>
-        <p><strong>Current video:</strong> "Man typing on computer" by Vlad Murashko<br/>
-        Instagram: <a href="https://www.instagram.com/murvl/" target="_blank" rel="noopener noreferrer">@murvl</a></p>
-
-        <p><strong>Alternative video:</strong> "Troubled adolescent" by cottonbro studio<br/>
+        "Troubled adolescent" by cottonbro studio<br/>
         Instagram: <a href="https://www.instagram.com/cottonbro/" target="_blank" rel="noopener noreferrer">@cottonbro</a></p>
 
         <h3>Logo Design</h3>
