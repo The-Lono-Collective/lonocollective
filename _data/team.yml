@@ -2,7 +2,7 @@
   initials: AA
   image: /assets/images/allie.jpeg
   title: Founding Member | Vice President
-  credentials: Partner, Hall Booth Smith specializing in healthcare law and mental health litigation. Bachelor's degree in Psychology. Former Chief Legal Officer for healthcare company. National defense counsel for multiple healthcare organizations.
+  credentials: Partner, Hall Booth Smith specializing in healthcare law and mental health litigation • Bachelor's degree in Psychology • Former Chief Legal Officer, Turn Key Health • National defense counsel for multiple healthcare organizations.
   expertise: Legal frameworks for mental health care, liability analysis, regulatory compliance (HIPAA, 42 CFR Part 2, state mental health statutes), medical malpractice defense, civil rights litigation.
 
 - name: Zacharia Rupp, MCS, MFA
@@ -10,7 +10,7 @@
   image: /assets/images/zach.jpg
   title: Founding Member | President
   credentials: Former Head of Data Delivery, Pareto AI • Master of Computer Science from University of Illinois Urbana-Champaign.
-  expertise: AI evaluation methodology, systematic literature review (PRISMA guidelines), research design, technical assessment of clinical decision support systems, statistical validation.
+  expertise: AI evaluation methodology, deep learning methods for healthcare, systematic literature review (PRISMA guidelines), research design, technical assessment of clinical decision support systems, statistical validation.
 
 - name: Jesse Ewing
   initials: JE
@@ -23,5 +23,5 @@
   initials: KA
   image: /assets/images/kalani.jpeg
   title: Founding Member | Business Development & Data Steward
-  credentials: Lead Clinical Engineer at OU Health. Former Head of Business Development and Cloud Infrastructure Architect at healthcare startup. Navy veteran with electronics technical background.
+  credentials: Lead Clinical Engineer at OU Health. Former Head of Business Development and Cloud Infrastructure Architect startup experience. Navy veteran with electronics technical background.
   expertise: Healthcare technology systems, clinical engineering, medical device integration, data infrastructure, healthcare business development.

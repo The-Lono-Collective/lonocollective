@@ -1,12 +1,25 @@
 .header {
-    position: sticky;
-    z-index: 10;
+    position: fixed;
+    z-index: 1000;
     top: 0;
+    left: 0;
+    right: 0;
     padding: 20px 0;
     margin: 0;
-
     display: block;
-    
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.header--hidden {
+    transform: translateY(-120%);
+    pointer-events: none;
+}
+
+.header--visible {
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .header::before {
@@ -16,9 +29,9 @@
     height: 88px;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.55) 10%,
-        rgba(0, 0, 0, 0.3) 45%,
-        rgba(0, 0, 0, 0) 100%,
+        rgba(25, 14, 14, 0.55) 10%,
+        rgba(25, 14, 14, 0.3) 50%,
+        rgba(25, 14, 14, 0) 100%,
         transparent 100%
     );
 
@@ -26,24 +39,6 @@
     -webkit-backdrop-filter: blur(2px);
 
     z-index: -1;
-    pointer-events: none;
-}
-
-.header::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -20px;
-    height: 88px;
-
-    background: linear-gradient(
-        to bottom,
-        rgba(145, 143, 143, 0) 10%,
-        rgba(90, 59, 53, 0.05) 45%,
-        rgba(37, 19, 19, 0) 100%
-    );
-
     pointer-events: none;
 }
 
@@ -74,11 +69,11 @@
 }
 
 .logo-text {
-    font-family: "Azeret Mono", monospace;
-    font-size: 18px;
-    font-weight: 500;
+    font-family: "Azeret Mono Medium", monospace;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     color: var(--text-primary);
-    letter-spacing: 0.15em;
     text-transform: uppercase;
 }
 
@@ -118,14 +113,13 @@
 
 @media (max-width: 768px) {
     .header {
-        position: relative;
+        padding: 15px 0;
     }
 }
 
 @media (max-width: 480px) {
     .header {
-        padding: 0;
-        position: relative;
+        padding: 10px 0;
     }
 
     .logo {
