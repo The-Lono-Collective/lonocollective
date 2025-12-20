@@ -1,10 +1,87 @@
 <footer class="site-footer" role="contentinfo">
     <div class="footer-content">
-        <div class="footer-copyright">
-            <p>&copy; 2025 The Lono Collective, LLC. All rights reserved.</p>
+
+        <!-- 3-Column Grid Section -->
+        <div class="footer-columns">
+
+            <!-- Column 1: Navigation -->
+            <div class="footer-column footer-nav-column">
+                <h3 class="footer-column-title">Navigate</h3>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <ul>
+                        {% for item in site.data.footer.navigation %}
+                        <li>
+                            <a href="{{ item.url | relative_url }}"
+                               {% if item.url contains '#' %}class="smooth-scroll"{% endif %}>
+                                {{ item.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Column 2: Resources -->
+            <div class="footer-column footer-resources-column">
+                <h3 class="footer-column-title">Resources</h3>
+                <nav class="footer-resources" aria-label="Resource links">
+                    <ul>
+                        {% for item in site.data.footer.resources %}
+                        <li>
+                            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Column 3: CTA -->
+            <div class="footer-column footer-cta-column">
+                <h3 class="footer-cta-headline">{{ site.data.footer.cta.headline }}</h3>
+                <p class="footer-cta-tagline">{{ site.data.footer.cta.tagline }}</p>
+                <a href="{{ site.data.footer.cta.button_url | relative_url }}"
+                   class="cta-button primary footer-cta-button">
+                    {{ site.data.footer.cta.button_text }}
+                </a>
+            </div>
+
         </div>
-        <div class="footer-links">
-            <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
+
+        <!-- Logo Section (below columns, centered) -->
+        <div class="footer-logo-section">
+            <!-- Large glyphs container -->
+            <div class="footer-glyphs">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}"
+                     alt="Logo"
+                     class="footer-glyph footer-glyph-logo"
+                     data-glyph="0">
+                <span class="footer-glyph footer-glyph-letter" data-glyph="1">L</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="2">O</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="3">N</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="4">O</span>
+                <span class="footer-glyph footer-glyph-separator" data-glyph="5">&ensp;</span>
+                <span class="footer-glyph footer-glyph-separator" data-glyph="6">&ensp;</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="7">C</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="8">O</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="9">L</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="10">L</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="11">E</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="12">C</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="13">T</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="14">I</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="15">V</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="16">E</span>
+                <span class="footer-glyph footer-glyph-letter" data-glyph="17"><sup>&reg;</sup></span>
+            </div>
+
+            <div class="footer-copyright" role="contentinfo">
+                <p>
+                    &copy; {{ site.data.footer.copyright.year }}
+                    {{ site.data.footer.copyright.entity }}.
+                    {{ site.data.footer.copyright.text }}
+                </p>
+            </div>
         </div>
+
     </div>
 </footer>

@@ -28,14 +28,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600&family=Song+Myung&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
-    <body class="theme--green-gradient-dark flowing-arcs-bg">
+    <body class="theme--green-gradient-light">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     {% include header.html %}
     <div class="container">
-        
+       
 
         <main class="main-content" id="main-content" role="main">
             {{ content }}
@@ -46,5 +46,6 @@
 
     <script type="module" src="{{ '/assets/js/main.js' | relative_url }}"></script>
     <script type="module" src="{{ '/assets/js/animations.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/header-scroll.js' | relative_url }}"></script>
 </body>
 </html>

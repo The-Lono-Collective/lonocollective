@@ -1,0 +1,124 @@
+# Mental Health AI Regulatory Tracker
+# Last updated: November 2025
+#
+# To add new regulatory items, add a new entry following this format:
+# - date: "Month Year"
+#   category: federal | state | clinical | international
+#   high_impact: true | false
+#   title: "Title of regulatory development"
+#   description: "Detailed description..."
+#   impact_note: "Optional: High-impact warning message"
+#   source_label: "Source name"
+#   source_url: "https://..."
+
+- date: "November 2025"
+  category: clinical
+  high_impact: true
+  title: "APA Issues Health Advisory Warning Against AI Chatbots and Wellness Apps for Mental Health"
+  description: "American Psychological Association releases health advisory stating that AI chatbots and wellness applications lack scientific evidence and necessary regulations to ensure user safety. Advisory warns these technologies may lack scientific validation and oversight, often do not include adequate safety protocols, and have not received regulatory approval. Emphasizes that even well-developed generative AI tools lack evidence of effectiveness or safety. Calls for randomized clinical trials, longitudinal outcome studies, and federal regulatory action. Warns against using these tools as substitutes for qualified mental health professionals."
+  impact_note: "Major professional organization declares current AI mental health tools unvalidated and unsafe"
+  source_label: "American Psychological Association"
+  source_url: "https://www.apa.org/topics/artificial-intelligence-machine-learning/health-advisory-chatbots-wellness-apps"
+
+- date: "November 2025"
+  category: federal
+  high_impact: true
+  title: "FDA Advisory Committee Recommends Stricter Approval Standards for Generative AI Mental Health Devices"
+  description: "FDA's Digital Health Advisory Committee issued formal recommendations that all generative AI-enabled mental health devices require De Novo classification or premarket approval (PMA), explicitly rejecting the 510(k) substantial equivalence pathway. Committee recommends randomized controlled trials for safety and effectiveness validation, and mandates human oversight for all AI therapy applications."
+  impact_note: "Fundamentally changes approval pathway for generative AI mental health tools"
+  source_label: "FDA Digital Health Advisory Committee"
+  source_url: "https://www.fda.gov/advisory-committees/advisory-committee-calendar/november-6-2025-digital-health-advisory-committee-meeting-announcement-11062025"
+
+- date: "October 2025"
+  category: state
+  high_impact: true
+  title: "California Enacts First-in-Nation AI Companion Chatbot Safeguards (SB 243)"
+  description: "Governor Newsom signs SB 243 requiring companion chatbot operators to implement critical safeguards including protocols for addressing suicidal ideation and self-harm, preventing exposure of minors to sexual content, and clear notifications that interactions are with AI. Operators must provide crisis service referrals and submit annual reports on connections between chatbot use and suicidal ideation. Creates private right of action for injuries from noncompliance. Effective January 1, 2026."
+  impact_note: "First state law mandating suicide prevention protocols for AI chatbots"
+  source_label: "California SB 243"
+  source_url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243"
+
+- date: "October 2025"
+  category: state
+  high_impact: false
+  title: "California Bans AI from Misrepresenting Healthcare Credentials (AB 489)"
+  description: "California AB 489, signed alongside SB 243, prohibits developers and deployers of AI tools from indicating or implying that the AI possesses a license or certificate to practice a healthcare profession. Additionally bans advertisements suggesting that AI-provided care comes from a licensed or certified human healthcare professional. Establishes consumer protection standards for transparency about AI use in healthcare settings. Effective January 1, 2026."
+  source_label: "California AB 489"
+  source_url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB489"
+
+- date: "September 2025"
+  category: clinical
+  high_impact: false
+  title: "Joint Commission and Coalition for Health AI Release First-of-Its-Kind Guidance on Responsible AI Use in Healthcare"
+  description: "Joint Commission (TJC), in collaboration with the Coalition for Health AI (CHAI), released its Guidance on the Responsible Use of Artificial Intelligence in Healthcare (RUAIH). This marks the first formal framework from a U.S. accrediting body aimed at helping health care organizations safely, effectively and ethically integrate AI technologies into clinical and operational practice."
+  source_label: "The Joint Commission"
+  source_url: "https://www.jointcommission.org/en-us/knowledge-library/news/2025-09-jc-and-chai-release-initial-guidance-to-support-responsible-ai-adoption"
+
+- date: "September 2025"
+  category: state
+  high_impact: true
+  title: "California Enacts First-in-Nation Frontier AI Regulation (SB 53)"
+  description: "Governor Newsom signs SB 53, the Transparency in Frontier Artificial Intelligence Act, establishing oversight and accountability requirements for developers of advanced AI models trained with more than 10^26 floating-point operations. Requires public disclosure of safety standards, establishes formal safety incident reporting mechanisms, protects whistleblowers raising AI safety concerns, and mandates annual legislative updates. Affects mental health AI systems built on frontier models like GPT-4 or Claude. California becomes first state to directly regulate frontier foundation model developers. Effective January 1, 2026."
+  impact_note: "First state regulation of frontier AI models used in mental health applications"
+  source_label: "California SB 53"
+  source_url: "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53"
+
+- date: "August 2025"
+  category: state
+  high_impact: true
+  title: "Illinois Enacts First-in-Nation Ban on AI-Only Mental Health Therapy"
+  description: "Illinois HB 1806 (Wellness and Oversight for Psychological Resources Act) prohibits AI systems from independently performing therapy, counseling, or psychotherapy without direct oversight by a licensed mental health professional. The law, which passed unanimously and was signed by Gov. Pritzker, represents the first state ban on autonomous AI therapy and sets a precedent for other states considering similar restrictions."
+  impact_note: "Bans autonomous AI therapy; requires licensed professional oversight"
+  source_label: "Illinois General Assembly"
+  source_url: "https://www.ilga.gov/Legislation/BillStatus?GAID=18&DocNum=1806&DocTypeID=HB&LegId=159219"
+
+- date: "June 2025"
+  category: state
+  high_impact: false
+  title: "Nevada Regulates AI Chatbots in Mental Healthcare Settings"
+  description: "Nevada AB 406, signed by Gov. Lombardo, establishes disclosure requirements and regulatory oversight for AI chatbot use in mental and behavioral healthcare contexts. The law requires clear notification to users when interacting with AI systems and mandates data privacy protections specific to mental health applications."
+  source_label: "Nevada Legislature"
+  source_url: "https://legiscan.com/NV/bill/AB406/2025"
+
+- date: "May 2025"
+  category: state
+  high_impact: false
+  title: "Utah Establishes Disclosure Requirements for Mental Health AI Chatbots"
+  description: "Utah HB 452, signed by Gov. Cox and effective May 7, 2025, requires suppliers of AI mental health chatbots to provide clear disclosures about AI capabilities and limitations. The law establishes consumer protection standards and requires transparency about data usage and algorithm decision-making in mental health contexts."
+  source_label: "Utah State Legislature"
+  source_url: "https://le.utah.gov/~2025/bills/static/HB0452.html"
+
+- date: "January 2025"
+  category: federal
+  high_impact: false
+  title: "FDA Issues Draft Guidance on Lifecycle Management of AI-Based Medical Device Software"
+  description: "FDA released comprehensive draft guidance outlining expectations for transparency, clinical validation, algorithm updates, and post-market monitoring of AI-enabled medical devices. The guidance applies to mental health AI systems classified as medical devices and emphasizes continuous monitoring requirements throughout the product lifecycle."
+  source_label: "FDA Draft Guidance"
+  source_url: "https://www.fda.gov/media/184856/download"
+
+- date: "December 2024"
+  category: federal
+  high_impact: true
+  title: "FDA Issues Draft Guidance on Clinical Decision Support Software"
+  description: "FDA clarifies which clinical decision support (CDS) software functions are considered medical devices requiring premarket review. Mental health AI systems making diagnostic or treatment recommendations fall under increased scrutiny, particularly those assessing suicide risk or recommending involuntary commitment."
+  impact_note: "May require premarket submission for mental health AI systems"
+  source_label: "FDA Draft Guidance"
+  source_url: "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+
+- date: "July 2024"
+  category: federal
+  high_impact: false
+  title: "CMS Announces Reimbursement Rules for Digital Mental Health Treatment"
+  description: "Centers for Medicare & Medicaid Services establishes billing codes for AI-assisted mental health screening but requires documentation of clinical oversight, validation studies, and adverse event reporting. Telehealth mental health AI must meet same standards as in-person care."
+  source_label: "Centers for Medicare & Medicaid Services"
+  source_url: "https://www.cms.gov/files/document/mln909432-behavioral-health-integration-services.pdf"
+
+- date: "June 2024"
+  category: international
+  high_impact: false
+  title: "EU AI Act Classifies Mental Health AI as \"High-Risk\""
+  description: "European Union's AI Act officially designates mental health AI systems—particularly those used for diagnosis, treatment planning, or crisis assessment—as high-risk applications requiring conformity assessment, transparency requirements, and human oversight. Enforcement begins in 2026."
+  source_label: "European Commission"
+  source_url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+
+

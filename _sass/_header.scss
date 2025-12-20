@@ -1,30 +1,56 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
+    position: fixed;
+    z-index: 1000;
     top: 0;
-    z-index: 100;
-    padding: 20px 1.5em;
-    inset: 0% 0% auto;
-    transition: padding 0.3s ease, backdrop-filter 0.3s ease;
-    margin: 0 10%;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    margin: 0;
+    display: block;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.header--hidden {
+    transform: translateY(-120%);
+    pointer-events: none;
+}
+
+.header--visible {
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .header::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 100%;
-    background: linear-gradient(to bottom, var(--bg-secondary) 0%, transparent 100%);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    inset: 0;
+    height: 88px;
+    background: linear-gradient(
+        to bottom,
+        rgba(25, 14, 14, 0.55) 10%,
+        rgba(25, 14, 14, 0.3) 50%,
+        rgba(25, 14, 14, 0) 100%,
+        transparent 100%
+    );
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
     z-index: -1;
+    pointer-events: none;
+}
+
+
+.header-inner {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 25px 1.5em 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -36,18 +62,19 @@
 }
 
 .logo-icon {
-    width: 45px;
-    height: 45px;
+    width: 52px;
+    height: 52px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
 .logo-text {
-    font-family: "Crimson Pro", serif;
-    font-size: 26px;
-    font-weight: 400;
+    font-family: "Azeret Mono Medium", monospace;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     color: var(--text-primary);
-    letter-spacing: -0.01em;
+    text-transform: uppercase;
 }
 
 .logo:hover .logo-icon {
@@ -76,7 +103,7 @@
 
 @media (min-width: 768px) {
     .header {
-        padding: 15px 0;
+        padding: 0 0;
     }
 
     .logo {
@@ -86,14 +113,13 @@
 
 @media (max-width: 768px) {
     .header {
-        position: relative;
+        padding: 15px 0;
     }
 }
 
 @media (max-width: 480px) {
     .header {
-        padding: 10px;
-        position: relative;
+        padding: 10px 0;
     }
 
     .logo {

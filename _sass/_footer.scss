@@ -1,70 +1,329 @@
-/* Site Footer */
+/* ============================================================================
+   SITE FOOTER - Enhanced Traditional Layout
+   ========================================================================= */
 
 .site-footer {
     position: relative;
-    padding: 48px 20px;
-    margin-top: 80px;
-}
+    padding: 100px 1.5em 80px;
+    margin: 0;
+    min-height: 450px;
 
-.site-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 100%;
-    background: rgba(127, 184, 148, 0.04);
-    border-top: 1px solid rgba(127, 184, 148, 0.15);
-    z-index: -1;
+    // Background layer with blur effect
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background: var(--bg-mauka);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        z-index: -1;
+    }
+
+    // Gradient border (top)
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(
+            90deg,
+            rgba(127, 184, 148, 0.3) 0%,
+            var(--accent-primary) 25%,
+            var(--accent-primary) 75%,
+            rgba(127, 184, 148, 0.3) 100%
+        );
+        z-index: 1;
+    }
 }
 
 .footer-content {
+    max-width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================================================
+   3-Column Grid Layout
+   ========================================================================= */
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-bottom: 80px;
+    text-align: left;
+}
+
+.footer-column-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Navigation & Resources Columns */
+.footer-nav,
+.footer-resources {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 16px;
+    }
+
+    a {
+        font-size: 16px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+        display: inline-block;
+        font-weight: 400;
+
+        &:hover,
+        &:focus {
+            color: var(--accent-primary);
+            transform: translateX(4px);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--accent-primary);
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
+    }
+}
+
+/* CTA Column */
+.footer-cta-column {
+    background: rgba(127, 184, 148, 0.05);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(127, 184, 148, 0.15);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        border-color: rgba(127, 184, 148, 0.3);
+        box-shadow: 0 8px 24px rgba(127, 184, 148, 0.1);
+    }
+}
+
+.footer-cta-headline {
+    font-family: 'Song Myung', serif;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.footer-cta-tagline {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-weight: 300;
+}
+
+.footer-cta-button {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+/* ============================================================================
+   Logo Section (Centered Below Columns)
+   ========================================================================= */
+
+.footer-logo-section {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(127, 184, 148, 0.15);
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+    max-width: fit-content;
+}
+
+/* Glyphs container - similar to Jeton's grid approach */
+.footer-glyphs {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 32px;
+    height: 280px;
+    position: relative;
+}
+
+/* Individual glyph styling */
+.footer-glyph {
+    will-change: transform;
+    opacity: 0;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+.footer-glyph-letter {
+    font-family: 'Azeret Mono', monospace;
+    font-weight: 700;
+    font-size: clamp(80px, 25vw, 220px);
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    line-height: 2;
+    display: inline-block;
+}
+
+.footer-glyph-separator {
+    font-family: 'Azeret Mono', monospace;
+    font-weight: 400;
+    font-size: clamp(60px, 18vw, 180px);
+    color: var(--text-primary);
+    line-height: 2;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.footer-glyph-logo {
+    width: clamp(100px, 12vw, 180px);
+    height: auto;
+    object-fit: contain;
+    margin-right: 24px;
 }
 
 .footer-copyright {
     p {
         font-size: 14px;
         color: var(--text-secondary);
-        margin: 0;
+        margin: 80px;
+        font-weight: 300;
     }
 }
 
-.footer-links {
-    display: flex;
-    gap: 32px;
+/* ============================================================================
+   Responsive Design
+   ========================================================================= */
 
-    a {
-        font-size: 14px;
-        color: var(--text-secondary);
-        text-decoration: none;
-        transition: color 0.2s ease;
+// Tablet (2-column layout)
+@media (max-width: 1024px) {
+    .footer-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px;
+        margin-bottom: 60px;
+    }
 
-        &:hover {
-            color: var(--accent-primary);
+    // CTA column spans both columns
+    .footer-cta-column {
+        grid-column: 1 / -1;
+    }
+}
+
+// Mobile (single column stack)
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 80px 20px 60px;
+        min-height: auto;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .footer-cta-column {
+        grid-column: auto;
+    }
+
+    .footer-logo-section {
+        padding-top: 40px;
+        min-height: 200px;
+    }
+
+    .footer-glyphs {
+        height: 150px;
+        flex-wrap: wrap;
+    }
+
+    .footer-glyph-letter {
+        font-size: clamp(48px, 10vw, 80px);
+    }
+
+    .footer-glyph-logo {
+        width: clamp(60px, 8vw, 100px);
+        margin-right: 10px;
+    }
+}
+
+// Small mobile adjustments
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 60px 15px 50px;
+    }
+
+    .footer-cta-column {
+        padding: 24px;
+    }
+
+    .footer-logo-section {
+        min-height: 150px;
+    }
+
+    .footer-glyphs {
+        height: 120px;
+    }
+
+    .footer-glyph-letter {
+        font-size: clamp(32px, 8vw, 64px);
+    }
+
+    .footer-glyph-logo {
+        width: clamp(40px, 6vw, 80px);
+        margin-right: 8px;
+    }
+}
+
+/* ============================================================================
+   Accessibility: Reduced Motion Support
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-glyph {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+
+        &.reveal {
+            transition: none !important;
+        }
+    }
+
+    .footer-nav a,
+    .footer-resources a {
+        transition: color 0.2s ease; // Keep color transition, remove transform
+
+        &:hover,
+        &:focus {
+            transform: none;
         }
     }
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 16px;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        gap: 16px;
-    }
-}
-
-/* Privacy Policy Page */
+/* ============================================================================
+   Privacy Policy Page Styles (existing)
+   ========================================================================= */
 
 .privacy-section {
     padding: 80px 20px;
@@ -77,7 +336,7 @@
     margin: 0 auto;
 
     h1 {
-        font-family: 'Crimson Pro', serif;
+        font-family: 'Song Myung', serif;
         font-size: clamp(36px, 6vw, 48px);
         font-weight: 600;
         color: var(--text-primary);
@@ -92,7 +351,7 @@
     }
 
     h2 {
-        font-family: 'Crimson Pro', serif;
+        font-family: 'Song Myung', serif;
         font-size: clamp(24px, 4vw, 32px);
         font-weight: 600;
         color: var(--text-primary);

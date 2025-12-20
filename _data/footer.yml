@@ -1,0 +1,49 @@
+# Footer content data structure
+# Follows pattern from navigation.yml and team.yml
+
+navigation:
+  - title: Mission
+    url: /mission/
+  - title: Framework
+    url: /#framework
+  - title: Team
+    url: /#team
+  - title: Contact
+    url: /#contact
+
+resources:
+  - title: Sources & Credits
+    url: /sources/
+  - title: Privacy Policy
+    url: /privacy/
+  - title: Regulatory Tracker
+    url: /regulations/
+
+cta:
+  headline: Start With a Risk Assessment
+  tagline: Identify AI safety gaps before they become regulatory violations or patient harm incidents.
+  button_text: Get Started
+  button_url: /#contact
+
+# Social links (commented out for future use)
+# Uncomment and add URLs when social media accounts are created
+# social:
+#   - platform: LinkedIn
+#     url: https://linkedin.com/company/lono-collective
+#     icon: linkedin
+#   - platform: Twitter
+#     url: https://twitter.com/lonocollective
+#     icon: twitter
+#   - platform: GitHub
+#     url: https://github.com/lonocollective
+#     icon: github
+
+branding:
+  logo: /assets/images/Lono_Mauka 23.png
+  logo_alt: Lono Collective
+  name: The Lono Collective
+
+copyright:
+  year: 2025
+  entity: The Lono Collective, LLC
+  text: All rights reserved.
