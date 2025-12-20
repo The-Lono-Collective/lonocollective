@@ -24,7 +24,7 @@ title: Mental Health AI Safety Evaluation
         </div>
         <div class="stat-card fade-in-up">
             <div class="stat-number">17</div>
-            <div class="stat-label">Number of deaths attributed to LLM use since 2023, 14 of which occurred in 2025 alone<sup><a href="https://www.llmdeathcount.com">3</a></sup></div>
+            <div class="stat-label">Deaths attributed to LLM use since 2023, 14 of which occurred in 2025 alone<sup><a href="https://www.llmdeathcount.com">3</a></sup></div>
         </div>
     </div>
 </section>
