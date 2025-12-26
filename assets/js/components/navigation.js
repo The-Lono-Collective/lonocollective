@@ -16,6 +16,9 @@ export function initNavigation() {
         menuToggle.setAttribute('aria-expanded', isOpen);
         mobileMenu.setAttribute('aria-hidden', !isOpen);
 
+        // Lock/unlock body scroll for full-screen overlay
+        document.body.classList.toggle('menu-open', isOpen);
+
         // Focus first menu item when opening
         if (isOpen) {
             const focusableElements = getFocusableElements();

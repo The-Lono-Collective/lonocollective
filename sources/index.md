@@ -47,7 +47,7 @@ description: Research citations and creative attributions for the Lono Collectiv
 
         <p><strong>[18]</strong> Stanford Human-Centered Artificial Intelligence. (n.d.). Exploring the dangers of AI in mental health care. <a href="https://hai.stanford.edu/news/exploring-the-dangers-of-ai-in-mental-health-care" target="_blank" rel="noopener noreferrer">https://hai.stanford.edu/news/exploring-the-dangers-of-ai-in-mental-health-care</a></p>
 
-        <p><strong>[19]</strong> Barnett, B. S., & Kolmes, K. (2024). Preliminary report on dangers of AI chatbots. <em>Psychiatric Times</em>. <a href="https://www.psychiatrictimes.com/view/preliminary-report-on-dangers-of-ai-chatbots" target="_blank" rel="noopener noreferrer">https://www.psychiatrictimes.com/view/preliminary-report-on-dangers-of-ai-chatbots</a></p>
+        <p><strong>[19]</strong> Wells, S.  (2025). New study warns of risks in AI mental health tools. <em>Stanford Report</em>. <a href="https://news.stanford.edu/stories/2025/06/ai-mental-health-care-tools-dangers-risks" target="_blank" rel="noopener noreferrer">https://news.stanford.edu/stories/2025/06/ai-mental-health-care-tools-dangers-risks</a></p>
 
         <p><strong>[20]</strong> Ji, S., Li, X., Huang, Z., & Cambria, E. (2025). Suicidal ideation and mental disorder detection with attentive relation networks. <em>Scientific Reports, 15</em>, 17242. <a href="https://www.nature.com/articles/s41598-025-17242-4" target="_blank" rel="noopener noreferrer">https://www.nature.com/articles/s41598-025-17242-4</a></p>
 
@@ -58,10 +58,7 @@ description: Research citations and creative attributions for the Lono Collectiv
         <h2>Creative Credits</h2>
 
         <h3>Hero Background Video</h3>
-        <p><strong>Current video:</strong> "Man typing on computer" by Vlad Murashko<br/>
-        Instagram: <a href="https://www.instagram.com/murvl/" target="_blank" rel="noopener noreferrer">@murvl</a></p>
-
-        <p><strong>Alternative video:</strong> "Troubled adolescent" by cottonbro studio<br/>
+        "Troubled adolescent" by cottonbro studio<br/>
         Instagram: <a href="https://www.instagram.com/cottonbro/" target="_blank" rel="noopener noreferrer">@cottonbro</a></p>
 
         <h3>Logo Design</h3>
