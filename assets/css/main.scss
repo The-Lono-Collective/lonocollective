@@ -824,15 +824,29 @@ body::before {
     position: absolute;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 13px;
     color: var(--text-secondary);
     font-weight: 500;
 }
 
+.axis-scale span {
+    white-space: nowrap;
+}
+
 .axis-scale.x-axis {
     bottom: 20px;
     left: 80px;
-    right: 60px;
+    width: calc(100% - 80px - 60px);
+}
+
+/* Center label can shrink/hide on smaller screens */
+.axis-scale.x-axis span:nth-child(2) {
+    text-align: center;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .axis-scale.y-axis-scale {
@@ -1266,8 +1280,56 @@ body::before {
         padding: 80px 0;
     }
 
+    /* Mobile: Disable auto-scroll, enable manual touch scrolling */
+    .regulatory-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(127, 184, 148, 0.3) transparent;
+    }
+
+    .regulatory-scroll::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .regulatory-scroll::-webkit-scrollbar-track {
+        background: rgba(127, 184, 148, 0.05);
+        border-radius: 10px;
+    }
+
+    .regulatory-scroll::-webkit-scrollbar-thumb {
+        background: rgba(127, 184, 148, 0.3);
+        border-radius: 10px;
+    }
+
+    /* Reduce fade edges on mobile */
+    .regulatory-scroll::before,
+    .regulatory-scroll::after {
+        width: 40px;
+    }
+
+    /* Stop the animation on mobile */
+    .regulatory-marquee-track {
+        animation: none;
+    }
+
+    /* Regulatory tracker - 85vw cards with peek of next card */
     .regulatory-item-card {
-        flex: 0 0 320px;
+        flex: 0 0 85vw;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
+
+    /* Remove fade edges for cleaner carousel look */
+    .regulatory-scroll::before,
+    .regulatory-scroll::after {
+        display: none;
+    }
+
+    /* Hide duplicate cards on mobile (they were for seamless loop) */
+    .regulatory-marquee-track > .regulatory-item-card:nth-child(n+11) {
+        display: none;
     }
 
     .regulatory-timeline {
@@ -2110,7 +2172,61 @@ html {
     }
 
     .risk-matrix-chart {
+        width: 100%;
         min-height: 500px;
+        padding: 70px 50px 50px 70px;
+    }
+
+    /* Update axis positioning to match chart padding */
+    .axis-label.y-axis {
+        left: 70px;
+    }
+
+    .axis-scale.x-axis {
+        left: 70px;
+        width: calc(100% - 70px - 50px);
+    }
+
+    .axis-scale.x-axis span {
+        white-space: nowrap;
+    }
+
+    .axis-scale.y-axis-scale {
+        left: 15px;
+        top: 70px;
+        bottom: 50px;
+    }
+
+    /* Update quadrant positions */
+    .quadrant.low-low {
+        bottom: 50px;
+        left: 70px;
+    }
+
+    .quadrant.low-high {
+        top: 70px;
+        left: 70px;
+    }
+
+    .quadrant.high-low {
+        bottom: 50px;
+        right: 50px;
+    }
+
+    .quadrant.high-high {
+        top: 70px;
+        right: 50px;
+    }
+
+    /* Update grid lines */
+    .grid-line.vertical {
+        top: 70px;
+        bottom: 50px;
+    }
+
+    .grid-line.horizontal {
+        left: 70px;
+        right: 50px;
     }
 }
 
@@ -2165,11 +2281,97 @@ html {
         margin: 0;
     }
 
-    .methodology-grid,
-    .cooperative-benefits,
-    .team-grid {
+    /* Cooperative benefits stays as vertical grid */
+    .cooperative-benefits {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    /* Methodology grid - horizontal carousel on mobile */
+    .methodology-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding: 20px 20px;
+    }
+
+    .method-card {
+        flex: 0 0 85vw;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        border-left: none;
+        padding: 24px;
+        background: var(--bg-primary);
+        border: 2px solid rgba(127, 184, 148, 0.15);
+        border-radius: 16px;
+    }
+
+    /* Team grid - horizontal carousel on mobile */
+    .team-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding: 20px 20px;
+        margin-top: 40px;
+    }
+
+    .team-member {
+        flex: 0 0 85vw;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        border-left: none;
+        padding: 24px;
+        background: var(--bg-primary);
+        border: 2px solid rgba(127, 184, 148, 0.15);
+        border-radius: 16px;
+    }
+
+    /* Scroll indicator dots for carousels */
+    .scroll-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    .scroll-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(127, 184, 148, 0.3);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .scroll-dot.active {
+        background: var(--accent-primary);
+        transform: scale(1.25);
+    }
+
+    /* Risk matrix - tap to toggle on mobile instead of hover */
+    .risk-point {
+        cursor: pointer;
+    }
+
+    .risk-point .risk-label {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Override hover behavior on mobile - only show when active */
+    .risk-point:hover .risk-label {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .risk-point.active .risk-label {
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .failure-mode-alert {
@@ -2243,28 +2445,45 @@ html {
     }
 
     .axis-label.y-axis {
-        font-size: 14px;
+        font-size: 12px;
+        left: 60px;
     }
 
     .axis-scale {
         font-size: 11px;
     }
 
+    .axis-scale.x-axis {
+        left: 60px;
+        width: calc(100% - 60px - 40px);
+    }
+
+    .axis-scale.x-axis span {
+        white-space: nowrap;
+    }
+
+    .axis-scale.y-axis-scale {
+        left: 10px;
+        top: 60px;
+        bottom: 40px;
+    }
+
+    /* Case studies - 85vw cards with peek of next card */
     .case-study-scroll {
         display: flex;
         overflow-x: auto;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        gap: 32px;
-        padding: 20px 0 40px 0;
+        gap: 16px;
+        padding: 20px 20px 20px 20px;
 
         scrollbar-width: thin;
         scrollbar-color: rgba(127, 184, 148, 0.3) transparent;
     }
 
     .case-study-scroll::-webkit-scrollbar {
-        height: 8px;
+        height: 6px;
     }
 
     .case-study-scroll::-webkit-scrollbar-track {
@@ -2278,13 +2497,28 @@ html {
     }
 
     .case-study-card {
-        flex: 0 0 360px;
-        scroll-snap-align: start;
+        flex: 0 0 85vw;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
     }
 
     .regulatory-header-wrapper {
         flex-direction: column;
         gap: 20px;
+    }
+
+    /* Full-width CTA buttons on mobile (easily revertible) */
+    .cta-button {
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Exception for regulatory section button */
+    .regulatory-header-wrapper .cta-button {
+        width: auto;
     }
 }
 
@@ -2331,16 +2565,25 @@ html {
         margin: 0;
     }
 
-    .methodology-grid,
-    .cooperative-benefits,
-    .team-grid {
+    .cooperative-benefits {
         gap: 32px;
     }
 
-    .method-card,
-    .benefit-card,
-    .team-member {
+    .benefit-card {
         padding-left: 24px;
+    }
+
+    /* Keep carousel styles from 768px but adjust sizing */
+    .methodology-grid,
+    .team-grid {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .method-card,
+    .team-member {
+        flex: 0 0 88vw;
+        padding: 20px;
     }
 
     .member-avatar {
@@ -2410,6 +2653,29 @@ html {
 
     .risk-legend {
         padding: 24px;
+    }
+
+    .axis-label.y-axis {
+        font-size: 10px;
+        left: 40px;
+        top: 8px;
+    }
+
+    .axis-scale.x-axis {
+        left: 40px;
+        width: calc(100% - 40px - 20px);
+        bottom: 5px;
+    }
+
+    /* Hide middle label on very small screens */
+    .axis-scale.x-axis span:nth-child(2) {
+        display: none;
+    }
+
+    .axis-scale.y-axis-scale {
+        left: 5px;
+        top: 40px;
+        bottom: 20px;
     }
 
     .badge-item {
