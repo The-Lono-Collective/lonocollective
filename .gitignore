@@ -1,3 +1,6 @@
+# Python
+.venv/
+
 # Jekyll
 _site/
 .sass-cache/
@@ -109,3 +112,5 @@ reference_materials/
 
 # Claude Code local settings
 .claude/
+.env
+.mcp.json
