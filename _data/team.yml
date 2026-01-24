@@ -1,9 +1,3 @@
-- name: Alexandra Ah Loy, JD
-  initials: AA
-  image: /assets/images/allie.jpeg
-  title: Founding Member | Vice President
-  credentials: Partner, Hall Booth Smith specializing in healthcare law and mental health litigation • Bachelor's degree in Psychology • Former Chief Legal Officer, Turn Key Health • National defense counsel for multiple healthcare organizations.
-  expertise: Legal frameworks for mental health care, liability analysis, regulatory compliance (HIPAA, 42 CFR Part 2, state mental health statutes), medical malpractice defense, civil rights litigation.
 
 - name: Zacharia Rupp, MCS, MFA
   initials: ZR
@@ -11,6 +5,13 @@
   title: Founding Member | President
   credentials: Former Head of Data Delivery, Pareto AI • Master of Computer Science from University of Illinois Urbana-Champaign.
   expertise: AI evaluation methodology, deep learning methods for healthcare, systematic literature review (PRISMA guidelines), research design, technical assessment of clinical decision support systems, statistical validation.
+
+- name: Alexandra Ah Loy, JD
+  initials: AA
+  image: /assets/images/allie.jpeg
+  title: Founding Member | Vice President | Chief Compliance Officer
+  credentials: Partner, Hall Booth Smith specializing in healthcare law and mental health litigation • Bachelor's degree in Psychology • Former Chief Legal Officer, Turn Key Health • National defense counsel for multiple healthcare organizations.
+  expertise: Legal frameworks for mental health care, liability analysis, regulatory compliance (HIPAA, 42 CFR Part 2, state mental health statutes), medical malpractice defense, civil rights litigation.
 
 - name: Jesse Ewing
   initials: JE
