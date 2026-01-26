@@ -64,6 +64,10 @@ body::before {
     --line-display: 1.1;
     --line-headline: 1.2;
     --line-body: 1.8;
+
+    // Layout
+    --container-max: 1100px;
+    --container-wide: 1200px;
 }
 
 .skip-link {
@@ -352,7 +356,7 @@ body::before {
 }
 
 .statistics-content {
-    max-width: 1000px;
+    max-width: var(--container-max);
     margin: 0 auto;
     padding: 0 40px;
     display: grid;
@@ -485,7 +489,7 @@ body::before {
 }
 
 .case-study-content {
-    max-width: 1100px;
+    max-width: var(--container-max);
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -610,7 +614,7 @@ body::before {
 }
 
 .risk-matrix-content {
-    max-width: 1400px;
+    max-width: var(--container-wide);
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -1391,7 +1395,7 @@ body::before {
 }
 
 .framework-content {
-    max-width: 1200px;
+    max-width: var(--container-wide);
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -1697,7 +1701,7 @@ body::before {
 }
 
 .cooperative-content {
-    max-width: 1200px;
+    max-width: var(--container-wide);
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -1929,7 +1933,7 @@ body::before {
 }
 
 .contact-content {
-    max-width: 850px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 40px;
     text-align: left;
