@@ -311,6 +311,51 @@ title: Mental Health AI Safety Evaluation
                 </div>
             </div>
         </div>
+
+        <div class="risk-matrix-mobile">
+            <div class="risk-card-list">
+                <div class="risk-card critical fade-in-up">
+                    <h3>Correctional Mental Health</h3>
+                    <p>Suicide risk screening in jails/prisons, where suicide rates are 3x higher than the general population</p>
+                    <div class="risk-tags">
+                        <span class="tag">High liability</span>
+                        <span class="tag">Preventable deaths</span>
+                    </div>
+                </div>
+                <div class="risk-card critical fade-in-up">
+                    <h3>Telehealth &amp; Crisis Lines</h3>
+                    <p>Remote crisis AI without visual assessment</p>
+                    <div class="risk-tags">
+                        <span class="tag">No visual cues</span>
+                        <span class="tag">Immediate risk</span>
+                    </div>
+                </div>
+                <div class="risk-card high fade-in-up">
+                    <h3>Hospital Psychiatric Units</h3>
+                    <p>AI-assisted triage and discharge planning, where 55% of post-discharge suicides occur within the first week</p>
+                    <div class="risk-tags">
+                        <span class="tag">Life-or-death decisions</span>
+                        <span class="tag">Discharge liability</span>
+                    </div>
+                </div>
+                <div class="risk-card medium fade-in-up">
+                    <h3>Primary Care Integration</h3>
+                    <p>Screening by non-specialist providers</p>
+                    <div class="risk-tags">
+                        <span class="tag">High volume</span>
+                        <span class="tag">Limited training</span>
+                    </div>
+                </div>
+                <div class="risk-card medium fade-in-up">
+                    <h3>Community Mental Health</h3>
+                    <p>Outpatient AI for high-risk populations</p>
+                    <div class="risk-tags">
+                        <span class="tag">Vulnerable populations</span>
+                        <span class="tag">Chronic conditions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

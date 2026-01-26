@@ -2409,6 +2409,68 @@ html {
     .regulatory-header-wrapper .cta-button {
         width: auto;
     }
+
+    /* Risk matrix - convert to card list on mobile */
+    .risk-matrix-chart {
+        display: none;
+    }
+
+    .risk-matrix-mobile {
+        display: block;
+    }
+
+    .risk-card-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .risk-card {
+        background: var(--bg-primary);
+        border: 2px solid rgba(127, 184, 148, 0.15);
+        border-radius: 12px;
+        padding: 20px;
+
+        &.critical {
+            border-left: 4px solid #D48A7F;
+        }
+
+        &.high {
+            border-left: 4px solid #FFC107;
+        }
+
+        &.medium {
+            border-left: 4px solid var(--accent-primary);
+        }
+    }
+
+    .risk-card h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 8px;
+    }
+
+    .risk-card p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+    }
+
+    .risk-card .risk-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+/* Desktop: hide mobile risk matrix version */
+@media (min-width: 769px) {
+    .risk-matrix-mobile {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
