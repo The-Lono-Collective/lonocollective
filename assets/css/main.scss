@@ -339,19 +339,11 @@ body::before {
 .statistics-section::after {
     content: "";
     position: absolute;
-    bottom: -80px;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 80px;
-    background: linear-gradient(
-        to bottom,
-        var(--bg-mauka) 0%,
-        rgba(127, 184, 148, 0.05) 100%
-    );
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    height: 1px;
+    background: rgba(127, 184, 148, 0.15);
     pointer-events: none;
 }
 
@@ -450,43 +442,9 @@ body::before {
     position: relative;
 }
 
-.case-study-section::before {
-    content: "";
-    position: absolute;
-    top: -80px;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(
-        to bottom,
-        rgba(186, 226, 225, 0.05) 0%,
-        var(--bg-shore) 100%
-    );
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    pointer-events: none;
-}
+.case-study-section::before { display: none; }
 
-.case-study-section::after {
-    content: "";
-    position: absolute;
-    bottom: -60px;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: linear-gradient(
-        to bottom,
-        var(--bg-shore) 0%,
-        rgba(186, 226, 225, 0.3) 100%
-    );
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    pointer-events: none;
-}
+.case-study-section::after { display: none; }
 
 .case-study-content {
     max-width: var(--container-max);
@@ -924,43 +882,9 @@ body::before {
     position: relative;
 }
 
-.regulatory-tracker-section::before {
-    content: "";
-    position: absolute;
-    top: -80px;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(
-        to bottom,
-        rgba(186, 226, 225, 0.05) 0%,
-        rgba(186, 226, 225, 0.1) 100%
-    );
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    pointer-events: none;
-}
+.regulatory-tracker-section::before { display: none; }
 
-.regulatory-tracker-section::after {
-    content: "";
-    position: absolute;
-    bottom: -80px;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(
-        to bottom,
-        rgba(127, 184, 148, 0.05) 0%,
-        transparent 100%
-    );
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    pointer-events: none;
-}
+.regulatory-tracker-section::after { display: none; }
 
 .regulatory-tracker-content {
     
@@ -1375,24 +1299,7 @@ body::before {
     position: relative;
 }
 
-.framework-section::after {
-    content: "";
-    position: absolute;
-    bottom: -80px;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgba(186, 226, 225, 0.3) 100%
-    );
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    pointer-events: none;
-}
+.framework-section::after { display: none; }
 
 .framework-content {
     max-width: var(--container-wide);
@@ -1681,24 +1588,7 @@ body::before {
     position: relative;
 }
 
-.cooperative-section::before {
-    content: "";
-    position: absolute;
-    top: -80px;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(
-        to bottom,
-        rgba(127, 184, 148, 0.05) 0%,
-        transparent 100%
-    );
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    pointer-events: none;
-}
+.cooperative-section::before { display: none; }
 
 .cooperative-content {
     max-width: var(--container-wide);
@@ -1779,24 +1669,7 @@ body::before {
     position: relative;
 }
 
-.team-section::after {
-    content: "";
-    position: absolute;
-    bottom: -80px;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgba(127, 184, 148, 0.04) 100%
-    );
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-    pointer-events: none;
-}
+.team-section::after { display: none; }
 
 .team-section > * {
     max-width: 1200px;
