@@ -127,7 +127,6 @@ export class FooterAnimations {
         const scrollProgress = Math.max(0, Math.min(1,
             (triggerPoint - footerMiddle) / (windowHeight / 2)
         ));
-        console.log(this.glyphs.length);
         // Apply transforms to each glyph based on scroll progress
         this.glyphs.forEach((glyph, index) => {
             // Each glyph has a staggered offset
@@ -136,8 +135,6 @@ export class FooterAnimations {
             const cosOffset = Math.cos(offset*45);
             const sinOffset = Math.sin(offset*45);
             const glyphProgress = Math.max(0, Math.min(1, (scrollProgress - offset) / (1 - offset)));
-
-            console.log("i: , cosOffset")
 
             // Calculate translateY (starts at 100%, ends at 0%)
             const translateY = 100 - (glyphProgress * 100);
