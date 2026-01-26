@@ -15,13 +15,27 @@ export class ScrollAnimations {
     }
 
     init() {
-        // Observe all elements with animation classes
         const animatedElements = document.querySelectorAll(
             '.fade-in-up, .fade-in-left, .fade-in-right, .scale-in'
         );
 
+        // Group elements by their parent section for staggered animation
+        const sections = new Map();
+
         animatedElements.forEach(element => {
-            this.observer.observe(element);
+            const section = element.closest('section') || document.body;
+            if (!sections.has(section)) {
+                sections.set(section, []);
+            }
+            sections.get(section).push(element);
+        });
+
+        // Add stagger index as CSS custom property
+        sections.forEach((elements) => {
+            elements.forEach((el, index) => {
+                el.style.setProperty('--stagger-index', index);
+                this.observer.observe(el);
+            });
         });
     }
 
