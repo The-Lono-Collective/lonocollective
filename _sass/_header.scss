@@ -26,18 +26,13 @@
     content: "";
     position: absolute;
     inset: 0;
-    height: 88px;
+    height: 100px;
     background: linear-gradient(
         to bottom,
-        rgba(25, 14, 14, 0.55) 10%,
-        rgba(25, 14, 14, 0.3) 50%,
-        rgba(25, 14, 14, 0) 100%,
+        rgba(25, 14, 14, 0.35) 0%,
+        rgba(25, 14, 14, 0.15) 40%,
         transparent 100%
     );
-
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-
     z-index: -1;
     pointer-events: none;
 }
