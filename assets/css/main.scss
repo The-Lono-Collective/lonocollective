@@ -125,22 +125,6 @@ body::after {
     z-index: 0;
 }
 
-.hero-section::after {
-    content: "";
-    position: absolute;
-    bottom: -60px;
-    left: 0;
-    right: 0;
-    height: 120px;
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgba(186, 226, 225, 0.06) 100%
-    );
-    pointer-events: none;
-    z-index: 1;
-}
-
 .hero-video {
     position: absolute;
     top: 50%;
@@ -406,6 +390,167 @@ body::after {
     line-height: 1.6;
     font-weight: 300;
     font-style: italic;
+}
+
+/* ============================================================================
+   OUR APPROACH SECTION
+   Positioning-focused section establishing epistemic integrity methodology
+   ========================================================================= */
+
+.approach-section {
+    padding: 120px 0;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    background: linear-gradient(
+        180deg,
+        var(--bg-primary) 0%,
+        rgba(127, 184, 148, 0.03) 50%,
+        var(--bg-primary) 100%
+    );
+}
+
+.approach-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.approach-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.approach-label {
+    display: inline-block;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    margin-bottom: 24px;
+}
+
+.approach-header h2 {
+    font-family: 'Song Myung', serif;
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+    line-height: var(--line-headline);
+}
+
+.approach-lead {
+    font-family: 'Song Myung', serif;
+    font-size: clamp(20px, 3vw, 26px);
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0 0 8px;
+    font-weight: 400;
+}
+
+.approach-lead em {
+    color: var(--text-primary);
+    font-style: italic;
+}
+
+.approach-statement {
+    font-size: clamp(17px, 2vw, 20px);
+    line-height: 1.9;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+    font-weight: 300;
+    padding: 32px 0;
+    border-top: 1px solid rgba(127, 184, 148, 0.15);
+    border-bottom: 1px solid rgba(127, 184, 148, 0.15);
+}
+
+.approach-pillars {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+}
+
+.approach-pillar {
+    padding-left: 32px;
+    border-left: 3px solid var(--accent-primary);
+    transition: border-color 0.3s ease;
+}
+
+.approach-pillar:hover {
+    border-color: var(--text-primary);
+}
+
+.approach-pillar h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.approach-pillar p {
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.approach-pillar p:last-child {
+    margin-bottom: 0;
+}
+
+.approach-pillar strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Responsive: Approach Section */
+@media (max-width: 768px) {
+    .approach-section {
+        padding: 80px 0;
+    }
+
+    .approach-content {
+        padding: 0 24px;
+    }
+
+    .approach-header {
+        margin-bottom: 40px;
+    }
+
+    .approach-statement {
+        margin-bottom: 60px;
+        padding: 24px 0;
+    }
+
+    .approach-pillars {
+        gap: 40px;
+    }
+
+    .approach-pillar {
+        padding-left: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .approach-section {
+        padding: 60px 0;
+    }
+
+    .approach-content {
+        padding: 0 20px;
+    }
+
+    .approach-pillar {
+        padding-left: 20px;
+    }
 }
 
 /* Failure Mode Alert Section */
@@ -1305,6 +1450,323 @@ body::after {
     }
 }
 
+/* ============================================================================
+   REGULATORY SNAPSHOT SECTION (Homepage)
+   A cleaner, editorial approach replacing the busy marquee
+   ========================================================================= */
+
+.regulatory-snapshot-section {
+    padding: 100px 0;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.regulatory-snapshot-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--accent-primary));
+    opacity: 0.4;
+}
+
+.regulatory-snapshot-content {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.regulatory-snapshot-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.regulatory-snapshot-label {
+    display: inline-block;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    background: rgba(127, 184, 148, 0.08);
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.regulatory-snapshot-header h2 {
+    font-family: 'Song Myung', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    line-height: var(--line-headline);
+}
+
+.regulatory-snapshot-header p {
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.regulatory-snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.regulatory-snapshot-card {
+    position: relative;
+    background: var(--bg-primary);
+    border: 1px solid rgba(127, 184, 148, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.regulatory-snapshot-card:hover {
+    border-color: rgba(127, 184, 148, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.snapshot-card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent-primary);
+    transition: height 0.3s ease;
+}
+
+.regulatory-snapshot-card.federal .snapshot-card-accent {
+    background: #D48A7F;
+}
+
+.regulatory-snapshot-card.state .snapshot-card-accent {
+    background: #E6B800;
+}
+
+.regulatory-snapshot-card.clinical .snapshot-card-accent {
+    background: var(--accent-primary);
+}
+
+.regulatory-snapshot-card.international .snapshot-card-accent {
+    background: #7FA8C9;
+}
+
+.regulatory-snapshot-card:hover .snapshot-card-accent {
+    height: 4px;
+}
+
+.snapshot-card-content {
+    padding: 28px;
+}
+
+.snapshot-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.snapshot-category {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.snapshot-date {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.snapshot-card-content h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: 12px;
+    transition: color 0.2s ease;
+}
+
+.regulatory-snapshot-card:hover .snapshot-card-content h3 {
+    color: var(--accent-primary);
+}
+
+.snapshot-card-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin: 0;
+}
+
+.snapshot-impact {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(127, 184, 148, 0.1);
+    font-size: 13px;
+    font-weight: 500;
+    color: #B8675D;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.snapshot-impact::before {
+    content: '!';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: rgba(212, 138, 127, 0.12);
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.regulatory-legend {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.legend-item.federal .legend-dot {
+    background: #D48A7F;
+}
+
+.legend-item.state .legend-dot {
+    background: #E6B800;
+}
+
+.legend-item.clinical .legend-dot {
+    background: var(--accent-primary);
+}
+
+.legend-item.international .legend-dot {
+    background: #7FA8C9;
+}
+
+.regulatory-snapshot-footer {
+    text-align: center;
+}
+
+.snapshot-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent-primary);
+    text-decoration: none;
+    padding: 14px 28px;
+    border: 2px solid rgba(127, 184, 148, 0.25);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.snapshot-cta:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+.snapshot-cta svg {
+    transition: transform 0.3s ease;
+}
+
+.snapshot-cta:hover svg {
+    transform: translateX(4px);
+}
+
+/* Responsive: Regulatory Snapshot */
+@media (max-width: 1024px) {
+    .regulatory-snapshot-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .regulatory-snapshot-section {
+        padding: 80px 0;
+    }
+
+    .regulatory-snapshot-section::before {
+        display: none;
+    }
+
+    .regulatory-snapshot-content {
+        padding: 0 24px;
+    }
+
+    .regulatory-snapshot-header {
+        margin-bottom: 48px;
+    }
+
+    .snapshot-card-content {
+        padding: 24px;
+    }
+
+    .snapshot-card-content h3 {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .regulatory-snapshot-section {
+        padding: 60px 0;
+    }
+
+    .regulatory-snapshot-content {
+        padding: 0 20px;
+    }
+
+    .snapshot-card-content {
+        padding: 20px;
+    }
+}
+
 .framework-section {
     padding: 100px 0;
     width: 100%;
@@ -1413,6 +1875,17 @@ body::after {
     font-size: 20px;
     font-weight: bold;
     line-height: 1.8;
+}
+
+.artifact-tagline {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent-primary);
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(127, 184, 148, 0.15);
 }
 
 /* Process Timeline */
@@ -2445,50 +2918,100 @@ html {
         display: block;
     }
 
-    .risk-card-list {
+    .risk-accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .risk-group {
+        background: var(--bg-primary);
+        border: 1px solid rgba(127, 184, 148, 0.15);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .risk-group summary {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 20px;
+        cursor: pointer;
+        list-style: none;
+        user-select: none;
+    }
+
+    .risk-group summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .risk-group-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .risk-group.critical .risk-group-dot {
+        background: #D48A7F;
+    }
+
+    .risk-group.high .risk-group-dot {
+        background: #FFC107;
+    }
+
+    .risk-group.medium .risk-group-dot {
+        background: var(--accent-primary);
+    }
+
+    .risk-group-label {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-primary);
+        flex: 1;
+    }
+
+    .risk-group-count {
+        font-size: 13px;
+        color: var(--text-secondary);
+    }
+
+    .risk-group .chevron {
+        color: var(--text-secondary);
+        transition: transform 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    .risk-group[open] .chevron {
+        transform: rotate(180deg);
+    }
+
+    .risk-group-items {
+        padding: 0 20px 20px;
         display: flex;
         flex-direction: column;
         gap: 16px;
     }
 
-    .risk-card {
-        background: var(--bg-primary);
-        border: 2px solid rgba(127, 184, 148, 0.15);
-        border-radius: 12px;
-        padding: 20px;
-
-        &.critical {
-            border-left: 4px solid #D48A7F;
-        }
-
-        &.high {
-            border-left: 4px solid #FFC107;
-        }
-
-        &.medium {
-            border-left: 4px solid var(--accent-primary);
-        }
+    .risk-item {
+        padding-left: 24px;
+        border-left: 2px solid rgba(127, 184, 148, 0.2);
     }
 
-    .risk-card h3 {
+    .risk-item h4 {
         font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 600;
         color: var(--text-primary);
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
 
-    .risk-card p {
-        font-size: 15px;
+    .risk-item p {
+        font-size: 14px;
         line-height: 1.6;
         color: var(--text-secondary);
-        margin-bottom: 12px;
-    }
-
-    .risk-card .risk-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
+        margin: 0;
     }
 }
 

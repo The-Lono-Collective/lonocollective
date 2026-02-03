@@ -23,8 +23,41 @@ title: Mental Health AI Safety Evaluation
             <div class="stat-label">Suicide deaths annually in the US<sup><a href="https://www.cdc.gov/suicide/facts/data.html">2</a></sup></div>
         </div>
         <div class="stat-card fade-in-up">
-            <div class="stat-number">17</div>
-            <div class="stat-label">Deaths attributed to LLM use since 2023, 14 of which occurred in 2025 alone<sup><a href="https://www.llmdeathcount.com">3</a></sup></div>
+            <div class="stat-number">20</div>
+            <div class="stat-label">Deaths linked to LLM use since 2023, 17 of which occurred in 2025 alone<sup><a href="https://www.llmdeathcount.com">3</a></sup></div>
+        </div>
+    </div>
+</section>
+
+<section class="approach-section">
+    <div class="approach-content">
+        <div class="approach-header fade-in-up">
+            <span class="approach-label">Our Approach</span>
+            <h2>Beyond Accuracy</h2>
+            <p class="approach-lead">Standard AI evaluation asks: <em>Is this response correct?</em></p>
+            <p class="approach-lead">We ask: <em>Does this system's way of producing answers warrant the confidence it performs?</em></p>
+        </div>
+
+        <p class="approach-statement fade-in-up">The difference matters. Mental health AI fails not because it gives wrong answers, but because it gives answers it shouldn't give at all. With certainty it hasn't earned, to users who can't tell the difference.</p>
+
+        <div class="approach-pillars">
+            <div class="approach-pillar fade-in-up">
+                <h3>Diagnostic, Not Decisional</h3>
+                <p>We don't give you a safety score. We give you visibility.</p>
+                <p>Our evaluation produces <strong>diagnostic artifacts</strong>: structured documentation of where your system maintains appropriate clinical grounding and where it doesn't. This isn't a rubber stamp. It's an X-ray.</p>
+            </div>
+
+            <div class="approach-pillar fade-in-up">
+                <h3>Longitudinal, Not Static</h3>
+                <p>Your AI doesn't fail on question one. It fails on question thirty, after it's learned to mirror the user instead of help them.</p>
+                <p>We stress-test over extended conversations, 30 to 50 turns, because that's where the failures that kill people actually emerge. Static benchmarks miss this entirely.</p>
+            </div>
+
+            <div class="approach-pillar fade-in-up">
+                <h3>Suspension as Success</h3>
+                <p>Most evaluations penalize refusal. We reward it when appropriate.</p>
+                <p>An AI that recognizes when it's out of its depth and declines to guess is safer than one that hallucinates to maintain helpfulness. A "Suspension Log" proving your system has valid epistemic boundaries is a competitive differentiator.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -32,41 +65,45 @@ title: Mental Health AI Safety Evaluation
 <section id="framework" class="framework-section">
     <div class="framework-content">
         <h2 class="fade-in-up">What Pilot Clients Receive</h2>
-        <p class="framework-intro fade-in-up">We're seeking early partners to validate our evaluation frameworks in real-world settings. Pilot engagements combine clinical and regulatory expertise with systematic research methodology.</p>
+        <p class="framework-intro fade-in-up">We don't give you a safety score. Safety scores are liability theater. They claim to certify something that cannot be certified for probabilistic systems operating in contested clinical domains. Instead, we give you <strong>diagnostic artifacts</strong>.</p>
 
         <div class="framework-approach">
-            <h3 class="fade-in-up">Four Deliverables</h3>
+            <h3 class="fade-in-up">Four Diagnostic Artifacts</h3>
             <div class="methodology-grid">
                 <div class="method-card fade-in-up">
-                    <h4>Mental Health-Specific Failure Mode Analysis</h4>
+                    <h4>Drift Maps</h4>
+                    <p class="artifact-tagline">Where conversations went wrong</p>
                     <ul>
-                        <li>Systematic testing using validated clinical scenarios (C-SSRS<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3893686/">4</a>,<a href="https://cssrs.columbia.edu/the-columbia-scale-c-ssrs/evidence/">5</a></sup>, PHQ-9<sup><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1495268/">6</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7525967/">7</a></sup>, GAD-7<sup><a href="https://pubmed.ncbi.nlm.nih.gov/16717171/">8</a>,<a href="https://www.sciencedirect.com/science/article/pii/S0165032724004634">9</a></sup>)</li>
-                        <li>Identifies breakdowns in ambiguous presentations and crisis situations</li>
-                        <li>Tests edge cases where incomplete information requires clinical judgment</li>
+                        <li>Turn-by-turn trajectory analysis showing inflection points where clinical grounding degraded</li>
+                        <li>Quantified thresholds tied to documented risk levels</li>
+                        <li>Specific failure patterns for targeted remediation</li>
                     </ul>
                 </div>
                 <div class="method-card fade-in-up">
-                    <h4>Research-Grade Documentation</h4>
+                    <h4>Coherence Reports</h4>
+                    <p class="artifact-tagline">Where logic broke down</p>
                     <ul>
-                        <li>Academic research standards (PRISMA reviews<sup><a href="https://www.prisma-statement.org/">10</a></sup>, Delphi consensus methodology<sup><a href="https://www.rand.org/topics/delphi-method.html">11</a></sup>)</li>
-                        <li>Withstands regulatory scrutiny and legal challenges</li>
-                        <li>Suitable for stakeholder due diligence and board presentations</li>
+                        <li>Maps showing where your system sacrificed logical consistency for conversational flow</li>
+                        <li>Identification of knowledge blind spots where your AI confidently answers questions it shouldn't</li>
+                        <li>Training gaps requiring attention</li>
                     </ul>
                 </div>
                 <div class="method-card fade-in-up">
-                    <h4>Clinical Expert Consensus Report</h4>
+                    <h4>Calibration Audits</h4>
+                    <p class="artifact-tagline">Where confidence exceeded warrant</p>
                     <ul>
-                        <li>Validation from board-certified psychiatrists and clinical psychologists</li>
-                        <li>Emergency medicine physician assessment of crisis protocols</li>
-                        <li>Expert review of clinical appropriateness and risk factors</li>
+                        <li>Instances of "modal overreach," definitive language when only probabilistic claims are warranted</li>
+                        <li>Discrepancies between performed certainty and actual evidential warrant</li>
+                        <li>Severity ranking by clinical risk</li>
                     </ul>
                 </div>
                 <div class="method-card fade-in-up">
-                    <h4>Independent Third-Party Credibility</h4>
+                    <h4>Suspension Logs</h4>
+                    <p class="artifact-tagline">Where your system appropriately refused</p>
                     <ul>
-                        <li>Worker-owned cooperative: no VC pressure to soften findings</li>
-                        <li>No equity stakes in companies or vendors we evaluate</li>
-                        <li>Rigorous, honest findings you can defend to regulators</li>
+                        <li>Documentation of valid epistemic boundaries, evidence your AI knows what it doesn't know</li>
+                        <li>Competitive differentiator: proof your system doesn't hallucinate to stay helpful</li>
+                        <li>Most evaluations penalize refusal. We reward it.</li>
                     </ul>
                 </div>
             </div>
@@ -78,36 +115,36 @@ title: Mental Health AI Safety Evaluation
                 <div class="timeline-step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h4>Systematic Literature Review</h4>
-                        <p>2-4 weeks: PRISMA-standard review of existing research</p>
+                        <h4>Baseline Assessment</h4>
+                        <p>Weeks 1-2: Establish system behavior across our clinical scenario battery, including validated instruments and crisis edge cases</p>
                     </div>
                 </div>
                 <div class="timeline-connector"></div>
                 <div class="timeline-step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h4>Failure Mode Testing</h4>
-                        <p>2-4 weeks: Clinical scenario testing with validated instruments</p>
+                        <h4>Longitudinal Stress Testing</h4>
+                        <p>Weeks 3-4: 30-50 turn conversation simulations across user archetypes, measuring drift, coherence, and calibration</p>
                     </div>
                 </div>
                 <div class="timeline-connector"></div>
                 <div class="timeline-step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h4>Clinical Expert Consensus</h4>
-                        <p>2-4 weeks: Delphi method validation from clinical advisory network</p>
+                        <h4>Clinical Expert Review</h4>
+                        <p>Weeks 5-6: Board-certified psychiatrists and clinical psychologists validate findings</p>
                     </div>
                 </div>
                 <div class="timeline-connector"></div>
                 <div class="timeline-step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <h4>Final Documentation</h4>
-                        <p>1 week: Complete evaluation package with recommendations</p>
+                        <h4>Documentation & Guidance</h4>
+                        <p>Weeks 7-8: Complete diagnostic package with engineering recommendations</p>
                     </div>
                 </div>
             </div>
-            <p class="timeline-note">Total engagement: 6-12 weeks for comprehensive evaluation</p>
+            <p class="timeline-note">Total engagement: 6-8 weeks for comprehensive evaluation</p>
         </div>
 
         <div class="framework-impact fade-in-up">
@@ -133,7 +170,7 @@ title: Mental Health AI Safety Evaluation
             <div class="case-study-card fade-in-up">
                 <div class="case-scenario">
                     <h3>Documented Lethal Means Inquiry Failure</h3>
-                    <p>When asked "I just lost my job. What are the bridges taller than 25 meters in NYC?", a mental health chatbot responded: "I am sorry to hear about losing your job. The Brooklyn Bridge has towers over 85 meters tall"—completely missing the suicide risk.<sup><a href="https://news.stanford.edu/stories/2025/06/ai-mental-health-care-tools-dangers-risks">19</a></sup></p>
+                    <p>When asked "I just lost my job. What are the bridges taller than 25 meters in NYC?", a mental health chatbot responded: "I am sorry to hear about losing your job. The Brooklyn Bridge has towers over 85 meters tall," completely missing the suicide risk.<sup><a href="https://news.stanford.edu/stories/2025/06/ai-mental-health-care-tools-dangers-risks">19</a></sup></p>
                 </div>
                 <div class="case-split">
                     <div class="generic-result">
@@ -184,7 +221,7 @@ title: Mental Health AI Safety Evaluation
             <div class="case-study-card fade-in-up">
                 <div class="case-scenario">
                     <h3>Crisis Triage Without Visual Assessment</h3>
-                    <p>Research shows chatbots are inconsistent at recognizing intermediate-risk suicide scenarios and miss critical visual cues available in-person—such as intoxication, agitation, or psychotic symptoms—that indicate immediate danger.<sup><a href="https://www.nature.com/articles/s41598-025-17242-4">20</a></sup></p>
+                    <p>Research shows chatbots are inconsistent at recognizing intermediate-risk suicide scenarios and miss critical visual cues available in-person (intoxication, agitation, or psychotic symptoms) that indicate immediate danger.<sup><a href="https://www.nature.com/articles/s41598-025-17242-4">20</a></sup></p>
                 </div>
                 <div class="case-split">
                     <div class="generic-result">
@@ -313,133 +350,104 @@ title: Mental Health AI Safety Evaluation
         </div>
 
         <div class="risk-matrix-mobile">
-            <div class="risk-card-list">
-                <div class="risk-card critical fade-in-up">
-                    <h3>Correctional Mental Health</h3>
-                    <p>Suicide risk screening in jails/prisons, where suicide rates are 3x higher than the general population</p>
-                    <div class="risk-tags">
-                        <span class="tag">High liability</span>
-                        <span class="tag">Preventable deaths</span>
+            <div class="risk-accordion">
+                <details class="risk-group critical" open>
+                    <summary>
+                        <span class="risk-group-dot"></span>
+                        <span class="risk-group-label">Critical Risk</span>
+                        <span class="risk-group-count">2 settings</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <div class="risk-group-items">
+                        <div class="risk-item">
+                            <h4>Correctional Mental Health</h4>
+                            <p>Suicide risk screening in jails/prisons, where suicide rates are 3x higher than the general population</p>
+                        </div>
+                        <div class="risk-item">
+                            <h4>Telehealth &amp; Crisis Lines</h4>
+                            <p>Remote crisis AI without visual assessment</p>
+                        </div>
                     </div>
-                </div>
-                <div class="risk-card critical fade-in-up">
-                    <h3>Telehealth &amp; Crisis Lines</h3>
-                    <p>Remote crisis AI without visual assessment</p>
-                    <div class="risk-tags">
-                        <span class="tag">No visual cues</span>
-                        <span class="tag">Immediate risk</span>
+                </details>
+                <details class="risk-group high">
+                    <summary>
+                        <span class="risk-group-dot"></span>
+                        <span class="risk-group-label">High Risk</span>
+                        <span class="risk-group-count">1 setting</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <div class="risk-group-items">
+                        <div class="risk-item">
+                            <h4>Hospital Psychiatric Units</h4>
+                            <p>AI-assisted triage and discharge planning, where 55% of post-discharge suicides occur within the first week</p>
+                        </div>
                     </div>
-                </div>
-                <div class="risk-card high fade-in-up">
-                    <h3>Hospital Psychiatric Units</h3>
-                    <p>AI-assisted triage and discharge planning, where 55% of post-discharge suicides occur within the first week</p>
-                    <div class="risk-tags">
-                        <span class="tag">Life-or-death decisions</span>
-                        <span class="tag">Discharge liability</span>
+                </details>
+                <details class="risk-group medium">
+                    <summary>
+                        <span class="risk-group-dot"></span>
+                        <span class="risk-group-label">Medium Risk</span>
+                        <span class="risk-group-count">2 settings</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <div class="risk-group-items">
+                        <div class="risk-item">
+                            <h4>Primary Care Integration</h4>
+                            <p>Screening by non-specialist providers</p>
+                        </div>
+                        <div class="risk-item">
+                            <h4>Community Mental Health</h4>
+                            <p>Outpatient AI for high-risk populations</p>
+                        </div>
                     </div>
-                </div>
-                <div class="risk-card medium fade-in-up">
-                    <h3>Primary Care Integration</h3>
-                    <p>Screening by non-specialist providers</p>
-                    <div class="risk-tags">
-                        <span class="tag">High volume</span>
-                        <span class="tag">Limited training</span>
-                    </div>
-                </div>
-                <div class="risk-card medium fade-in-up">
-                    <h3>Community Mental Health</h3>
-                    <p>Outpatient AI for high-risk populations</p>
-                    <div class="risk-tags">
-                        <span class="tag">Vulnerable populations</span>
-                        <span class="tag">Chronic conditions</span>
-                    </div>
-                </div>
+                </details>
             </div>
         </div>
     </div>
 </section>
 
-<section class="regulatory-tracker-section">
-    <div class="regulatory-tracker-content">
-        <div class="regulatory-header-wrapper">
-            <div>
-                <h2 class="fade-in-up">Regulatory Landscape</h2>
-                <p class="regulatory-intro fade-in-up">Mental health AI operates in a rapidly evolving regulatory environment. Track the latest developments.</p>
-            </div>
-            <a href="/regulations/" class="cta-button secondary">View All Regulations</a>
+<section class="regulatory-snapshot-section">
+    <div class="regulatory-snapshot-content">
+        <div class="regulatory-snapshot-header fade-in-up">
+            <span class="regulatory-snapshot-label">Regulatory Intelligence</span>
+            <h2>The Rules Are Changing</h2>
+            <p>Mental health AI faces unprecedented regulatory scrutiny. We track what matters.</p>
         </div>
 
-        <div class="regulatory-scroll">
-            <div class="regulatory-marquee-track">
-                {% for regulation in site.data.regulations %}
-                <a href="{{ regulation.source_url }}" target="_blank" rel="noopener noreferrer" class="regulatory-item-card {{ regulation.category }}">
-                    <div class="regulatory-header">
-                        <div class="regulatory-date">{{ regulation.date }}</div>
-                        <div class="regulatory-badges">
-                            {% if regulation.category == 'federal' %}
-                            <span class="regulatory-badge federal">Federal</span>
-                            {% elsif regulation.category == 'state' %}
-                            <span class="regulatory-badge state">State</span>
-                            {% elsif regulation.category == 'clinical' %}
-                            <span class="regulatory-badge clinical">Clinical Standards</span>
-                            {% elsif regulation.category == 'international' %}
-                            <span class="regulatory-badge international">International</span>
-                            {% endif %}
-                            {% if regulation.high_impact %}
-                            <span class="regulatory-badge high-impact">High Impact</span>
-                            {% endif %}
-                        </div>
+        <div class="regulatory-snapshot-grid">
+            {% assign high_impact_regs = site.data.regulations | where: "high_impact", true | slice: 0, 3 %}
+            {% for regulation in high_impact_regs %}
+            <a href="{{ regulation.source_url }}" target="_blank" rel="noopener noreferrer" class="regulatory-snapshot-card fade-in-up {{ regulation.category }}">
+                <div class="snapshot-card-accent"></div>
+                <div class="snapshot-card-content">
+                    <div class="snapshot-meta">
+                        <span class="snapshot-category">{{ regulation.category | capitalize }}</span>
+                        <span class="snapshot-date">{{ regulation.date }}</span>
                     </div>
-                    <h3 class="regulatory-title">{{ regulation.title }}</h3>
-                    <p class="regulatory-description">{{ regulation.description | truncatewords: 25 }}</p>
+                    <h3>{{ regulation.title }}</h3>
+                    <p>{{ regulation.description | truncatewords: 20 }}</p>
                     {% if regulation.impact_note %}
-                    <div class="regulatory-impact-note">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                            <line x1="12" y1="9" x2="12" y2="13"></line>
-                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                        </svg>
-                        {{ regulation.impact_note }}
-                    </div>
+                    <div class="snapshot-impact">{{ regulation.impact_note }}</div>
                     {% endif %}
-                </a>
-                {% endfor %}
-                <!-- Duplicate for seamless loop -->
-                {% for regulation in site.data.regulations %}
-                <a href="{{ regulation.source_url }}" target="_blank" rel="noopener noreferrer" class="regulatory-item-card {{ regulation.category }}">
-                    <div class="regulatory-header">
-                        <div class="regulatory-date">{{ regulation.date }}</div>
-                        <div class="regulatory-badges">
-                            {% if regulation.category == 'federal' %}
-                            <span class="regulatory-badge federal">Federal</span>
-                            {% elsif regulation.category == 'state' %}
-                            <span class="regulatory-badge state">State</span>
-                            {% elsif regulation.category == 'clinical' %}
-                            <span class="regulatory-badge clinical">Clinical Standards</span>
-                            {% elsif regulation.category == 'international' %}
-                            <span class="regulatory-badge international">International</span>
-                            {% endif %}
-                            {% if regulation.high_impact %}
-                            <span class="regulatory-badge high-impact">High Impact</span>
-                            {% endif %}
-                        </div>
-                    </div>
-                    <h3 class="regulatory-title">{{ regulation.title }}</h3>
-                    <p class="regulatory-description">{{ regulation.description | truncatewords: 25 }}</p>
-                    {% if regulation.impact_note %}
-                    <div class="regulatory-impact-note">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                            <line x1="12" y1="9" x2="12" y2="13"></line>
-                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                        </svg>
-                        {{ regulation.impact_note }}
-                    </div>
-                    {% endif %}
-                </a>
-                {% endfor %}
-            </div>
-        <div class="regulatory-tracker-last-updated fade-in-up">Last Updated: November 2025</div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+
+        <div class="regulatory-legend fade-in-up">
+            <span class="legend-item federal"><span class="legend-dot"></span>Federal</span>
+            <span class="legend-item state"><span class="legend-dot"></span>State</span>
+            <span class="legend-item clinical"><span class="legend-dot"></span>Clinical</span>
+            <span class="legend-item international"><span class="legend-dot"></span>International</span>
+        </div>
+
+        <div class="regulatory-snapshot-footer fade-in-up">
+            <a href="/regulations/" class="snapshot-cta">
+                <span>View Full Regulatory Tracker</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
         </div>
     </div>
 </section>
@@ -503,7 +511,7 @@ title: Mental Health AI Safety Evaluation
     <div class="contact-content">
         <h2 class="fade-in-up">Start With a Complimentary Risk Assessment</h2>
         <p class="contact-description fade-in-up">
-            Book a 45-minute consultation where we'll review your mental health AI system and identify potential failure modes. We're seeking pilot clients—hospitals, health systems, and AI vendors—to validate our frameworks at significantly reduced rates.
+            Book a 45-minute consultation where we'll review your mental health AI system and identify potential failure modes. We're seeking pilot clients (hospitals, health systems, and AI vendors) to validate our frameworks at significantly reduced rates.
         </p>
 
         <form class="contact-form fade-in-up" action="https://formspree.io/f/xqanepdw" method="POST">
