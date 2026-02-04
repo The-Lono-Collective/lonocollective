@@ -3,7 +3,7 @@ layout: default
 title: Our Mission
 ---
 
-<section class="mission-hero section--shore">
+<section class="mission-hero">
     <div class="mission-content">
         <h1 class="editorial-headline fade-in-up">
             Imagination becomes structure.
@@ -17,13 +17,13 @@ title: Our Mission
     </div>
 </section>
 
-<section class="mission-values section--kalo">
+<section class="mission-values">
     <div class="mission-content">
         <h2 class="editorial-headline fade-in-up">Why We Exist</h2>
         <p class="editorial-body fade-in-up">
             The Lono Collective was founded on the belief that mental health AI safety evaluation requires more than technical expertise. It demands clinical knowledge, regulatory understanding, and unwavering commitment to independent, rigorous research.
         </p>
-        <p class="editoprial-body fade-in-up">
+        <p class="editorial-body fade-in-up">
              We believe that high-stakes work demands a high level of personal investment, and that the traditional corporate model is a poor match for the level of ownership required of the people building our future. Every contributing full member therefore is granted their well-earned equal ownership in the Lono Collective.
         </p>
         <p class="editorial-body fade-in-up">

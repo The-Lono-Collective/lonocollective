@@ -2470,40 +2470,84 @@ html {
 
 /* Mission Page */
 .mission-hero {
-    min-height: 60vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 0;
+    padding: 140px 0 100px;
     text-align: left;
     position: relative;
+    background: linear-gradient(
+        180deg,
+        rgba(42, 66, 39, 0.4) 0%,
+        rgba(58, 90, 74, 0.3) 100%
+    );
+}
+
+.mission-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(
+        to bottom,
+        rgba(42, 66, 39, 0.6) 0%,
+        transparent 100%
+    );
+    pointer-events: none;
 }
 
 .mission-content {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 40px;
+    position: relative;
+    z-index: 1;
 }
 
 .mission-content .editorial-headline {
-    margin-bottom: 40px;
+    margin-bottom: 48px;
+    font-size: clamp(36px, 6vw, 56px);
 }
 
 .mission-content .editorial-body {
     margin-bottom: 32px;
     padding-right: 0;
+    color: var(--text-secondary);
 }
 
 .mission-content .editorial-body--large {
     font-size: clamp(18px, 2.5vw, 22px);
-    line-height: 1.8;
+    line-height: 1.9;
     font-weight: 400;
+    color: var(--text-primary);
 }
 
 .mission-values {
     padding: 100px 0;
     width: 100%;
     margin: 0;
+    background: var(--bg-kalo);
+    position: relative;
+}
+
+.mission-values::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, var(--accent-primary), transparent);
+    opacity: 0.4;
+}
+
+.mission-values .editorial-headline {
+    color: var(--accent-primary);
+    margin-bottom: 40px;
 }
 
 .mission-approach {
@@ -2511,6 +2555,41 @@ html {
     width: 100%;
     margin: 0;
     background: var(--bg-shore);
+    position: relative;
+}
+
+.mission-approach::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, var(--accent-primary), transparent);
+    opacity: 0.4;
+}
+
+/* Mission page responsive */
+@media (max-width: 768px) {
+    .mission-hero {
+        min-height: auto;
+        padding: 120px 0 80px;
+    }
+
+    .mission-content {
+        padding: 0 24px;
+    }
+
+    .mission-values,
+    .mission-approach {
+        padding: 80px 0;
+    }
+
+    .mission-values::before,
+    .mission-approach::before {
+        height: 60px;
+    }
 }
 
 /* Responsive adjustments */
