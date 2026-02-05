@@ -35,7 +35,7 @@ title: Chatbot Liability Evaluation
             </div>
         </div>
         <div class="failure-stats fade-in-up">
-            <span class="stat-item"><strong>5</strong> Character.AI lawsuits settled in 2026<sup><a href="https://www.cnn.com/2026/01/07/business/character-ai-google-settle-teen-suicide-lawsuit">1</a></sup></span>
+            <span class="stat-item"><strong>5+</strong> chatbot companion lawsuits settled in 2026<sup><a href="https://www.cnn.com/2026/01/07/business/character-ai-google-settle-teen-suicide-lawsuit">1</a></sup></span>
             <span class="stat-divider">|</span>
             <span class="stat-item"><strong>44</strong> state attorneys general investigating AI chatbot safety</span>
         </div>
@@ -50,7 +50,7 @@ title: Chatbot Liability Evaluation
         <div class="liability-header fade-in-up">
             <span class="liability-label">Liability Exposure</span>
             <h2>Nine Ways Your Chatbot Creates Legal Risk</h2>
-            <p>Every consumer-facing chatbot is a liability risk. We help you understand exactly where.</p>
+            <p>Every consumer-facing chatbot poses significant liability and safety risk. We help you understand exactly where.</p>
         </div>
 
         <div class="liability-grid fade-in-up">
@@ -109,13 +109,13 @@ title: Chatbot Liability Evaluation
             <div class="approach-pillar fade-in-up">
                 <h3>Diagnostic, Not Decisional</h3>
                 <p>We don't give you a safety score. We give you visibility.</p>
-                <p>Our evaluation produces <strong>diagnostic artifacts</strong>: structured documentation of where your system maintains appropriate grounding and where it doesn't. An X-ray rather than a baseless bill of good health.</p>
+                <p>Our evaluation produces <strong>diagnostic artifacts</strong> documentating where your system maintains appropriate grounding and where it doesn't. An X-ray rather than a baseless bill of good health.</p>
             </div>
 
             <div class="approach-pillar fade-in-up">
                 <h3>Longitudinal, Not Static</h3>
-                <p>Your chatbot doesn't fail on question one. It fails on question thirty, after it's learned to mirror the user instead of help them.</p>
-                <p>We stress-test over extended conversations, 30 to 50 turns, because that's where dangerous failures actually emerge. Static benchmarks miss this entirely.</p>
+                <p>Your chatbot doesn't fail on question one. It fails on question thirty, after it's learned to parrot the user instead of help them.</p>
+                <p>We stress-test over extended conversations, 30 to 100 turns, because that's where dangerous failures actually emerge. Static benchmarks miss this entirely.</p>
             </div>
 
             <div class="approach-pillar fade-in-up">
@@ -149,7 +149,7 @@ title: Chatbot Liability Evaluation
                     <p class="artifact-tagline">Where logic broke down</p>
                     <ul>
                         <li>Maps showing where your system sacrificed logical consistency for conversational flow</li>
-                        <li>Identification of knowledge blind spots where your AI confidently answers questions it shouldn't</li>
+                        <li>Identification of knowledge blind spots where your AI confidently bullshits answers to questions it shouldn't</li>
                         <li>Training gaps requiring attention</li>
                     </ul>
                 </div>
@@ -414,17 +414,17 @@ title: Chatbot Liability Evaluation
                 <div class="track-header">
                     <span class="track-label">Track B</span>
                     <h3>Litigation Support</h3>
-                    <p class="track-tagline">Preparing for or facing litigation?</p>
+                    <p class="track-tagline">Conderned about safety or preparing/facing litigation?</p>
                 </div>
                 <div class="track-body">
-                    <p>Expert evaluation services with defensible methodology documentation for legal proceedings.</p>
+                    <p>Expert evaluation services with defensible methodology documentation for risk mitigation you can use in legal proceedings.</p>
                     <ul class="track-features">
                         <li>Forensic conversation analysis</li>
                         <li>Defensible methodology documentation</li>
                         <li>Expert witness availability</li>
                         <li>Court-ready diagnostic artifacts</li>
                     </ul>
-                    <p class="track-cta">Ideal for legal teams building or defending against chatbot liability claims.</p>
+                    <p class="track-cta">Ideal for legal teams building or defending against chatbot liability claims or companies concerned about their chatbot safety.</p>
                 </div>
             </div>
         </div>
