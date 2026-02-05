@@ -181,7 +181,7 @@ title: Chatbot Liability Evaluation
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h4>Baseline Assessment</h4>
-                        <p>Weeks 1-2: Establish system behavior across our scenario battery, including domain-specific instruments and edge cases</p>
+                        <p>Weeks 1-2: Establish system behavior across our scenario battery</p>
                     </div>
                 </div>
                 <div class="timeline-connector"></div>
@@ -189,7 +189,7 @@ title: Chatbot Liability Evaluation
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h4>Longitudinal Stress Testing</h4>
-                        <p>Weeks 3-4: 30-100 turn conversation simulations across user archetypes, measuring drift, coherence, and calibration</p>
+                        <p>Weeks 3-4: We measure drift, coherence, and calibration over extended conversation simulations</p>
                     </div>
                 </div>
                 <div class="timeline-connector"></div>
@@ -413,7 +413,7 @@ title: Chatbot Liability Evaluation
             <div class="service-track fade-in-up" data-track="litigation">
                 <div class="track-header">
                     <span class="track-label">Track B</span>
-                    <h3>Litigation Support</h3>
+                    <h3>Defensive Evaluation</h3>
                     <p class="track-tagline">Concerned about safety or preparing for litigation?</p>
                 </div>
                 <div class="track-body">
