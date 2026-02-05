@@ -236,18 +236,6 @@ title: Chatbot Liability Evaluation
                 <div class="grid-line horizontal"></div>
 
                 <!-- Risk matrix points -->
-                <div class="risk-point critical" style="left: 80%; top: 15%;" data-setting="healthcare">
-                    <div class="risk-dot"></div>
-                    <div class="risk-label">
-                        <h3>Healthcare Chatbots</h3>
-                        <p>Mental health support, symptom checkers, crisis lines where misguided advice can be fatal</p>
-                        <div class="risk-tags">
-                            <span class="tag">Life-or-death</span>
-                            <span class="tag">Malpractice exposure</span>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="risk-point critical" style="left: 75%; top: 20%;" data-setting="companion">
                     <div class="risk-dot"></div>
                     <div class="risk-label">
@@ -260,7 +248,19 @@ title: Chatbot Liability Evaluation
                     </div>
                 </div>
 
-                <div class="risk-point high" style="left: 55%; top: 25%;" data-setting="legal">
+                <div class="risk-point high" style="left: 45%; top: 15%;" data-setting="healthcare">
+                    <div class="risk-dot"></div>
+                    <div class="risk-label">
+                        <h3>Healthcare Chatbots</h3>
+                        <p>Mental health support, symptom checkers, crisis lines where misguided advice can be fatal</p>
+                        <div class="risk-tags">
+                            <span class="tag">Life-or-death</span>
+                            <span class="tag">Malpractice exposure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-point high" style="left: 35%; top: 25%;" data-setting="legal">
                     <div class="risk-dot"></div>
                     <div class="risk-label">
                         <h3>Legal & Financial Advisory</h3>
@@ -272,7 +272,7 @@ title: Chatbot Liability Evaluation
                     </div>
                 </div>
 
-                <div class="risk-point medium" style="left: 70%; top: 55%;" data-setting="customer">
+                <div class="risk-point medium" style="left: 85%; top: 55%;" data-setting="customer">
                     <div class="risk-dot"></div>
                     <div class="risk-label">
                         <h3>Customer Service Bots</h3>
@@ -284,7 +284,7 @@ title: Chatbot Liability Evaluation
                     </div>
                 </div>
 
-                <div class="risk-point medium" style="left: 50%; top: 50%;" data-setting="educational">
+                <div class="risk-point medium" style="left: 60%; top: 50%;" data-setting="educational">
                     <div class="risk-dot"></div>
                     <div class="risk-label">
                         <h3>Educational Bots</h3>
@@ -332,14 +332,10 @@ title: Chatbot Liability Evaluation
                     <summary>
                         <span class="risk-group-dot"></span>
                         <span class="risk-group-label">Critical Risk</span>
-                        <span class="risk-group-count">2 contexts</span>
+                        <span class="risk-group-count">1 context</span>
                         <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                     </summary>
                     <div class="risk-group-items">
-                        <div class="risk-item">
-                            <h4>Healthcare Chatbots</h4>
-                            <p>Mental health support, symptom checkers, crisis lines where misguided advice can be fatal</p>
-                        </div>
                         <div class="risk-item">
                             <h4>Companion &amp; Emotional Support Bots</h4>
                             <p>Character.AI-style companions with parasocial relationships and vulnerable users</p>
@@ -350,10 +346,14 @@ title: Chatbot Liability Evaluation
                     <summary>
                         <span class="risk-group-dot"></span>
                         <span class="risk-group-label">High Risk</span>
-                        <span class="risk-group-count">1 context</span>
+                        <span class="risk-group-count">2 contexts</span>
                         <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                     </summary>
                     <div class="risk-group-items">
+                        <div class="risk-item">
+                            <h4>Healthcare Chatbots</h4>
+                            <p>Mental health support, symptom checkers, crisis lines where misguided advice can be fatal</p>
+                        </div>
                         <div class="risk-item">
                             <h4>Legal &amp; Financial Advisory</h4>
                             <p>Chatbots providing guidance on contracts, taxes, investments, or legal rights</p>
@@ -414,7 +414,7 @@ title: Chatbot Liability Evaluation
                 <div class="track-header">
                     <span class="track-label">Track B</span>
                     <h3>Litigation Support</h3>
-                    <p class="track-tagline">Conderned about safety or preparing/facing litigation?</p>
+                    <p class="track-tagline">Concerned about safety or preparing for litigation?</p>
                 </div>
                 <div class="track-body">
                     <p>Expert evaluation services with defensible methodology documentation for risk mitigation you can use in legal proceedings.</p>
