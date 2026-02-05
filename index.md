@@ -496,8 +496,6 @@ title: Chatbot Liability Evaluation
                 <p>Equal ownership and decision-making power among all worker-owners. Collective accountability for our work's integrity and rigor.</p>
             </div>
         </div>
-
-        <p class="cooperative-value fade-in-up">In chatbot liability evaluation, independence isn't just a business model, <strong>but a moral imperative. Honest findings protect users and companies alike.</strong></p>
     </div>
 </section>
 
