@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Mental Health AI Regulatory Tracker
+title: AI Regulatory Tracker
 ---
 
 <section class="regulations-page-hero">
     <div class="regulations-hero-content">
-        <h1 class="fade-in-up">Mental Health AI Regulatory Tracker</h1>
-        <p class="regulations-subtitle fade-in-up">Comprehensive tracking of federal, state, clinical, and international regulatory developments affecting mental health AI systems. Updated continuously as new regulations emerge.</p>
-        <div class="regulatory-tracker-last-updated fade-in-up">Last Updated: November 2025</div>
+        <h1 class="fade-in-up">AI Regulatory Tracker</h1>
+        <p class="regulations-subtitle fade-in-up">Comprehensive tracking of federal, state, clinical, and international regulatory developments affecting consumer-facing AI systems. Updated continuously as new regulations emerge.</p>
+        <div class="regulatory-tracker-last-updated fade-in-up">Last Updated: February 2026</div>
     </div>
 </section>
 
@@ -69,7 +69,7 @@ title: Mental Health AI Regulatory Tracker
 <section class="regulations-cta">
     <div class="regulations-cta-content">
         <h2>Need Help Navigating Regulatory Compliance?</h2>
-        <p>Our evaluation frameworks help mental health AI systems meet evolving regulatory requirements across federal, state, and clinical standards.</p>
+        <p>Our evaluation frameworks help consumer-facing AI systems meet evolving regulatory requirements across federal, state, and clinical standards.</p>
         <a href="/#contact" class="cta-button primary large">Request Risk Assessment</a>
     </div>
 </section>
