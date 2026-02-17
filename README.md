@@ -1,6 +1,6 @@
 # The Lono Collective
 
-Official website for The Lono Collective - Independent AI Safety Evaluation Frameworks.
+Official website for The Lono Collective - Independent AI Safety Evaluation.
 
 🌐 **Live Site:** [lonocollective.ai](https://lonocollective.ai)
 
