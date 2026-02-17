@@ -6,7 +6,7 @@ Official website for The Lono Collective - Independent AI Safety Evaluation Fram
 
 ## About
 
-We're a worker-owned and democratically governed cooperative specializing in developing and running evaluation frameworks for mental health AI deployments.
+Worker-owned and democratically governed AI safety cooperative.
 
 ### Prerequisites
 
