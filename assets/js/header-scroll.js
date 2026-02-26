@@ -1,39 +1,32 @@
-// Header scroll behavior - hide on scroll down, show on scroll up
+// Header scroll behavior - hide on scroll down, show on scroll up, solid when past hero
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Header scroll script loaded');
-
     const header = document.querySelector('.header');
-    const container = document.querySelector('.container');
+    const heroSection = document.querySelector('.hero-section');
 
-    if (!header) {
-        console.error('Header element not found!');
-        return;
-    }
+    if (!header) return;
 
-    console.log('Header element found:', header);
-    console.log('Container element:', container);
-
+    const heroHeight = heroSection ? heroSection.offsetHeight : window.innerHeight;
     let lastScrollY = 0;
 
-    // Listen to body scroll (that's where the scroll is happening)
     document.body.addEventListener('scroll', function() {
         const currentScrollY = document.body.scrollTop;
 
-        // Scrolling down and past threshold - hide
+        // Solid background once scrolled past the hero
+        if (currentScrollY > heroHeight) {
+            header.classList.add('header--scrolled');
+        } else {
+            header.classList.remove('header--scrolled');
+        }
+
+        // Hide on scroll down past threshold, show on scroll up
         if (currentScrollY > lastScrollY && currentScrollY > 400) {
             header.classList.add('header--hidden');
-        }
-        // Scrolling up - show
-        else if (currentScrollY < lastScrollY && currentScrollY > 100) {
+        } else if (currentScrollY < lastScrollY && currentScrollY > 100) {
             header.classList.remove('header--hidden');
-        }
-        // At top - show
-        else if (currentScrollY <= 100) {
+        } else if (currentScrollY <= 100) {
             header.classList.remove('header--hidden');
         }
 
         lastScrollY = currentScrollY;
     }, { passive: true });
-
-    console.log('Scroll listener attached to document.body');
 });

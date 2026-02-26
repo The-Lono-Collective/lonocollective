@@ -35,6 +35,13 @@
     );
     z-index: -1;
     pointer-events: none;
+    transition: background 0.3s ease, height 0.3s ease;
+}
+
+/* Solid header when scrolled past the hero — honest, legible, functional */
+.header--scrolled::before {
+    background: rgba(42, 66, 39, 0.97);
+    height: 100%;
 }
 
 

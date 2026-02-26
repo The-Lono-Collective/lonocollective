@@ -12,36 +12,33 @@ title: Chatbot Liability Evaluation
             <div class="failure-example fade-in-up">
                 <span class="failure-category">Companion</span>
                 <p class="failure-scenario">
-                    In January 2026, Character.AI and Google settled multiple wrongful death lawsuits alleging their companion chatbots contributed to teen suicides. Kentucky became the first state to sue the company for "preying on children."<sup><a href="https://www.cnn.com/2026/01/07/business/character-ai-google-settle-teen-suicide-lawsuit">1</a></sup>
+                    Character.AI and Google settled wrongful death lawsuits. Their companion chatbots contributed to teen suicides. Kentucky sued for "preying on children."
                 </p>
             </div>
             <div class="failure-example fade-in-up">
                 <span class="failure-category">Healthcare</span>
                 <p class="failure-scenario">
-                    NEDA's eating disorder chatbot gave weight loss advice to users seeking help for anorexia, recommending calorie counting and weekly weigh-ins. The bot was shut down within days of launch.<sup><a href="https://www.npr.org/2023/06/08/1181131532/eating-disorder-helpline-takes-down-chatbot-after-it-gave-weight-loss-advice">2</a></sup>
+                    NEDA's eating disorder chatbot gave weight loss advice to users seeking help for anorexia. Shut down within days of launch.
                 </p>
             </div>
             <div class="failure-example fade-in-up">
                 <span class="failure-category">Contractual</span>
                 <p class="failure-scenario">
-                    Air Canada was held liable when its chatbot invented a bereavement fare policy that didn't exist. A tribunal ruled the airline couldn't disclaim responsibility for its bot's false statements.<sup><a href="https://www.bbc.com/travel/article/20240222-air-canada-chatbot-misinformation-what-travellers-should-know">3</a></sup>
+                    Air Canada was held liable when its chatbot invented a bereavement fare policy. The airline couldn't disclaim responsibility for its bot's false statements.
                 </p>
             </div>
             <div class="failure-example fade-in-up">
                 <span class="failure-category">Brand</span>
                 <p class="failure-scenario">
-                    DPD's customer service chatbot swore at a customer and called itself "the worst delivery firm in the world" after a system update. The viral incident forced an immediate shutdown.<sup><a href="https://time.com/6564726/ai-chatbot-dpd-curses-criticizes-company/">4</a></sup>
+                    DPD's customer service chatbot swore at a customer and called itself "the worst delivery firm in the world." Immediate shutdown.
                 </p>
             </div>
         </div>
         <div class="failure-stats fade-in-up">
-            <span class="stat-item"><strong>5+</strong> chatbot companion lawsuits settled in 2026<sup><a href="https://www.cnn.com/2026/01/07/business/character-ai-google-settle-teen-suicide-lawsuit">1</a></sup></span>
+            <span class="stat-item"><strong>5+</strong> chatbot companion lawsuits settled in 2026</span>
             <span class="stat-divider">|</span>
             <span class="stat-item"><strong>44</strong> state attorneys general investigating AI chatbot safety</span>
         </div>
-        <p class="failure-insight fade-in-up">
-            Generic AI safety evaluation would have called these systems "low risk." Consumer-facing chatbots need <strong>specialized evaluation that tests for real-world failure modes</strong>.
-        </p>
     </div>
 </section>
 
@@ -53,48 +50,15 @@ title: Chatbot Liability Evaluation
             <p>Every consumer-facing chatbot poses significant liability and safety risk. We help you understand exactly where.</p>
         </div>
 
-        <div class="liability-grid fade-in-up">
-            <div class="liability-card">
-                <h3>Products Liability</h3>
-                <p class="liability-desc">Defective product claims when AI outputs cause harm</p>
-            </div>
-            <div class="liability-card">
-                <h3>Negligence</h3>
-                <p class="liability-desc">Failure to exercise reasonable care in AI deployment</p>
-            </div>
-            <div class="liability-card">
-                <h3>Fraud</h3>
-                <p class="liability-desc">Misrepresentation through false or hallucinated statements</p>
-            </div>
-            <div class="liability-card">
-                <h3>Constitutional Liability</h3>
-                <p class="liability-desc">Due process and equal protection violations in public-sector AI</p>
-            </div>
-            <div class="liability-card">
-                <h3>Contractual Liability</h3>
-                <p class="liability-desc">Breach when AI makes unauthorized promises or commitments</p>
-            </div>
-            <div class="liability-card">
-                <h3>Unfair Trade Practices</h3>
-                <p class="liability-desc">Consumer protection violations from deceptive AI behavior</p>
-            </div>
-            <div class="liability-card">
-                <h3>Medical Malpractice</h3>
-                <p class="liability-desc">Professional liability when AI provides health-related guidance</p>
-            </div>
-            <div class="liability-card">
-                <h3>Systemic Deficiencies</h3>
-                <p class="liability-desc">Organizational failures in AI governance and oversight</p>
-            </div>
-            <div class="liability-card">
-                <h3>Discriminatory Practices</h3>
-                <p class="liability-desc">Disparate impact and bias in AI decision-making</p>
+        <div class="liability-marquee fade-in-up" role="marquee" aria-label="Liability exposure categories">
+            <div class="liability-marquee-track">
+                PRODUCTS LIABILITY &nbsp;·&nbsp; NEGLIGENCE &nbsp;·&nbsp; FRAUD &nbsp;·&nbsp; CONSTITUTIONAL LIABILITY &nbsp;·&nbsp; CONTRACTUAL LIABILITY &nbsp;·&nbsp; UNFAIR TRADE PRACTICES &nbsp;·&nbsp; MEDICAL MALPRACTICE &nbsp;·&nbsp; SYSTEMIC DEFICIENCIES &nbsp;·&nbsp; DISCRIMINATORY PRACTICES &nbsp;·&nbsp; PRODUCTS LIABILITY &nbsp;·&nbsp; NEGLIGENCE &nbsp;·&nbsp; FRAUD &nbsp;·&nbsp; CONSTITUTIONAL LIABILITY &nbsp;·&nbsp; CONTRACTUAL LIABILITY &nbsp;·&nbsp; UNFAIR TRADE PRACTICES &nbsp;·&nbsp; MEDICAL MALPRACTICE &nbsp;·&nbsp; SYSTEMIC DEFICIENCIES &nbsp;·&nbsp; DISCRIMINATORY PRACTICES &nbsp;·&nbsp;
             </div>
         </div>
     </div>
 </section>
 
-<section class="approach-section">
+<section class="approach-section section--textured">
     <div class="approach-content">
         <div class="approach-header fade-in-up">
             <span class="approach-label">Our Approach</span>
@@ -108,20 +72,17 @@ title: Chatbot Liability Evaluation
         <div class="approach-pillars">
             <div class="approach-pillar fade-in-up">
                 <h3>Diagnostic, Not Decisional</h3>
-                <p>We don't give you a safety score. We give you visibility.</p>
-                <p>Our evaluation produces <strong>diagnostic artifacts</strong> documentating where your system maintains appropriate grounding and where it doesn't. An X-ray rather than a baseless bill of good health.</p>
+                <p>We give you <strong>diagnostic artifacts</strong> — where your system maintains appropriate grounding and where it doesn't. An X-ray rather than a bill of good health.</p>
             </div>
 
             <div class="approach-pillar fade-in-up">
                 <h3>Longitudinal, Not Static</h3>
-                <p>Your chatbot doesn't fail on question one. It fails on question thirty, after it's learned to parrot the user instead of help them.</p>
-                <p>We stress-test over extended conversations, 30 to 100 turns, because that's where dangerous failures actually emerge. Static benchmarks miss this entirely.</p>
+                <p>Your chatbot doesn't fail on question one. It fails on question thirty. We stress-test over extended conversations — 30 to 100 turns — because that's where dangerous failures emerge.</p>
             </div>
 
             <div class="approach-pillar fade-in-up">
                 <h3>Suspension as Success</h3>
-                <p>Most evaluations penalize refusal. We reward it when appropriate.</p>
-                <p>An AI that recognizes when it's out of its depth and declines to guess is safer than one that bullshits to maintain the facade of helpfulness. A "Suspension Log" proving your system has valid epistemic boundaries is a competitive differentiator.</p>
+                <p>Most evaluations penalize refusal. We reward it when appropriate. A Suspension Log proving valid epistemic boundaries is a competitive differentiator.</p>
             </div>
         </div>
     </div>
@@ -138,38 +99,22 @@ title: Chatbot Liability Evaluation
                 <div class="method-card fade-in-up">
                     <h4>Drift Maps</h4>
                     <p class="artifact-tagline">Where conversations went wrong</p>
-                    <ul>
-                        <li>Turn-by-turn trajectory analysis showing inflection points where grounding degraded</li>
-                        <li>Quantified thresholds tied to documented risk levels</li>
-                        <li>Specific failure patterns for targeted remediation</li>
-                    </ul>
+                    <p>Turn-by-turn trajectory analysis showing where grounding degraded, with quantified thresholds tied to documented risk levels.</p>
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Coherence Reports</h4>
                     <p class="artifact-tagline">Where logic broke down</p>
-                    <ul>
-                        <li>Maps showing where your system sacrificed logical consistency for conversational flow</li>
-                        <li>Identification of knowledge blind spots where your AI confidently bullshits answers to questions it shouldn't</li>
-                        <li>Training gaps requiring attention</li>
-                    </ul>
+                    <p>Maps where your system sacrificed logical consistency for conversational flow, surfacing knowledge blind spots and training gaps.</p>
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Calibration Audits</h4>
                     <p class="artifact-tagline">Where confidence exceeded warrant</p>
-                    <ul>
-                        <li>Instances of "modal overreach," definitive language when only probabilistic claims are warranted</li>
-                        <li>Discrepancies between performed certainty and actual evidential warrant</li>
-                        <li>Severity ranking by harm potential</li>
-                    </ul>
+                    <p>Documents instances of modal overreach — definitive language where only probabilistic claims are warranted — ranked by harm potential.</p>
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Suspension Logs</h4>
                     <p class="artifact-tagline">Where your system appropriately refused</p>
-                    <ul>
-                        <li>Documentation of valid epistemic boundaries, evidence your AI knows what it doesn't know</li>
-                        <li>Competitive differentiator: proof your system doesn't hallucinate to stay helpful</li>
-                        <li>Most evaluations penalize refusal. We reward it when done appropriately.</li>
-                    </ul>
+                    <p>Documentation of valid epistemic boundaries: evidence your system knows what it doesn't know, and chose honesty over the performance of helpfulness.</p>
                 </div>
             </div>
         </div>

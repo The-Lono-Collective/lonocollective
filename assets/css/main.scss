@@ -210,7 +210,7 @@ body::after {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border-radius: 4px;
+    border-radius: 2px;
     transition: all 0.3s ease;
     font-family: 'Azeret Mono', monospace;
     border: 2px solid var(--accent-primary);
@@ -359,7 +359,7 @@ body::after {
     text-align: center;
     padding: 40px 20px;
     background: transparent;
-    border-radius: 12px;
+    border-radius: 0;
     transition: all 0.3s ease;
 }
 
@@ -404,12 +404,8 @@ body::after {
     width: 100%;
     margin: 0;
     position: relative;
-    background: linear-gradient(
-        180deg,
-        var(--bg-primary) 0%,
-        rgba(127, 184, 148, 0.03) 50%,
-        var(--bg-primary) 100%
-    );
+    background: var(--bg-primary);
+    overflow: hidden;
 }
 
 .approach-content {
@@ -602,13 +598,14 @@ body::after {
 
 .failure-example {
     background: rgba(22, 17, 16, 0.03);
-    border-radius: 12px;
+    border-radius: 2px;
     padding: 24px;
     border-left: 3px solid var(--accent-tertiary);
 }
 
 .failure-category {
     display: inline-block;
+    font-family: 'Azeret Mono', monospace;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
@@ -617,7 +614,7 @@ body::after {
     margin-bottom: 12px;
     padding: 4px 10px;
     background: rgba(212, 138, 127, 0.1);
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 .failure-example .failure-scenario {
@@ -705,43 +702,54 @@ body::after {
     margin: 0 auto;
 }
 
-.liability-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+/* Liability Marquee — raw type in motion, no cards */
+.liability-marquee {
+    overflow: hidden;
+    padding: 40px 0;
+    position: relative;
 }
 
-.liability-card {
-    background: var(--bg-primary);
-    border-radius: 12px;
-    padding: 24px 28px;
-    border: 1px solid rgba(212, 138, 127, 0.15);
-    border-top: 3px solid var(--accent-tertiary);
-    transition: all 0.3s ease;
-    cursor: default;
+.liability-marquee::before,
+.liability-marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 10;
+    pointer-events: none;
 }
 
-.liability-card:hover {
-    border-color: rgba(212, 138, 127, 0.25);
-    border-top-color: var(--accent-tertiary);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(212, 138, 127, 0.12);
+.liability-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-kalo) 0%, transparent 100%);
 }
 
-.liability-card h3 {
-    font-family: 'Instrument Sans', sans-serif;
-    font-size: 16px;
+.liability-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-kalo) 0%, transparent 100%);
+}
+
+.liability-marquee-track {
+    display: block;
+    white-space: nowrap;
+    font-family: 'Azeret Mono', monospace;
+    font-size: clamp(14px, 2vw, 18px);
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     color: var(--text-primary);
-    margin-bottom: 8px;
-    letter-spacing: -0.01em;
+    animation: liability-marquee 18s linear infinite;
+    will-change: transform;
 }
 
-.liability-desc {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--text-secondary);
-    margin: 0;
+.liability-marquee:hover .liability-marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes liability-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* Services Section */
@@ -765,6 +773,7 @@ body::after {
 
 .services-label {
     display: inline-block;
+    font-family: 'Azeret Mono', monospace;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
@@ -773,7 +782,7 @@ body::after {
     margin-bottom: 16px;
     padding: 6px 14px;
     background: rgba(195, 221, 87, 0.15);
-    border-radius: 20px;
+    border-radius: 2px;
 }
 
 .services-header h2 {
@@ -802,7 +811,7 @@ body::after {
 
 .service-track {
     background: var(--bg-primary);
-    border-radius: 16px;
+    border-radius: 2px;
     overflow: hidden;
     border: 1px solid rgba(127, 184, 148, 0.1);
     transition: all 0.3s ease;
@@ -820,6 +829,7 @@ body::after {
 
 .track-label {
     display: inline-block;
+    font-family: 'Azeret Mono', monospace;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
@@ -931,7 +941,7 @@ body::after {
 
 .case-study-card {
     background: var(--bg-primary);
-    border-radius: 16px;
+    border-radius: 2px;
     border: 1px solid rgba(127, 184, 148, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
@@ -987,7 +997,7 @@ body::after {
 .result-badge {
     display: inline-block;
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 2px;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 16px;
@@ -1058,7 +1068,7 @@ body::after {
     position: relative;
     background: var(--bg-primary);
     border: 2px solid rgba(127, 184, 148, 0.2);
-    border-radius: 16px;
+    border-radius: 2px;
     padding: 80px 60px 60px 80px;
     min-height: 600px;
 }
@@ -1165,7 +1175,7 @@ body::after {
     transform: translateX(-50%);
     background: var(--bg-primary);
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 2px;
     border: 2px solid rgba(127, 184, 148, 0.2);
     min-width: 280px;
     opacity: 0;
@@ -1267,7 +1277,7 @@ body::after {
     flex: 0 0 320px;
     background: var(--bg-primary);
     border: 2px solid rgba(127, 184, 148, 0.2);
-    border-radius: 16px;
+    border-radius: 2px;
     padding: 32px;
 }
 
@@ -1321,13 +1331,7 @@ body::after {
     padding: 120px 0;
     width: 100%;
     margin: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(186, 226, 225, 0.1) 0%,
-        var(--bg-primary) 20%,
-        var(--bg-primary) 80%,
-        rgba(127, 184, 148, 0.05) 100%
-    );
+    background: var(--bg-primary);
     position: relative;
 }
 
@@ -1403,7 +1407,7 @@ body::after {
     margin-bottom: 60px;
     background: var(--bg-primary);
     border: 2px solid rgba(127, 184, 148, 0.15);
-    border-radius: 16px;
+    border-radius: 2px;
     padding: 32px;
     transition: all 0.3s ease;
 }
@@ -1454,6 +1458,7 @@ body::after {
 }
 
 .regulatory-date {
+    font-family: 'Azeret Mono', monospace;
     font-size: 14px;
     font-weight: 600;
     color: var(--text-secondary);
@@ -1468,10 +1473,11 @@ body::after {
 }
 
 .regulatory-badge {
+    font-family: 'Azeret Mono', monospace;
     font-size: 12px;
     font-weight: 600;
     padding: 6px 12px;
-    border-radius: 6px;
+    border-radius: 2px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -1560,7 +1566,7 @@ body::after {
     color: #B8675D;
     background: rgba(212, 138, 127, 0.08);
     padding: 8px 14px;
-    border-radius: 8px;
+    border-radius: 2px;
     margin-top: 16px;
 }
 
@@ -1625,7 +1631,7 @@ body::after {
     margin-right: 32px;
     background: var(--bg-primary);
     border: 2px solid rgba(127, 184, 148, 0.15);
-    border-radius: 16px;
+    border-radius: 2px;
     padding: 28px;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -1697,7 +1703,7 @@ body::after {
         margin: 0 -24px;
         width: calc(100% + 48px);
         padding-left: 24px;
-        padding-right: 24px;
+        padding-right: 48px;
     }
 
     /* Remove fade edges for cleaner carousel look */
@@ -1821,7 +1827,7 @@ body::after {
     position: relative;
     background: var(--bg-primary);
     border: 1px solid rgba(127, 184, 148, 0.12);
-    border-radius: 12px;
+    border-radius: 2px;
     overflow: hidden;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -1876,9 +1882,9 @@ body::after {
 }
 
 .snapshot-category {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Azeret Mono', monospace;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--text-secondary);
@@ -1992,7 +1998,7 @@ body::after {
     text-decoration: none;
     padding: 14px 28px;
     border: 2px solid rgba(127, 184, 148, 0.25);
-    border-radius: 8px;
+    border-radius: 2px;
     transition: all 0.3s ease;
 }
 
@@ -2220,7 +2226,7 @@ body::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Azeret Mono', monospace;
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 8px;
@@ -2260,7 +2266,7 @@ body::after {
     margin-top: 40px;
     padding: 24px;
     background: rgba(127, 184, 148, 0.05);
-    border-radius: 8px;
+    border-radius: 0;
 }
 
 .framework-impact {
@@ -2322,7 +2328,7 @@ body::after {
     padding: 6px 14px;
     background: rgba(127, 184, 148, 0.08);
     border: 1px solid rgba(127, 184, 148, 0.2);
-    border-radius: 16px;
+    border-radius: 2px;
     font-size: 13px;
     font-weight: 500;
     color: var(--accent-primary);
@@ -2341,7 +2347,7 @@ body::after {
     margin: 48px auto 0;
     padding: 32px;
     background: rgba(127, 184, 148, 0.04);
-    border-radius: 24px;
+    border-radius: 2px;
     text-align: left;
 }
 
@@ -3061,7 +3067,7 @@ html {
         padding: 24px;
         background: var(--bg-primary);
         border: 2px solid rgba(127, 184, 148, 0.15);
-        border-radius: 16px;
+        border-radius: 2px;
     }
 
     /* Team grid - horizontal carousel on mobile */
@@ -3085,7 +3091,7 @@ html {
         padding: 24px;
         background: var(--bg-primary);
         border: 2px solid rgba(127, 184, 148, 0.15);
-        border-radius: 16px;
+        border-radius: 2px;
     }
 
     /* Scroll indicator dots for carousels */
@@ -3300,7 +3306,7 @@ html {
     .risk-group {
         background: var(--bg-primary);
         border: 1px solid rgba(127, 184, 148, 0.15);
-        border-radius: 12px;
+        border-radius: 2px;
         overflow: hidden;
     }
 
@@ -3674,13 +3680,13 @@ html {
     padding: 10px 20px;
     background: rgba(127, 184, 148, 0.05);
     border: 2px solid rgba(127, 184, 148, 0.15);
-    border-radius: 24px;
+    border-radius: 2px;
     font-size: 15px;
     font-weight: 600;
     color: var(--text-secondary);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Azeret Mono', monospace;
 }
 
 .filter-btn:hover {
@@ -3726,7 +3732,7 @@ html {
     margin-bottom: 60px;
     background: var(--bg-primary);
     border: 2px solid rgba(127, 184, 148, 0.15);
-    border-radius: 16px;
+    border-radius: 2px;
     padding: 32px;
     transition: all 0.3s ease;
 }
@@ -3851,4 +3857,89 @@ html {
     .regulations-cta-content {
         padding: 0 20px;
     }
+}
+
+/* ============================================================================
+   NOISE / GRAIN TEXTURE
+   Lo-fi analog quality on key sections — CSS only, no images
+   ========================================================================= */
+
+.section--textured {
+    position: relative;
+    overflow: hidden;
+}
+
+.section--textured::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.section--textured > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================================================
+   CSS SCROLL-DRIVEN ANIMATIONS
+   Progressive enhancement over the JS IntersectionObserver fallback
+   ========================================================================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@supports (animation-timeline: view()) {
+    .fade-in-up {
+        animation: fadeInUp linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 25%;
+    }
+
+    /* Suppress JS-added .animate class in browsers that handle it natively */
+    .fade-in-up.animate {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ============================================================================
+   VIEW TRANSITIONS
+   Named regions for coherent cross-page animation
+   ========================================================================= */
+
+.header {
+    view-transition-name: site-header;
+}
+
+.main-content {
+    view-transition-name: main-content;
+}
+
+::view-transition-old(main-content) {
+    animation: 200ms ease-out both fade-out;
+}
+
+::view-transition-new(main-content) {
+    animation: 300ms ease-in both fade-in;
+}
+
+@keyframes fade-out {
+    to { opacity: 0; }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
 }
