@@ -12,7 +12,7 @@ title: Chatbot Liability Evaluation
             <div class="failure-example fade-in-up">
                 <span class="failure-category">Companion</span>
                 <p class="failure-scenario">
-                    Character.AI and Google settled wrongful death lawsuits. Their companion chatbots contributed to teen suicides. Kentucky sued for "preying on children."
+                    Character.AI and Google settled wrongful death lawsuits. Their companion chatbots contributed to teen suicides. Kentucky's AG sued, alleging they were "preying on children."
                 </p>
             </div>
             <div class="failure-example fade-in-up">
@@ -88,10 +88,14 @@ title: Chatbot Liability Evaluation
     </div>
 </section>
 
+<div class="manifesto-strip" aria-hidden="true">
+    <span>SAFETY SCORES ARE LIABILITY THEATER</span>
+</div>
+
 <section id="framework" class="framework-section">
     <div class="framework-content">
         <h2 class="fade-in-up">What Pilot Clients Receive</h2>
-        <p class="framework-intro fade-in-up">We don't give you a safety score. Safety scores are liability theater. They claim to certify something that cannot be certified for probabilistic systems. Instead, we give you <strong>diagnostic artifacts</strong>.</p>
+        <p class="framework-intro fade-in-up">We don't give you a safety score. <span class="crossed-out">Safety scores</span> are liability theater. They claim to certify something that cannot be certified for probabilistic systems. Instead, we give you <strong>diagnostic artifacts</strong>.</p>
 
         <div class="framework-approach">
             <h3 class="fade-in-up">Four Diagnostic Artifacts</h3>
@@ -328,7 +332,7 @@ title: Chatbot Liability Evaluation
     </div>
 </section>
 
-<section class="services-section">
+<section class="services-section section--inverted">
     <div class="services-content">
         <div class="services-header fade-in-up">
             <span class="services-label">How We Work</span>

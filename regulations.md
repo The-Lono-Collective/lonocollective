@@ -6,7 +6,7 @@ title: AI Regulatory Tracker
 <section class="regulations-page-hero">
     <div class="regulations-hero-content">
         <h1 class="fade-in-up">AI Regulatory Tracker</h1>
-        <p class="regulations-subtitle fade-in-up">Comprehensive tracking of federal, state, clinical, and international regulatory developments affecting consumer-facing AI systems. Updated continuously as new regulations emerge.</p>
+        <p class="regulations-subtitle fade-in-up">Every regulation that can affect your liability exposure — tracked and explained. Federal, state, clinical, and international. Updated as the landscape shifts.</p>
         <div class="regulatory-tracker-last-updated fade-in-up">Last Updated: February 2026</div>
     </div>
 </section>
