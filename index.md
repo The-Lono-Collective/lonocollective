@@ -7,7 +7,7 @@ title: Chatbot Liability Evaluation
 
 <section class="failure-mode-alert">
     <div class="failure-mode-content">
-        <h2 class="failure-mode-header fade-in-up">When Chatbots Fail</h2>
+        <h2 class="failure-mode-header fade-in-up">When Chatbots Harm</h2>
         <div class="failure-examples-grid">
             <div class="failure-example fade-in-up">
                 <span class="failure-category">Companion</span>
@@ -27,17 +27,11 @@ title: Chatbot Liability Evaluation
                     Air Canada was held liable when its chatbot invented a bereavement fare policy. The airline couldn't disclaim responsibility for its bot's false statements.
                 </p>
             </div>
-            <div class="failure-example fade-in-up">
-                <span class="failure-category">Brand</span>
-                <p class="failure-scenario">
-                    DPD's customer service chatbot swore at a customer and called itself "the worst delivery firm in the world." Immediate shutdown.
-                </p>
-            </div>
         </div>
         <div class="failure-stats fade-in-up">
-            <span class="stat-item"><strong>5+</strong> chatbot companion lawsuits settled in 2026</span>
+            <span class="stat-item"><strong>20</strong> documented deaths linked to LLMs since 2024</span>
             <span class="stat-divider">|</span>
-            <span class="stat-item"><strong>44</strong> state attorneys general investigating AI chatbot safety</span>
+            <span class="stat-item"><strong>Zero</strong> major AI deployments have published harm incident rates</span>
         </div>
     </div>
 </section>
@@ -166,8 +160,8 @@ title: Chatbot Liability Evaluation
 
 <section class="risk-matrix-section section--mauka-subtle">
     <div class="risk-matrix-content">
-        <h2 class="fade-in-up">Where Consumer Chatbots Operate<br />And Where They Fail</h2>
-        <p class="risk-matrix-intro fade-in-up">We evaluate systems across high-risk deployment contexts. This matrix shows which environments pose the greatest danger when chatbots fail:</p>
+        <h2 class="fade-in-up">Where Consumer Chatbots Operate<br />And Where People Are Hurt</h2>
+        <p class="risk-matrix-intro fade-in-up">We evaluate systems across high-risk deployment contexts. This matrix shows which environments pose the greatest danger when people are hurt:</p>
 
         <div class="risk-matrix-wrapper fade-in-up">
             <div class="risk-matrix-chart">
@@ -345,15 +339,16 @@ title: Chatbot Liability Evaluation
                 <div class="track-header">
                     <span class="track-label">Track A</span>
                     <h3>Risk Assessment Consulting</h3>
-                    <p class="track-tagline">Not ready for full evaluation?</p>
+                    <p class="track-tagline">Know what you're deploying before you deploy it.</p>
                 </div>
                 <div class="track-body">
-                    <p>Independent risk surface testing to understand your exposure before committing to comprehensive evaluation.</p>
+                    <p>Targeted analysis of where your chatbot creates harm. You learn what we find. All of it.</p>
                     <ul class="track-features">
                         <li>Targeted liability surface analysis</li>
                         <li>Attorney-client privilege structure available</li>
-                        <li>Findings protected from discovery</li>
-                        <li>Clear go/no-go recommendations</li>
+                        <li>You will know exactly what we found</li>
+                        <li>What you do with it is on you</li>
+                        <li>Clear go/no-go recommendation</li>
                     </ul>
                     <p class="track-cta">Ideal for companies exploring AI deployment or uncertain about risk exposure.</p>
                 </div>
@@ -428,22 +423,11 @@ title: Chatbot Liability Evaluation
 
 <section class="cooperative-section">
     <div class="cooperative-content">
-        <h2 class="fade-in-up">Why the cooperative model matters</h2>
+        <h2 class="fade-in-up">Structure is not neutral.</h2>
         <p class="cooperative-intro fade-in-up">Worker-owned and democratically governed. No venture capital pressure. No compromised research integrity.</p>
 
-        <div class="cooperative-benefits">
-            <div class="benefit-card fade-in-up">
-                <h3>No VC Pressure</h3>
-                <p>Bootstrapped and independent. Never pressured to soften findings, rush timelines, or compromise safety for profit or growth metrics.</p>
-            </div>
-            <div class="benefit-card fade-in-up">
-                <h3>No Equity Stakes</h3>
-                <p>We don't take equity in the companies we evaluate. We don't have partnerships with AI vendors. Our only incentive is rigorous, honest evaluation.</p>
-            </div>
-            <div class="benefit-card fade-in-up">
-                <h3>Democratic Governance</h3>
-                <p>Equal ownership and decision-making power among all worker-owners. Collective accountability for our work's integrity and rigor.</p>
-            </div>
+        <div class="cooperative-statement fade-in-up">
+            <p>We cannot evaluate AI systems for accountability while being structured to protect our own revenue from the truth of what we find. The cooperative isn't a quality feature. It's the only structure that makes this work honest.</p>
         </div>
     </div>
 </section>
@@ -451,7 +435,7 @@ title: Chatbot Liability Evaluation
 <section id="team" class="team-section">
     <div class="section-header fade-in-up">
         <h2>Core Team</h2>
-        <p class="section-subtitle">Domain expertise, legal compliance, and AI safety research</p>
+        <p class="section-subtitle">Domain expertise, accountability research, and AI safety</p>
     </div>
 
     <div class="team-grid">
@@ -475,7 +459,7 @@ title: Chatbot Liability Evaluation
     </div>
 
     <div class="clinical-advisory fade-in-up">
-        <p><strong>Expert Advisory Network</strong>: Our evaluation frameworks are developed in consultation with domain experts across healthcare, legal, financial services, and consumer protection who understand what failure means in high-stakes contexts.</p>
+        <p><strong>Expert Advisory Network</strong>: Our evaluation frameworks are developed in consultation with domain experts across healthcare, legal, financial services, and consumer protection who understand what harm means for real people.</p>
     </div>
 </section>
 
@@ -483,7 +467,7 @@ title: Chatbot Liability Evaluation
     <div class="contact-content">
         <h2 class="fade-in-up">Start With a Complimentary Risk Assessment</h2>
         <p class="contact-description fade-in-up">
-            Book a 45-minute consultation where we'll review your chatbot deployment and identify potential failure modes. We're seeking pilot clients to validate our frameworks at significantly reduced rates.
+            Book a 45-minute consultation where we'll review your chatbot deployment and identify where harm lives. We're seeking pilot clients to validate our frameworks at significantly reduced rates.
         </p>
 
         <form class="contact-form fade-in-up" action="https://formspree.io/f/xqanepdw" method="POST">
