@@ -406,6 +406,7 @@ body::after {
     position: relative;
     background: var(--bg-primary);
     overflow: hidden;
+    border-top: 1px solid rgba(232, 234, 223, 0.15);
 }
 
 .approach-content {
@@ -415,7 +416,7 @@ body::after {
 }
 
 .approach-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 48px;
 }
 
@@ -447,6 +448,7 @@ body::after {
     color: var(--text-secondary);
     margin: 0 0 8px;
     font-weight: 400;
+    text-align: left;
 }
 
 .approach-lead em {
@@ -455,16 +457,15 @@ body::after {
 }
 
 .approach-statement {
-    font-size: clamp(17px, 2vw, 20px);
-    line-height: 1.9;
-    color: var(--text-secondary);
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 80px;
-    font-weight: 300;
-    padding: 32px 0;
-    border-top: 1px solid rgba(127, 184, 148, 0.15);
-    border-bottom: 1px solid rgba(127, 184, 148, 0.15);
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.7;
+    color: var(--text-primary);
+    text-align: left;
+    max-width: 760px;
+    margin: 0 0 80px;
+    font-weight: 400;
+    padding: 24px 0 24px 28px;
+    border-left: 3px solid var(--accent-tertiary);
 }
 
 .approach-pillars {
@@ -525,7 +526,7 @@ body::after {
 
     .approach-statement {
         margin-bottom: 60px;
-        padding: 24px 0;
+        padding: 20px 0 20px 20px;
     }
 
     .approach-pillars {
@@ -707,27 +708,7 @@ body::after {
     overflow: hidden;
     padding: 40px 0;
     position: relative;
-}
-
-.liability-marquee::before,
-.liability-marquee::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 80px;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.liability-marquee::before {
-    left: 0;
-    background: linear-gradient(to right, var(--bg-kalo) 0%, transparent 100%);
-}
-
-.liability-marquee::after {
-    right: 0;
-    background: linear-gradient(to left, var(--bg-kalo) 0%, transparent 100%);
+    width: 100%;
 }
 
 .liability-marquee-track {
@@ -2204,7 +2185,7 @@ body::after {
 .timeline-steps {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    align-items: center;
+    align-items: start;
     gap: 0;
     margin-bottom: 32px;
 }

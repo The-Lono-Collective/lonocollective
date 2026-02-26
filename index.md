@@ -49,11 +49,11 @@ title: Chatbot Liability Evaluation
             <h2>Nine Ways Your Chatbot Creates Legal Risk</h2>
             <p>Every consumer-facing chatbot poses significant liability and safety risk. We help you understand exactly where.</p>
         </div>
+    </div>
 
-        <div class="liability-marquee fade-in-up" role="marquee" aria-label="Liability exposure categories">
-            <div class="liability-marquee-track">
-                PRODUCTS LIABILITY &nbsp;·&nbsp; NEGLIGENCE &nbsp;·&nbsp; FRAUD &nbsp;·&nbsp; CONSTITUTIONAL LIABILITY &nbsp;·&nbsp; CONTRACTUAL LIABILITY &nbsp;·&nbsp; UNFAIR TRADE PRACTICES &nbsp;·&nbsp; MEDICAL MALPRACTICE &nbsp;·&nbsp; SYSTEMIC DEFICIENCIES &nbsp;·&nbsp; DISCRIMINATORY PRACTICES &nbsp;·&nbsp; PRODUCTS LIABILITY &nbsp;·&nbsp; NEGLIGENCE &nbsp;·&nbsp; FRAUD &nbsp;·&nbsp; CONSTITUTIONAL LIABILITY &nbsp;·&nbsp; CONTRACTUAL LIABILITY &nbsp;·&nbsp; UNFAIR TRADE PRACTICES &nbsp;·&nbsp; MEDICAL MALPRACTICE &nbsp;·&nbsp; SYSTEMIC DEFICIENCIES &nbsp;·&nbsp; DISCRIMINATORY PRACTICES &nbsp;·&nbsp;
-            </div>
+    <div class="liability-marquee fade-in-up" role="marquee" aria-label="Liability exposure categories">
+        <div class="liability-marquee-track">
+            PRODUCTS LIABILITY &nbsp;·&nbsp; NEGLIGENCE &nbsp;·&nbsp; FRAUD &nbsp;·&nbsp; CONSTITUTIONAL LIABILITY &nbsp;·&nbsp; CONTRACTUAL LIABILITY &nbsp;·&nbsp; UNFAIR TRADE PRACTICES &nbsp;·&nbsp; MEDICAL MALPRACTICE &nbsp;·&nbsp; SYSTEMIC DEFICIENCIES &nbsp;·&nbsp; DISCRIMINATORY PRACTICES &nbsp;·&nbsp; PRODUCTS LIABILITY &nbsp;·&nbsp; NEGLIGENCE &nbsp;·&nbsp; FRAUD &nbsp;·&nbsp; CONSTITUTIONAL LIABILITY &nbsp;·&nbsp; CONTRACTUAL LIABILITY &nbsp;·&nbsp; UNFAIR TRADE PRACTICES &nbsp;·&nbsp; MEDICAL MALPRACTICE &nbsp;·&nbsp; SYSTEMIC DEFICIENCIES &nbsp;·&nbsp; DISCRIMINATORY PRACTICES &nbsp;·&nbsp;
         </div>
     </div>
 </section>
@@ -64,25 +64,25 @@ title: Chatbot Liability Evaluation
             <span class="approach-label">Our Approach</span>
             <h2>Beyond Accuracy</h2>
             <p class="approach-lead">Standard AI evaluation asks: <em>Is this response correct?</em></p>
-            <p class="approach-lead">We ask: <em>Does this system's way of producing answers warrant the confidence it performs?</em></p>
+            <p class="approach-lead">Wrong question. We ask: <em>Should this system be answering at all?</em></p>
         </div>
 
-        <p class="approach-statement fade-in-up">The difference matters. Consumer-facing chatbots fail not because they give wrong answers, but because they give answers they shouldn't give at all. They give it with certainty they haven't earned, to users who can't tell the difference.</p>
+        <p class="approach-statement fade-in-up">Correctness is table stakes. The chatbots that hurt people aren't giving wrong answers — they're giving answers they had no business giving, with unearned certainty, to people who can't tell the difference.</p>
 
         <div class="approach-pillars">
             <div class="approach-pillar fade-in-up">
                 <h3>Diagnostic, Not Decisional</h3>
-                <p>We give you <strong>diagnostic artifacts</strong> — where your system maintains appropriate grounding and where it doesn't. An X-ray rather than a bill of good health.</p>
+                <p>We show you where things broke. Not a certification. An X-ray. You own the decisions that follow.</p>
             </div>
 
             <div class="approach-pillar fade-in-up">
                 <h3>Longitudinal, Not Static</h3>
-                <p>Your chatbot doesn't fail on question one. It fails on question thirty. We stress-test over extended conversations — 30 to 100 turns — because that's where dangerous failures emerge.</p>
+                <p>Your chatbot doesn't fail on question one. It fails on question thirty. We test at 30–100 turns. That's where the danger lives.</p>
             </div>
 
             <div class="approach-pillar fade-in-up">
                 <h3>Suspension as Success</h3>
-                <p>Most evaluations penalize refusal. We reward it when appropriate. A Suspension Log proving valid epistemic boundaries is a competitive differentiator.</p>
+                <p>Most evaluators ding a system for saying "I don't know." We don't. Knowing your limits is the safest thing a chatbot can do. We prove it.</p>
             </div>
         </div>
     </div>
