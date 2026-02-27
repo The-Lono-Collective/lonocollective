@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
 
+            // Scroll to top of page so filtered results are visible from the start
+            document.body.scrollTo({ top: 0, behavior: 'smooth' });
+
             // Filter items
             regulatoryItems.forEach(item => {
                 const category = item.getAttribute('data-category');

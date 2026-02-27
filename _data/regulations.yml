@@ -11,6 +11,15 @@
 #   source_label: "Source name"
 #   source_url: "https://..."
 
+- date: "December 2025"
+  category: federal
+  high_impact: true
+  title: "Trump Executive Order Attempts to Preempt State AI Safety Laws"
+  description: "President Trump signs 'Ensuring a National Policy Framework for Artificial Intelligence,' directing creation of an AI Litigation Task Force to challenge state AI laws as unconstitutionally burdensome on interstate commerce. The Commerce Department must identify 'onerous' state AI laws within 90 days (by March 2026). Federal agencies may condition grants on states agreeing not to enforce conflicting AI laws. Children's safety laws are explicitly carved out from preemption—meaning California SB 243, Illinois HB 1806, and similar laws protecting minors likely survive. The order threatens to hollow out state-level chatbot liability frameworks for non-minor contexts."
+  impact_note: "Federal preemption push threatens state chatbot safety laws—children's safety laws are explicitly exempt"
+  source_label: "White House"
+  source_url: "https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/"
+
 - date: "November 2025"
   category: clinical
   high_impact: true
@@ -54,6 +63,15 @@
   description: "California AB 489, signed alongside SB 243, prohibits developers and deployers of AI tools from indicating or implying that the AI possesses a license or certificate to practice a healthcare profession. Additionally bans advertisements suggesting that AI-provided care comes from a licensed or certified human healthcare professional. Establishes consumer protection standards for transparency about AI use in healthcare settings. Effective January 1, 2026."
   source_label: "California AB 489"
   source_url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB489"
+
+- date: "September 2025"
+  category: federal
+  high_impact: true
+  title: "FTC Launches Investigation into AI Companion Chatbot Harms to Children"
+  description: "Federal Trade Commission issues formal orders to seven major AI companies—Meta, OpenAI, Alphabet (Google), xAI, Snap, and Character Technologies—demanding disclosure of how they measure, test, and monitor negative impacts of companion chatbots on children and teens. The inquiry follows wrongful death lawsuits by parents of teenagers who died by suicide after interactions with AI companion chatbots. FTC seeks information on monetization practices, AI character development, personal data collection, and safety mitigation measures."
+  impact_note: "Federal consumer protection agency formally investigates AI companion chatbot harms to minors"
+  source_label: "Federal Trade Commission"
+  source_url: "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions"
 
 - date: "September 2025"
   category: clinical

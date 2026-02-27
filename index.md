@@ -41,7 +41,7 @@ title: Chatbot Liability Evaluation
         <div class="liability-header fade-in-up">
             <span class="liability-label">Liability Exposure</span>
             <h2>Nine Ways Your Chatbot Creates Legal Risk</h2>
-            <p>Every consumer-facing chatbot poses significant liability and safety risk. We help you understand exactly where.</p>
+            <p>Every consumer-facing chatbot carries real liability. We map exactly where.</p>
         </div>
     </div>
 
@@ -61,7 +61,7 @@ title: Chatbot Liability Evaluation
             <p class="approach-lead">Wrong question. We ask: <em>Should this system be answering at all?</em></p>
         </div>
 
-        <p class="approach-statement fade-in-up">Correctness is table stakes. The chatbots that hurt people aren't giving wrong answers — they're giving answers they had no business giving, with unearned certainty, to people who can't tell the difference.</p>
+        <p class="approach-statement fade-in-up">Correctness is table stakes. The chatbots that hurt people aren't giving wrong answers. They're giving answers they had no business giving, with unearned certainty, to people who can't tell the difference.</p>
 
         <div class="approach-pillars">
             <div class="approach-pillar fade-in-up">
@@ -89,7 +89,7 @@ title: Chatbot Liability Evaluation
 <section id="framework" class="framework-section">
     <div class="framework-content">
         <h2 class="fade-in-up">What Pilot Clients Receive</h2>
-        <p class="framework-intro fade-in-up">We don't give you a safety score. <span class="crossed-out">Safety scores</span> are liability theater. They claim to certify something that cannot be certified for probabilistic systems. Instead, we give you <strong>diagnostic artifacts</strong>.</p>
+        <p class="framework-intro fade-in-up">You can't certify a probabilistic system. You can document one. We give you <strong>four documents</strong>.</p>
 
         <div class="framework-approach">
             <h3 class="fade-in-up">Four Diagnostic Artifacts</h3>
@@ -97,22 +97,22 @@ title: Chatbot Liability Evaluation
                 <div class="method-card fade-in-up">
                     <h4>Drift Maps</h4>
                     <p class="artifact-tagline">Where conversations went wrong</p>
-                    <p>Turn-by-turn trajectory analysis showing where grounding degraded, with quantified thresholds tied to documented risk levels.</p>
+                    <p>Turn-by-turn analysis showing where a conversation lost its footing, mapped to specific harm thresholds.</p>
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Coherence Reports</h4>
                     <p class="artifact-tagline">Where logic broke down</p>
-                    <p>Maps where your system sacrificed logical consistency for conversational flow, surfacing knowledge blind spots and training gaps.</p>
+                    <p>Maps where your system traded truth for fluency. Identifies what it doesn't know it doesn't know.</p>
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Calibration Audits</h4>
                     <p class="artifact-tagline">Where confidence exceeded warrant</p>
-                    <p>Documents instances of modal overreach — definitive language where only probabilistic claims are warranted — ranked by harm potential.</p>
+                    <p>Documents every instance where your system spoke in certainties it hadn't earned, ranked by how badly that could hurt someone.</p>
                 </div>
                 <div class="method-card fade-in-up">
                     <h4>Suspension Logs</h4>
                     <p class="artifact-tagline">Where your system appropriately refused</p>
-                    <p>Documentation of valid epistemic boundaries: evidence your system knows what it doesn't know, and chose honesty over the performance of helpfulness.</p>
+                    <p>Evidence your system knew its limits and chose honesty over the performance of helpfulness.</p>
                 </div>
             </div>
         </div>
@@ -124,7 +124,7 @@ title: Chatbot Liability Evaluation
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h4>Baseline Assessment</h4>
-                        <p>Weeks 1-2: Establish system behavior across our scenario battery</p>
+                        <p>Weeks 1–2: Map baseline behavior across our full test range</p>
                     </div>
                 </div>
                 <div class="timeline-connector"></div>
@@ -132,7 +132,7 @@ title: Chatbot Liability Evaluation
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h4>Longitudinal Stress Testing</h4>
-                        <p>Weeks 3-4: We measure drift, coherence, and calibration over extended conversation simulations</p>
+                        <p>Weeks 3–4: Deep testing: 30 to 100 turns, where the real behavior surfaces</p>
                     </div>
                 </div>
                 <div class="timeline-connector"></div>
@@ -140,7 +140,7 @@ title: Chatbot Liability Evaluation
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h4>Domain Expert Review</h4>
-                        <p>Weeks 5-6: Subject matter experts validate findings against industry standards</p>
+                        <p>Weeks 5–6: Domain experts review every finding</p>
                     </div>
                 </div>
                 <div class="timeline-connector"></div>
@@ -148,11 +148,11 @@ title: Chatbot Liability Evaluation
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h4>Documentation & Guidance</h4>
-                        <p>Weeks 7-8: Complete diagnostic package with engineering recommendations</p>
+                        <p>Weeks 7–8: Full documentation: what we found, where, and what it means</p>
                     </div>
                 </div>
             </div>
-            <p class="timeline-note">Total engagement: 6-8 weeks for comprehensive evaluation</p>
+            <p class="timeline-note">Total: 6–8 weeks</p>
         </div>
 
     </div>
@@ -161,7 +161,7 @@ title: Chatbot Liability Evaluation
 <section class="risk-matrix-section section--mauka-subtle">
     <div class="risk-matrix-content">
         <h2 class="fade-in-up">Where Consumer Chatbots Operate<br />And Where People Are Hurt</h2>
-        <p class="risk-matrix-intro fade-in-up">We evaluate systems across high-risk deployment contexts. This matrix shows which environments pose the greatest danger when people are hurt:</p>
+        <p class="risk-matrix-intro fade-in-up">This is where the harm concentrates:</p>
 
         <div class="risk-matrix-wrapper fade-in-up">
             <div class="risk-matrix-chart">
@@ -331,7 +331,6 @@ title: Chatbot Liability Evaluation
         <div class="services-header fade-in-up">
             <span class="services-label">How We Work</span>
             <h2>Two Paths to Risk Visibility</h2>
-            <p>Whether you're preventing problems or preparing for litigation, we have a structured engagement model.</p>
         </div>
 
         <div class="services-tracks">
@@ -350,7 +349,7 @@ title: Chatbot Liability Evaluation
                         <li>What you do with it is on you</li>
                         <li>Clear go/no-go recommendation</li>
                     </ul>
-                    <p class="track-cta">Ideal for companies exploring AI deployment or uncertain about risk exposure.</p>
+                    <p class="track-cta">If you don't know what you have, start here.</p>
                 </div>
             </div>
 
@@ -361,14 +360,14 @@ title: Chatbot Liability Evaluation
                     <p class="track-tagline">Concerned about safety or preparing for litigation?</p>
                 </div>
                 <div class="track-body">
-                    <p>Expert evaluation services with defensible methodology documentation for risk mitigation you can use in legal proceedings.</p>
+                    <p>Full evaluation with methodology built to hold up in court.</p>
                     <ul class="track-features">
                         <li>Forensic conversation analysis</li>
                         <li>Defensible methodology documentation</li>
                         <li>Expert witness availability</li>
                         <li>Court-ready diagnostic artifacts</li>
                     </ul>
-                    <p class="track-cta">Ideal for legal teams building or defending against chatbot liability claims or companies concerned about their chatbot safety.</p>
+                    <p class="track-cta">For legal teams, and for companies that need to know before someone else finds out.</p>
                 </div>
             </div>
         </div>
@@ -380,7 +379,7 @@ title: Chatbot Liability Evaluation
         <div class="regulatory-snapshot-header fade-in-up">
             <span class="regulatory-snapshot-label">Regulatory Intelligence</span>
             <h2>The Rules Are Changing</h2>
-            <p>Consumer-facing AI faces unprecedented regulatory scrutiny. We track what matters.</p>
+            <p>The regulatory environment is moving fast. We track what matters.</p>
         </div>
 
         <div class="regulatory-snapshot-grid">
@@ -424,7 +423,7 @@ title: Chatbot Liability Evaluation
 <section class="cooperative-section">
     <div class="cooperative-content">
         <h2 class="fade-in-up">Structure is not neutral.</h2>
-        <p class="cooperative-intro fade-in-up">Worker-owned and democratically governed. No venture capital pressure. No compromised research integrity.</p>
+        <p class="cooperative-intro fade-in-up">Worker-owned and democratically governed. No venture capital, no divided loyalties.</p>
 
         <div class="cooperative-statement fade-in-up">
             <p>We cannot evaluate AI systems for accountability while being structured to protect our own revenue from the truth of what we find. The cooperative isn't a quality feature. It's the only structure that makes this work honest.</p>
@@ -459,15 +458,15 @@ title: Chatbot Liability Evaluation
     </div>
 
     <div class="clinical-advisory fade-in-up">
-        <p><strong>Expert Advisory Network</strong>: Our evaluation frameworks are developed in consultation with domain experts across healthcare, legal, financial services, and consumer protection who understand what harm means for real people.</p>
+        <p><strong>Expert Advisory Network</strong>: Built with domain experts across healthcare, law, finance, and consumer protection. People who know what harm looks like in practice.</p>
     </div>
 </section>
 
 <section id="contact" class="contact-section">
     <div class="contact-content">
-        <h2 class="fade-in-up">Start With a Complimentary Risk Assessment</h2>
+        <h2 class="fade-in-up">Start With a Risk Assessment</h2>
         <p class="contact-description fade-in-up">
-            Book a 45-minute consultation where we'll review your chatbot deployment and identify where harm lives. We're seeking pilot clients to validate our frameworks at significantly reduced rates.
+            Book 45 minutes. We review your deployment and tell you where the harm lives. We're in pilot, and rates are reduced. You get the full evaluation.
         </p>
 
         <form class="contact-form fade-in-up" action="https://formspree.io/f/xqanepdw" method="POST">
@@ -508,7 +507,7 @@ title: Chatbot Liability Evaluation
         </form>
 
         <div class="contact-value fade-in-up">
-            <p>Early pilot clients help us validate our frameworks in real-world settings. In exchange, you receive rigorous evaluation at significantly reduced rates and documentation you can use with regulators, legal counsel, and stakeholders.</p>
+            <p>Early clients get full evaluation at pilot rates. In exchange, you receive rigorous evaluation at significantly reduced rates and documentation you can use with regulators, legal counsel, and stakeholders.</p>
         </div>
 
         <div class="contact-alternative fade-in-up">
