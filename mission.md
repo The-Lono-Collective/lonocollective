@@ -78,7 +78,7 @@ title: Our Mission
         </p>
         <p class="editorial-body fade-in-up">
             We remain ontologically open. We agonize over the questions. We expect
-            to be wrong and to learn from it. This is not a liability. It is the work.
+            to be wrong and to learn from it. That, precisely, is the work.
         </p>
     </div>
 </section>
@@ -89,14 +89,15 @@ title: Our Mission
         <h2 class="editorial-headline fade-in-up">Structure as Politics</h2>
         <p class="editorial-body fade-in-up">
             Every contributing full member holds equal ownership in the Lono Collective.
-            This is not a perk. It is how we ensure the research belongs to the research.
+            That ownership is the mechanism by which the research stays honest: no one
+            has a financial stake in a softened finding.
         </p>
         <p class="editorial-body fade-in-up">
             Audre Lorde wrote that the master's tools will never dismantle the master's
             house. A firm that evaluates AI systems for accountability cannot itself be
             structured to protect revenue at the cost of truth. The cooperative model
-            isn't a differentiator. It is a structural commitment to independence —
-            and independence is the work.
+            is how that commitment takes institutional form. Without structural
+            independence, the work is compromised before it begins.
         </p>
         <p class="editorial-body fade-in-up">
             No venture capital. No equity stakes in the companies we evaluate. No
