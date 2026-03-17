@@ -151,56 +151,36 @@
     text-align: center;
     padding-top: 30px;
     border-top: 1px solid rgba(127, 184, 148, 0.15);
-    position: relative;
-    overflow: hidden;
-    min-height: 180px;
     max-width: fit-content;
 }
 
-/* Glyphs container - similar to Jeton's grid approach */
-.footer-glyphs {
-    display: flex;
+.footer-logo {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 0;
+    gap: 20px;
+    text-decoration: none;
     margin-bottom: 32px;
-    height: 280px;
-    position: relative;
+    transition: all 0.3s ease;
+
+    &:hover .footer-logo-text {
+        color: var(--accent-primary);
+    }
 }
 
-/* Individual glyph styling */
-.footer-glyph {
-    will-change: transform;
-    opacity: 0;
-    transform: matrix(1,0,0,1,0,0);
-}
-
-.footer-glyph-letter {
-    font-family: 'Azeret Mono', monospace;
-    font-weight: 700;
-    font-size: clamp(80px, 25vw, 220px);
-    color: var(--text-primary);
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    line-height: 2;
-    display: inline-block;
-}
-
-.footer-glyph-separator {
-    font-family: 'Azeret Mono', monospace;
-    font-weight: 400;
-    font-size: clamp(60px, 18vw, 180px);
-    color: var(--text-primary);
-    line-height: 2;
-    display: inline-block;
-    margin: 0 8px;
-}
-
-.footer-glyph-logo {
-    width: clamp(100px, 12vw, 180px);
-    height: auto;
+.footer-logo-icon {
+    width: 52px;
+    height: 52px;
     object-fit: contain;
-    margin-right: 24px;
+}
+
+.footer-logo-text {
+    font-family: "Azeret Mono Medium", monospace;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
 .footer-copyright {
@@ -249,69 +229,6 @@
 
     .footer-logo-section {
         padding-top: 40px;
-        min-height: auto;
-        overflow: visible;
-    }
-
-    // Use CSS Grid for precise two-line layout on mobile
-    .footer-glyphs {
-        display: grid;
-        grid-template-columns: auto repeat(4, auto);
-        grid-template-rows: auto auto;
-        justify-content: center;
-        align-items: center;
-        gap: 0 2px;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .footer-glyph-letter {
-        font-size: clamp(32px, 9vw, 48px);
-        line-height: 1.3;
-    }
-
-    // Hide the separator spaces on mobile
-    .footer-glyph-separator {
-        display: none;
-    }
-
-    // Row 1: Logo + LONO
-    .footer-glyph[data-glyph="0"] { grid-row: 1; grid-column: 1; } // Logo
-    .footer-glyph[data-glyph="1"] { grid-row: 1; grid-column: 2; } // L
-    .footer-glyph[data-glyph="2"] { grid-row: 1; grid-column: 3; } // O
-    .footer-glyph[data-glyph="3"] { grid-row: 1; grid-column: 4; } // N
-    .footer-glyph[data-glyph="4"] { grid-row: 1; grid-column: 5; } // O
-
-    // Row 2: COLLECTIVE (spanning all columns, centered)
-    .footer-glyph[data-glyph="7"],
-    .footer-glyph[data-glyph="8"],
-    .footer-glyph[data-glyph="9"],
-    .footer-glyph[data-glyph="10"],
-    .footer-glyph[data-glyph="11"],
-    .footer-glyph[data-glyph="12"],
-    .footer-glyph[data-glyph="13"],
-    .footer-glyph[data-glyph="14"],
-    .footer-glyph[data-glyph="15"],
-    .footer-glyph[data-glyph="16"],
-    .footer-glyph[data-glyph="17"] {
-        grid-row: 2;
-    }
-
-    .footer-glyph[data-glyph="7"] { grid-column: 1; } // C
-    .footer-glyph[data-glyph="8"] { grid-column: 2; } // O
-    .footer-glyph[data-glyph="9"] { grid-column: 3; } // L
-    .footer-glyph[data-glyph="10"] { grid-column: 4; } // L
-    .footer-glyph[data-glyph="11"] { grid-column: 5; } // E
-    .footer-glyph[data-glyph="12"] { grid-column: 6; } // C
-    .footer-glyph[data-glyph="13"] { grid-column: 7; } // T
-    .footer-glyph[data-glyph="14"] { grid-column: 8; } // I
-    .footer-glyph[data-glyph="15"] { grid-column: 9; } // V
-    .footer-glyph[data-glyph="16"] { grid-column: 10; } // E
-    .footer-glyph[data-glyph="17"] { grid-column: 11; } // ®
-
-    .footer-glyph-logo {
-        width: clamp(28px, 6vw, 40px);
-        margin-right: 4px;
     }
 
     .footer-copyright {
@@ -331,24 +248,6 @@
         padding: 24px;
     }
 
-    .footer-logo-section {
-        min-height: auto;
-    }
-
-    .footer-glyphs {
-        height: auto;
-        gap: 0 1px;
-    }
-
-    .footer-glyph-letter {
-        font-size: clamp(24px, 7vw, 36px);
-    }
-
-    .footer-glyph-logo {
-        width: clamp(20px, 5vw, 32px);
-        margin-right: 2px;
-    }
-
     .footer-copyright {
         p {
             margin: 20px 10px;
@@ -362,19 +261,9 @@
    ========================================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-    .footer-glyph {
-        opacity: 1 !important;
-        transform: none !important;
-        transition: none !important;
-
-        &.reveal {
-            transition: none !important;
-        }
-    }
-
     .footer-nav a,
     .footer-resources a {
-        transition: color 0.2s ease; // Keep color transition, remove transform
+        transition: color 0.2s ease;
 
         &:hover,
         &:focus {

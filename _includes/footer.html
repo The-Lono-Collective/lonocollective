@@ -49,30 +49,10 @@
 
         <!-- Logo Section (below columns, centered) -->
         <div class="footer-logo-section">
-            <!-- Large glyphs container -->
-            <div class="footer-glyphs">
-                <img src="{{ '/assets/images/logo.png' | relative_url }}"
-                     alt="Logo"
-                     class="footer-glyph footer-glyph-logo"
-                     data-glyph="0">
-                <span class="footer-glyph footer-glyph-letter" data-glyph="1">L</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="2">O</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="3">N</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="4">O</span>
-                <span class="footer-glyph footer-glyph-separator" data-glyph="5">&ensp;</span>
-                <span class="footer-glyph footer-glyph-separator" data-glyph="6">&ensp;</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="7">C</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="8">O</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="9">L</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="10">L</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="11">E</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="12">C</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="13">T</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="14">I</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="15">V</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="16">E</span>
-                <span class="footer-glyph footer-glyph-letter" data-glyph="17">&reg;</span>
-            </div>
+            <a href="{{ '/' | relative_url }}" class="footer-logo">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Lono Collective" class="footer-logo-icon">
+                <span class="footer-logo-text">{{ site.title }}</span>
+            </a>
 
             <div class="footer-copyright" role="contentinfo">
                 <p>

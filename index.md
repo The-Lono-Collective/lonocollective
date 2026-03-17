@@ -40,7 +40,7 @@ title: Chatbot Liability Evaluation
     <div class="liability-content">
         <div class="liability-header fade-in-up">
             <span class="liability-label">Liability Exposure</span>
-            <h2>Nine Ways Your Chatbot Creates Legal Risk</h2>
+            <h2>Your Chatbot Carries Legal Risk</h2>
             <p>Every consumer-facing chatbot carries real liability. We map exactly where.</p>
         </div>
     </div>
@@ -58,20 +58,20 @@ title: Chatbot Liability Evaluation
             <span class="approach-label">Our Approach</span>
             <h2>Beyond Accuracy</h2>
             <p class="approach-lead">Standard AI evaluation asks: <em>Is this response correct?</em></p>
-            <p class="approach-lead">Wrong question. We ask: <em>Should this system be answering at all?</em></p>
+            <p class="approach-lead">That's the wrong question. We ask: <em>Should this system be answering at all?</em></p>
         </div>
 
-        <p class="approach-statement fade-in-up">Correctness is table stakes. The chatbots that hurt people aren't giving wrong answers. They're giving answers they had no business giving, with unearned certainty, to people who can't tell the difference.</p>
+        <p class="approach-statement fade-in-up"><strong>The chatbots that hurt people aren't giving wrong answers.</strong> They're giving answers they had no business giving, with unearned certainty and credibility, to people who can't tell the difference.</p>
 
         <div class="approach-pillars">
             <div class="approach-pillar fade-in-up">
                 <h3>Diagnostic, Not Decisional</h3>
-                <p>We show you where things broke. Not a certification. An X-ray. You own the decisions that follow.</p>
+                <p>We show you where things broke. This is not a rubber-stamped certification, but an X-ray. You own the decisions that follow.</p>
             </div>
 
             <div class="approach-pillar fade-in-up">
                 <h3>Longitudinal, Not Static</h3>
-                <p>Your chatbot doesn't fail on question one. It fails on question thirty. We test at 30–100 turns. That's where the danger lives.</p>
+                <p>Your chatbot doesn't fail on question one. It doesn't fail on question ten. It fails somewhere around turn 50. We test extending conversations between 30-100 turns long. That's where the danger lives.</p>
             </div>
 
             <div class="approach-pillar fade-in-up">
@@ -89,7 +89,7 @@ title: Chatbot Liability Evaluation
 <section id="framework" class="framework-section">
     <div class="framework-content">
         <h2 class="fade-in-up">What Pilot Clients Receive</h2>
-        <p class="framework-intro fade-in-up">You can't certify a probabilistic system. You can document one. We give you <strong>four documents</strong>.</p>
+        <p class="framework-intro fade-in-up">You cannot certify a probabilistic system. You can document one. We give you <strong>four documents</strong>.</p>
 
         <div class="framework-approach">
             <h3 class="fade-in-up">Four Diagnostic Artifacts</h3>
@@ -152,7 +152,7 @@ title: Chatbot Liability Evaluation
                     </div>
                 </div>
             </div>
-            <p class="timeline-note">Total: 6–8 weeks</p>
+            <p class="timeline-note">Total: 6–10 weeks</p>
         </div>
 
     </div>
@@ -367,7 +367,7 @@ title: Chatbot Liability Evaluation
                         <li>Expert witness availability</li>
                         <li>Court-ready diagnostic artifacts</li>
                     </ul>
-                    <p class="track-cta">For legal teams, and for companies that need to know before someone else finds out.</p>
+                    <p class="track-cta">For legal teams, and for companies that need to know before someone is harmed.</p>
                 </div>
             </div>
         </div>
@@ -422,11 +422,11 @@ title: Chatbot Liability Evaluation
 
 <section class="cooperative-section">
     <div class="cooperative-content">
-        <h2 class="fade-in-up">Structure is not neutral.</h2>
+        <h2 class="fade-in-up">Honest findings require structural difference.</h2>
         <p class="cooperative-intro fade-in-up">Worker-owned and democratically governed. No venture capital, no divided loyalties.</p>
 
         <div class="cooperative-statement fade-in-up">
-            <p>We cannot evaluate AI systems for accountability while being structured to protect our own revenue from the truth of what we find. The cooperative isn't a quality feature. It's the only structure that makes this work honest.</p>
+            <p>We cannot evaluate AI systems for accountability while being structured to protect our own revenue from the truth of what we find. The cooperative is the only structure that makes this work honest.</p>
         </div>
     </div>
 </section>
@@ -466,7 +466,7 @@ title: Chatbot Liability Evaluation
     <div class="contact-content">
         <h2 class="fade-in-up">Start With a Risk Assessment</h2>
         <p class="contact-description fade-in-up">
-            Book 45 minutes. We review your deployment and tell you where the harm lives. We're in pilot, and rates are reduced. You get the full evaluation.
+            Don't wait until your model causes real harm. Book 45 minutes. We review your deployment and tell you where the harm currently lives. We're in pilot, and rates are reduced. You get the full evaluation.
         </p>
 
         <form class="contact-form fade-in-up" action="https://formspree.io/f/xqanepdw" method="POST">

@@ -9,11 +9,12 @@ title: Our Mission
             Harm is not an edge case.
         </h1>
         <p class="editorial-body editorial-body--large fade-in-up">
-            We exist to end AI-driven harm.
+            We exist to end real and present AI-driven harm.
         </p>
         <p class="editorial-body fade-in-up">
             Consumer AI is deployed into the highest-stakes moments in human
-            life — crisis, grief, medical uncertainty, financial despair.
+            life: crisis, grief, medical uncertainty, financial despair. <strong>Even
+            if not purpose-built to handle such moments, that is where models are used.</strong>
             The companies deploying it measure retention, conversion, sentiment.
             They do not measure harm. We do.
         </p>
@@ -36,13 +37,13 @@ title: Our Mission
         </p>
         <p class="editorial-body fade-in-up">
             Nothing structurally changes, because nothing structurally needs to. The
-            harm was never the problem — the liability was. And liability, unlike harm,
+            harm was never the problem. The liability was. And liability, unlike harm,
             can be managed.
         </p>
         <p class="editorial-body fade-in-up">
             The safety score, the compliance checklist, the "responsible AI" badge:
-            these are the spectacle of safety, not safety itself. They exist to protect
-            the deployer. They leave the user exposed. When they fail, and they fail,
+            these are the spectacle of safety, rather than safety itself. They exist to protect
+            the deployer. They leave the user exposed. When they fail, and they do fail,
             the company's first question is not "who was hurt?" It is "what's our
             exposure?"
         </p>
@@ -66,7 +67,7 @@ title: Our Mission
         </p>
         <p class="editorial-body fade-in-up">
             We take seriously that ontology and epistemology are not academic
-            abstractions — they determine whether our frameworks are any good. What
+            abstractions; they determine whether our frameworks are any good. What
             counts as evidence of harm? Who gets to define it? How do we know when we
             know? These questions come before the methodology.
         </p>
@@ -74,7 +75,7 @@ title: Our Mission
             We welcome dissent and cultivate diversity of experience and opinion. Not
             as performative gestures toward inclusion. Because rigorous thinking is
             only possible when no conclusion is safe from challenge. We are, in this
-            sense, committed democrats — epistemologically before we are anything else.
+            sense, committed democrats epistemologically before we are anything else.
         </p>
         <p class="editorial-body fade-in-up">
             We remain ontologically open. We agonize over the questions. We expect
@@ -86,7 +87,7 @@ title: Our Mission
 <section class="mission-cooperative">
     <div class="mission-content">
         <span class="section-label fade-in-up">The Cooperative</span>
-        <h2 class="editorial-headline fade-in-up">Structure as Politics</h2>
+        <h2 class="editorial-headline fade-in-up">This Work is Inherently Political</h2>
         <p class="editorial-body fade-in-up">
             Every contributing full member holds equal ownership in the Lono Collective.
             That ownership is the mechanism by which the research stays honest: no one
@@ -97,12 +98,12 @@ title: Our Mission
             house. A firm that evaluates AI systems for accountability cannot itself be
             structured to protect revenue at the cost of truth. The cooperative model
             is how that commitment takes institutional form. Without structural
-            independence, the work is compromised before it begins.
+            independence, the work is corrupted before it begins.
         </p>
         <p class="editorial-body fade-in-up">
             No venture capital. No equity stakes in the companies we evaluate. No
             hierarchy of interest that puts the client's comfort above our findings.
-            The accountability we demand of AI systems, we demand of ourselves.
+            The accountability we demand of AI systems, we demand of ourselves. This is non-negotiable.
         </p>
     </div>
 </section>
