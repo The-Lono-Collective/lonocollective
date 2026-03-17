@@ -49,15 +49,21 @@
 }
 
 /* ============================================================================
-   3-Column Grid Layout
+   4-Column Grid Layout: Logo | Navigate | Resources | CTA
    ========================================================================= */
 
 .footer-columns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: minmax(160px, 1fr) 1fr 1fr 2fr;
     gap: 60px;
-    margin-bottom: 80px;
+    margin-bottom: 0;
     text-align: left;
+}
+
+.footer-logo-column {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 4px;
 }
 
 .footer-column-title {
@@ -144,22 +150,15 @@
 }
 
 /* ============================================================================
-   Logo Section (Centered Below Columns)
+   Logo Column (in grid)
    ========================================================================= */
-
-.footer-logo-section {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(127, 184, 148, 0.15);
-    max-width: fit-content;
-}
 
 .footer-logo {
     display: inline-flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
     text-decoration: none;
-    margin-bottom: 32px;
     transition: all 0.3s ease;
 
     &:hover .footer-logo-text {
@@ -175,7 +174,7 @@
 
 .footer-logo-text {
     font-family: "Azeret Mono Medium", monospace;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.05em;
     color: var(--text-primary);
@@ -183,28 +182,39 @@
     transition: color 0.3s ease;
 }
 
+/* ============================================================================
+   Footer Bottom (copyright below grid)
+   ========================================================================= */
+
+.footer-bottom {
+    margin-top: 48px;
+    border-top: 1px solid rgba(232, 234, 223, 0.15);
+    padding-top: 24px;
+}
+
 .footer-copyright {
-    p {
-        font-size: 14px;
-        color: var(--text-secondary);
-        margin: 80px;
-        font-weight: 300;
-    }
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin: 0;
 }
 
 /* ============================================================================
    Responsive Design
    ========================================================================= */
 
-// Tablet (2-column layout)
+// Tablet (2-column layout): logo + nav | resources | CTA spans
 @media (max-width: 1024px) {
     .footer-columns {
         grid-template-columns: repeat(2, 1fr);
         gap: 48px;
-        margin-bottom: 60px;
     }
 
-    // CTA column spans both columns
+    // Logo occupies first column, CTA spans both
+    .footer-logo-column {
+        grid-column: 1;
+    }
+
     .footer-cta-column {
         grid-column: 1 / -1;
     }
@@ -220,21 +230,18 @@
     .footer-columns {
         grid-template-columns: 1fr;
         gap: 40px;
-        margin-bottom: 50px;
+    }
+
+    .footer-logo-column {
+        grid-column: auto;
     }
 
     .footer-cta-column {
         grid-column: auto;
     }
 
-    .footer-logo-section {
-        padding-top: 40px;
-    }
-
-    .footer-copyright {
-        p {
-            margin: 30px 20px;
-        }
+    .footer-bottom {
+        margin-top: 32px;
     }
 }
 
@@ -249,10 +256,7 @@
     }
 
     .footer-copyright {
-        p {
-            margin: 20px 10px;
-            font-size: 12px;
-        }
+        font-size: 12px;
     }
 }
 

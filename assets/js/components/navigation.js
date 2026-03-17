@@ -39,6 +39,10 @@ export function initNavigation() {
         toggleMenu(!isOpen);
     });
 
+    // Dedicated close button inside mobile menu
+    const closeButton = document.getElementById('mobileMenuClose');
+    if (closeButton) closeButton.addEventListener('click', closeMenu);
+
     // Click outside to close
     document.addEventListener('click', function(e) {
         if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {

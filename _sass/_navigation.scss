@@ -1,6 +1,6 @@
 .nav-menu {
     display: none;
-    gap: 40px;
+    gap: clamp(16px, 2.5vw, 40px);
     list-style: none;
 }
 
@@ -155,8 +155,26 @@ body.menu-open {
     }
 }
 
-@media (min-width: 1024px) {
-    .nav-menu {
-        gap: 50px;
+.mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    background: transparent;
+    border: 2px solid var(--accent-tertiary);
+    color: var(--text-primary);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+        color: var(--accent-primary);
+        border-color: var(--accent-primary);
     }
 }

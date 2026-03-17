@@ -1,10 +1,18 @@
 <footer class="site-footer" role="contentinfo">
     <div class="footer-content">
 
-        <!-- 3-Column Grid Section -->
+        <!-- 4-Column Grid: Logo | Navigate | Resources | CTA -->
         <div class="footer-columns">
 
-            <!-- Column 1: Navigation -->
+            <!-- Col 1: Logo -->
+            <div class="footer-column footer-logo-column">
+                <a href="{{ '/' | relative_url }}" class="footer-logo">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Lono Collective" class="footer-logo-icon">
+                    <span class="footer-logo-text">{{ site.title }}</span>
+                </a>
+            </div>
+
+            <!-- Col 2: Navigate -->
             <div class="footer-column footer-nav-column">
                 <h3 class="footer-column-title">Navigate</h3>
                 <nav class="footer-nav" aria-label="Footer navigation">
@@ -21,7 +29,7 @@
                 </nav>
             </div>
 
-            <!-- Column 2: Resources -->
+            <!-- Col 3: Resources -->
             <div class="footer-column footer-resources-column">
                 <h3 class="footer-column-title">Resources</h3>
                 <nav class="footer-resources" aria-label="Resource links">
@@ -35,7 +43,7 @@
                 </nav>
             </div>
 
-            <!-- Column 3: CTA -->
+            <!-- Col 4: CTA -->
             <div class="footer-column footer-cta-column">
                 <h3 class="footer-cta-headline">{{ site.data.footer.cta.headline }}</h3>
                 <p class="footer-cta-tagline">{{ site.data.footer.cta.tagline }}</p>
@@ -47,20 +55,13 @@
 
         </div>
 
-        <!-- Logo Section (below columns, centered) -->
-        <div class="footer-logo-section">
-            <a href="{{ '/' | relative_url }}" class="footer-logo">
-                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Lono Collective" class="footer-logo-icon">
-                <span class="footer-logo-text">{{ site.title }}</span>
-            </a>
-
-            <div class="footer-copyright" role="contentinfo">
-                <p>
-                    &copy; {{ site.data.footer.copyright.year }}
-                    {{ site.data.footer.copyright.entity }}.
-                    {{ site.data.footer.copyright.text }}
-                </p>
-            </div>
+        <!-- Copyright below grid -->
+        <div class="footer-bottom" role="contentinfo">
+            <p class="footer-copyright">
+                &copy; {{ site.data.footer.copyright.year }}
+                {{ site.data.footer.copyright.entity }}.
+                {{ site.data.footer.copyright.text }}
+            </p>
         </div>
 
     </div>

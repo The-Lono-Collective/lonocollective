@@ -124,7 +124,21 @@
         padding: 10px 0;
     }
 
+    .header-inner {
+        padding: 12px 1em 6px;
+    }
+
     .logo {
         font-size: 18px;
+    }
+
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo-text {
+        font-size: 13px;
+        white-space: nowrap;
     }
 }

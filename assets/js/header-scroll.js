@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Hide on scroll down past threshold, show on scroll up
-        if (currentScrollY > lastScrollY && currentScrollY > 400) {
+        if (currentScrollY > lastScrollY && currentScrollY > 200) {
             header.classList.add('header--hidden');
         } else if (currentScrollY < lastScrollY && currentScrollY > 100) {
             header.classList.remove('header--hidden');
