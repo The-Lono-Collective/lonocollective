@@ -14,6 +14,16 @@ permalink: pretty
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
+
+# Blog post URLs: /blog/YYYY/MM/DD/slug/
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      permalink: /blog/:year/:month/:day/:title/
 
 # Build settings
 sass:
@@ -25,3 +35,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - src/
+  - vendor/

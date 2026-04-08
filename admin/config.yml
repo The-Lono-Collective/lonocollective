@@ -1,0 +1,65 @@
+backend:
+  name: github
+  repo: The-Lono-Collective/lonocollective
+  branch: main
+  client_id: Ov23lihVtW4IpcC39zQc
+
+publish_mode: editorial_workflow
+
+media_folder: assets/images/blog
+public_folder: /assets/images/blog
+
+collections:
+  - name: posts
+    label: Blog Posts
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post }
+      - { label: Title, name: title, widget: string }
+      - {
+          label: Date,
+          name: date,
+          widget: datetime,
+          date_format: YYYY-MM-DD,
+          time_format: false,
+        }
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - { label: Research, value: research }
+          - { label: Announcement, value: announcement }
+      - label: Author
+        name: author
+        widget: relation
+        collection: authors
+        search_fields: [name]
+        value_field: "{{slug}}"
+        display_fields: [name]
+      - {
+          label: Excerpt,
+          name: excerpt,
+          widget: text,
+          hint: "One or two sentences shown on the blog index. Write this yourself — don't let it auto-truncate.",
+        }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: authors
+    label: Authors
+    folder: _data/authors
+    create: true
+    identifier_field: name
+    extension: yml
+    format: yaml
+    fields:
+      - { label: Name, name: name, widget: string }
+      - {
+          label: URL,
+          name: url,
+          widget: string,
+          required: false,
+          hint: "Team profile anchor (e.g. /#team) or external URL. Leave blank for name-only attribution.",
+          pattern: ['^(https?://|/|#).*|^$', "Must be a relative path, anchor, or http(s) URL"],
+        }

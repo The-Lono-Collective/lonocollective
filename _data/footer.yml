@@ -12,6 +12,8 @@ navigation:
     url: /#contact
 
 resources:
+  - title: Blog
+    url: /blog/
   - title: Sources & Credits
     url: /sources/
   - title: Privacy Policy

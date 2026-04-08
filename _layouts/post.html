@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>{{ page.title }} - {{ site.title | strip_html }}</title>
+
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+    <meta name="author" content="{% if page.author %}{{ site.data.authors[page.author].name }}{% else %}{{ site.title | strip_html }}{% endif %}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <meta property="og:title" content="{{ page.title }} - {{ site.title | strip_html }}">
+    <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="{{ site.title | strip_html }}">
+    <meta property="og:image" content="{{ '/assets/images/web-preview.png' | absolute_url }}">
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    {% if page.author %}<meta property="article:author" content="{{ site.data.authors[page.author].name }}">{% endif %}
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }} - {{ site.title | strip_html }}">
+    <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+    <meta name="twitter:image" content="{{ '/assets/images/web-preview.png' | absolute_url }}">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600&family=Song+Myung&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme--green-gradient-light">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    {% include header.html %}
+    <div class="container">
+        <main class="main-content" id="main-content" role="main">
+            <article class="post-article">
+                <div class="post-container">
+
+                    <header class="post-header">
+                        <div class="post-meta-top">
+                            {% if page.category %}
+                            <span class="post-category-badge post-category-badge--{{ page.category }}">
+                                {{ page.category | capitalize }}
+                            </span>
+                            {% endif %}
+                            <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+                                {{ page.date | date: "%B %-d, %Y" }}
+                            </time>
+                        </div>
+
+                        <h1 class="post-title">{{ page.title }}</h1>
+
+                        {% if page.excerpt %}
+                        <p class="post-excerpt-header">{{ page.excerpt }}</p>
+                        {% endif %}
+
+                        {% if page.author %}
+                        {% assign author = site.data.authors[page.author] %}
+                        <div class="post-byline">
+                            <span class="post-byline-label">By</span>
+                            {% assign _url_lower = author.url | downcase | strip %}
+                            {% assign _safe_url = false %}
+                            {% if _url_lower == '' %}{% elsif _url_lower contains 'javascript:' %}{% elsif _url_lower contains 'vbscript:' %}{% elsif _url_lower contains 'data:' %}{% else %}{% assign _safe_url = true %}{% endif %}
+                            {% if _safe_url %}
+                            <a href="{{ author.url }}" class="post-author-link">{{ author.name }}</a>
+                            {% else %}
+                            <span class="post-author-name">{{ author.name }}</span>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+
+                        {% assign words = content | number_of_words %}
+                        {% assign reading_time = words | divided_by: 200 | plus: 1 %}
+                        <p class="post-reading-time">{{ reading_time }} min read</p>
+                    </header>
+
+                    <div class="post-body">
+                        {{ content }}
+                    </div>
+
+                    <footer class="post-footer">
+                        <div class="post-nav">
+                            {% if page.previous.url %}
+                            <a href="{{ page.previous.url }}" class="post-nav-link post-nav-link--prev">
+                                <span class="post-nav-label">Previous</span>
+                                <span class="post-nav-title">{{ page.previous.title }}</span>
+                            </a>
+                            {% else %}
+                            <div></div>
+                            {% endif %}
+
+                            {% if page.next.url %}
+                            <a href="{{ page.next.url }}" class="post-nav-link post-nav-link--next">
+                                <span class="post-nav-label">Next</span>
+                                <span class="post-nav-title">{{ page.next.title }}</span>
+                            </a>
+                            {% endif %}
+                        </div>
+
+                        <div class="post-back">
+                            <a href="/blog/" class="post-back-link">← All Posts</a>
+                        </div>
+                    </footer>
+
+                </div>
+            </article>
+        </main>
+
+        {% include footer.html %}
+    </div>
+
+    <script type="module" src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script type="module" src="{{ '/assets/js/animations.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/header-scroll.js' | relative_url }}"></script>
+</body>
+</html>
