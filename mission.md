@@ -22,10 +22,7 @@ title: Our Mission
 </section>
 
 <div class="manifesto-strip">
-    <div class="manifesto-track">
-        <span>THIS IS ACCOUNTABILITY WORK</span>
-        <span>THIS IS ACCOUNTABILITY WORK</span>
-    </div>
+    <span>THIS IS ACCOUNTABILITY WORK</span>
 </div>
 
 <section class="mission-values">

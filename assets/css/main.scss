@@ -3976,27 +3976,15 @@ html {
     border-bottom: 1px solid rgba(232, 234, 223, 0.15);
 }
 
-.manifesto-track {
-    display: flex;
-    width: max-content;
-    animation: manifesto-scroll 25s linear infinite;
-}
-
 .manifesto-strip span {
     display: block;
     font-family: 'Azeret Mono', monospace;
-    font-size: clamp(32px, 7vw, 80px);
+    font-size: clamp(20px, 4.5vw, 110px);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: -0.02em;
     color: var(--text-primary);
     white-space: nowrap;
-    padding: 0 60px;
-}
-
-@keyframes manifesto-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
 }
 
 /* ============================================================================

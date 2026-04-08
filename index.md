@@ -83,10 +83,7 @@ title: Chatbot Liability Evaluation
 </section>
 
 <div class="manifesto-strip" aria-hidden="true">
-    <div class="manifesto-track">
-        <span>SAFETY SCORES ARE LIABILITY THEATER</span>
-        <span>SAFETY SCORES ARE LIABILITY THEATER</span>
-    </div>
+    <span>SAFETY SCORES ARE LIABILITY THEATER</span>
 </div>
 
 <section id="framework" class="framework-section">
