@@ -3,6 +3,7 @@ backend:
   repo: The-Lono-Collective/lonocollective
   branch: main
   client_id: Ov23lihVtW4IpcC39zQc
+  base_url: https://auth.lonocollective.ai
 
 publish_mode: editorial_workflow
 
