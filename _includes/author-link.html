@@ -1,9 +1,12 @@
 {%- comment -%}
 Renders include.author.name, linked to include.author.url only when the URL is
 safe (relative path, anchor, or http/https). Optional include.class overrides
-the link class. Expects include.author to be an author data object.
+the link class. Expects include.author to be an author data object; renders
+nothing if include.author is missing (e.g. an unknown author slug).
 {%- endcomment -%}
+{%- if include.author -%}
 {%- assign _url_lower = include.author.url | downcase | strip -%}
 {%- assign _safe_url = false -%}
 {%- if _url_lower == '' -%}{%- elsif _url_lower contains 'javascript:' -%}{%- elsif _url_lower contains 'vbscript:' -%}{%- elsif _url_lower contains 'data:' -%}{%- else -%}{%- assign _safe_url = true -%}{%- endif -%}
 {%- if _safe_url -%}<a href="{{ include.author.url }}" class="{{ include.class | default: 'post-author-link' }}">{{ include.author.name }}</a>{%- else -%}<span class="post-author-name">{{ include.author.name }}</span>{%- endif -%}
+{%- endif -%}
