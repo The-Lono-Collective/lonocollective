@@ -183,7 +183,7 @@
     transition: all 0.2s ease;
 
     &::before {
-        content: "#";
+        content: "#" / "";
         opacity: 0.5;
     }
 
