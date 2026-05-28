@@ -163,6 +163,15 @@
 
 // ── Post article ────────────────────────────────
 
+.post-cover {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 0 0 32px;
+}
+
 .post-header {
     margin-bottom: 56px;
     padding-bottom: 40px;
