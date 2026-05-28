@@ -104,6 +104,17 @@ describe('initBlogFilter', () => {
         expect(cards[1].hidden).toBe(true);
     });
 
+    test('clicking "All Tags" after a tag re-shows cards', () => {
+        initBlogFilter(document, '');
+        document.querySelector('[data-tag="llm"]').click();
+        expect(document.querySelectorAll('.blog-post-card')[1].hidden).toBe(true);
+        document.querySelector('[data-tag="all"]').click();
+        const cards = document.querySelectorAll('.blog-post-card');
+        expect(cards[0].hidden).toBe(false);
+        expect(cards[1].hidden).toBe(false);
+        expect(document.querySelector('[data-tag="all"]').classList.contains('is-active')).toBe(true);
+    });
+
     test('pre-activates a tag from ?tag=', () => {
         initBlogFilter(document, '?tag=llm');
         expect(document.querySelector('[data-tag="llm"]').classList.contains('is-active')).toBe(true);
