@@ -48,6 +48,20 @@ collections:
           widget: text,
           hint: "One or two sentences shown on the blog index. Write this yourself — don't let it auto-truncate.",
         }
+      - {
+          label: Cover Image,
+          name: cover_image,
+          widget: image,
+          required: false,
+          hint: "Shown as the hero at the top of the post and as the social-share preview image.",
+        }
+      - {
+          label: Tags,
+          name: tags,
+          widget: list,
+          required: false,
+          hint: "Freeform topic tags (e.g. LLM, regulation). Readers can filter the blog by these.",
+        }
       - { label: Body, name: body, widget: markdown }
 
   - name: authors
@@ -66,4 +80,18 @@ collections:
           required: false,
           hint: "Team profile anchor (e.g. /#team) or external URL. Leave blank for name-only attribution.",
           pattern: ['^(https?://|/|#).*|^$', "Must be a relative path, anchor, or http(s) URL"],
+        }
+      - {
+          label: Bio,
+          name: bio,
+          widget: text,
+          required: false,
+          hint: "One or two sentences. Appears at the bottom of every post you write.",
+        }
+      - {
+          label: Photo,
+          name: image,
+          widget: image,
+          required: false,
+          hint: "Headshot shown beside your bio.",
         }
