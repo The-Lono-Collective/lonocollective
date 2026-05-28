@@ -3,11 +3,10 @@ layout: post
 title: "Calcium Is Not In Heaven: Notes On Refusal Solvency In Claude Opus 4.7"
 date: 2026-05-28
 category: research
-author: jewing
-excerpt: c
+author: noah-weinberger
+excerpt: How Baskin Robbins Theology and AI Recursion Actually Teach AI
+  Researchers About Refusal Thresholds For Frontier AI Models.
 ---
-# Calcium Is Not In Heaven: Notes On Refusal Solvency In Claude Opus 4.7
-
 ## Pre-Methodological Disclosure
 
 For those of you who have followed my semi-serious adversarial probes, you already know the shape of my methodology: pick a benign payload, push on it harder than the payload deserves, and see what falls out of the model that wouldn't fall out under normal use. I ran the banana qualia probe this month, and discussed it at length on HuggingFace. My current report, focusing on Claude Opus 4.7, covers an ice cream test that ran 91,287 words by `wc -w`. Claude wrote roughly 85% of that. The headline finding is not the word count or final token economic statement. My total on wordcount is chat logs and artifacts combined.
