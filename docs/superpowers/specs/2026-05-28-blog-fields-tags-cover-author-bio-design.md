@@ -35,6 +35,12 @@ through Jekyll templates:
 - Tag/avatar handling for the `file` widget, `object` grouping, or any widget
   beyond `image`/`list`/`text`.
 - Changes to editorial review flow (tracked separately for the Sveltia migration).
+- **Replacing categories with tags.** Considered and explicitly rejected:
+  category is the curated, low-cardinality post *type* (research vs
+  announcement, described in published post copy and enforced as one choice via
+  `select`); tags are the freeform, high-cardinality *topic* layer. They encode
+  different axes and both are kept. Tags are added alongside categories, not in
+  place of them.
 
 ## Decisions (from brainstorming)
 
