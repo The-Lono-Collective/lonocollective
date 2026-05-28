@@ -161,6 +161,38 @@
     }
 }
 
+// ── Post tags (topical, lighter than the category badge) ──
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.post-tag {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &::before {
+        content: "#";
+        opacity: 0.5;
+    }
+
+    &:hover {
+        border-color: var(--accent-primary);
+        color: var(--accent-primary);
+    }
+}
+
 // ── Post article ────────────────────────────────
 
 .post-cover {

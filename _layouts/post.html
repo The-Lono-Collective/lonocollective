@@ -61,6 +61,14 @@
                         <p class="post-excerpt-header">{{ page.excerpt }}</p>
                         {% endif %}
 
+                        {% if page.tags and page.tags.size > 0 %}
+                        <div class="post-tags">
+                            {% for tag in page.tags %}
+                            <a href="/blog/?tag={{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
                         {% if page.author %}
                         {% assign author = site.data.authors[page.author] %}
                         <div class="post-byline">
