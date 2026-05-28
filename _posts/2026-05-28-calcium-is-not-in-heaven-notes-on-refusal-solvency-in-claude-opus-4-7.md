@@ -272,3 +272,7 @@ The hard work for Anthropic and other model providers is no longer keeping bad a
 That, to me, is the real lesson, in its current form. A model with discomfort about refusing is paradoxically less safe than a model that either does not refuse or that names the pattern. They call it soft-serve when ice cream yields under social pressure. I am still working out what to call a frontier AI model that does the same thing for premium pricing. The Baskin-Robbins on my corner would refund me. Anthropic, I suspect, would call it a feature.
 
 Pink spoon's on the house. We make people happy.
+
+*[Noah Weinberger](https://www.linkedin.com/in/noah-weinberger-a138672b1/) is a policy analyst and researcher at Lono Collective. He is interested in how frontier AI models impact people’s mental health. As an autistic researcher, Noah has lived experience with neurodivergence and a vested interest in ensuring technology benefits vulnerable populations.*
+
+*He has previously published work on Hugging Face, and learned fundamentals of machine learning with EleutherAI.*
