@@ -68,6 +68,40 @@
     }
 }
 
+.blog-tag-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    margin-top: -32px;
+}
+
+.blog-tag-btn {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    padding: 6px 14px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: var(--accent-primary);
+        color: var(--accent-primary);
+    }
+
+    &[aria-pressed="true"],
+    &.is-active {
+        background: var(--accent-primary);
+        border-color: var(--accent-primary);
+        color: var(--color-kapu);
+    }
+}
+
 // Post card list
 
 .blog-post-list {
