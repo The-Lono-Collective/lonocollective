@@ -5,7 +5,10 @@ backend:
   client_id: Ov23lihVtW4IpcC39zQc
   base_url: https://auth.lonocollective.ai
 
-publish_mode: editorial_workflow
+# Sveltia CMS does not yet support editorial_workflow. With this disabled,
+# saves publish directly to the `main` branch — no draft PR review step.
+# Re-enable if returning to Decap.
+# publish_mode: editorial_workflow
 
 media_folder: assets/images/blog
 public_folder: /assets/images/blog
