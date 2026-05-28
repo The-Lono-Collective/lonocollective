@@ -62,14 +62,7 @@
                         {% assign author = site.data.authors[page.author] %}
                         <div class="post-byline">
                             <span class="post-byline-label">By</span>
-                            {% assign _url_lower = author.url | downcase | strip %}
-                            {% assign _safe_url = false %}
-                            {% if _url_lower == '' %}{% elsif _url_lower contains 'javascript:' %}{% elsif _url_lower contains 'vbscript:' %}{% elsif _url_lower contains 'data:' %}{% else %}{% assign _safe_url = true %}{% endif %}
-                            {% if _safe_url %}
-                            <a href="{{ author.url }}" class="post-author-link">{{ author.name }}</a>
-                            {% else %}
-                            <span class="post-author-name">{{ author.name }}</span>
-                            {% endif %}
+                            {% include author-link.html author=author %}
                         </div>
                         {% endif %}
 
@@ -83,6 +76,24 @@
                     </div>
 
                     <footer class="post-footer">
+                        {% if page.author %}
+                        {% assign post_author = site.data.authors[page.author] %}
+                        {% if post_author %}
+                        {% if post_author.bio or post_author.image %}
+                        <aside class="post-author-bio">
+                            {% if post_author.image %}
+                            <img class="post-author-bio__avatar" src="{{ post_author.image | relative_url }}" alt="{{ post_author.name }}" width="64" height="64">
+                            {% endif %}
+                            <div class="post-author-bio__text">
+                                <p class="post-author-bio__name">{% include author-link.html author=post_author class='post-author-bio__link' %}</p>
+                                {% if post_author.bio %}
+                                <p class="post-author-bio__blurb">{{ post_author.bio }}</p>
+                                {% endif %}
+                            </div>
+                        </aside>
+                        {% endif %}
+                        {% endif %}
+                        {% endif %}
                         <div class="post-nav">
                             {% if page.previous.url %}
                             <a href="{{ page.previous.url }}" class="post-nav-link post-nav-link--prev">
