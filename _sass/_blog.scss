@@ -68,6 +68,11 @@
     }
 }
 
+// Renders directly under the category filter only when tagged posts exist. The
+// negative margin-top pulls this row up into .blog-filter's 48px margin-bottom
+// (netting ~16px between the rows); that 48px stays intact on tag-less pages,
+// where this row isn't output. If you change .blog-filter's margin-bottom,
+// revisit this value.
 .blog-tag-filter {
     display: flex;
     gap: 8px;
