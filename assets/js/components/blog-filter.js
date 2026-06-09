@@ -63,32 +63,29 @@ export function initBlogFilter(doc, search) {
         });
     };
 
-    categoryButtons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            activeCategory = btn.getAttribute('data-filter') || 'all';
-            setActive(categoryButtons, btn);
-            apply();
+    const bindFilter = (buttons, attr, onChoose) => {
+        buttons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                onChoose(btn.getAttribute(attr) || 'all');
+                setActive(buttons, btn);
+                apply();
+            });
         });
-    });
+    };
 
-    tagButtons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            activeTag = btn.getAttribute('data-tag') || 'all';
-            setActive(tagButtons, btn);
-            apply();
-        });
-    });
-
-    const requested = readTagParam(
-        search != null ? search : (typeof window !== 'undefined' && window.location ? window.location.search : '')
-    );
-    if (requested) {
+    const preActivateTagFromUrl = () => {
+        const requested = readTagParam(
+            search != null ? search : (typeof window !== 'undefined' && window.location ? window.location.search : '')
+        );
+        if (!requested) return;
         const match = tagButtons.find((b) => b.getAttribute('data-tag') === requested);
-        if (match) {
-            activeTag = requested;
-            setActive(tagButtons, match);
-        }
-    }
+        if (!match) return;
+        activeTag = requested;
+        setActive(tagButtons, match);
+    };
 
+    bindFilter(categoryButtons, 'data-filter', (v) => { activeCategory = v; });
+    bindFilter(tagButtons, 'data-tag', (v) => { activeTag = v; });
+    preActivateTagFromUrl();
     apply();
 }

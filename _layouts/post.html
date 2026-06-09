@@ -93,7 +93,7 @@
                         {% if post_author.bio or post_author.image %}
                         <aside class="post-author-bio">
                             {% if post_author.image %}
-                            <img class="post-author-bio__avatar" src="{{ post_author.image | relative_url }}" alt="{{ post_author.name }}" width="64" height="64">
+                            <img class="post-author-bio__avatar" src="{{ post_author.image | relative_url }}" alt="" width="64" height="64">
                             {% endif %}
                             <div class="post-author-bio__text">
                                 <p class="post-author-bio__name">{% include author-link.html author=post_author class='post-author-bio__link' %}</p>

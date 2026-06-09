@@ -88,17 +88,12 @@ describe('initBlogFilter', () => {
         expect(cards[1].hidden).toBe(false);
     });
 
-    test('clicking a category filters cards', () => {
+    test.each([
+        ['category', '[data-filter="research"]'],
+        ['tag', '[data-tag="llm"]'],
+    ])('clicking a %s filters cards', (_label, selector) => {
         initBlogFilter(document, '');
-        document.querySelector('[data-filter="research"]').click();
-        const cards = document.querySelectorAll('.blog-post-card');
-        expect(cards[0].hidden).toBe(false);
-        expect(cards[1].hidden).toBe(true);
-    });
-
-    test('clicking a tag filters cards', () => {
-        initBlogFilter(document, '');
-        document.querySelector('[data-tag="llm"]').click();
+        document.querySelector(selector).click();
         const cards = document.querySelectorAll('.blog-post-card');
         expect(cards[0].hidden).toBe(false);
         expect(cards[1].hidden).toBe(true);

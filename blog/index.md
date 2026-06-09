@@ -18,12 +18,14 @@ description: Thought leadership and announcements from The Lono Collective on AI
 
   {% if site.tags.size > 0 %}
   {% assign sorted_tags = site.tags | sort %}
+  {% assign seen_slugs = "" %}
+  {% capture tag_buttons %}{% for tag in sorted_tags %}{% assign slug = tag[0] | slugify %}{% assign needle = '[' | append: slug | append: ']' %}{% unless seen_slugs contains needle %}{% assign seen_slugs = seen_slugs | append: needle %}<button class="blog-tag-btn" data-tag="{{ slug }}" aria-pressed="false">{{ tag[0] }}</button>{% endunless %}{% endfor %}{% endcapture %}
+  {% if tag_buttons != blank %}
   <div class="blog-tag-filter" role="group" aria-label="Filter posts by tag">
     <button class="blog-tag-btn is-active" data-tag="all" aria-pressed="true">All Tags</button>
-    {% for tag in sorted_tags %}
-    <button class="blog-tag-btn" data-tag="{{ tag[0] | slugify }}" aria-pressed="false">{{ tag[0] }}</button>
-    {% endfor %}
+    {{ tag_buttons }}
   </div>
+  {% endif %}
   {% endif %}
 
   <div class="blog-post-list" id="blog-post-list">
