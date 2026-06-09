@@ -36,3 +36,4 @@ exclude:
   - Gemfile.lock
   - src/
   - vendor/
+  - docs/superpowers/   # engineering specs/plans; contain Liquid examples in code fences
