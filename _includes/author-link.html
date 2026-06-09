@@ -1,0 +1,23 @@
+{%- comment -%}
+Renders include.author.name, linked to include.author.url only when the URL is
+safe. Deny-by-default: only http://, https://, single-leading-/, or # prefixes
+pass (protocol-relative // is rejected, matching the CMS author.url pattern
+in admin/config.yml). Optional include.class overrides the link class. Renders
+nothing if include.author is missing.
+{%- endcomment -%}
+{%- if include.author -%}
+{%- assign _url = include.author.url | strip -%}
+{%- assign _url_lower = _url | downcase -%}
+{%- assign _safe_url = false -%}
+{%- assign _prefix2 = _url_lower | slice: 0, 2 -%}
+{%- assign _prefix7 = _url_lower | slice: 0, 7 -%}
+{%- assign _prefix8 = _url_lower | slice: 0, 8 -%}
+{%- assign _prefix1 = _url_lower | slice: 0, 1 -%}
+{%- if _prefix2 == '//' -%}
+{%- elsif _prefix7 == 'http://' -%}{%- assign _safe_url = true -%}
+{%- elsif _prefix8 == 'https://' -%}{%- assign _safe_url = true -%}
+{%- elsif _prefix1 == '/' -%}{%- assign _safe_url = true -%}
+{%- elsif _prefix1 == '#' -%}{%- assign _safe_url = true -%}
+{%- endif -%}
+{%- if _safe_url -%}<a href="{{ include.author.url }}" class="{{ include.class | default: 'post-author-link' }}">{{ include.author.name }}</a>{%- else -%}<span class="post-author-name">{{ include.author.name }}</span>{%- endif -%}
+{%- endif -%}

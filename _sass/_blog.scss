@@ -68,6 +68,45 @@
     }
 }
 
+// Renders directly under the category filter only when tagged posts exist. The
+// negative margin-top pulls this row up into .blog-filter's 48px margin-bottom
+// (netting ~16px between the rows); that 48px stays intact on tag-less pages,
+// where this row isn't output. If you change .blog-filter's margin-bottom,
+// revisit this value.
+.blog-tag-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    margin-top: -32px;
+}
+
+.blog-tag-btn {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    padding: 6px 14px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: var(--accent-primary);
+        color: var(--accent-primary);
+    }
+
+    &[aria-pressed="true"],
+    &.is-active {
+        background: var(--accent-primary);
+        border-color: var(--accent-primary);
+        color: var(--color-kapu);
+    }
+}
+
 // Post card list
 
 .blog-post-list {
@@ -161,7 +200,48 @@
     }
 }
 
+// ── Post tags (topical, lighter than the category badge) ──
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.post-tag {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &::before {
+        content: "#" / "";
+        opacity: 0.5;
+    }
+
+    &:hover {
+        border-color: var(--accent-primary);
+        color: var(--accent-primary);
+    }
+}
+
 // ── Post article ────────────────────────────────
+
+.post-cover {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 0 0 32px;
+}
 
 .post-header {
     margin-bottom: 56px;
@@ -349,6 +429,55 @@
     margin-top: 80px;
     padding-top: 40px;
     border-top: 1px solid var(--border-color);
+}
+
+.post-author-bio {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: rgba(235, 255, 220, 0.05);
+}
+
+.post-author-bio__avatar {
+    flex: 0 0 auto;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0;
+}
+
+.post-author-bio__name {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    margin: 0 0 6px;
+}
+
+.post-author-bio__link {
+    color: var(--accent-primary);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--accent-secondary);
+    }
+}
+
+.post-author-bio__blurb {
+    font-size: var(--type-body-md);
+    color: var(--text-secondary);
+    line-height: var(--line-body);
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .post-author-bio {
+        flex-direction: column;
+    }
 }
 
 .post-nav {

@@ -16,6 +16,18 @@ description: Thought leadership and announcements from The Lono Collective on AI
     <button class="blog-filter-btn" data-filter="announcement" aria-pressed="false">Announcements</button>
   </div>
 
+  {% if site.tags.size > 0 %}
+  {% assign sorted_tags = site.tags | sort %}
+  {% assign seen_slugs = "" %}
+  {% capture tag_buttons %}{% for tag in sorted_tags %}{% assign slug = tag[0] | slugify %}{% assign needle = '[' | append: slug | append: ']' %}{% unless seen_slugs contains needle %}{% assign seen_slugs = seen_slugs | append: needle %}<button class="blog-tag-btn" data-tag="{{ slug }}" aria-pressed="false">{{ tag[0] }}</button>{% endunless %}{% endfor %}{% endcapture %}
+  {% if tag_buttons != blank %}
+  <div class="blog-tag-filter" role="group" aria-label="Filter posts by tag">
+    <button class="blog-tag-btn is-active" data-tag="all" aria-pressed="true">All Tags</button>
+    {{ tag_buttons }}
+  </div>
+  {% endif %}
+  {% endif %}
+
   <div class="blog-post-list" id="blog-post-list">
     {% assign posts = site.posts %}
     {% if posts.size == 0 %}
@@ -23,7 +35,7 @@ description: Thought leadership and announcements from The Lono Collective on AI
     {% else %}
     {% for post in posts %}
     {% assign author = site.data.authors[post.author] %}
-    <a href="{{ post.url }}" class="blog-post-card" data-category="{{ post.category }}">
+    <a href="{{ post.url }}" class="blog-post-card" data-category="{{ post.category }}" data-tags="{% for t in post.tags %}{{ t | slugify }} {% endfor %}">
       <div class="blog-card-meta">
         {% if post.category %}
         <span class="blog-category-badge blog-category-badge--{{ post.category }}">{{ post.category | capitalize }}</span>
@@ -42,35 +54,3 @@ description: Thought leadership and announcements from The Lono Collective on AI
     {% endif %}
   </div>
 </div>
-
-<script>
-(function () {
-  var buttons = document.querySelectorAll('.blog-filter-btn');
-  var cards = document.querySelectorAll('.blog-post-card');
-  var emptyState = document.querySelector('.blog-empty-state');
-
-  buttons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var filter = btn.getAttribute('data-filter');
-
-      buttons.forEach(function (b) {
-        b.classList.remove('is-active');
-        b.setAttribute('aria-pressed', 'false');
-      });
-      btn.classList.add('is-active');
-      btn.setAttribute('aria-pressed', 'true');
-
-      var visibleCount = 0;
-      cards.forEach(function (card) {
-        var match = filter === 'all' || card.getAttribute('data-category') === filter;
-        card.hidden = !match;
-        if (match) visibleCount++;
-      });
-
-      if (emptyState) {
-        emptyState.hidden = visibleCount > 0;
-      }
-    });
-  });
-}());
-</script>
