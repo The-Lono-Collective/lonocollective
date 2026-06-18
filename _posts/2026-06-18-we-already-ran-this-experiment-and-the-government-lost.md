@@ -115,5 +115,3 @@ So how does this end? It ends the way the crypto wars ended, because researchers
 Photo by [Tim Mossholder](https://unsplash.com/@timmossholder?ref=twobytwotokens.com) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
 If America wants secure networks, she needs her defenders armed with the best available tools, not disarmed by an export rule that treats vulnerability discovery as a munition. The bits do not check passports, and they were never the enemy. The enemy is the person who chooses to do harm, and the law already knows how to find that person. Prosecute the criminal, not the compiler. America learned this lesson once at the cost of a three-year criminal investigation hanging over one citizen and a decade of needless export theater. She should not have to learn it twice.
-
-[](https://www.twobytwotokens.com/the-trump-admins-mythos-executive-orders-secret-technique-enforcing-existing-laws/)
