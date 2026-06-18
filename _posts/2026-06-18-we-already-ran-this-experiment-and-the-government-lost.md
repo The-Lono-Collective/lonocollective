@@ -5,12 +5,10 @@ date: 2026-06-18
 category: research
 author: noah-weinberger
 excerpt: Secretary Lutnick's letter is the complete inversion of Trump's executive order. Lutnick's export control ruling is capability-as-contraband in its purest, most undiluted form. Claude Mythos’ model itself is what is being interdicted at the border. The temptation the conduct-based approach was built to resist has now been surrendered to completely, and America and her allies have been made less safe in the process. Reversing the US' AI governance priorities is not refining anything and may in fact be making everyone less safe.
-cover_image: ''
+cover_image: /assets/images/blog/fable.png
 tags:
-  - llm, regulation, frontier AI
+  - llm, regulation, frontier AI, cybersecurity
 ---
-
-![We Already Ran This Experiment, and the Government Lost](/assets/images/blog/fable.png "Look at Mr Claude in his noodle boat. Isn't he FABLE-ous?")
 
 ## **AKA: Code is Speech**
 
@@ -117,6 +115,5 @@ So how does this end? It ends the way the crypto wars ended, because researchers
 Photo by [Tim Mossholder](https://unsplash.com/@timmossholder?ref=twobytwotokens.com) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
 If America wants secure networks, she needs her defenders armed with the best available tools, not disarmed by an export rule that treats vulnerability discovery as a munition. The bits do not check passports, and they were never the enemy. The enemy is the person who chooses to do harm, and the law already knows how to find that person. Prosecute the criminal, not the compiler. America learned this lesson once at the cost of a three-year criminal investigation hanging over one citizen and a decade of needless export theater. She should not have to learn it twice.
-
 
 [](https://www.twobytwotokens.com/the-trump-admins-mythos-executive-orders-secret-technique-enforcing-existing-laws/)
