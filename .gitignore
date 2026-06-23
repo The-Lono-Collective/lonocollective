@@ -114,3 +114,11 @@ reference_materials/
 .claude/
 .env
 .mcp.json
+
+# Superpowers brainstorm sessions
+.superpowers/
+
+# Internal working docs — never commit to the PUBLIC repo (white-paper sources,
+# third-party site feedback, etc.). The published white paper lives in assets/docs/.
+docs/*.pdf
+docs/*.docx

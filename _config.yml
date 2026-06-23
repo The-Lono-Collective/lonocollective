@@ -30,10 +30,22 @@ sass:
   sass_dir: _sass
   style: compressed
 
+# Keep internal files out of the published site. Jekyll publishes EVERY top-level
+# file by default (anything not dot/underscore-prefixed or listed here), so each
+# internal file must be excluded explicitly or it becomes a public, indexable URL.
 exclude:
+  # Build tooling / dependency manifests
   - README.md
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - babel.config.js
   - src/
   - vendor/
-  - docs/superpowers/   # engineering specs/plans; contain Liquid examples in code fences
+  # Internal only — AI/agent instructions, engineering notes, automation, raw data
+  - CLAUDE.md
+  - docs/                              # notes, specs, plans, source PDFs — never published
+  - check_feeds.py
+  - comprehensive_search.py
+  - search_regulations.py
+  - mental_health_ai_regulations_2025.json
