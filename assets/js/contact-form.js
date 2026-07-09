@@ -75,10 +75,18 @@ function showErrorMessage(errors) {
         errorText = errors.map(e => e.message).join(', ');
     }
 
-    errorDiv.innerHTML = `
-        <div class="message-icon">✕</div>
-        <p><strong>Error:</strong> ${errorText}</p>
-    `;
+    // Build with DOM nodes + textContent so a server-supplied error string can
+    // never be interpreted as HTML (prevents DOM XSS via the response body).
+    const icon = document.createElement('div');
+    icon.className = 'message-icon';
+    icon.textContent = '✕';
+
+    const messageP = document.createElement('p');
+    const label = document.createElement('strong');
+    label.textContent = 'Error:';
+    messageP.append(label, ' ', errorText);
+
+    errorDiv.append(icon, messageP);
 
     form.insertBefore(errorDiv, form.firstChild);
 

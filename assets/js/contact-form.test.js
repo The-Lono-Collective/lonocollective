@@ -294,4 +294,29 @@ describe('Contact Form AJAX Handler', () => {
         expect(errorMessage).toBeTruthy();
         expect(errorMessage.textContent).toContain('Network error');
     });
+
+    test('error message renders server response as inert text, not HTML (XSS sink closed)', async () => {
+        const malicious = '<img src=x onerror="window.__xss = true">';
+        global.fetch.mockResolvedValue({
+            ok: false,
+            json: async () => ({ errors: malicious })
+        });
+
+        const { initContactForm } = await import('./contact-form.js');
+        initContactForm();
+
+        document.getElementById('name').value = 'Test User';
+        document.getElementById('email').value = 'test@example.com';
+        document.getElementById('message').value = 'Test message';
+
+        form.dispatchEvent(new Event('submit'));
+        await new Promise(resolve => setTimeout(resolve, 100));
+
+        const errorMessage = document.querySelector('.form-error');
+        expect(errorMessage).toBeTruthy();
+        // The markup must be inert: no element is parsed out of the response...
+        expect(errorMessage.querySelector('img')).toBeNull();
+        // ...and the raw string is shown to the user as text instead.
+        expect(errorMessage.textContent).toContain(malicious);
+    });
 });
