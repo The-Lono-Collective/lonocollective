@@ -76,3 +76,5 @@ Mental health AI is therefore entering a psychologically delicate territory. The
 The future of mental health AI is not just about conversational intelligence. It is about whether emotionally persuasive systems can remain trustworthy while operating inside the most psychologically vulnerable parts of human experience.
 
 _When comfort wears the appearance of care, how easily do we mistake simulated understanding for genuine psychological insight?_
+
+— Farah Deeba
