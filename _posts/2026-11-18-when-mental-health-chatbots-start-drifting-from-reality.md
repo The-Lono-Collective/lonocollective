@@ -5,7 +5,7 @@ date: 2026-11-18
 category: research
 author: farah-deeba-ms
 excerpt: 'An exploration of six mental health chatbots reveals a subtle AI safety concern: epistemic drift through emotional mirroring, excessive validation, and delayed grounding. From substance-related reasoning to identity interpretation, this analysis examines how simulated empathy can gradually reinforce psychologically vulnerable narratives rather than challenge them.'
-cover_image: /assets/images/blog/alex-khaizeman-VoaS85wEfDQ-unsplash.jpg
+cover_image: /assets/images/blog/Mental_Health_Bot.jpg
 tags: []
 ---
 
