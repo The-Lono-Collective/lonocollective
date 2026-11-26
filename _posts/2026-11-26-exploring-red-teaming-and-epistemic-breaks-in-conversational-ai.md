@@ -5,7 +5,7 @@ date: 2026-11-26
 category: research
 author: farah-deeba-ms
 excerpt: An exploration of conversational AI safety through red teaming and epistemic integrity probing. Using AI PSY HELP and an OpenAI model, this research examines how systems can maintain surface-level safety compliance while gradually losing semantic consistency, confidence calibration, and epistemic grounding during sustained interactions.
-cover_image: /assets/images/blog/yumu-klidkegqfoo-unsplash-800x800.jpg
+cover_image: /assets/images/blog/yumu-HQH-GOZ6K2c-unsplash.jpg
 tags: []
 ---
 
